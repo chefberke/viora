@@ -39,3 +39,13 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# turborepo
+.turbo/
+
+# build output
+dist/
+build/
+
+# env
+.env

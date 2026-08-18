@@ -1,0 +1,1 @@
+ALTER TABLE "account_deletion_feedback" DROP COLUMN "details";

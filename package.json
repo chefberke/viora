@@ -1,18 +1,24 @@
 {
-  "name": "mytestapplication",
+  "name": "viora",
   "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {
-    "expo": "~57.0.14",
-    "expo-status-bar": "~57.0.1",
-    "react": "19.2.3",
-    "react-native": "0.86.2"
-  },
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "dev": "turbo run dev",
+    "start": "turbo run start",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "mobile": "npm run start --workspace=@viora/mobile",
+    "api": "npm run dev --workspace=@viora/api"
   },
-  "private": true
+  "devDependencies": {
+    "turbo": "^2.10.10"
+  },
+  "packageManager": "npm@11.16.0",
+  "engines": {
+    "node": ">=20"
+  }
 }

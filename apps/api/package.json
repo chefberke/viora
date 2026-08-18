@@ -1,0 +1,35 @@
+{
+  "name": "@viora/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/index.ts",
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "auth:generate": "auth generate --config src/lib/auth.ts --output src/db/schema.ts --yes",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@better-auth/expo": "^1.7.0",
+    "better-auth": "^1.7.0",
+    "cors": "^2.8.6",
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.3",
+    "@types/pg": "^8.23.1",
+    "auth": "^1.7.0",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^7.0.2"
+  }
+}
