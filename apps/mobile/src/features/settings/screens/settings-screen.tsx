@@ -3,18 +3,17 @@ import { useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { useAuthActions, type DeleteAccountInput } from '@/features/auth';
+import { useAuthActions, useSignInMethods, type DeleteAccountInput } from '@/features/auth';
 import { authClient } from '@/shared/lib';
 import { ChangePasswordForm } from '../components/change-password-form';
 import { DeleteAccountConfirm } from '../components/delete-account-confirm';
 import { DeleteAccountReason } from '../components/delete-account-reason';
 import { SettingsHeader } from '../components/settings-header';
+import { useLeaveSettings } from '../use-leave-settings';
 import { AccountActionsSection } from '../sections/account-actions-section';
 import { AccountSection } from '../sections/account-section';
-import { DeviceSection } from '../sections/device-section';
-import { PreferencesSection } from '../sections/preferences-section';
-import { SavedMealsSection } from '../sections/saved-meals-section';
-import { SubscriptionSection } from '../sections/subscription-section';
+import { AppSection } from '../sections/app-section';
+import { MealsSection } from '../sections/meals-section';
 
 /**
  * Deleting is two steps: the reason is asked while backing out is still free, and the
@@ -23,9 +22,9 @@ import { SubscriptionSection } from '../sections/subscription-section';
 type SettingsView = 'menu' | 'password' | 'delete-reason' | 'delete-confirm';
 
 /**
- * The contents of the settings modal, which `app/(app)/_layout.tsx` presents. Most of the
- * list is placeholder UI: only the account values, the change-password form, the
- * Appearance row and Sign Out are live.
+ * The contents of the settings modal, which `app/(app)/_layout.tsx` presents. Four cards:
+ * who the account is, the meal settings, the app's own, and the two ways out of it. The
+ * meal rows are placeholder UI; everything else is live.
  */
 export function SettingsScreen() {
   const insets = useSafeAreaInsets();
@@ -35,6 +34,11 @@ export function SettingsScreen() {
   const { data: session } = authClient.useSession();
   const { changePassword, deleteAccount, signOut, isPending, error, clearError } =
     useAuthActions();
+
+  // A Google account has no password, so the row that changes one is not offered.
+  const signIn = useSignInMethods();
+
+  const leaveSettings = useLeaveSettings();
 
   // Held between the two delete steps; nothing is sent until the word is typed.
   const [deletion, setDeletion] = useState<DeleteAccountInput>({ reason: '' });
@@ -74,9 +78,15 @@ export function SettingsScreen() {
               setView('delete-reason');
             }}
             onConfirm={() => {
-              // Nothing to navigate: losing the session flips the guard in
-              // `app/_layout.tsx`, which drops this group and lands on welcome.
-              void deleteAccount(deletion);
+              // Nothing to navigate on the way out: losing the session flips the guard in
+              // `app/_layout.tsx`, which drops this group and lands on welcome. The modal
+              // is closed first, so it is not what the group remembers — see
+              // `use-leave-settings.ts`. A failure keeps it open, with the error.
+              void deleteAccount(deletion).then((deleted) => {
+                if (deleted) {
+                  leaveSettings();
+                }
+              });
             }}
           />
         )}
@@ -121,6 +131,7 @@ export function SettingsScreen() {
         <AccountSection
           name={session?.user.name ?? ''}
           email={session?.user.email ?? ''}
+          signIn={signIn}
           disabled={isPending}
           onChangePassword={() => {
             clearError();
@@ -128,10 +139,8 @@ export function SettingsScreen() {
           }}
         />
 
-        <SavedMealsSection />
-        <PreferencesSection />
-        <DeviceSection />
-        <SubscriptionSection />
+        <MealsSection />
+        <AppSection />
 
         <AccountActionsSection
           disabled={isPending}
@@ -140,7 +149,9 @@ export function SettingsScreen() {
             setView('delete-reason');
           }}
           onSignOut={() => {
-            // Nothing to navigate; see the note on the delete confirmation above.
+            // Closed before the session goes, so the group does not remember an open modal
+            // and reopen it on the next sign-in. See `use-leave-settings.ts`.
+            leaveSettings();
             void signOut();
           }}
         />

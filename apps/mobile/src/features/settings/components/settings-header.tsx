@@ -1,8 +1,8 @@
-import { useRouter } from 'expo-router';
 import { Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { IconButton } from '@/shared/ui';
+import { useLeaveSettings } from '../use-leave-settings';
 
 /**
  * The pinned title row, held by the ScrollView's `stickyHeaderIndices` rather than by a
@@ -10,7 +10,7 @@ import { IconButton } from '@/shared/ui';
  * because the rows pass underneath. The close button is the only way out of the modal.
  */
 export function SettingsHeader() {
-  const router = useRouter();
+  const leaveSettings = useLeaveSettings();
   // A full-screen modal covers the status bar, so the inset is ours to apply.
   const insets = useSafeAreaInsets();
 
@@ -24,7 +24,7 @@ export function SettingsHeader() {
       <IconButton
         accessibilityLabel="Close settings"
         icon={{ name: 'close', className: 'text-foreground-muted' }}
-        onPress={() => router.back()}
+        onPress={leaveSettings}
       />
     </View>
   );

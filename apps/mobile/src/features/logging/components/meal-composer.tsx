@@ -84,7 +84,7 @@ export function MealComposer({ initialEntries, status = 'idle' }: MealComposerPr
   return (
     <ScrollView
       className="flex-1"
-      contentContainerClassName="gap-6 px-5 pb-6 pt-2"
+      contentContainerClassName="gap-6 px-5 pb-6 pt-5"
       keyboardShouldPersistTaps="handled"
     >
       {entries.map((entry, index) => (

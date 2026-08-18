@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { authClient } from '@/shared/lib';
 import { EMPTY_TOTALS } from '../constants';
 import type { ComposerState } from '../types';
 import { ComposerToolbar } from '../components/composer-toolbar';
@@ -15,20 +16,20 @@ export interface TodayScreenProps {
 
 /** Placeholder figures until the data layer exists. */
 const MOCK = {
-  idle: { streak: 0, totals: EMPTY_TOTALS },
-  composing: { streak: 1, totals: EMPTY_TOTALS, draft: ['small hamburger'] },
+  idle: { totals: EMPTY_TOTALS },
+  composing: { totals: EMPTY_TOTALS, draft: ['small hamburger'] },
 } as const;
 
 export function TodayScreen({ state = 'idle' }: TodayScreenProps) {
   const insets = useSafeAreaInsets();
   const isComposing = state === 'composing';
 
+  // Cached, so the header greets by name on the first frame.
+  const { data: session } = authClient.useSession();
+
   return (
     <View className="flex-1 bg-background" style={{ paddingTop: insets.top }}>
-      <LogHeader
-        dateLabel="Today"
-        streak={isComposing ? MOCK.composing.streak : MOCK.idle.streak}
-      />
+      <LogHeader name={session?.user.name} memberSince={session?.user.createdAt} />
 
       <MealComposer
         initialEntries={isComposing ? MOCK.composing.draft : undefined}

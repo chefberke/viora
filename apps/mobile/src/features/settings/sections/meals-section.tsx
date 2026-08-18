@@ -3,22 +3,23 @@ import { useState } from 'react';
 import { SettingsRow } from '../components/settings-row';
 import { SettingsSection } from '../components/settings-section';
 
-/** Static. The switch keeps local state only. */
-export function PreferencesSection() {
+/** Static: the saved list and the summariser both wait on the data layer. */
+export function MealsSection() {
   const [summarize, setSummarize] = useState(false);
 
   return (
-    <SettingsSection title="Preferences">
+    <SettingsSection title="Meals">
       <SettingsRow
-        icon="stats-chart"
-        iconClassName="text-accent"
-        title="Customize Goal Bar"
+        icon="bookmark"
+        iconClassName="text-warning"
+        title="Saved Meals"
+        subtitle="0 saved"
         accessory="chevron"
         onPress={() => {}}
       />
       <SettingsRow
         icon="sparkles"
-        iconClassName="text-warning"
+        iconClassName="text-brand"
         title="Summarize Food Text"
         subtitle="What is this?"
         accessory="switch"

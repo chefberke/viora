@@ -7,5 +7,6 @@ export type { IconButtonProps } from './icon-button';
 export { LoadingScreen } from './loading-screen';
 export type { LoadingScreenProps } from './loading-screen';
 export { Pill } from './pill';
+export type { PillProps } from './pill';
 export { TextField } from './text-field';
 export type { TextFieldProps } from './text-field';

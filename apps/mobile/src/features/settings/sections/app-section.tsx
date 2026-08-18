@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { ActionSheetIOS, Alert, Platform } from 'react-native';
 
+import { useTimeZone } from '@/shared/time';
 import { useTheme, type ThemePreference } from '@/theme';
 import { SettingsRow } from '../components/settings-row';
 import { SettingsSection } from '../components/settings-section';
@@ -12,12 +12,13 @@ const CHOICES: ReadonlyArray<{ value: ThemePreference; label: string }> = [
 ];
 
 /**
- * Only the Appearance row is live. Its chooser is the platform's own: the screen is
- * already a modal, and a custom sheet on top of it would be one too many.
+ * How the app itself behaves: one setting to make, and one value it only reports. The
+ * Appearance chooser is the platform's own — the screen is already a modal, and a custom
+ * sheet on top of it would be one too many.
  */
-export function DeviceSection() {
+export function AppSection() {
   const { preference, setPreference } = useTheme();
-  const [automaticTimeZone, setAutomaticTimeZone] = useState(true);
+  const timeZone = useTimeZone();
 
   const current = CHOICES.find((choice) => choice.value === preference) ?? CHOICES[0]!;
 
@@ -52,7 +53,7 @@ export function DeviceSection() {
   };
 
   return (
-    <SettingsSection title="Device Settings">
+    <SettingsSection title="App">
       <SettingsRow
         icon="contrast"
         iconClassName="text-brand"
@@ -61,23 +62,9 @@ export function DeviceSection() {
         accessory="caret"
         onPress={pickAppearance}
       />
-      <SettingsRow
-        icon="globe"
-        iconClassName="text-brand"
-        title="Automatic Time Zone"
-        value="Europe/Istanbul"
-        accessory="switch"
-        switchValue={automaticTimeZone}
-        onSwitchChange={setAutomaticTimeZone}
-      />
-      <SettingsRow
-        icon="mic"
-        iconClassName="text-accent"
-        title="Dictation Language"
-        value="Auto-detect"
-        accessory="caret"
-        onPress={() => {}}
-      />
+
+      {/* Read, not set: the device already answers this, so the row only reports it. */}
+      <SettingsRow icon="globe" iconClassName="text-accent" title="Time Zone" value={timeZone} />
     </SettingsSection>
   );
 }

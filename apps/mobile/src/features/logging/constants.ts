@@ -1,4 +1,5 @@
-import type { MacroKey, MacroTotals } from './types';
+import type { IoniconName } from '@/shared/ui';
+import type { MacroKey, MacroTotals, TimeOfDay } from './types';
 
 /** Order and presentation of the macros in the summary bar. */
 export const MACROS: ReadonlyArray<{
@@ -21,4 +22,21 @@ export const EMPTY_TOTALS: MacroTotals = {
   carbs: 0,
   protein: 0,
   fat: 0,
+};
+
+/**
+ * How each part of the day greets, and the glyph that repeats it. The colours are the
+ * composer action tokens: warm for daylight, the blue of the mic for the evening.
+ */
+export const GREETINGS: Record<
+  TimeOfDay,
+  { salutation: string; icon: IoniconName; colorClassName: string }
+> = {
+  morning: { salutation: 'Good morning', icon: 'sunny', colorClassName: 'text-action-add' },
+  afternoon: {
+    salutation: 'Good afternoon',
+    icon: 'partly-sunny',
+    colorClassName: 'text-warning',
+  },
+  evening: { salutation: 'Good evening', icon: 'moon', colorClassName: 'text-accent' },
 };

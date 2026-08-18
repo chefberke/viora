@@ -7,7 +7,10 @@ export interface AccountActionsSectionProps {
   onSignOut: () => void;
 }
 
-/** Both rows are live. */
+/**
+ * Both rows are live. Signing out is ordinary and reads that way; deleting is the last
+ * row on the screen, alone in red, because it is the one that cannot be undone.
+ */
 export function AccountActionsSection({
   disabled,
   onDeleteAccount,
@@ -16,6 +19,13 @@ export function AccountActionsSection({
   return (
     <SettingsSection>
       <SettingsRow
+        icon="log-out"
+        iconClassName="text-foreground-muted"
+        title="Sign Out"
+        disabled={disabled}
+        onPress={onSignOut}
+      />
+      <SettingsRow
         icon="person-remove"
         iconClassName="text-danger"
         title="Delete Account"
@@ -23,14 +33,6 @@ export function AccountActionsSection({
         accessory="chevron"
         disabled={disabled}
         onPress={onDeleteAccount}
-      />
-      <SettingsRow
-        icon="log-out"
-        iconClassName="text-danger"
-        title="Sign Out"
-        tone="danger"
-        disabled={disabled}
-        onPress={onSignOut}
       />
     </SettingsSection>
   );

@@ -13,3 +13,6 @@ export type ComposerStatus = 'idle' | 'reading';
 
 /** Which layout the screen renders. Static for now — see today-screen.tsx. */
 export type ComposerState = 'idle' | 'composing';
+
+/** Which part of the day the greeting speaks to. */
+export type TimeOfDay = 'morning' | 'afternoon' | 'evening';
