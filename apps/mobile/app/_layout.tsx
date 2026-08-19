@@ -1,5 +1,6 @@
 import '../global.css';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -8,11 +9,19 @@ import { authClient } from '@/shared/lib';
 import { LoadingScreen } from '@/shared/ui';
 import { ThemeProvider, useTheme } from '@/theme';
 
+// One transparent retry knocks out blips on a phone network; 30 s of staleness is fine
+// for data this screen itself keeps up to date after every parse.
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { retry: 1, staleTime: 30_000 } },
+});
+
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
-        <RootNavigator />
+        <QueryClientProvider client={queryClient}>
+          <RootNavigator />
+        </QueryClientProvider>
       </ThemeProvider>
     </SafeAreaProvider>
   );

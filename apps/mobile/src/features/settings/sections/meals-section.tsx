@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { SUMMARIZE_FOOD_TEXT_KEY, usePersistentFlag } from '@/shared/lib';
 
 import { SettingsRow } from '../components/settings-row';
 import { SettingsSection } from '../components/settings-section';
 
-/** Static: the saved list and the summariser both wait on the data layer. */
+/** The saved list still waits on its own data layer; the summariser switch is live. */
 export function MealsSection() {
-  const [summarize, setSummarize] = useState(false);
+  const [summarize, setSummarize] = usePersistentFlag(SUMMARIZE_FOOD_TEXT_KEY);
 
   return (
     <SettingsSection title="Meals">
@@ -21,7 +21,7 @@ export function MealsSection() {
         icon="sparkles"
         iconClassName="text-brand"
         title="Summarize Food Text"
-        subtitle="What is this?"
+        subtitle="Suggest cleaned-up wording for entries"
         accessory="switch"
         switchValue={summarize}
         onSwitchChange={setSummarize}

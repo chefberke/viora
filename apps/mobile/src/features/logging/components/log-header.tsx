@@ -8,6 +8,7 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import { Pill } from '@/shared/ui';
+import { PANEL_OVERHANG } from '../constants';
 import { DayGreeting } from './day-greeting';
 import { MonthCalendar } from './month-calendar';
 import { SettingsButton } from './settings-button';
@@ -22,6 +23,15 @@ export interface LogHeaderProps {
   name?: string;
   /** When the account was opened. It bounds how far back the calendar can be walked. */
   memberSince?: Date;
+  /** The day the log is showing, and the same day as a number for the calendar. */
+  date: Date;
+  selectedDay: number;
+  isToday: boolean;
+  /** How many days back the shown day sits. Zero on today. */
+  daysBack: number;
+  /** Days the user wrote something on; the only past days the calendar will open. */
+  loggedDays: readonly number[];
+  onSelectDay: (day: number) => void;
 }
 
 /**
@@ -40,7 +50,16 @@ export interface LogHeaderProps {
  * pressed. So the header grows with it and hands the same height straight back as a
  * negative margin: the screen below is covered, never moved.
  */
-export function LogHeader({ name, memberSince }: LogHeaderProps) {
+export function LogHeader({
+  name,
+  memberSince,
+  date,
+  selectedDay,
+  isToday,
+  daysBack,
+  loggedDays,
+  onSelectDay,
+}: LogHeaderProps) {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [calendarHeight, setCalendarHeight] = useState(0);
   const [gearWidth, setGearWidth] = useState(0);
@@ -72,7 +91,7 @@ export function LogHeader({ name, memberSince }: LogHeaderProps) {
           accessibilityLabel="Show the month"
           accessibilityState={{ expanded: isCalendarOpen }}
         >
-          <DayGreeting name={name} />
+          <DayGreeting name={name} date={date} isToday={isToday} daysBack={daysBack} />
         </Pill>
 
         <Pill
@@ -89,14 +108,29 @@ export function LogHeader({ name, memberSince }: LogHeaderProps) {
         aria-hidden={!isCalendarOpen}
       >
         {/* The padding is the gap to the pills plus the room the card's shadow needs; the
-            clip above cuts anything that reaches past it. */}
+            clip above cuts anything that reaches past it. The card reaches a few points
+            past the greeting on both sides, so it reads as a card and not as the pill
+            stretched downward. */}
         <View
-          className="px-5 pb-4"
-          style={{ paddingTop: GAP, marginRight: gearWidth + GAP }}
+          className="pb-4 pr-5"
+          style={{
+            paddingTop: GAP,
+            paddingLeft: 20 - PANEL_OVERHANG,
+            marginRight: gearWidth + GAP - PANEL_OVERHANG,
+          }}
           pointerEvents="box-none"
           onLayout={({ nativeEvent }) => setCalendarHeight(nativeEvent.layout.height)}
         >
-          <MonthCalendar memberSince={memberSince} />
+          <MonthCalendar
+            memberSince={memberSince}
+            selectedDay={selectedDay}
+            loggedDays={loggedDays}
+            onSelectDay={(day) => {
+              onSelectDay(day);
+              // The day is chosen; the month has said all it had to say.
+              setIsCalendarOpen(false);
+            }}
+          />
         </View>
       </Animated.View>
     </Animated.View>

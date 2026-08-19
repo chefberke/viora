@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Keyboard, View } from 'react-native';
 
 import { IconButton, Pill } from '@/shared/ui';
 import { CalorieStat } from './calorie-stat';
@@ -26,6 +26,7 @@ export function ComposerToolbar({ calories }: { calories: number }) {
       <IconButton
         icon={{ family: 'material', name: 'keyboard-hide', className: 'text-foreground-muted' }}
         accessibilityLabel="Hide the keyboard"
+        onPress={() => Keyboard.dismiss()}
       />
     </View>
   );

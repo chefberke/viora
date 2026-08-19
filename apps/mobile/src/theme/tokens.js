@@ -29,6 +29,8 @@ const colors = {
     warning: '245 158 11', // #F59E0B
     accent: '0 122 255', // #007AFF
     success: '22 163 74', // #16A34A
+    /* Hydration. Its own token: water is not a link, so it must not borrow `accent`. */
+    water: '2 132 199', // #0284C7
 
     /* Macro accents, darkened so they stay readable on white. */
     'macro-carbs': '225 29 72', // #E11D48
@@ -63,6 +65,7 @@ const colors = {
     warning: '255 159 10', // #FF9F0A
     accent: '10 132 255', // #0A84FF
     success: '48 209 88', // #30D158
+    water: '56 189 248', // #38BDF8
 
     /* Macro accents */
     'macro-carbs': '255 77 109', // #FF4D6D

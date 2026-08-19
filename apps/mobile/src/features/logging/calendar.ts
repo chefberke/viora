@@ -24,6 +24,28 @@ export function toDayNumber(date: Date): number {
   return date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDate();
 }
 
+/** The day number read back as a date at midnight, the inverse of `toDayNumber`. */
+export function fromDayNumber(day: number): Date {
+  return new Date(Math.floor(day / 10000), (Math.floor(day / 100) % 100) - 1, day % 100);
+}
+
+/**
+ * A day number carried on a route, read back. Anything that is not one — a missing
+ * parameter, a stray string — comes back undefined, and the screen falls back to today.
+ */
+export function toDayParam(value: string | undefined): number | undefined {
+  const day = Number(value);
+
+  return value !== undefined && Number.isInteger(day) && day > 0 ? day : undefined;
+}
+
+/** How many whole days lie between two day numbers. Negative when `day` is the older one. */
+export function daysBetween(day: number, other: number): number {
+  const MS_PER_DAY = 24 * 60 * 60 * 1000;
+
+  return Math.round((fromDayNumber(day).getTime() - fromDayNumber(other).getTime()) / MS_PER_DAY);
+}
+
 /** "August 2026", in the same fixed locale as the greeting's date line. */
 export function formatMonthLabel(date: Date): string {
   return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });

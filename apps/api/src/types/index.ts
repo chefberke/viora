@@ -1,7 +1,27 @@
 export type {
+  DeleteEntryResponse,
   DeletionFeedbackResponse,
+  EntriesResponse,
   ErrorResponse,
   HealthResponse,
   HelloResponse,
+  LogEntryDto,
+  LoggedDaysResponse,
   MeResponse,
+  UpsertEntryRequest,
+  UpsertEntryResponse,
 } from './api.ts';
+export {
+  ENTRY_KINDS,
+  ENTRY_STATUSES,
+  isEntryKind,
+  isEntryStatus,
+  type ConfidenceLevel,
+  type EntryKind,
+  type EntryStatus,
+  type ItemSource,
+  type NutrientTotals,
+  type ParsedItem,
+  type ParseResult,
+  type ParseSource,
+} from './parse.ts';

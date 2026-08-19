@@ -1,3 +1,5 @@
+import { randomUUID } from 'expo-crypto';
+
 /**
  * The draft written in the composer. It is a list, not one block of text: every line is
  * an entry of its own, so what the user writes arrives as one meal per entry.
@@ -20,11 +22,10 @@ export interface SplitResult {
   focusCaret?: number;
 }
 
-let counter = 0;
-
 export function createEntry(text = ''): DraftEntry {
-  counter += 1;
-  return { id: `entry-${counter}`, text };
+  // A real UUID, because the row id doubles as the server entry id: the same id makes
+  // `PUT /api/entries/:id` idempotent across retries and edits.
+  return { id: randomUUID(), text };
 }
 
 /** Blank is anything with no writing in it: empty, a space, a tab. */

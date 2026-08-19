@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 import { toZonedDate, useTimeZone } from '@/shared/time';
@@ -9,6 +9,7 @@ import {
   addMonths,
   buildMonthWeeks,
   formatMonthLabel,
+  fromDayNumber,
   startOfMonth,
   toDayNumber,
 } from '../calendar';
@@ -17,11 +18,17 @@ import { useToday } from '../use-today';
 export interface MonthCalendarProps {
   /** When the account was opened. Nothing was logged before it, so it closes the way back. */
   memberSince?: Date;
+  /** The day the log is showing. */
+  selectedDay: number;
+  /** Days the user wrote something on. Only these and today can be opened. */
+  loggedDays: readonly number[];
+  onSelectDay: (day: number) => void;
 }
 
 /**
- * One month at a time, walked with the two arrows. The run of logged days will be drawn
- * onto these same cells once the data layer exists; for now only today is marked.
+ * One month at a time, walked with the two arrows, and the way to jump to a day rather
+ * than step to it. A day is only open if it holds a log, or if it is today; the rest are
+ * dimmed and take no press, because there is nothing on them to show.
  *
  * The walk is held between the month the account was opened and this month, because
  * neither side can ever hold a log. An account younger than a month leaves a single month
@@ -30,7 +37,12 @@ export interface MonthCalendarProps {
  * Not a `Pill`: a grid inside a stadium shape loses its corner cells. It takes the corners
  * and the lift of the pills above it instead, so the header reads as one set.
  */
-export function MonthCalendar({ memberSince }: MonthCalendarProps) {
+export function MonthCalendar({
+  memberSince,
+  selectedDay,
+  loggedDays,
+  onSelectDay,
+}: MonthCalendarProps) {
   const { shadow } = useTheme();
   const timeZone = useTimeZone();
   const today = useToday();
@@ -44,14 +56,21 @@ export function MonthCalendar({ memberSince }: MonthCalendarProps) {
   const firstMonth =
     joined && joined.getTime() < today.getTime() ? startOfMonth(joined) : currentMonth;
 
-  const [visibleMonth, setVisibleMonth] = useState(currentMonth);
+  const [visibleMonth, setVisibleMonth] = useState(() => startOfMonth(fromDayNumber(selectedDay)));
+
+  // Stepping between days from the screen moves the month under them, so opening the
+  // calendar always shows the day that is on screen.
+  const selectedMonth = startOfMonth(fromDayNumber(selectedDay)).getTime();
+
+  useEffect(() => {
+    setVisibleMonth(new Date(selectedMonth));
+  }, [selectedMonth]);
+
+  const logged = useMemo(() => new Set(loggedDays), [loggedDays]);
 
   const canGoBack = visibleMonth.getTime() > firstMonth.getTime();
   const canGoForward = visibleMonth.getTime() < currentMonth.getTime();
 
-  // No join date yet, on the frame before the session resolves: dim nothing rather than
-  // dimming the whole month.
-  const firstDay = joined ? toDayNumber(joined) : 0;
   const todayDay = toDayNumber(today);
   const weeks = buildMonthWeeks(visibleMonth);
   const year = visibleMonth.getFullYear();
@@ -90,54 +109,102 @@ export function MonthCalendar({ memberSince }: MonthCalendarProps) {
         ))}
       </View>
 
-      {weeks.map((week, weekIndex) => (
-        // The grid is fixed for the month, so the row and cell positions are the keys.
-        <View key={weekIndex} className="mt-0.5 flex-row">
-          {week.map((day, dayIndex) => {
-            const value = day === null ? 0 : toDayNumber(new Date(year, month, day));
+      {weeks.map((week, weekIndex) => {
+        const isLogged = (dayIndex: number) => {
+          const day = week[dayIndex];
 
-            return (
-              <View key={dayIndex} className="flex-1 items-center">
-                {day === null ? null : (
-                  <DayCell
-                    day={day}
-                    isToday={value === todayDay}
-                    isOutside={value < firstDay || value > todayDay}
-                  />
-                )}
-              </View>
-            );
-          })}
-        </View>
-      ))}
+          return (
+            day !== null &&
+            day !== undefined &&
+            logged.has(toDayNumber(new Date(year, month, day)))
+          );
+        };
+
+        return (
+          // The grid is fixed for the month, so the row and cell positions are the keys.
+          <View key={weekIndex} className="mt-0.5 flex-row">
+            {week.map((day, dayIndex) => {
+              const value = day === null ? 0 : toDayNumber(new Date(year, month, day));
+              const hasLog = isLogged(dayIndex);
+
+              // Two logged days side by side are one run, so the tint reaches across the
+              // gap between them and the discs read as a single band. A run that meets the
+              // end of the row stops there: the next day is on the line below.
+              const joinsLeft = hasLog && isLogged(dayIndex - 1);
+              const joinsRight = hasLog && isLogged(dayIndex + 1);
+
+              return (
+                <View key={dayIndex} className="h-8 flex-1 items-center">
+                  {joinsLeft ? (
+                    <View className="absolute left-0 top-0 h-8 w-1/2 bg-brand/15" />
+                  ) : null}
+                  {joinsRight ? (
+                    <View className="absolute right-0 top-0 h-8 w-1/2 bg-brand/15" />
+                  ) : null}
+
+                  {day === null ? null : (
+                    <DayCell
+                      day={day}
+                      isSelected={value === selectedDay}
+                      isToday={value === todayDay}
+                      isLogged={hasLog}
+                      onPress={() => onSelectDay(value)}
+                    />
+                  )}
+                </View>
+              );
+            })}
+          </View>
+        );
+      })}
     </View>
   );
 }
 
-/** Today wears the brand disc. A day with no log to hold is dimmed rather than hidden. */
+/**
+ * Three things are said on one disc. A day that was logged is tinted, so a run of them
+ * reads as a streak and the days that were let go stay plain — that is the whole point of
+ * the month. The day being read wears the full brand disc, and today wears a ring when it
+ * is not the day being read, so the two are never confused.
+ *
+ * A day with nothing on it takes no press, because there would be nothing to show.
+ */
 function DayCell({
   day,
+  isSelected,
   isToday,
-  isOutside,
+  isLogged,
+  onPress,
 }: {
   day: number;
+  isSelected: boolean;
   isToday: boolean;
-  isOutside: boolean;
+  isLogged: boolean;
+  onPress: () => void;
 }) {
+  const isOpen = isLogged || isToday;
+  const fill = isSelected ? 'bg-brand' : isLogged ? 'bg-brand/15' : '';
+  const ring = isToday && !isSelected ? 'border border-brand' : '';
+
   return (
-    <View
-      className={`h-8 w-8 items-center justify-center rounded-full ${isToday ? 'bg-brand' : ''}`}
+    <Pressable
+      disabled={!isOpen}
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={isLogged ? `${day}, logged` : `${day}`}
+      accessibilityState={{ disabled: !isOpen, selected: isSelected }}
+      className={`h-8 w-8 items-center justify-center rounded-full ${fill} ${ring}`}
     >
       <Text
         className={
-          isToday
+          isSelected
             ? 'text-[13px] font-semibold text-brand-foreground'
-            : `text-[13px] ${isOutside ? 'text-foreground-subtle' : 'text-foreground'}`
+            : `text-[13px] ${isOpen ? 'font-medium text-foreground' : 'text-foreground-subtle'}`
         }
       >
         {day}
       </Text>
-    </View>
+    </Pressable>
   );
 }
 

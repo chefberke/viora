@@ -22,6 +22,20 @@
       "when": 1787072237802,
       "tag": "0002_youthful_aqueduct",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1787080999484,
+      "tag": "0003_living_leper_queen",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1787171624314,
+      "tag": "0004_strong_sinister_six",
+      "breakpoints": true
     }
   ]
 }

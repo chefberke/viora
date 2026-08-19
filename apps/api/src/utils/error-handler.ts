@@ -1,7 +1,8 @@
 import type { NextFunction, Request, Response } from 'express';
 
 import { isProduction } from '../config/index.ts';
-import { HttpError } from './http-error.ts';
+import { isHttpError } from './http-error.ts';
+import { describeError, logError } from './logger.ts';
 import type { ErrorResponse } from '../types/index.ts';
 
 /**
@@ -11,7 +12,7 @@ import type { ErrorResponse } from '../types/index.ts';
  */
 export function errorHandler(
   error: unknown,
-  _req: Request,
+  req: Request,
   res: Response<ErrorResponse>,
   next: NextFunction,
 ): void {
@@ -20,11 +21,11 @@ export function errorHandler(
     return;
   }
 
-  if (error instanceof HttpError) {
+  if (isHttpError(error)) {
     res.status(error.status).json({ error: error.message });
     return;
   }
 
-  console.error('[api] unhandled error', error);
-  res.status(500).json({ error: isProduction ? 'internal_error' : String(error) });
+  logError('unhandled_error', error, { requestId: req.requestId });
+  res.status(500).json({ error: isProduction ? 'internal_error' : describeError(error).message });
 }

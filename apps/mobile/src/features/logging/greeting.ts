@@ -41,6 +41,14 @@ export function formatGreeting(timeOfDay: TimeOfDay, name = ''): string {
 }
 
 /**
+ * How far back a day sits: "Yesterday", or "5 days ago". Only ever asked about a past day,
+ * because there is no way to reach one that has not happened.
+ */
+export function formatDaysAgo(daysBack: number): string {
+  return daysBack === 1 ? 'Yesterday' : `${daysBack} days ago`;
+}
+
+/**
  * "Tuesday, Aug 18". The locale is fixed to en-US because the copy around it is English:
  * following the device would put a Turkish date next to an English greeting.
  */

@@ -22,6 +22,26 @@ export default function AppLayout() {
           contentStyle: { backgroundColor: colors.background },
         }}
       />
+
+      {/* The detail sheets, native so drag-to-dismiss costs no gesture dependency. */}
+      <Stack.Screen
+        name="entry/[id]"
+        options={{
+          presentation: 'formSheet',
+          sheetAllowedDetents: [0.65, 0.95],
+          sheetGrabberVisible: true,
+          contentStyle: { backgroundColor: colors.background },
+        }}
+      />
+      <Stack.Screen
+        name="water"
+        options={{
+          presentation: 'formSheet',
+          sheetAllowedDetents: [0.8],
+          sheetGrabberVisible: true,
+          contentStyle: { backgroundColor: colors.background },
+        }}
+      />
     </Stack>
   );
 }
