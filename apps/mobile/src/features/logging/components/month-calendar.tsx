@@ -3,7 +3,6 @@ import { Pressable, Text, View } from 'react-native';
 
 import { toZonedDate, useTimeZone } from '@/shared/time';
 import { Icon, type IoniconName } from '@/shared/ui';
-import { useTheme } from '@/theme';
 import {
   WEEKDAY_LABELS,
   addMonths,
@@ -34,8 +33,8 @@ export interface MonthCalendarProps {
  * neither side can ever hold a log. An account younger than a month leaves a single month
  * to show, so both arrows are then closed.
  *
- * Not a `Pill`: a grid inside a stadium shape loses its corner cells. It takes the corners
- * and the lift of the pills above it instead, so the header reads as one set.
+ * It draws no surface of its own. It fills a sheet, and a sheet has nothing behind it, so
+ * a card here would be a card floating on nothing.
  */
 export function MonthCalendar({
   memberSince,
@@ -43,7 +42,6 @@ export function MonthCalendar({
   loggedDays,
   onSelectDay,
 }: MonthCalendarProps) {
-  const { shadow } = useTheme();
   const timeZone = useTimeZone();
   const today = useToday();
 
@@ -77,7 +75,7 @@ export function MonthCalendar({
   const month = visibleMonth.getMonth();
 
   return (
-    <View className="rounded-[28px] bg-surface px-4 pb-3 pt-3" style={shadow}>
+    <View className="pb-1">
       <View className="flex-row items-center justify-between">
         <MonthArrow
           icon="chevron-back"
@@ -98,7 +96,7 @@ export function MonthCalendar({
         />
       </View>
 
-      <View className="mt-2 flex-row">
+      <View className="mt-4 flex-row">
         {WEEKDAY_LABELS.map((label) => (
           <Text
             key={label}

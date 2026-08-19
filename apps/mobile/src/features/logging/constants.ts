@@ -41,14 +41,6 @@ export const MACROS: ReadonlyArray<{
   },
 ];
 
-/**
- * How far a panel reaches past the pill it opens out of, on each side. The month card and
- * the day card are both a handle with a card under it, and a card exactly as wide as its
- * handle reads as the handle stretched rather than as something that came out of it. A few
- * points of overhang is enough to say they are two things.
- */
-export const PANEL_OVERHANG = 8;
-
 /** Calories have no letter; the flame stands in for one. */
 export const CALORIE_GLYPH = '🔥';
 

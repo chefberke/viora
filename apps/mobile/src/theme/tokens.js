@@ -19,6 +19,10 @@ const colors = {
 
     /* Text */
     foreground: '17 17 19', // #111113
+    /* One step off the full black: headings and headline figures, which should lead the
+       row without shouting it. Still far enough from `foreground-muted` to read as a
+       heading beside the muted line under it. */
+    'foreground-soft': '63 63 70', // #3F3F46
     'foreground-muted': '110 110 118', // #6E6E76 — placeholder, status label
     'foreground-subtle': '168 168 176', // #A8A8B0 — dot separators
 
@@ -57,6 +61,7 @@ const colors = {
 
     /* Text */
     foreground: '250 250 250', // #FAFAFA
+    'foreground-soft': '201 201 206', // #C9C9CE
     'foreground-muted': '138 138 145', // #8A8A91
     'foreground-subtle': '90 90 98', // #5A5A62
 

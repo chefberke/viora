@@ -4,11 +4,11 @@ import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { authClient, SUMMARIZE_FOOD_TEXT_KEY, usePersistentFlag } from '@/shared/lib';
+import { useSelectedDayContext } from '../selected-day-context';
 import { useEntryParser } from '../use-entry-parser';
-import { useSelectedDay } from '../use-selected-day';
 import { ComposerToolbar } from '../components/composer-toolbar';
 import { DaySwipe } from '../components/day-swipe';
-import { DaySummary } from '../components/day-summary';
+import { DaySummaryBar } from '../components/day-summary-bar';
 import { LogHeader } from '../components/log-header';
 import { MealComposer } from '../components/meal-composer';
 import { MealRowsSkeleton } from '../components/meal-rows-skeleton';
@@ -21,7 +21,7 @@ export function TodayScreen() {
   // Cached, so the header greets by name on the first frame.
   const { data: session } = authClient.useSession();
 
-  const selected = useSelectedDay();
+  const selected = useSelectedDayContext();
   const parser = useEntryParser(selected.day);
   const [summarize] = usePersistentFlag(SUMMARIZE_FOOD_TEXT_KEY);
 
@@ -59,13 +59,9 @@ export function TodayScreen() {
     <View className="flex-1 bg-background" style={{ paddingTop: insets.top }}>
       <LogHeader
         name={session?.user.name}
-        memberSince={session?.user.createdAt}
         date={selected.date}
-        selectedDay={selected.day}
         isToday={selected.isToday}
         daysBack={selected.daysBack}
-        loggedDays={selected.loggedDays}
-        onSelectDay={selected.select}
       />
 
       {/* The word answers the pull to refresh, and nothing else. A day that is opened or
@@ -99,12 +95,19 @@ export function TodayScreen() {
         )}
       </DaySwipe>
 
-      {/* The bottom slot swaps: a summary when idle, the entry controls while composing. */}
+      {/* The bottom slot swaps: the day's numbers when idle, the entry controls while
+          composing. The pill opens the day in full, as a sheet like every other one. */}
       <View className="px-4" style={{ paddingBottom: insets.bottom + 8 }}>
         {isComposing ? (
           <ComposerToolbar calories={parser.totals.calories} />
         ) : (
-          <DaySummary totals={parser.totals} waterMl={parser.waterMl} />
+          <DaySummaryBar
+            calories={parser.totals.calories}
+            waterMl={parser.waterMl}
+            onPress={() =>
+              router.push({ pathname: '/summary', params: { day: String(selected.day) } })
+            }
+          />
         )}
       </View>
     </View>

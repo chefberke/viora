@@ -97,17 +97,23 @@ export function useSelectedDay(): UseSelectedDayResult {
     [loggedDays, todayDay],
   );
 
-  return {
-    day,
-    date: day === todayDay ? today : fromDayNumber(day),
-    today,
-    isToday: day === todayDay,
-    daysBack: daysBetween(todayDay, day),
-    loggedDays,
-    canGoBack: previousDay !== null,
-    canGoForward: nextDay !== null,
-    goBack,
-    goForward,
-    select,
-  };
+  // Held together rather than rebuilt every render: this result is handed to a context
+  // that the whole stack reads, and `useToday` hands it a new Date on every hour mark. An
+  // hour that turns over on the same day should re-render nothing.
+  return useMemo(
+    () => ({
+      day,
+      date: day === todayDay ? today : fromDayNumber(day),
+      today,
+      isToday: day === todayDay,
+      daysBack: daysBetween(todayDay, day),
+      loggedDays,
+      canGoBack: previousDay !== null,
+      canGoForward: nextDay !== null,
+      goBack,
+      goForward,
+      select,
+    }),
+    [day, today, todayDay, loggedDays, previousDay, nextDay, goBack, goForward, select],
+  );
 }
