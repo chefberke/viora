@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 
+import { AppLogo } from '@/shared/ui';
 import { DayGreeting } from './day-greeting';
 import { SettingsButton } from './settings-button';
 
@@ -38,8 +39,13 @@ export function LogHeader({ name, date, isToday, daysBack }: LogHeaderProps) {
         onPressDate={() => router.push('/calendar')}
       />
 
-      {/* Held to the greeting's own line, not to the top of the block, so the glyph reads
-          against the name rather than against the chip below it. */}
+      {/* The mark and the gear are both held to the greeting's own line, not to the top of
+          the block, so they read against the name rather than against the chip below it.
+          Out of the flow on either side, they leave the greeting on the screen's centre. */}
+      <View className="absolute left-5 top-3 h-[22px] justify-center">
+        <AppLogo size={22} />
+      </View>
+
       <View className="absolute right-5 top-3 h-[22px] justify-center">
         <SettingsButton />
       </View>

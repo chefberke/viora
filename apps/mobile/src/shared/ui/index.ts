@@ -1,3 +1,5 @@
+export { AppLogo } from './app-logo';
+export type { AppLogoProps } from './app-logo';
 export { Button } from './button';
 export type { ButtonProps, ButtonVariant } from './button';
 export { Icon } from './icon';

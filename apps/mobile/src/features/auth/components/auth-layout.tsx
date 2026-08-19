@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { AppLogo } from '@/shared/ui';
 import { BackButton } from './back-button';
 
 export interface AuthLayoutProps {
@@ -36,8 +37,10 @@ export function AuthLayout({
     >
       <View className="h-12 justify-center">{showBack ? <BackButton /> : null}</View>
 
-      {/* Reserved for the brand mark. Empty for now, but it positions the title. */}
-      <View className="h-40" />
+      {/* The brand mark. Its box also sets where the title starts. */}
+      <View className="h-40 justify-center">
+        <AppLogo />
+      </View>
 
       <Text className="text-[34px] font-bold leading-[40px] text-foreground">{title}</Text>
 
