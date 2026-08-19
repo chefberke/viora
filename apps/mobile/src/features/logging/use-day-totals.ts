@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { entriesDayKey, fetchEntriesByDay } from './api';
-import type { MacroTotals } from './types';
+import type { MacroTotals } from '@/shared/macros';
 
 export interface UseDayTotalsResult {
   totals: MacroTotals;

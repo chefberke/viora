@@ -4,6 +4,7 @@ import { ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useAuthActions, useSignInMethods, type DeleteAccountInput } from '@/features/auth';
+import { SavedMealsPanel } from '@/features/saved-meals';
 import { authClient } from '@/shared/lib';
 import { ChangePasswordForm } from '../components/change-password-form';
 import { DeleteAccountConfirm } from '../components/delete-account-confirm';
@@ -19,12 +20,15 @@ import { MealsSection } from '../sections/meals-section';
  * Deleting is two steps: the reason is asked while backing out is still free, and the
  * irreversible confirmation gets a screen of its own.
  */
-type SettingsView = 'menu' | 'password' | 'delete-reason' | 'delete-confirm';
+type SettingsView = 'menu' | 'password' | 'saved-meals' | 'delete-reason' | 'delete-confirm';
 
 /**
  * The contents of the settings modal, which `app/(app)/_layout.tsx` presents. Four cards:
- * who the account is, the meal settings, the app's own, and the two ways out of it. The
- * meal rows are placeholder UI; everything else is live.
+ * who the account is, the saved meals, the app's own settings, and the two ways out of it.
+ *
+ * Everything that is not the menu is a view swap rather than a route, because settings is
+ * already a full-screen modal and a second presentation on top of one is a shape this app
+ * does not use anywhere.
  */
 export function SettingsScreen() {
   const insets = useSafeAreaInsets();
@@ -94,6 +98,24 @@ export function SettingsScreen() {
     );
   }
 
+  if (view === 'saved-meals') {
+    return (
+      // Scrolling, unlike the password page: the list has no bound, so it has to be able to
+      // run past the screen. A full-screen modal covers the status bar, so the top inset is
+      // ours to apply.
+      <ScrollView
+        className="bg-background"
+        contentContainerStyle={{
+          paddingHorizontal: 20,
+          paddingTop: insets.top + 8,
+          paddingBottom: insets.bottom + 24,
+        }}
+      >
+        <SavedMealsPanel onBack={backToMenu} />
+      </ScrollView>
+    );
+  }
+
   if (view === 'password') {
     return (
       // A full-screen modal covers the status bar, so the top inset is ours to apply.
@@ -139,7 +161,7 @@ export function SettingsScreen() {
           }}
         />
 
-        <MealsSection />
+        <MealsSection onOpenSavedMeals={() => setView('saved-meals')} />
         <AppSection />
 
         <AccountActionsSection

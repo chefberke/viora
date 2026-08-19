@@ -62,7 +62,7 @@ export interface ParseSource {
 /** The full outcome of one parse, stored on the entry and rendered by the sheets. */
 export interface ParseResult {
   kind: EntryKind;
-  /** The input with spelling fixed — the "Summarize Food Text" suggestion. */
+  /** The input with spelling fixed. It is the key meal suggestions are grouped under. */
   normalizedText: string;
   /** The model's own account of how it read the line. */
   reasoning: string;

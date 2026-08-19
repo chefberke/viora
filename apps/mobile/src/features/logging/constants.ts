@@ -1,51 +1,6 @@
 import type { IoniconName } from '@/shared/ui';
-import type { MacroKey, MacroTotals, TimeOfDay } from './types';
-
-/** Order and presentation of the macros in the summary bar and the day panel. */
-export const MACROS: ReadonlyArray<{
-  key: MacroKey;
-  /** Single letter shown before the value. */
-  label: string;
-  /** Written out, for the places that have the room. */
-  name: string;
-  /** Tailwind text color class for that letter. */
-  colorClassName: string;
-  /** The same colour as a fill, for the share bars. */
-  fillClassName: string;
-  /** What a gram of it is worth. The Atwater factors, which is how the panel splits a day. */
-  kcalPerGram: number;
-}> = [
-  {
-    key: 'carbs',
-    label: 'C',
-    name: 'Carbs',
-    colorClassName: 'text-macro-carbs',
-    fillClassName: 'bg-macro-carbs',
-    kcalPerGram: 4,
-  },
-  {
-    key: 'protein',
-    label: 'P',
-    name: 'Protein',
-    colorClassName: 'text-macro-protein',
-    fillClassName: 'bg-macro-protein',
-    kcalPerGram: 4,
-  },
-  {
-    key: 'fat',
-    label: 'F',
-    name: 'Fat',
-    colorClassName: 'text-macro-fat',
-    fillClassName: 'bg-macro-fat',
-    kcalPerGram: 9,
-  },
-];
-
-/** Calories have no letter; the flame stands in for one. */
-export const CALORIE_GLYPH = '🔥';
-
-/** Water is written the same way everywhere it is shown. */
-export const WATER_GLYPH = '💧';
+import type { MacroTotals } from '@/shared/macros';
+import type { TimeOfDay } from './types';
 
 /**
  * The beat a row opens on, before it has a word for what it is doing. It is shown once, at

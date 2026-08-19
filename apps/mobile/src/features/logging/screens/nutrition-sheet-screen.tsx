@@ -3,12 +3,13 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'expo-router';
 
+import { BookmarkButton, useSavedMeals } from '@/features/saved-meals';
 import { IconButton } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { entriesDayKey, fetchEntriesByDay } from '../api';
-import type { ConfidenceLevel } from '../api-types';
+import type { ConfidenceLevel } from '@/shared/api-types';
 import { toDayNumber } from '../calendar';
-import { CALORIE_GLYPH, MACROS } from '../constants';
+import { CALORIE_GLYPH, MACROS } from '@/shared/macros';
 import { useToday } from '../use-today';
 import { NutritionItemRow } from '../components/nutrition-item-row';
 import { ProgressRing } from '../components/progress-ring';
@@ -60,15 +61,36 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
   const entry = data?.entries.find((item) => item.id === id);
   const result = entry?.result;
 
+  // Whether this line is bookmarked is read off the saved list rather than carried on the
+  // entry: the list is small and already cached, and a bookmark belongs to the wording, not
+  // to one particular row of one particular day.
+  const { find, toggle, isSaving } = useSavedMeals();
+  const saved = entry ? find(entry.rawText) : undefined;
+
   return (
     <ScrollView className="flex-1 bg-background" contentContainerClassName="gap-5 px-5 pb-10 pt-4">
       <View className="flex-row items-center justify-between">
         <Text className="text-xl font-semibold text-foreground">Nutrition Details</Text>
-        <IconButton
-          icon={{ name: 'close', className: 'text-foreground-muted' }}
-          accessibilityLabel="Close"
-          onPress={() => router.back()}
-        />
+
+        {/* Grouped, not spread: `justify-between` would push the two buttons to either end. */}
+        <View className="flex-row items-center gap-2">
+          {/* Nothing to save from an entry with no parse — the sheet has no figures to show
+              for it either, so the button keeps the same company as the body below. */}
+          {entry && result ? (
+            <BookmarkButton
+              isSaved={saved !== undefined}
+              disabled={isSaving}
+              onPress={() => {
+                void toggle({ text: entry.rawText, result, sourceEntryId: entry.id });
+              }}
+            />
+          ) : null}
+          <IconButton
+            icon={{ name: 'close', className: 'text-foreground-muted' }}
+            accessibilityLabel="Close"
+            onPress={() => router.back()}
+          />
+        </View>
       </View>
 
       {!entry || !result ? (

@@ -1,5 +1,6 @@
 export type {
   DeleteEntryResponse,
+  DeleteSavedMealResponse,
   DeletionFeedbackResponse,
   EntriesResponse,
   ErrorResponse,
@@ -8,6 +9,12 @@ export type {
   LogEntryDto,
   LoggedDaysResponse,
   MeResponse,
+  SavedMealDto,
+  SavedMealsResponse,
+  SaveMealRequest,
+  SaveMealResponse,
+  SuggestionDto,
+  SuggestionsResponse,
   UpsertEntryRequest,
   UpsertEntryResponse,
 } from './api.ts';

@@ -8,6 +8,8 @@ import { accountRouter } from './modules/account/account.routes.ts';
 import { authRouter } from './modules/auth/auth.routes.ts';
 import { entriesRouter } from './modules/entries/entries.routes.ts';
 import { healthRouter } from './modules/health/health.routes.ts';
+import { savedMealsRouter } from './modules/saved-meals/saved-meals.routes.ts';
+import { suggestionsRouter } from './modules/suggestions/suggestions.routes.ts';
 import { userRouter } from './modules/user/user.routes.ts';
 import { errorHandler, log, requestId } from './utils/index.ts';
 
@@ -25,6 +27,8 @@ app.use(healthRouter);
 app.use(userRouter);
 app.use(accountRouter);
 app.use(entriesRouter);
+app.use(savedMealsRouter);
+app.use(suggestionsRouter);
 
 app.use(errorHandler);
 

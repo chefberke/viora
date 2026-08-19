@@ -23,12 +23,14 @@ export interface UpsertEntryInput {
   rawText: string;
   day: number;
   revision: number;
+  minuteOfDay: number | null;
 }
 
 function toDto(row: typeof logEntries.$inferSelect): LogEntryDto {
   return {
     id: row.id,
     day: row.day,
+    minuteOfDay: row.minuteOfDay,
     rawText: row.rawText,
     revision: row.revision,
     status: row.status as LogEntryDto['status'],
@@ -43,7 +45,7 @@ function toDto(row: typeof logEntries.$inferSelect): LogEntryDto {
  * the trace row is written either way, so a failed parse is still measurable.
  */
 export async function upsertEntry(input: UpsertEntryInput): Promise<LogEntryDto> {
-  const { id, user, rawText, day, revision } = input;
+  const { id, user, rawText, day, revision, minuteOfDay } = input;
   const existing = await db.query.logEntries.findFirst({ where: eq(logEntries.id, id) });
 
   // Someone else's id: pretend it does not exist rather than confirm it does.
@@ -56,7 +58,9 @@ export async function upsertEntry(input: UpsertEntryInput): Promise<LogEntryDto>
       throw conflict('revision_conflict');
     }
 
-    // Idempotent replay: the same edit again returns the stored parse for free.
+    // Idempotent replay: the same edit again returns the stored parse for free. It returns
+    // before the write below, so a replay never fills in a minute the first write missed —
+    // which is correct, not an oversight: only the first write is allowed to set the time.
     if (
       revision === existing.revision &&
       existing.rawText === rawText &&
@@ -93,10 +97,16 @@ export async function upsertEntry(input: UpsertEntryInput): Promise<LogEntryDto>
   // Compare-and-set: a slow old parse arriving after a newer edit must not win.
   await db
     .insert(logEntries)
-    .values({ id, userId: user.id, ...values })
+    .values({ id, userId: user.id, minuteOfDay, ...values })
     .onConflictDoUpdate({
       target: logEntries.id,
-      set: values,
+      set: {
+        ...values,
+        // First write wins. Correcting a typo at 23:00 must not move a 09:00 breakfast to
+        // dinner, so an existing time is never overwritten — but a row that has none yet
+        // (an old row, or one whose first write carried no time) can still be given one.
+        minuteOfDay: sql`coalesce(${logEntries.minuteOfDay}, excluded.minute_of_day)`,
+      },
       setWhere: sql`${logEntries.revision} <= ${revision}`,
     });
 

@@ -8,15 +8,17 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut, useReducedMotion } from 'react-native-reanimated';
 
+import type { SuggestionDto } from '@/shared/api-types';
+import { ShimmerText } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { ROW_LINE_HEIGHT, ROW_TEXT_CLASS } from '../constants';
 import { createEntry, isBlank, splitEntry, withText, type DraftEntry } from '../draft';
 import type { RowState } from '../use-entry-parser';
 import { EntryResultLabel } from './entry-result-label';
+import { EntrySuggestion } from './entry-suggestion';
 import { NoFoodHint } from './no-food-hint';
-import { SummarizeSuggestion } from './summarize-suggestion';
 
 /** Where the caret goes once a row opens, closes or joins. It waits for the row to mount. */
 interface PendingFocus {
@@ -27,6 +29,9 @@ interface PendingFocus {
 
 /** A caret with nothing selected sits on one character; a selected range reads as -1. */
 const NO_CARET = -1;
+
+/** One pass of the shimmer over the accepted line. The same beat the suggestion arrived on. */
+const MORPH_SWEEP_MS = 520;
 
 /** How long the brand-coloured ghost of an accepted suggestion stays before fading. */
 const MORPH_MS = 700;
@@ -41,8 +46,8 @@ export interface MealComposerProps {
   /** A row with a result was tapped (via its calorie/water label). */
   onRowPress: (id: string) => void;
   onRetryRow: (id: string) => void;
-  /** The "Summarize Food Text" setting: offer the parser's cleaned-up wording. */
-  summarizeEnabled: boolean;
+  /** What to offer on an empty row, best first. Empty when there is nothing worth offering. */
+  suggestions: readonly SuggestionDto[];
   /** Pulling the rows down asks for the day again. */
   onRefresh: () => void;
 }
@@ -62,10 +67,11 @@ export function MealComposer({
   onRowsChanged,
   onRowPress,
   onRetryRow,
-  summarizeEnabled,
+  suggestions,
   onRefresh,
 }: MealComposerProps) {
   const { colors } = useTheme();
+  const reduceMotion = useReducedMotion();
 
   const [entries, setEntries] = useState<DraftEntry[]>(() =>
     initialEntries && initialEntries.length > 0 ? [...initialEntries] : [createEntry()],
@@ -74,7 +80,18 @@ export function MealComposer({
   // The id of a row whose text just morphed into its suggestion; drives the purple ghost.
   const [morphingId, setMorphingId] = useState<string | null>(null);
 
+  // Which row the caret is in. Only that row is offered suggestions, so an empty row further
+  // down the page does not sprout its own list.
+  //
+  // It is never cleared on blur. Blur runs before the suggestion's own press, so clearing it
+  // there would unmount the line under the finger and eat the tap — `keyboardShouldPersistTaps`
+  // keeps the touch alive, but not a node that has already gone. Focus moving to another row
+  // overwrites it, and a deleted row clears it, which covers every case that matters.
+  const [focusedId, setFocusedId] = useState<string | null>(null);
+
   const inputs = useRef(new Map<string, TextInput | null>());
+  // The timer holding the ghost of an accepted suggestion. A second tap takes over from it.
+  const morphTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // Where the caret sits. The return key reads it to know how much of the line moves down,
   // and backspace to tell a delete inside the line from one at its very start.
   const carets = useRef(new Map<string, number>());
@@ -84,6 +101,16 @@ export function MealComposer({
   useEffect(() => {
     onRowsChanged(entries);
   }, [entries, onRowsChanged]);
+
+  // The ghost does not outlive the screen.
+  useEffect(
+    () => () => {
+      if (morphTimer.current !== null) {
+        clearTimeout(morphTimer.current);
+      }
+    },
+    [],
+  );
 
   useEffect(() => {
     const pending = pendingFocus.current;
@@ -207,11 +234,23 @@ export function MealComposer({
     setEntries((prev) => [...prev, opened]);
   }
 
-  /** The tap on a suggestion: the row becomes the cleaned-up text, wearing brand purple. */
+  /**
+   * The tap on a suggestion: the row becomes that meal, and the ghost above it shimmers once
+   * as it hands the line over — the same pass the suggestion itself arrived on, so the two
+   * moments read as one thing finishing what it started.
+   */
   function handleAcceptSuggestion(id: string, suggestion: string) {
+    if (morphTimer.current !== null) {
+      clearTimeout(morphTimer.current);
+    }
+
     setEntries((prev) => withText(prev, id, suggestion));
     setMorphingId(id);
-    setTimeout(() => setMorphingId((current) => (current === id ? null : current)), MORPH_MS);
+
+    morphTimer.current = setTimeout(() => {
+      morphTimer.current = null;
+      setMorphingId((current) => (current === id ? null : current));
+    }, MORPH_MS);
   }
 
   /**
@@ -220,6 +259,7 @@ export function MealComposer({
    * what deletes it on the server too — see `removeRow` in ../use-entry-parser.ts.
    */
   function handleDeleteRow(id: string) {
+    setFocusedId((current) => (current === id ? null : current));
     setEntries((prev) => {
       const next = prev.filter((entry) => entry.id !== id);
 
@@ -236,21 +276,13 @@ export function MealComposer({
     return state?.phase === 'done' && !!state.result && state.result.items.length === 0;
   }
 
-  function suggestionFor(entry: DraftEntry): string | null {
-    if (!summarizeEnabled) {
-      return null;
-    }
-
-    const state = rowStates.get(entry.id);
-    const normalized = state?.result?.normalizedText;
-
-    if (state?.phase !== 'done' || !normalized) {
-      return null;
-    }
-
-    return normalized.trim().toLowerCase() === entry.text.trim().toLowerCase()
-      ? null
-      : normalized;
+  /**
+   * A row is offered suggestions only while it is the focused one and still empty. The first
+   * character types them away: a list sitting under a line being written competes with it
+   * instead of helping, and by then the person already knows what they are logging.
+   */
+  function showsSuggestions(entry: DraftEntry): boolean {
+    return focusedId === entry.id && entry.text === '' && suggestions.length > 0;
   }
 
   return (
@@ -275,9 +307,7 @@ export function MealComposer({
       }
     >
       {entries.map((entry, index) => {
-        // A line with no food in it has nothing to word better, so the two never share a row.
         const noFood = foundNoFood(entry);
-        const suggestion = noFood ? null : suggestionFor(entry);
         const prompt = index === 0 ? 'Start logging your meals...' : 'Add another meal...';
 
         return (
@@ -309,6 +339,7 @@ export function MealComposer({
                     }
                   }}
                   onSubmitEditing={() => handleSubmit(entry.id)}
+                  onFocus={() => setFocusedId(entry.id)}
                   onBlur={() => handleBlur(entry.id)}
                   // The prompt below stands in for `placeholder`, which can only wear the
                   // input's own type.
@@ -336,18 +367,28 @@ export function MealComposer({
                   </Text>
                 ) : null}
 
-                {/* The accepted suggestion's ghost: the same text in brand purple, fading
-                    into the ordinary row — the "mysterious" morph. */}
+                {/* The accepted suggestion's ghost: the same text in brand purple with one
+                    shimmer through it, fading into the ordinary row — the "mysterious" morph. */}
                 {morphingId === entry.id ? (
-                  <Animated.Text
+                  <Animated.View
                     pointerEvents="none"
                     entering={FadeIn.duration(120)}
                     exiting={FadeOut.duration(500)}
-                    className={`${ROW_TEXT_CLASS} text-brand`}
                     style={StyleSheet.absoluteFill}
                   >
-                    {entry.text}
-                  </Animated.Text>
+                    {reduceMotion ? (
+                      <Text className={`${ROW_TEXT_CLASS} text-brand`}>{entry.text}</Text>
+                    ) : (
+                      <ShimmerText
+                        text={entry.text}
+                        base={colors.brand}
+                        highlight={colors['brand-soft']}
+                        textClassName={ROW_TEXT_CLASS}
+                        sweepMs={MORPH_SWEEP_MS}
+                        passes={1}
+                      />
+                    )}
+                  </Animated.View>
                 ) : null}
               </View>
 
@@ -358,11 +399,10 @@ export function MealComposer({
               />
             </View>
 
-            {suggestion ? (
-              <SummarizeSuggestion
-                original={entry.text}
-                suggestion={suggestion}
-                onAccept={() => handleAcceptSuggestion(entry.id, suggestion)}
+            {showsSuggestions(entry) ? (
+              <EntrySuggestion
+                suggestions={suggestions}
+                onAccept={(text) => handleAcceptSuggestion(entry.id, text)}
               />
             ) : null}
 

@@ -1,6 +1,7 @@
 import { env } from '../../config/index.ts';
 import { cacheGet, cacheSet } from '../../lib/redis.ts';
 import { sha256 } from '../../utils/index.ts';
+import { normalizeInput } from './entries.text.ts';
 import type { LlmParse, UsdaMatch } from './entries.types.ts';
 import { PROMPT_FINGERPRINT, PROMPT_VERSION, USDA_KEY_VERSION } from './entries.versions.ts';
 
@@ -10,15 +11,6 @@ const USDA_MISS_TTL_SECONDS = 24 * 3600; // 1 day
 
 /** Stored under a USDA key that searched and found nothing, so misses are cached too. */
 const USDA_MISS = 'miss';
-
-/**
- * Lowercase, unicode-normalize, and collapse whitespace — nothing else. Digits, units
- * and punctuation all change the meaning of a food line ("2 eggs" is not "eggs"),
- * so they stay in the key.
- */
-export function normalizeInput(text: string): string {
-  return text.normalize('NFKC').toLowerCase().trim().replace(/\s+/g, ' ');
-}
 
 /** Prompt and model are part of the key: neither changing must serve a stale parse. */
 function parseKey(rawText: string): string {

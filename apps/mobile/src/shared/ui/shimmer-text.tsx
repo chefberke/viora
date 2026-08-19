@@ -40,6 +40,17 @@ export interface ShimmerTextProps {
   highlight: string;
   /** Size and weight of the text. Colour comes from `base`/`highlight`. */
   textClassName?: string;
+  /** How long one pass takes. The default suits a wait; a shorter one suits a flourish. */
+  sweepMs?: number;
+  /**
+   * How many times the band crosses the text. Left out, it crosses for as long as the
+   * component is mounted — which is what a wait of unknown length needs. A number instead
+   * makes the shimmer a moment rather than a state: the band leaves at the far edge and the
+   * letters are simply `base` from then on, so the settled look needs no second element.
+   */
+  passes?: number;
+  /** Called once the last pass has left the text. Never called while the band is looping. */
+  onSettled?: () => void;
 }
 
 /**
@@ -52,6 +63,9 @@ export function ShimmerText({
   base,
   highlight,
   textClassName = 'text-[15px] font-normal',
+  sweepMs = SWEEP_DURATION,
+  passes,
+  onSettled,
 }: ShimmerTextProps) {
   const progress = useRef(new Animated.Value(0)).current;
   // The band travels the real width of the text, which is only known after one layout.
@@ -62,20 +76,31 @@ export function ShimmerText({
   // 1 while a word is settled, 0 while it is out of the way.
   const swap = useRef(new Animated.Value(1)).current;
 
+  // Held in a ref so a fresh inline callback on every parent render cannot restart the sweep.
+  const settled = useRef(onSettled);
+  settled.current = onSettled;
+
   useEffect(() => {
     // On the UI thread, so the sweep does not stutter while JavaScript is busy.
     const loop = Animated.loop(
       Animated.timing(progress, {
         toValue: 1,
-        duration: SWEEP_DURATION,
+        duration: sweepMs,
         easing: Easing.linear,
         useNativeDriver: true,
       }),
+      passes === undefined ? undefined : { iterations: passes },
     );
 
-    loop.start();
+    // Only a counted sweep ever finishes, so this fires for those and never for the loop.
+    loop.start(({ finished }) => {
+      if (finished) {
+        settled.current?.();
+      }
+    });
+
     return () => loop.stop();
-  }, [progress]);
+  }, [passes, progress, sweepMs]);
 
   // A new word waits for the old one to leave: one line, so the width may change under it.
   useEffect(() => {

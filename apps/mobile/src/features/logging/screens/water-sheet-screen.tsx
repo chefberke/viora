@@ -6,9 +6,9 @@ import { useRouter } from 'expo-router';
 import { IconButton } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { entriesRangeKey, fetchEntriesRange } from '../api';
-import type { LogEntryDto } from '../api-types';
+import type { LogEntryDto } from '@/shared/api-types';
 import { fromDayNumber, toDayNumber, WEEKDAY_LABELS } from '../calendar';
-import { WATER_GLYPH } from '../constants';
+import { WATER_GLYPH } from '@/shared/macros';
 import { useToday } from '../use-today';
 import { ProgressRing } from '../components/progress-ring';
 

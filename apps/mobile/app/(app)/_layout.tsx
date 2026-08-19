@@ -37,6 +37,17 @@ export default function AppLayout() {
             contentStyle: { backgroundColor: colors.background },
           }}
         />
+        {/* Opened from inside the settings modal, which is the only sheet here that is. iOS
+            presents it over the modal the same way it presents the others over the log. */}
+        <Stack.Screen
+          name="saved-meal/[id]"
+          options={{
+            presentation: 'formSheet',
+            sheetAllowedDetents: [0.65, 0.95],
+            sheetGrabberVisible: true,
+            contentStyle: { backgroundColor: colors.background },
+          }}
+        />
         <Stack.Screen
           name="water"
           options={{

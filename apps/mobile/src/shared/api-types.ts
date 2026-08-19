@@ -1,6 +1,10 @@
 /**
  * Hand-mirrored from `apps/api/src/types/parse.ts` and `api.ts` — the two apps share no
  * package, so this file is the contract copy. Change the API types first, then this.
+ *
+ * It sits in `shared/` rather than inside a feature because two features speak to the same
+ * API: logging writes entries, saved-meals bookmarks their parses. Keeping the contract in
+ * one of them would have the other reaching through a feature barrel for a type.
  */
 
 export type EntryKind = 'food' | 'water';
@@ -53,6 +57,7 @@ export interface ParseResult {
 export interface LogEntryDto {
   id: string;
   day: number;
+  minuteOfDay: number | null;
   rawText: string;
   revision: number;
   status: EntryStatus;
@@ -65,6 +70,7 @@ export interface UpsertEntryRequest {
   rawText: string;
   day: number;
   revision: number;
+  minuteOfDay: number | null;
 }
 
 export interface UpsertEntryResponse {
@@ -80,5 +86,43 @@ export interface LoggedDaysResponse {
 }
 
 export interface DeleteEntryResponse {
+  deleted: true;
+}
+
+export interface SuggestionDto {
+  key: string;
+  text: string;
+  source: 'history' | 'bookmark' | 'both';
+  score: number;
+}
+
+export interface SuggestionsResponse {
+  suggestions: SuggestionDto[];
+}
+
+export interface SavedMealDto {
+  id: string;
+  text: string;
+  status: EntryStatus;
+  result: ParseResult | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SavedMealsResponse {
+  savedMeals: SavedMealDto[];
+}
+
+export interface SaveMealRequest {
+  text: string;
+  result?: ParseResult | null;
+  sourceEntryId?: string | null;
+}
+
+export interface SaveMealResponse {
+  savedMeal: SavedMealDto;
+}
+
+export interface DeleteSavedMealResponse {
   deleted: true;
 }

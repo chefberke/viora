@@ -49,6 +49,7 @@ const colors = {
     /* The brand purple. Primary actions only, so it keeps meaning "the way forward". */
     brand: '124 77 255', // #7C4DFF
     'brand-strong': '106 61 232', // #6A3DE8 — pressed
+    'brand-soft': '183 155 255', // #B79BFF — the crest of a shimmer through brand text
     'brand-foreground': '255 255 255', // #FFFFFF — text and icons on top of brand
   },
 
@@ -85,6 +86,7 @@ const colors = {
     /* Brand, lifted: a purple tuned for white is too close to the near-black page. */
     brand: '138 99 255', // #8A63FF
     'brand-strong': '120 82 240', // #7852F0
+    'brand-soft': '192 168 255', // #C0A8FF
     'brand-foreground': '255 255 255', // #FFFFFF
   },
 };

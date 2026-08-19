@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { IconButton } from '@/shared/ui';
 import { fromDayNumber, toDayNumber } from '../calendar';
-import { CALORIE_GLYPH, MACROS, WATER_GLYPH } from '../constants';
+import { CALORIE_GLYPH, MACROS, WATER_GLYPH } from '@/shared/macros';
 import { formatDateLabel } from '../greeting';
 import { useDayTotals } from '../use-day-totals';
 import { useToday } from '../use-today';

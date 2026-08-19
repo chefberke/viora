@@ -1,11 +1,15 @@
-import { SUMMARIZE_FOOD_TEXT_KEY, usePersistentFlag } from '@/shared/lib';
+import { useSavedMeals } from '@/features/saved-meals';
 
 import { SettingsRow } from '../components/settings-row';
 import { SettingsSection } from '../components/settings-section';
 
-/** The saved list still waits on its own data layer; the summariser switch is live. */
-export function MealsSection() {
-  const [summarize, setSummarize] = usePersistentFlag(SUMMARIZE_FOOD_TEXT_KEY);
+export interface MealsSectionProps {
+  onOpenSavedMeals: () => void;
+}
+
+/** One row, and it is live: the meals you bookmarked, with how many there are. */
+export function MealsSection({ onOpenSavedMeals }: MealsSectionProps) {
+  const { savedMeals, isLoaded } = useSavedMeals();
 
   return (
     <SettingsSection title="Meals">
@@ -13,18 +17,11 @@ export function MealsSection() {
         icon="bookmark"
         iconClassName="text-warning"
         title="Saved Meals"
-        subtitle="0 saved"
+        // Blank rather than "0 saved" until the list is in: a wrong count that corrects
+        // itself a moment later reads as a bug.
+        subtitle={isLoaded ? `${savedMeals.length} saved` : ' '}
         accessory="chevron"
-        onPress={() => {}}
-      />
-      <SettingsRow
-        icon="sparkles"
-        iconClassName="text-brand"
-        title="Summarize Food Text"
-        subtitle="Suggest cleaned-up wording for entries"
-        accessory="switch"
-        switchValue={summarize}
-        onSwitchChange={setSummarize}
+        onPress={onOpenSavedMeals}
       />
     </SettingsSection>
   );

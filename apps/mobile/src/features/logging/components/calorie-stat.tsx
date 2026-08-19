@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 
-import { CALORIE_GLYPH } from '../constants';
+import { CALORIE_GLYPH } from '@/shared/macros';
 
 export function CalorieStat({ value }: { value: number }) {
   return (

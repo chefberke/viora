@@ -26,6 +26,8 @@ export interface DeletionFeedbackResponse {
 export interface LogEntryDto {
   id: string;
   day: number;
+  /** Minutes past local midnight, or null when the entry carries no time of day. */
+  minuteOfDay: number | null;
   rawText: string;
   revision: number;
   status: EntryStatus;
@@ -39,6 +41,12 @@ export interface UpsertEntryRequest {
   rawText: string;
   day: number;
   revision: number;
+  /**
+   * Minutes past local midnight. The client sends it only when `day` is the device's today —
+   * logging onto a past day says nothing about when that food was eaten. Only the first write
+   * for an entry is kept, so editing a line at night cannot move a breakfast to dinner.
+   */
+  minuteOfDay: number | null;
 }
 
 export interface UpsertEntryResponse {
@@ -60,5 +68,60 @@ export interface LoggedDaysResponse {
 
 /** `DELETE /api/entries/:id` */
 export interface DeleteEntryResponse {
+  deleted: true;
+}
+
+/**
+ * `GET /api/suggestions?day=&minute=` — what to offer on an empty composer row, best first.
+ *
+ * Deliberately without a `ParseResult`: accepting a suggestion writes its text into the row
+ * and lets the ordinary parse pipeline run, which hits the parse and USDA caches and so costs
+ * next to nothing. Carrying a snapshot here would only add a way for it to go stale.
+ */
+export interface SuggestionDto {
+  /** The canonical key it was grouped under. The client uses it as the list key. */
+  key: string;
+  /** The line to write into the row. */
+  text: string;
+  source: 'history' | 'bookmark' | 'both';
+  score: number;
+}
+
+export interface SuggestionsResponse {
+  suggestions: SuggestionDto[];
+}
+
+export interface SavedMealDto {
+  id: string;
+  text: string;
+  status: EntryStatus;
+  result: ParseResult | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+/** `GET /api/saved-meals` */
+export interface SavedMealsResponse {
+  savedMeals: SavedMealDto[];
+}
+
+/**
+ * `PUT /api/saved-meals/:id`
+ *
+ * Bookmarking passes the entry's existing parse in `result`, so nothing is re-parsed. Editing
+ * the text leaves `result` out and the server parses the new line.
+ */
+export interface SaveMealRequest {
+  text: string;
+  result?: ParseResult | null;
+  sourceEntryId?: string | null;
+}
+
+export interface SaveMealResponse {
+  savedMeal: SavedMealDto;
+}
+
+/** `DELETE /api/saved-meals/:id` */
+export interface DeleteSavedMealResponse {
   deleted: true;
 }

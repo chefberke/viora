@@ -3,9 +3,10 @@ import { Keyboard, Platform, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { authClient, SUMMARIZE_FOOD_TEXT_KEY, usePersistentFlag } from '@/shared/lib';
+import { authClient } from '@/shared/lib';
 import { useSelectedDayContext } from '../selected-day-context';
 import { useEntryParser } from '../use-entry-parser';
+import { useSuggestions } from '../use-suggestions';
 import { ComposerToolbar } from '../components/composer-toolbar';
 import { DaySwipe } from '../components/day-swipe';
 import { DaySummaryBar } from '../components/day-summary-bar';
@@ -23,7 +24,7 @@ export function TodayScreen() {
 
   const selected = useSelectedDayContext();
   const parser = useEntryParser(selected.day);
-  const [summarize] = usePersistentFlag(SUMMARIZE_FOOD_TEXT_KEY);
+  const suggestions = useSuggestions(selected.day);
 
   // Composing is simply "the keyboard is up": the bottom slot swaps on it.
   const [isComposing, setIsComposing] = useState(false);
@@ -87,7 +88,7 @@ export function TodayScreen() {
             onRowsChanged={parser.onRowsChanged}
             onRowPress={handleRowPress}
             onRetryRow={parser.retryRow}
-            summarizeEnabled={summarize}
+            suggestions={suggestions}
             onRefresh={parser.refresh}
           />
         ) : (

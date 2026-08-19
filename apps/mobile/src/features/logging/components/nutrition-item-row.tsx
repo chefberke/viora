@@ -8,8 +8,8 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import { Icon } from '@/shared/ui';
-import type { ParsedItem } from '../api-types';
-import { MACROS } from '../constants';
+import type { ParsedItem } from '@/shared/api-types';
+import { MACROS } from '@/shared/macros';
 
 const ROW_TIMING = { duration: 220, easing: Easing.out(Easing.cubic) };
 

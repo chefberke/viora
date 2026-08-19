@@ -34,9 +34,10 @@ function Wave({ width, color }: { width: number; color: string }) {
 }
 
 /**
- * The mark a row wears when the parser has something to say about it: the spellcheck wave,
- * as wide as the words above it. Both things the parser can say — this wording could be
- * better, and there is no food in this at all — wear it, so they read as one family.
+ * The mark a row wears when the parser found no food in it: the spellcheck wave, as wide as
+ * the words above it. A wave says "this line is wrong", so it belongs to that one case only —
+ * the suggestions under an empty row deliberately do not wear it, because an empty row is not
+ * a mistake.
  *
  * The width comes from an invisible twin of the row's text rather than from the row: the
  * row is a `TextInput` and fills its column, so it would measure the column, not the words.

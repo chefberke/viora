@@ -1,6 +1,7 @@
 import { Pressable, Text } from 'react-native';
 
-import { ROW_TEXT_CLASS, WATER_GLYPH } from '../constants';
+import { WATER_GLYPH } from '@/shared/macros';
+import { ROW_TEXT_CLASS } from '../constants';
 import type { RowState } from '../use-entry-parser';
 import { ParsePhaseLabel } from './parse-phase-label';
 

@@ -4,10 +4,10 @@ import { useTheme } from '@/theme';
 import { WavyUnderline } from './wavy-underline';
 
 /**
- * What a row says once its parse has landed on nothing. It is built like the summarize
- * suggestion — the same wave under the words, the same line waiting below it — because to
- * the reader it is the same thing happening: the parser has read the line and has
- * something to say about it. Only what it says differs.
+ * What a row says once its parse has landed on nothing: the spellcheck wave under the words,
+ * and a line waiting below it. It is the only thing left wearing the wave — the suggestions
+ * on an empty row deliberately do not, because a wave means the line is wrong and an empty
+ * row is not.
  *
  * Writing the line again is done in place, so it is said rather than pressed; dropping the
  * line needs a press, and it is the only thing here that can be tapped.

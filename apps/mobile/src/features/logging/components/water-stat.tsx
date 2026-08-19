@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 
-import { WATER_GLYPH } from '../constants';
+import { WATER_GLYPH } from '@/shared/macros';
 
 /** Water on the summary bar, written the way the calories beside it are. */
 export function WaterStat({ value }: { value: number }) {

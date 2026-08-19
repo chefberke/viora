@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
+import { toZonedDate, useTimeZone } from '@/shared/time';
+import { toDayNumber } from './calendar';
 import {
   deleteEntry,
   entriesDayKey,
@@ -8,12 +10,15 @@ import {
   loggedDaysKey,
   upsertEntry,
 } from './api';
-import type { EntriesResponse, ParseResult } from './api-types';
+import type { EntriesResponse, ParseResult } from '@/shared/api-types';
 import type { DraftEntry } from './draft';
-import type { MacroTotals } from './types';
+import type { MacroTotals } from '@/shared/macros';
 
 /** How long a row rests before its text is sent to be parsed. */
 const DEBOUNCE_MS = 1000;
+
+/** Everything under this key is what to suggest; a write to the day makes all of it wrong. */
+const SUGGESTIONS_KEY_PREFIX = ['suggestions'] as const;
 
 /** The shortest time the pull-to-refresh bar stays up, so a fast fetch is still readable. */
 const MIN_REFRESH_MS = 550;
@@ -50,6 +55,7 @@ export interface UseEntryParserResult {
  */
 export function useEntryParser(day: number): UseEntryParserResult {
   const queryClient = useQueryClient();
+  const timeZone = useTimeZone();
   const query = useQuery({
     queryKey: entriesDayKey(day),
     queryFn: () => fetchEntriesByDay(day),
@@ -146,6 +152,28 @@ export function useEntryParser(day: number): UseEntryParserResult {
     }
   }, []);
 
+  /**
+   * When this row is being eaten, in minutes past local midnight — the signal suggestions
+   * learn a person's hours from.
+   *
+   * Read here rather than from `useToday`, which only re-renders on the hour and so would
+   * hand back a time up to an hour stale. Only today gets one: writing yesterday's dinner in
+   * at 23:00 says nothing about when that dinner was eaten, and the server keeps the first
+   * value anyway, so a wrong guess here would be permanent.
+   */
+  const minuteOfDayFor = useCallback(
+    (rowDay: number): number | null => {
+      const now = toZonedDate(new Date(), timeZone);
+
+      if (toDayNumber(now) !== rowDay) {
+        return null;
+      }
+
+      return now.getHours() * 60 + now.getMinutes();
+    },
+    [timeZone],
+  );
+
   const send = useCallback(
     async (id: string, text: string) => {
       const revision = (revisions.current.get(id) ?? 0) + 1;
@@ -155,7 +183,12 @@ export function useEntryParser(day: number): UseEntryParserResult {
       setRow(id, { phase: statesRef.current.get(id)?.result ? 'calculating' : 'reading' });
 
       try {
-        const { entry } = await upsertEntry(id, { rawText: text, day, revision });
+        const { entry } = await upsertEntry(id, {
+          rawText: text,
+          day,
+          revision,
+          minuteOfDay: minuteOfDayFor(day),
+        });
 
         // A newer edit is already in flight (or pending): this result is history.
         if (revisions.current.get(id) !== revision) {
@@ -172,6 +205,9 @@ export function useEntryParser(day: number): UseEntryParserResult {
         // both are cheap to refresh and wrong to leave stale.
         void queryClient.invalidateQueries({ queryKey: ['entries-range'] });
         void queryClient.invalidateQueries({ queryKey: loggedDaysKey() });
+        // What is already on today's plate is what must not be suggested again, so the list
+        // is wrong the moment a row lands.
+        void queryClient.invalidateQueries({ queryKey: SUGGESTIONS_KEY_PREFIX });
       } catch (error) {
         if (revisions.current.get(id) !== revision) {
           return;
@@ -185,7 +221,7 @@ export function useEntryParser(day: number): UseEntryParserResult {
         setRow(id, { phase: 'error' });
       }
     },
-    [day, queryClient, setRow],
+    [day, minuteOfDayFor, queryClient, setRow],
   );
 
   const schedule = useCallback(
@@ -233,6 +269,7 @@ export function useEntryParser(day: number): UseEntryParserResult {
         }));
         void queryClient.invalidateQueries({ queryKey: ['entries-range'] });
         void queryClient.invalidateQueries({ queryKey: loggedDaysKey() });
+        void queryClient.invalidateQueries({ queryKey: SUGGESTIONS_KEY_PREFIX });
       }
 
       revisions.current.delete(id);
@@ -275,6 +312,7 @@ export function useEntryParser(day: number): UseEntryParserResult {
             }));
             void queryClient.invalidateQueries({ queryKey: ['entries-range'] });
             void queryClient.invalidateQueries({ queryKey: loggedDaysKey() });
+            void queryClient.invalidateQueries({ queryKey: SUGGESTIONS_KEY_PREFIX });
             dropRow(id);
           }
 
