@@ -7,7 +7,7 @@ import { BookmarkButton, useSavedMeals } from '@/features/saved-meals';
 import { IconButton } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { entriesDayKey, fetchEntriesByDay } from '../api';
-import type { ConfidenceLevel } from '@/shared/api-types';
+import type { ConfidenceLevel, ParseSource } from '@/shared/api-types';
 import { toDayNumber } from '../calendar';
 import { CALORIE_GLYPH, MACROS } from '@/shared/macros';
 import { useToday } from '../use-today';
@@ -25,6 +25,25 @@ const LEVEL_CLASS: Record<ConfidenceLevel, string> = {
   medium: 'text-warning',
   low: 'text-danger',
 };
+
+/**
+ * A `Record` rather than a chain of checks: the compiler then refuses to build once a
+ * third database is added and this list has not grown with it. Getting that wrong is how
+ * a real reference ends up labelled as a guess.
+ */
+const SOURCE_LABEL: Record<ParseSource['kind'], (source: ParseSource) => string> = {
+  usda: (source) =>
+    source.sourceId === null
+      ? 'USDA FoodData Central'
+      : `USDA FoodData Central #${source.sourceId}`,
+  off: (source) =>
+    source.sourceId === null ? 'Open Food Facts' : `Open Food Facts · ${source.sourceId}`,
+  llm: () => 'Language-model estimate',
+};
+
+function describeSource(source: ParseSource): string {
+  return SOURCE_LABEL[source.kind](source);
+}
 
 export interface NutritionSheetScreenProps {
   id: string;
@@ -174,13 +193,16 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
                   <View key={`${source.title}-${index}`} className="bg-surface px-5 py-4">
                     <Text className="text-base text-foreground">{source.title}</Text>
                     <Text className="text-xs text-foreground-muted">
-                      {source.kind === 'usda'
-                        ? `USDA FoodData Central #${source.fdcId}`
-                        : 'Language-model estimate'}
+                      {describeSource(source)}
                     </Text>
                   </View>
                 ))}
               </View>
+              {result.sources.some((source) => source.kind === 'off') ? (
+                <Text className="text-xs text-foreground-subtle">
+                  Product data from Open Food Facts, under the Open Database License (ODbL).
+                </Text>
+              ) : null}
             </View>
           ) : null}
         </>

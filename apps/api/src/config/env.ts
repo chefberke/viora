@@ -31,6 +31,17 @@ export const env = {
   LLM_MODEL: required('LLM_MODEL'),
 
   USDA_API_KEY: required('USDA_API_KEY'),
+
+  // Optional: Open Food Facts has no API key and no signup. `OFF_ENABLED=false` is the
+  // kill switch — the pipeline then runs on USDA alone, exactly as it did before.
+  OFF_ENABLED: (process.env.OFF_ENABLED ?? 'true') !== 'false',
+  OFF_BASE_URL: (process.env.OFF_BASE_URL ?? 'https://search.openfoodfacts.org').replace(
+    /\/+$/,
+    '',
+  ),
+  // Open Food Facts asks every caller to identify itself. An app name and version is what
+  // belongs here, optionally a project URL — never a personal email address.
+  OFF_USER_AGENT: process.env.OFF_USER_AGENT ?? 'Viora/1.0',
 } as const;
 
 export const isProduction = env.NODE_ENV === 'production';

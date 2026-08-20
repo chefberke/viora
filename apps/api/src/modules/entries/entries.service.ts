@@ -6,10 +6,11 @@ import { and, asc, eq, gte, lte, sql } from 'drizzle-orm';
 
 import { env } from '../../config/index.ts';
 import { db } from '../../db/index.ts';
-import { logEntries, parseTraces } from '../../db/app-schema.ts';
+import { logEntries, parseTraceLookups, parseTraces } from '../../db/app-schema.ts';
 import type { SessionUser } from '../../lib/auth.ts';
 import type { LogEntryDto } from '../../types/index.ts';
 import { conflict, notFound } from '../../utils/index.ts';
+import { normalizeStoredResult } from './entries.compat.ts';
 import { isPipelineError, toHttpError, type PipelineError } from './entries.errors.ts';
 import { parseRow } from './entries.pipeline.ts';
 import { PROMPT_VERSION } from './entries.versions.ts';
@@ -34,7 +35,7 @@ function toDto(row: typeof logEntries.$inferSelect): LogEntryDto {
     rawText: row.rawText,
     revision: row.revision,
     status: row.status as LogEntryDto['status'],
-    result: row.result ?? null,
+    result: normalizeStoredResult(row.result ?? null),
     createdAt: row.createdAt.toISOString(),
     updatedAt: row.updatedAt.toISOString(),
   };
@@ -116,26 +117,43 @@ export async function upsertEntry(input: UpsertEntryInput): Promise<LogEntryDto>
     throw notFound();
   }
 
-  await db.insert(parseTraces).values({
-    id: crypto.randomUUID(),
-    entryId: id,
-    userId: user.id,
-    requestId: input.requestId,
-    revision,
-    model: env.LLM_MODEL,
-    promptVersion: PROMPT_VERSION,
-    inputText: rawText,
-    llmCacheHit: outcome?.trace.llmCacheHit ? 1 : 0,
-    usdaLookups: outcome?.trace.usdaLookups ?? 0,
-    usdaCacheHits: outcome?.trace.usdaCacheHits ?? 0,
-    llmLatencyMs: outcome?.trace.llmLatencyMs ?? null,
-    usdaLatencyMs: outcome?.trace.usdaLatencyMs ?? null,
-    totalLatencyMs: outcome?.trace.totalLatencyMs ?? Math.round(performance.now() - startedAt),
-    promptTokens: outcome?.trace.promptTokens ?? null,
-    completionTokens: outcome?.trace.completionTokens ?? null,
-    source: outcome?.trace.source ?? null,
-    confidence: outcome?.trace.confidence ?? null,
-    errorCode: pipelineError?.code ?? null,
+  const traceId = crypto.randomUUID();
+
+  // The trace and its per-database rows are one record: a trace with no lookup rows
+  // would read as "no database was reached", which is reserved for a run that failed.
+  await db.transaction(async (tx) => {
+    await tx.insert(parseTraces).values({
+      id: traceId,
+      entryId: id,
+      userId: user.id,
+      requestId: input.requestId,
+      revision,
+      model: env.LLM_MODEL,
+      promptVersion: PROMPT_VERSION,
+      inputText: rawText,
+      llmCacheHit: outcome?.trace.llmCacheHit ? 1 : 0,
+      llmLatencyMs: outcome?.trace.llmLatencyMs ?? null,
+      totalLatencyMs: outcome?.trace.totalLatencyMs ?? Math.round(performance.now() - startedAt),
+      promptTokens: outcome?.trace.promptTokens ?? null,
+      completionTokens: outcome?.trace.completionTokens ?? null,
+      source: outcome?.trace.source ?? null,
+      confidence: outcome?.trace.confidence ?? null,
+      errorCode: pipelineError?.code ?? null,
+    });
+
+    // One row per food database the parse ran a wave for. A failed run leaves none.
+    if (outcome && outcome.trace.providers.length > 0) {
+      await tx.insert(parseTraceLookups).values(
+        outcome.trace.providers.map((provider) => ({
+          traceId,
+          provider: provider.provider,
+          lookups: provider.lookups,
+          cacheHits: provider.cacheHits,
+          skipped: provider.skipped,
+          latencyMs: provider.latencyMs,
+        })),
+      );
+    }
   });
 
   if (pipelineError) {

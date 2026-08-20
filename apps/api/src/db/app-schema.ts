@@ -1,4 +1,14 @@
-import { index, integer, jsonb, pgTable, real, text, timestamp, unique } from 'drizzle-orm/pg-core';
+import {
+  index,
+  integer,
+  jsonb,
+  pgTable,
+  primaryKey,
+  real,
+  text,
+  timestamp,
+  unique,
+} from 'drizzle-orm/pg-core';
 
 import type { ParseResult } from '../types/parse.ts';
 
@@ -90,22 +100,48 @@ export const parseTraces = pgTable('parse_traces', {
   model: text('model').notNull(),
   promptVersion: text('prompt_version').notNull(),
   inputText: text('input_text').notNull(),
-  /** 0 or 1, not a count like the fields below it. */
+  /** 0 or 1, not a count. What each food database did is in `parse_trace_lookups`. */
   llmCacheHit: integer('llm_cache_hit').notNull(),
-  usdaLookups: integer('usda_lookups').notNull(),
-  usdaCacheHits: integer('usda_cache_hits').notNull(),
   llmLatencyMs: integer('llm_latency_ms'),
-  usdaLatencyMs: integer('usda_latency_ms'),
   totalLatencyMs: integer('total_latency_ms').notNull(),
   promptTokens: integer('prompt_tokens'),
   completionTokens: integer('completion_tokens'),
-  /** 'usda' | 'llm_estimate' | 'mixed' | 'water', or null on failure. */
+  /** 'usda' | 'off' | 'llm_estimate' | 'mixed' | 'water', or null on failure. */
   source: text('source'),
   confidence: real('confidence'),
   /** A pipeline taxonomy code, set only when the run failed. */
   errorCode: text('error_code'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
+
+/**
+ * What one food database did for one parse. A child table rather than a column set per
+ * provider: a third database is then a new value in `provider`, not four more columns on
+ * a table that is already wide, and "how does each database compare" becomes one
+ * `group by provider` instead of a query that has to know every provider by name.
+ *
+ * A provider that was switched off for a parse has no row, which is the truthful
+ * reading: that parse never had it to ask.
+ */
+export const parseTraceLookups = pgTable(
+  'parse_trace_lookups',
+  {
+    traceId: text('trace_id')
+      .notNull()
+      .references(() => parseTraces.id, { onDelete: 'cascade' }),
+    /** A `FoodProvider`: 'usda' or 'off' today. Free text, so a new one needs no migration. */
+    provider: text('provider').notNull(),
+    /** Names this database was actually asked about, over the network. */
+    lookups: integer('lookups').notNull(),
+    /** Names answered from the cache instead. */
+    cacheHits: integer('cache_hits').notNull(),
+    /** Names never put to it at all: nothing to gain, or a spent rate budget. */
+    skipped: integer('skipped').notNull(),
+    /** This database's own wave, null when it made no call. The waves run side by side. */
+    latencyMs: integer('latency_ms'),
+  },
+  (table) => [primaryKey({ columns: [table.traceId, table.provider] })],
+);
 
 export const DELETION_REASONS = [
   'not_using',

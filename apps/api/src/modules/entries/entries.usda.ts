@@ -1,5 +1,6 @@
 import { env } from '../../config/index.ts';
-import type { Nutrition100g, UsdaMatch } from './entries.types.ts';
+import { foldTokens } from './entries.text.ts';
+import type { FoodMatch, Nutrition100g, SearchFood } from './entries.types.ts';
 
 const SEARCH_URL = 'https://api.nal.usda.gov/fdc/v1/foods/search';
 const REQUEST_TIMEOUT_MS = 5_000;
@@ -15,13 +16,6 @@ const MIN_OVERLAP = 0.5;
 
 /** Nutrient numbers in FDC search results: energy kcal, protein, fat, carbs. */
 const NUTRIENT_NUMBERS = { kcal: '208', protein: '203', fat: '204', carbs: '205' } as const;
-
-function tokenize(text: string): string[] {
-  return text
-    .toLowerCase()
-    .split(/[^a-z0-9]+/)
-    .filter((token) => token.length > 1);
-}
 
 function readNutrients(food: Record<string, unknown>): Nutrition100g | null {
   const list = Array.isArray(food.foodNutrients) ? food.foodNutrients : [];
@@ -56,15 +50,15 @@ function readNutrients(food: Record<string, unknown>): Nutrition100g | null {
   };
 }
 
-function pickBestMatch(query: string, foods: unknown[]): UsdaMatch | null {
-  const queryTokens = tokenize(query);
+function pickBestMatch(query: string, foods: unknown[]): FoodMatch | null {
+  const queryTokens = foldTokens(query);
 
   if (queryTokens.length === 0) {
     return null;
   }
 
-  let best: UsdaMatch | null = null;
-  let bestScore = -Infinity;
+  let best: FoodMatch | null = null;
+  let bestRank = -Infinity;
 
   for (const candidate of foods) {
     if (typeof candidate !== 'object' || candidate === null) {
@@ -80,7 +74,7 @@ function pickBestMatch(query: string, foods: unknown[]): UsdaMatch | null {
       continue;
     }
 
-    const descriptionTokens = tokenize(description);
+    const descriptionTokens = foldTokens(description);
     const matched = queryTokens.filter((token) => descriptionTokens.includes(token)).length;
     const overlap = matched / queryTokens.length;
 
@@ -96,11 +90,19 @@ function pickBestMatch(query: string, foods: unknown[]): UsdaMatch | null {
 
     // Long descriptions are specific preparations; prefer the short generic entry.
     const extraTokens = Math.max(0, descriptionTokens.length - matched);
-    const score = (DATA_TYPE_WEIGHT[dataType] ?? 0.5) * overlap - 0.1 * extraTokens;
+    const rank = (DATA_TYPE_WEIGHT[dataType] ?? 0.5) * overlap - 0.1 * extraTokens;
 
-    if (score > bestScore) {
-      bestScore = score;
-      best = { fdcId, description, dataType, per100g, matchScore: overlap };
+    if (rank > bestRank) {
+      bestRank = rank;
+      best = {
+        provider: 'usda',
+        id: String(fdcId),
+        description,
+        detail: dataType,
+        per100g,
+        matchScore: overlap,
+        rank,
+      };
     }
   }
 
@@ -112,10 +114,10 @@ function pickBestMatch(query: string, foods: unknown[]): UsdaMatch | null {
  * on any USDA outage — the pipeline treats both as "fall back to the flagged estimate",
  * so a third-party outage never fails a user's request.
  */
-export async function searchFood(name: string): Promise<UsdaMatch | null> {
+export const searchUsdaFood: SearchFood = async (query) => {
   const url =
     `${SEARCH_URL}?api_key=${encodeURIComponent(env.USDA_API_KEY)}` +
-    `&query=${encodeURIComponent(name)}` +
+    `&query=${encodeURIComponent(query)}` +
     `&dataType=${encodeURIComponent('Foundation,SR Legacy,Branded')}` +
     `&pageSize=10`;
 
@@ -128,11 +130,11 @@ export async function searchFood(name: string): Promise<UsdaMatch | null> {
       }
 
       const body = (await response.json()) as { foods?: unknown };
-      return pickBestMatch(name, Array.isArray(body.foods) ? body.foods : []);
+      return pickBestMatch(query, Array.isArray(body.foods) ? body.foods : []);
     } catch {
       // Timeout or network failure: one more try, then give up quietly.
     }
   }
 
   return null;
-}
+};

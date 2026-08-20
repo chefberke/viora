@@ -21,7 +21,7 @@ export function isEntryKind(value: unknown): value is EntryKind {
 }
 
 /** Where a parsed item's nutrition figures came from. */
-export type ItemSource = 'usda' | 'llm_estimate' | 'water';
+export type ItemSource = 'usda' | 'off' | 'llm_estimate' | 'water';
 
 export type ConfidenceLevel = 'high' | 'medium' | 'low';
 
@@ -39,8 +39,8 @@ export interface ParsedItem {
   carbs: number;
   fat: number;
   source: ItemSource;
-  /** USDA FoodData Central id when `source` is 'usda'. */
-  fdcId: number | null;
+  /** The matched row's id in its own database: an fdcId, or an Open Food Facts barcode. */
+  sourceId: string | null;
   matchedDescription: string | null;
   confidence: number;
 }
@@ -54,9 +54,10 @@ export interface NutrientTotals {
 }
 
 export interface ParseSource {
-  kind: 'usda' | 'llm';
+  kind: 'usda' | 'off' | 'llm';
   title: string;
-  fdcId: number | null;
+  /** The row's id in its own database. Null for the model's own estimate. */
+  sourceId: string | null;
 }
 
 /** The full outcome of one parse, stored on the entry and rendered by the sheets. */

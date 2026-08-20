@@ -36,9 +36,13 @@ function toItem(entry: unknown): LlmItem {
 
   const quantity = item.quantity;
   const estimatedGrams = item.estimated_grams;
+  const localName = typeof item.local_name === 'string' ? item.local_name.trim().toLowerCase() : '';
 
   return {
     name,
+    // A missing local name falls back to the English one. That is not a loss: an item
+    // whose two names agree is still looked up whenever the LINE was not English.
+    localName: localName === '' ? name : localName,
     quantity:
       typeof quantity === 'number' && Number.isFinite(quantity) && quantity > 0
         ? clamp(quantity, 0.01, 100)
@@ -87,6 +91,10 @@ export function validateLlmOutput(raw: string): LlmParse {
     normalizedText: typeof record.normalized_text === 'string' ? record.normalized_text.trim() : '',
     reasoning: typeof record.reasoning === 'string' ? record.reasoning.trim() : '',
     confidence: asConfidence(record.confidence),
+    // An empty string means the model gave no language, and the pipeline reads that as
+    // "not English" — the lookup then costs a little rate budget instead of silently
+    // dropping every local food. Guessing 'en' here would fail in the expensive direction.
+    language: typeof record.language === 'string' ? record.language.trim().toLowerCase().slice(0, 2) : '',
     items: record.items.slice(0, MAX_ITEMS).map(toItem),
   };
 }

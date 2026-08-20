@@ -7,17 +7,26 @@ export const LLM_ESTIMATE_CONFIDENCE_CAP = 0.45;
 /**
  * The model's self-report scaled by how well the database match fit. A perfect USDA
  * match keeps the self-report; a barely-accepted one takes a 30% haircut.
+ *
+ * Exhaustive on purpose, with no `default`: a source that fell through to a catch-all
+ * would silently be trusted more than a USDA match, not less. The compiler is the guard.
  */
 export function itemConfidence(llmSelf: number, source: ItemSource, matchScore: number): number {
-  if (source === 'usda') {
-    return round2(llmSelf * (0.7 + 0.3 * matchScore));
-  }
+  switch (source) {
+    case 'usda':
+      return round2(llmSelf * (0.7 + 0.3 * matchScore));
 
-  if (source === 'llm_estimate') {
-    return round2(Math.min(llmSelf, LLM_ESTIMATE_CONFIDENCE_CAP));
-  }
+    // Crowd-entered from photographed labels rather than measured, so the same match
+    // quality is worth a little less than USDA's.
+    case 'off':
+      return round2(llmSelf * (0.6 + 0.3 * matchScore));
 
-  return round2(llmSelf);
+    case 'llm_estimate':
+      return round2(Math.min(llmSelf, LLM_ESTIMATE_CONFIDENCE_CAP));
+
+    case 'water':
+      return round2(llmSelf);
+  }
 }
 
 /**

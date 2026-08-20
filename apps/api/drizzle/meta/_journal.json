@@ -43,6 +43,13 @@
       "when": 1787175168362,
       "tag": "0005_good_silvermane",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1787246850151,
+      "tag": "0006_tense_thor",
+      "breakpoints": true
     }
   ]
 }

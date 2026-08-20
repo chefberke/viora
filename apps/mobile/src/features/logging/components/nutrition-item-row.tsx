@@ -8,10 +8,31 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import { Icon } from '@/shared/ui';
-import type { ParsedItem } from '@/shared/api-types';
+import type { ItemSource, ParsedItem } from '@/shared/api-types';
 import { MACROS } from '@/shared/macros';
 
 const ROW_TIMING = { duration: 220, easing: Easing.out(Easing.cubic) };
+
+/**
+ * The database a row's numbers came from, short enough to sit under the food's name. Null
+ * where naming one would be wrong: a model estimate says so in its own words, and water
+ * has no figures to attribute. Exhaustive, so a third database cannot arrive unnamed.
+ */
+const SOURCE_NAME: Record<ItemSource, string | null> = {
+  usda: 'USDA',
+  off: 'Open Food Facts',
+  llm_estimate: null,
+  water: null,
+};
+
+/** What the row credits under the food's name, or null when there is nothing to credit. */
+function sourceLine(item: ParsedItem): string | null {
+  const database = SOURCE_NAME[item.source] ?? null;
+
+  return database === null || item.matchedDescription === null
+    ? null
+    : `${database} · ${item.matchedDescription}`;
+}
 
 /** How the portion is written: whichever measure the parse had for it. */
 function portionLabel(item: ParsedItem): string {
@@ -53,6 +74,8 @@ export function NutritionItemRow({ item, isOpen, onToggle }: NutritionItemRowPro
     transform: [{ rotate: `${progress.value * 180}deg` }],
   }));
 
+  const credit = sourceLine(item);
+
   return (
     <View className="bg-surface">
       <Pressable
@@ -69,6 +92,10 @@ export function NutritionItemRow({ item, isOpen, onToggle }: NutritionItemRowPro
           </Text>
           {item.source === 'llm_estimate' ? (
             <Text className="text-xs text-warning">estimate — no database match</Text>
+          ) : credit !== null ? (
+            <Text className="text-xs text-foreground-subtle" numberOfLines={1}>
+              {credit}
+            </Text>
           ) : null}
         </View>
 

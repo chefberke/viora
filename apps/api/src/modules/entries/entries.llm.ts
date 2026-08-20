@@ -5,7 +5,15 @@ import { FEW_SHOTS, SYSTEM_PROMPT } from './entries.prompt.ts';
 import type { LlmCallResult } from './entries.types.ts';
 
 const CHAT_COMPLETIONS_PATH = '/chat/completions';
-const REQUEST_TIMEOUT_MS = 20_000;
+/**
+ * Covers the whole call, headers and body together. A queued model answers its headers in
+ * under a second and then pads the connection with whitespace while it works, so this
+ * budget is really the body read. Measured on the free tier: about 11 s for a good answer,
+ * and 20 s was tight enough to abort answers that were still on their way.
+ *
+ * Three passes at this length is the worst case a failing parse can cost a request.
+ */
+const REQUEST_TIMEOUT_MS = 30_000;
 const RETRY_DELAY_MS = 500;
 
 interface ChatCompletion {
@@ -61,14 +69,25 @@ export async function callParseLlm(rawText: string): Promise<LlmCallResult> {
 
     if (response.ok) {
       const body = (await response.json().catch(() => null)) as ChatCompletion | null;
-      const content = body?.choices?.[0]?.message?.content;
+
+      // The headers arrive long before the body does: a queued model holds the connection
+      // open and pads it with whitespace, so the request timeout lands on the READ. That
+      // is a transport failure and takes the retry, not `llm_invalid_output` — the code
+      // for a model that answered with rubbish, which throws on the spot and never retries.
+      if (body === null) {
+        lastStatus = 0;
+        await delay(RETRY_DELAY_MS);
+        continue;
+      }
+
+      const content = body.choices?.[0]?.message?.content;
 
       if (typeof content !== 'string' || content === '') {
         throw pipelineError('llm_invalid_output');
       }
 
-      const promptTokens = body?.usage?.prompt_tokens;
-      const completionTokens = body?.usage?.completion_tokens;
+      const promptTokens = body.usage?.prompt_tokens;
+      const completionTokens = body.usage?.completion_tokens;
 
       return {
         raw: content,

@@ -11,6 +11,7 @@ import { db } from '../../db/index.ts';
 import { savedMeals } from '../../db/app-schema.ts';
 import type { SavedMealDto, SaveMealRequest } from '../../types/index.ts';
 import { notFound } from '../../utils/index.ts';
+import { normalizeStoredResult } from '../entries/entries.compat.ts';
 import { isPipelineError, toHttpError } from '../entries/entries.errors.ts';
 import { parseRow } from '../entries/entries.pipeline.ts';
 import { canonicalKey } from '../entries/entries.text.ts';
@@ -20,7 +21,7 @@ function toDto(row: typeof savedMeals.$inferSelect): SavedMealDto {
     id: row.id,
     text: row.text,
     status: row.status as SavedMealDto['status'],
-    result: row.result ?? null,
+    result: normalizeStoredResult(row.result ?? null),
     createdAt: row.createdAt.toISOString(),
     updatedAt: row.updatedAt.toISOString(),
   };
@@ -47,7 +48,9 @@ export async function saveMeal(
     throw notFound();
   }
 
-  let result = body.result ?? null;
+  // An older install bookmarks from a snapshot it stored in the shape of its own day, so
+  // the client's parse is brought forward before it is written back.
+  let result = normalizeStoredResult(body.result ?? null);
   let status: SavedMealDto['status'] = result ? 'parsed' : 'failed';
 
   // No snapshot means the text is new or edited, so it has to be read again. A failure is
