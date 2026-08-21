@@ -1,0 +1,939 @@
+{
+  "caseId": "en-cup-of-popcorn",
+  "input": "2 cups of popcorn",
+  "recordedAt": "2026-08-21T00:43:31.817Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"2 cups of popcorn\",\"reasoning\":\"The line lists two cups of popcorn. Popcorn is treated as a single food item. One cup of air‑popped popcorn weighs about 8 g, so two cups are estimated at 16 g.\",\"confidence\":0.92,\"language\":\"en\",\"items\":[{\"name\":\"popcorn\",\"local_name\":\"popcorn\",\"quantity\":2,\"unit\":\"cup\",\"estimated_grams\":16,\"estimated_per_100g\":{\"kcal\":387,\"protein\":12.9,\"carbs\":77,\"fat\":4.5},\"kind\":\"food\",\"confidence\":0.9}]}",
+    "promptTokens": 2927,
+    "completionTokens": 421
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "popcorn": [
+        {
+          "fdcId": 2434613,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "025788745004",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Snappy Popcorn Co., Inc.",
+          "brandName": "FARMER JON'S",
+          "ingredients": "CORN OIL, SALT, POPCORN.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-11-01",
+          "dataSource": "LI",
+          "packageWeight": "20 oz/568 g",
+          "servingSizeUnit": "g",
+          "servingSize": 11,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Snappy <em>Popcorn</em> Co., Inc.<br /><b>Ingredients</b>: CORN OIL, SALT, <em>POPCORN</em>.",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.09
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 18.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 45.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 409
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 9.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.27
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 182
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 682
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2105052,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "046567012742",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Raley's",
+          "brandName": "RALEY'S",
+          "ingredients": "YELLOW POPCORN",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2018-02-08",
+          "dataSource": "LI",
+          "packageWeight": "32 oz/2 lbs/907 g",
+          "servingSizeUnit": "g",
+          "servingSize": 51,
+          "householdServingFullText": "0.25 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: YELLOW <em>POPCORN</em>",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 11.8
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.92
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 72.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 373
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 11.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.82
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.98
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 2.94
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2080653,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "092825093220",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Brookshire Grocery Company",
+          "brandName": "BROOKSHIRE'S",
+          "ingredients": "POPCORN, PALM OIL WITH PRESERVATIVE (TBHQ), SALT, NATURAL FLAVOR, COLOR (ANNATTO EXTRACT).",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "19.8 oz/561 g",
+          "servingSizeUnit": "g",
+          "servingSize": 33,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>POPCORN</em>, PALM OIL WITH PRESERVATIVE (TBHQ), SALT, NATURAL FLAVOR, COLOR (ANNATTO EXTRACT).",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.06
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 30.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 51.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 515
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 9.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.09
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 758
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 3.03
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2041350,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "023000438642",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Pinnacle Foods Group LLC",
+          "brandName": "SNYDER OF BERLIN",
+          "ingredients": "POPCORN, CORN OIL, WHEY, MALTODEXTRIN, REDUCED LACTOSE WHEY, CHEDDAR AND BLUE CHEESE (CULTURED MILK, SALT, ENZYMES), CANOLA OIL, SALT, DISODIUM PHOSPHATE, CITRIC ACID, LACTIC ACID, ARTIFICIAL COLORS (YELLOW 6 AND YELLOW 5), SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2020-02-26",
+          "dataSource": "LI",
+          "packageWeight": "6 oz/170 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>POPCORN</em>, CORN OIL, WHEY, MALTODEXTRIN, REDUCED LACTOSE WHEY, CHEDDAR AND BLUE CHEESE (CULTURED MILK",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 42.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 42.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 571
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 7.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 71
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.29
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 1140
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 12.5
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 25
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1662277,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "019669002867",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "Wabash Valley Farms, Inc.",
+          "brandName": "WABASH VALLEY FARMS",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-11-02",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 39,
+          "householdServingFullText": "3 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.69
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.56
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 56.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 282
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 10.3
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.85
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1709703
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1709703
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2430295,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "025788722005",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Snappy Popcorn Co., Inc.",
+          "brandName": "FARMER JON'S",
+          "ingredients": "COCONUT OIL, SOYBEAN OIL, PALM OIL, CORN OIL, CHEDDAR CHEESE (PASTEURIZED MILK, CHEESE CULTURE, SALT, ENZYMES), CREAM, SALT, DISODIUM PHOSPHATE CONTAINS LESS THAN 2% OF SODIUM PHOSPHATE, LACTIC ACID, PAPRIKA OLEORESIN, SOY LECITHIN, ANNATTO EXTRACT, POPCORN.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2018-07-06",
+          "dataSource": "LI",
+          "packageWeight": "8 oz/227 g",
+          "servingSizeUnit": "g",
+          "servingSize": 23,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Snappy <em>Popcorn</em> Co., Inc.<br /><b>Ingredients</b>: , PAPRIKA OLEORESIN, SOY LECITHIN, ANNATTO EXTRACT, <em>POPCORN</em>.",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.7
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 21.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 43.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 478
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 8.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.09
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 217
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 783
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2287343,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "850251004605",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Amplify Snack Brands, Inc.",
+          "brandName": "SKINNYPOP",
+          "ingredients": "POPCORN, SUNFLOWER OIL, RICE FLOUR, SEA SALT, NATURAL FLAVORS, SPICES, JALAPENO PEPPER POWDER AND CITRIC ACID",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2019-06-20",
+          "dataSource": "LI",
+          "packageWeight": "1 oz/28 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 BAG",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>POPCORN</em>, SUNFLOWER OIL, RICE FLOUR, SEA SALT, NATURAL FLAVORS, SPICES, JALAPENO PEPPER POWDER AND CITRIC ACID",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 32.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "297",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 71
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.57
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 964
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 357
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.3
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.79
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 16.1
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 8.93
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2073789,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "072600042070",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Herr Foods Inc.",
+          "brandName": "HERR'S",
+          "subbrandName": "OLD BAY",
+          "ingredients": "SELECT POPCORN, VEGETABLE OIL (ONE OR MORE OF THE FOLLOWING: CORN, COTTONSEED, PALM), BUTTER (CREAM, SALT, ANNATTO EXTRACT [COLOR]), SALT, NONFAT DRY MILK, SPICES, BUTTERMILK, MALTODEXTRIN, PAPRIKA, SODIUM DIACETATE, MONOSODIUM GLUTAMATE, DEXTROSE, SODIUM CITRATE, CITRIC ACID, TOCOPHEROL (ANTI-OXIDANT), BETA CAROTENE (COLOR), AND ANNATTO EXTRACT (COLOR).",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-09-21",
+          "dataSource": "LI",
+          "packageWeight": "1 oz/28.4 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "3 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SELECT <em>POPCORN</em>, VEGETABLE OIL (ONE OR MORE OF THE FOLLOWING: CORN, COTTONSEED, PALM), BUTTER (CREAM",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 57.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 7.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.57
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 1360
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1430
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.93
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2621065,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "041190571321",
+          "publishedDate": "2023-08-31",
+          "brandOwner": "Wakefern Food Corporation",
+          "brandName": "SHOPRITE",
+          "ingredients": "100% WHOLE GRAIN YELLOW POPCORN",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2023-07-07",
+          "dataSource": "LI",
+          "packageWeight": "32 oz/2 lbs/907 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 33,
+          "householdServingFullText": "2 tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: 100% WHOLE GRAIN YELLOW <em>POPCORN</em>",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 12.1
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.03
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 78.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 333
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.03
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 18.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.94
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 424
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 381764,
+          "description": "POPCORN",
+          "dataType": "Branded",
+          "gtinUpc": "041303047156",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "Supervalu, Inc.",
+          "ingredients": "POPCORN, CORN OIL AND/OR SUNFLOWER OIL, WHITE CHEDDAR SEASONING (WHEY, BUTTERMILK, CHEDDAR CHEESE [CULTURED MILK, SALT, ENZYMES], MALTODEXTRIN, SALT, NATURAL FLAVORS, DISODIUM PHOSPHATE, LACTIC ACID, CITRIC ACID, CANOLA OIL), CITRIC ACID, SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2018-03-11",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "2 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>POPCORN</em>, CORN OIL AND/OR SUNFLOWER OIL, WHITE CHEDDAR SEASONING (WHEY, BUTTERMILK, CHEDDAR CHEESE",
+          "score": 862.72687,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 214
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.29
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 46.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 536
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 7.1
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 1180
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5.36
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 17.9
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

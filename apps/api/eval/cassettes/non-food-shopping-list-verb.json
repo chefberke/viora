@@ -1,0 +1,17 @@
+{
+  "caseId": "non-food-shopping-list-verb",
+  "input": "remember to call the dentist",
+  "recordedAt": "2026-08-21T00:45:23.929Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"\",\"reasoning\":\"The line contains no food or drink items, only a reminder, so nothing to log.\",\"confidence\":0,\"language\":\"en\",\"items\":[]}",
+    "promptTokens": 2969,
+    "completionTokens": 156
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {},
+    "off": {}
+  }
+}

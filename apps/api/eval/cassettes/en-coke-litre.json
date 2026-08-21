@@ -1,0 +1,2473 @@
+{
+  "caseId": "en-coke-litre",
+  "input": "coke 1lietre",
+  "recordedAt": "2026-08-21T00:41:48.512Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"coke 1 litre\",\"reasoning\":\"\\\"coke\\\" is recognized as the branded soft drink Coca‑Cola; \\\"1lietre\\\" is corrected to \\\"1 litre\\\". The line specifies a single litre, so quantity 1, unit \\\"l\\\", estimated weight 1000 g.\",\"confidence\":0.86,\"language\":\"en\",\"items\":[{\"name\":\"coca-cola\",\"local_name\":\"coke\",\"quantity\":1,\"unit\":\"l\",\"estimated_grams\":1000,\"estimated_per_100g\":{\"kcal\":42,\"protein\":0,\"carbs\":10.6,\"fat\":0},\"kind\":\"food\",\"confidence\":0.85}]}",
+    "promptTokens": 2942,
+    "completionTokens": 736
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "coca-cola": [
+        {
+          "fdcId": 171884,
+          "description": "Beverages, The COCA-COLA company, Minute Maid, Lemonade",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14189,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 675.1586,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 192
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.016
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 3.1
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 46
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 87.9
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 11.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.009
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 175108,
+          "description": "Beverages, COCA-COLA, POWERADE, lemon-lime flavored, ready-to-drink",
+          "commonNames": "thirst quencher",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14461,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 598.2449,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "421",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 6.11
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.028
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.009
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.05
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.008
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 3.22
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 91.9
+            },
+            {
+              "nutrientNumber": "313",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0.91
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.91
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 7.84
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 32
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 18
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 1.56
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.153
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 134
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 175104,
+          "description": "Beverages, The COCA-COLA company, DASANI, water, bottled, non-carbonated",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14434,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 598.2449,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "313",
+              "value": 6.7
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 173179,
+          "description": "Beverages, The COCA-COLA company, Hi-C Flashin' Fruit Punch",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14065,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 598.2449,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 87.5
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 12.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 188
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 30
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2678649,
+          "description": "COCA-COLA, COLA",
+          "dataType": "Branded",
+          "gtinUpc": "04963406",
+          "publishedDate": "2023-11-16",
+          "brandOwner": "Coca-Cola USA Operations",
+          "brandName": "COCA-COLA",
+          "ingredients": "CARBONATED WATER, HIGH FRUCTOSE CORN SYRUP, CARAMEL COLOR, PHOSPHORIC ACID, NATURAL FLAVORS, CAFFEINE. ",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2021-11-13",
+          "dataSource": "LI",
+          "packageWeight": "12 fl oz/355 mL",
+          "servingSizeUnit": "MLT",
+          "servingSize": 355,
+          "householdServingFullText": "1 CAN",
+          "shortDescription": "",
+          "caffeineStatement": "['CAFFEINE CONTENT: 34 MG/12 FL OZ', 'CAFFEINE CONTENT: 34 MG/12 FL OZ', 'CAFFEINE CONTENT: 34 MG/12 FL OZ', 'CAFFEINE CONTENT: 34 MG/12 FL OZ', 'CAFFEINE CONTENT: 34 MG/12 FL OZ', 'CAFFEINE CONTENT: 34 MG/12 FL OZ']",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: <em>Coca</em>-<em>Cola</em> USA Operations",
+          "score": 575.0081,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 39
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 13
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1999231,
+          "description": "COCA-COLA FLAVORED MINTS, COCA-COLA",
+          "dataType": "Branded",
+          "gtinUpc": "009800005000",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "TIC TAC",
+          "ingredients": "SUGAR* , DEXTROSE , RICE STARCH, COCA-COLA DRINK (WATER , SUGAR, CARAMEL COLOR , PHOSPHORIC ACID , NATURAL FLAVORS) , MALTODEXTRIN , NATURAL AND ARTIFICIAL FLAVORS , GUM ARABIC , CITRIC ACID , TARTARIC ACID , MAGNESIUM STEARATE, SHELLAC AND CARNAUBA WAX AS GLAZING AGENTS, RED 40.",
+          "marketCountry": "United States",
+          "foodCategory": "Chewing Gum & Mints",
+          "modifiedDate": "2021-06-18",
+          "dataSource": "LI",
+          "packageWeight": "0.84 oz/24 g",
+          "servingSizeUnit": "g",
+          "servingSize": 5,
+          "householdServingFullText": "1 mint",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR* , DEXTROSE , RICE STARCH, <em>COCA</em>-<em>COLA</em> DRINK (WATER , SUGAR, CARAMEL COLOR , PHOSPHORIC ACID",
+          "score": 557.0065,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 173188,
+          "description": "Beverages, The COCA-COLA company, Glaceau Vitamin Water, Revive Fruit Punch, fortified",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14093,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 537.0839,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "268",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 10.2
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.02
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 1.02
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.15
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 99.2
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 148
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 3.38
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.69
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.338
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 174809,
+          "description": "Beverages, THE COCA-COLA COMPANY, NOS Zero, energy drink, sugar-free with guarana, fortified with vitamins B6 and B12",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14026,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 445.95297,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.03
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 98.4
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.833
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.62
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 85
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 34
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 2.5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 173165,
+          "description": "Beverages, THE COCA-COLA COMPANY, NOS energy drink, Original, grape, loaded cherry, charged citrus, fortified with vitamins B6 and B12",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14030,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 411.09604,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.28
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 183
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 85
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 11.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.833
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 44
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 88.4
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 34
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 175093,
+          "description": "Beverages, carbonated, cola, fast-food cola",
+          "commonNames": "soft drink, pop, soda",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14400,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 410.05963,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 90.3
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "313",
+              "value": 57
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.07
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.11
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8.97
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 157
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 9.56
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 37
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "454",
+              "value": 0.1
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "en|coke": [
+        {
+          "code": "0049000024692",
+          "brands": [
+            "Coke"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 0,
+            "energy-kcal_100g": 0,
+            "fat_100g": 0,
+            "proteins_100g": 0,
+            "salt_100g": 0.03,
+            "sodium_100g": 0.012
+          },
+          "product_name": "Diet Coke - 6pk/16.9 fl oz Bottles"
+        },
+        {
+          "code": "0049000005226",
+          "brands": [
+            "Coke"
+          ],
+          "product_name": "coke"
+        },
+        {
+          "code": "5000112663662",
+          "brands": [
+            "Coke"
+          ],
+          "nutriments": {
+            "fat_100g": 0,
+            "sugars_100g": 0,
+            "proteins_100g": 0,
+            "salt_100g": 0,
+            "carbohydrates_100g": 0,
+            "saturated-fat_100g": 0,
+            "energy-kcal_100g": 1,
+            "sodium_100g": 0
+          },
+          "product_name": "Coke"
+        },
+        {
+          "code": "5020075000748",
+          "brands": [
+            "Coke"
+          ],
+          "product_name": "Coke"
+        },
+        {
+          "code": "9300675001243",
+          "brands": [
+            "Coke"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 10.6,
+            "energy-kcal_100g": 43,
+            "fat_100g": 0,
+            "proteins_100g": 0,
+            "saturated-fat_100g": 0,
+            "sugars_100g": 10.6
+          },
+          "product_name": "Coke"
+        },
+        {
+          "code": "69394539",
+          "brands": [
+            "Coke"
+          ],
+          "product_name": "Coke"
+        },
+        {
+          "code": "5449000201300",
+          "brands": [
+            "COKE"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 10.6,
+            "sugars_100g": 10.6,
+            "proteins_100g": 0,
+            "energy-kcal_100g": 42,
+            "sodium_100g": 0,
+            "salt_100g": 0,
+            "saturated-fat_100g": 0,
+            "fat_100g": 0
+          },
+          "product_name": "Coca Cola"
+        },
+        {
+          "code": "9106271891512",
+          "brands": [
+            "coke"
+          ],
+          "product_name": "coke"
+        },
+        {
+          "code": "5000112630671",
+          "brands": [
+            "Coke"
+          ],
+          "product_name": "Coke Zero"
+        },
+        {
+          "code": "05723393",
+          "brands": [
+            "Coke"
+          ],
+          "product_name": "Diet Coke"
+        }
+      ]
+    }
+  }
+}

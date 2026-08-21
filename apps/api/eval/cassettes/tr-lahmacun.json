@@ -1,0 +1,120 @@
+{
+  "caseId": "tr-lahmacun",
+  "input": "1 lahmacun",
+  "recordedAt": "2026-08-21T00:39:09.649Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"1 lahmacun\",\"reasoning\":\"One piece of lahmacun, a Turkish flatbread topped with minced meat and vegetables. No size qualifier, so quantity 1 piece.\",\"confidence\":0.92,\"language\":\"tr\",\"items\":[{\"name\":\"lahmacun\",\"local_name\":\"lahmacun\",\"unit\":\"piece\",\"quantity\":1,\"estimated_grams\":150,\"estimated_per_100g\":{\"kcal\":260,\"protein\":10,\"carbs\":30,\"fat\":10},\"kind\":\"food\",\"confidence\":0.9}]}",
+    "promptTokens": 2940,
+    "completionTokens": 418
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "lahmacun": []
+    },
+    "off": {
+      "tr|lahmacun": [
+        {
+          "code": "4026279922252",
+          "brands": [
+            "Lekker anders"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 40,
+            "energy-kcal_100g": 293,
+            "fat_100g": 11,
+            "proteins_100g": 8.19999980926514,
+            "saturated-fat_100g": 2.20000004768372,
+            "sugars_100g": 1.5
+          },
+          "product_name": "Lahmacun"
+        },
+        {
+          "code": "3800500564296",
+          "brands": [
+            "Ikra"
+          ],
+          "nutriments": {
+            "energy-kcal_100g": 217,
+            "saturated-fat_100g": 1.2799999713897705,
+            "carbohydrates_100g": 35.5,
+            "proteins_100g": 8.869999885559082,
+            "sugars_100g": 3.890000104904175,
+            "fat_100g": 4.440000057220459
+          },
+          "product_name": "Lahmacun"
+        },
+        {
+          "code": "27092507",
+          "brands": [
+            "Orient"
+          ],
+          "nutriments": {
+            "sodium_100g": 0.5599999999999999,
+            "energy-kcal_100g": 248,
+            "salt_100g": 1.4,
+            "saturated-fat_100g": 1.7,
+            "carbohydrates_100g": 34,
+            "sugars_100g": 1.7,
+            "fiber_100g": 3.0999999046325684,
+            "proteins_100g": 8,
+            "fat_100g": 8.5
+          },
+          "product_name": "Lahmacun"
+        },
+        {
+          "code": "4251235821373",
+          "nutriments": {
+            "carbohydrates_100g": 34,
+            "saturated-fat_100g": 1.7,
+            "salt_100g": 1.4,
+            "energy-kcal_100g": 247,
+            "sodium_100g": 0.5599999999999999,
+            "fat_100g": 8.5,
+            "proteins_100g": 8,
+            "sugars_100g": 1.7
+          },
+          "product_name": "Lahmacun"
+        },
+        {
+          "code": "8717545691106",
+          "brands": [
+            "Marhaba"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 32.1,
+            "energy-kcal_100g": 227,
+            "energy-kj_100g": 950,
+            "fat_100g": 6.5,
+            "fiber_100g": 2.4,
+            "proteins_100g": 8.8,
+            "salt_100g": 1.0825,
+            "saturated-fat_100g": 2.9,
+            "sodium_100g": 0.433,
+            "sugars_100g": 4.9
+          },
+          "product_name": "Lahmacun"
+        },
+        {
+          "code": "4026279922108",
+          "brands": [
+            "Lekker & Anders"
+          ],
+          "nutriments": {
+            "sodium_100g": 0.44000000000000006,
+            "energy-kcal_100g": 246,
+            "salt_100g": 1.1,
+            "saturated-fat_100g": 1.1,
+            "carbohydrates_100g": 41,
+            "sugars_100g": 2,
+            "proteins_100g": 8.3,
+            "fat_100g": 5
+          },
+          "product_name": "Street Food Lahmacun"
+        }
+      ]
+    }
+  }
+}

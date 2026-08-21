@@ -8,3 +8,17 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Every eval run writes a report under this name, and most of them are one afternoon's
+# question. Only the checkpoints the README pins are kept, so adding one is a deliberate
+# line here rather than whatever `--name` happened to hold last.
+eval/reports/*
+!eval/reports/baseline.*
+!eval/reports/prompt-v2.*
+!eval/reports/prompt-v3.*
+!eval/reports/phase2.*
+!eval/reports/phase2-code.*
+!eval/reports/phase2-matcher.*
+!eval/reports/phase3-before.*
+!eval/reports/phase6.*
+!eval/reports/phase6-api.*

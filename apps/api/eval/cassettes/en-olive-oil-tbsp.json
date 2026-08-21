@@ -1,0 +1,745 @@
+{
+  "caseId": "en-olive-oil-tbsp",
+  "input": "1 tbsp olive oil",
+  "recordedAt": "2026-08-21T00:44:03.424Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"1 tbsp olive oil\",\"reasoning\":\"One tablespoon of olive oil, a standard volume measure. Converted to weight using typical density (~13.5 g per tbsp).\",\"confidence\":0.97,\"language\":\"en\",\"items\":[{\"name\":\"olive oil\",\"local_name\":\"olive oil\",\"quantity\":1,\"unit\":\"tbsp\",\"estimated_grams\":13.5,\"estimated_per_100g\":{\"kcal\":884,\"protein\":0,\"carbs\":0,\"fat\":100},\"kind\":\"food\",\"confidence\":0.95}]}",
+    "promptTokens": 2927,
+    "completionTokens": 337
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "olive oil": [
+        {
+          "fdcId": 2073857,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "011110019684",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "The Kroger Co.",
+          "brandName": "KROGER",
+          "subbrandName": "MAYO",
+          "ingredients": "WATER, SOYBEAN OIL, OLIVE OIL, WHOLE EGGS AND EGG YOLKS, MODIFIED POTATO STARCH, DISTILLED VINEGAR, SUGAR, SALT, LEMON JUICE CONCENTRATE, NATURAL FLAVOR, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR).",
+          "marketCountry": "United States",
+          "foodCategory": "Salad Dressing & Mayonnaise",
+          "modifiedDate": "2019-08-13",
+          "dataSource": "LI",
+          "packageWeight": "30 fl oz/887 mL",
+          "servingSizeUnit": "g",
+          "servingSize": 14,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: WATER, SOYBEAN <em>OIL</em>, <em>OLIVE</em> <em>OIL</em>, WHOLE EGGS AND EGG YOLKS, MODIFIED POTATO STARCH, DISTILLED VINEGAR",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 42.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 429
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 821
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 36
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.14
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1905976,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "041331011419",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Goya Foods, Inc. ",
+          "brandName": "GOYA",
+          "ingredients": "REFINED OLIVE OIL AND EXTRA VIRGIN OLIVE OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2018-06-07",
+          "dataSource": "LI",
+          "packageWeight": "8.5 fl oz/250 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: REFINED <em>OLIVE</em> <em>OIL</em> AND EXTRA VIRGIN <em>OLIVE</em> <em>OIL</em>.",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 10
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1908628,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "688267059360",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Ahold USA, Inc. ",
+          "brandName": "AHOLD",
+          "ingredients": "OLIVE OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2018-03-11",
+          "dataSource": "LI",
+          "packageWeight": "25.3 fl oz/750 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>OLIVE</em> <em>OIL</em>.",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 13.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2055340,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "041618501008",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Sovena USA, Inc.",
+          "brandName": "OLIVARI",
+          "ingredients": "EXTRA VIRGIN OLIVE OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "17 fl oz/502 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: EXTRA VIRGIN <em>OLIVE</em> <em>OIL</em>.",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 13.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2290656,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "710069306516",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Cachere Distributing Inc.",
+          "brandName": "GEFEN",
+          "ingredients": "OLIVE OIL, PROPELLANT.",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "6 oz/170 g",
+          "servingSizeUnit": "g",
+          "servingSize": 0.25,
+          "householdServingFullText": "0.33 SEC. SPRAY",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>OLIVE</em> <em>OIL</em>, PROPELLANT.",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2102340,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "018894343622",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Big Y Foods, Inc.",
+          "brandName": "BIG Y",
+          "ingredients": "OLIVE OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2020-01-09",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>OLIVE</em> <em>OIL</em>.",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 10
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1582039,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "070404003754",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "Pompeian, Inc.",
+          "brandName": "POMPEIAN",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2018-01-22",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 10
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1603965
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1603965
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1582077,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "070404004706",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "Pompeian, Inc.",
+          "brandName": "POMPEIAN",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2018-03-10",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 10
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1604005
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1604005
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2040111,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "041736000285",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Salov North America Corp.",
+          "brandName": "FILIPPO BERIO",
+          "ingredients": "OLIVE OIL COMPOSED OF REFINED OLIVE OILS AND VIRGIN OLIVE OILS.",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2020-04-08",
+          "dataSource": "LI",
+          "packageWeight": "50.7 fl oz/1.5 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>OLIVE</em> <em>OIL</em> COMPOSED OF REFINED <em>OLIVE</em> <em>OILS</em> AND VIRGIN <em>OLIVE</em> <em>OILS</em>.",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 13.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 496830,
+          "description": "OLIVE OIL",
+          "dataType": "Branded",
+          "gtinUpc": "852669003003",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "COLOSSEO",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Vegetable & Cooking Oils",
+          "modifiedDate": "2018-03-11",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 15,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1028.7937,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 93.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 800
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 10
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

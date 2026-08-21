@@ -1,0 +1,3356 @@
+{
+  "caseId": "en-red-bull",
+  "input": "a can of red bull",
+  "recordedAt": "2026-08-21T00:42:12.055Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\n  \"normalized_text\": \"a can of red bull\",\n  \"reasoning\": \"One branded energy drink, identified as a can. The line gives no size beyond the can, so quantity 1 can is used.\",\n  \"confidence\": 0.9,\n  \"language\": \"en\",\n  \"items\": [\n    {\n      \"name\": \"energy drink\",\n      \"local_name\": \"red bull\",\n      \"unit\": \"can\",\n      \"quantity\": 1,\n      \"estimated_grams\": 250,\n      \"estimated_per_100g\": {\n        \"kcal\": 45,\n        \"protein\": 0,\n        \"carbs\": 11,\n        \"fat\": 0\n      },\n      \"kind\": \"food\",\n      \"confidence\": 0.9\n    }\n  ]\n}",
+    "promptTokens": 2941,
+    "completionTokens": 507
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "energy drink": [
+        {
+          "fdcId": 2365144,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "850003560014",
+          "publishedDate": "2022-12-07",
+          "brandOwner": "3D Energy Drinks LLC",
+          "brandName": "3D",
+          "ingredients": "CARBONATED WATER, ERYTHRITOL, CITRIC ACID, TAURINE, SODIUM CITRATE, NATURAL AND ARTIFICIAL FLAVOR, CAFFEINE, SUCRALOSE, SODIUM BENZOATE (PRESERVATIVE), POTASSIUM SORBATE (PRESERVATIVE), PANAX GINSENG ROOT EXTRACT, L-CARNITINE TARTRATE, ACESULFAME POTASSIUM, GUM ACACIA, NIACINAMIDE (VITAMIN B-3), D-GLUCURONOLACTONE, INOSITOL, SODIUM CHLORIDE, GUARANA SEED EXTRACT, CALCIUM D PANTOTHENATE (VITAMIN B-5), FD&C RED #40, PYRIDOXINE HYDROCHLORIDE (VITAMIN B-6), CYANOCOBALAMIN (VITAMIN B-12).",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2020-12-17",
+          "dataSource": "LI",
+          "packageWeight": "16 FL OZ/473 ML",
+          "servingSizeUnit": "ml",
+          "servingSize": 473,
+          "householdServingFullText": "16 OZA",
+          "shortDescription": "",
+          "caffeineStatement": "CONTAINS 200MG OF CAFFEINE PER 16 OZ CAN",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: 3D <em>Energy</em> <em>Drinks</em> LLC",
+          "score": 1104.6445,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "299",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 5.92
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 2.96
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.592
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.78
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2462614,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "868784000384",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "3D Energy Drinks LLC",
+          "brandName": "3D",
+          "ingredients": "CARBONATED WATER, CITRIC ACID, ERYTHRITOL, TAURINE, SODIUM CITRATE, NATURAL AND ARTIFICIAL FLAVOR, CAFFEINE, SUCRALOSE, SODIUM BENZOATE (PRESERVATIVE), POTASSIUM SORBATE (PRESERVATIVE), PANAX GINSENG ROOT EXTRACT, L-CARNITINE TARTRATE, ACESULFAME POTASSIUM, GUM ACACIA, NIACINAMIDE (VITAMIN B-3), D-GLUCURONOLACTONE, INOSITOL, SODIUM CHLORIDE, GUARANA SEED EXTRACT, CALCIUM D PANTOTHENATE (VITAMIN B-5), PYRIDOXINE HYDROCHLORIDE (VITAMIN B-6), CYANOCOBALAMIN (VITAMIN B-12).",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2022-07-22",
+          "dataSource": "LI",
+          "packageWeight": "16 FL OZ/473 ML",
+          "servingSizeUnit": "ml",
+          "servingSize": 473,
+          "householdServingFullText": "16 OZA",
+          "shortDescription": "",
+          "caffeineStatement": "CONTAINS 200MG OF CAFFEINE PER 16 OZ CAN",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: 3D <em>Energy</em> <em>Drinks</em> LLC",
+          "score": 1104.6445,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "299",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 5.92
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.48
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.592
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.78
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2491190,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "611269102826",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Red Bull North America, Inc.",
+          "brandName": "RED BULL",
+          "ingredients": "CARBONATED WATER, SUCROSE, GLUCOSE, CITRIC ACID, TAURINE, SODIUM CITRATE, MAGNESIUM CARBONATE, CAFFEINE, INOSITOL, NIACINAMIDE, CALCIUM PANTOTHENATE, PYRIDOXINE HCL, VITAMIN B12, NATURAL AND ARTIFICIAL FLAVORS, COLORS.",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2018-08-10",
+          "dataSource": "LI",
+          "packageWeight": "72 fl oz/2.1 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 355,
+          "householdServingFullText": "12 OZA",
+          "shortDescription": "",
+          "caffeineStatement": "['CAFFEINE CONTENT: 114 MG/ 12 FL. OZ. NOT RECOMMENDED FOR CHILDREN, PREGNANT OR NURSING WOMEN AND PERSONS SENSITIVE TO CAFFEINE.', 'CAFFEINE CONTENT: 114 MG/ 12 FL. OZ. NOT RECOMMENDED FOR CHILDREN, PREGNANT OR NURSING WOMEN AND PERSONS SENSITIVE TO CAFFEINE.', 'CAFFEINE CONTENT: 114 MG/ 12 FL. OZ. NOT RECOMMENDED FOR CHILDREN, PREGNANT OR NURSING WOMEN AND PERSONS SENSITIVE TO CAFFEINE.', 'CAFFEINE CONTENT: 114 MG/12 FL OZ.', 'CAFFEINE CONTENT: 114 MG/12 FL OZ.', 'CAFFEINE CONTENT: 114 MG/12 FL OZ.', 'CAFFEINE CONTENT: 114 MG/12 FL OZ.', 'CAFFEINE CONTENT: 114 MG/12 FL OZ.']",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0.28
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 39
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 7.89
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.986
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 2.03
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.03
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2491060,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "818094000697",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Rockstar Inc.",
+          "brandName": "ROCKSTAR",
+          "ingredients": "CARBONATED WATER, TAURINE, CITRIC ACID, CAFFEINE, SODIUM CITRATE, CALCIUM LACTATE, BENZOIC ACID (PRESERVATIVE), SORBIC ACID (PRESERVATIVE), ACESULFAME POTASSIUM, SUCRALOSE, PANAX GINSENG, ROOT EXTRACT, MAGNESIUM LACTATE, PANTOTHENIC ACID, NIACINAMIDE, MAGNESIUM LACTATE, PANTOTHENIC ACID, NIACINAMIDE, NATURAL FLAVORS, PURPLE SWEET POTATO JUICE EXTRACT (COLOR), BLACK CARROT JUICE CONCENTRATE (COLOR), ELDERBERRY EXTRACT CONCENTRATE (COLOR), MONOPOTASSIUM PHOSPHATE, PYRIDOXINE HYDROCHLORIDE, RED CABBAGE JUICE CONCENTRATE (COLOR), FOLIC ACID, CYANOCOBALAMIN. ",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2018-06-05",
+          "dataSource": "LI",
+          "packageWeight": "16 fl oz/473 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "8 OZA",
+          "shortDescription": "",
+          "caffeineStatement": "['IN EACH SERVING: TAURINE 1000 MG, CAFFEINE 120 MG.', 'IN EACH SERVING: TAURINE 1000 MG, CAFFEINE 120 MG.', 'TOTAL CAFFEINE FROM ALL SOURCES: 240MG PER CAN', 'TOTAL CAFFEINE FROM ALL SOURCES: 240MG PER CAN', 'TOTAL CAFFEINE FROM ALL SOURCES: 240MG PER CAN']",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 8.33
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 2.08
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.833
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1914573,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "061500127406",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Santa Fe Pro Musica, Inc.",
+          "brandName": "BLAK MAX",
+          "ingredients": "CARBONATED WATER, CITRIC ACID, NATURAL FLAVOR, CAFFEINE, SODIUM CITRATE, SUCRALOSE, POTASSIUM SORBATE AND POTASSIUM BENZOATE (PRESERVATIVES), NIACINAMIDE (VITAMIN B3), PANAX GINSENG ROOT EXTRACT, CARAMEL COLOR, ACESULFAME POTASSIUM, SALT, INOSITOL, MALTODEXTRIN, GUARANA, PYRIDOXINE HYDROCHLORIDE (VITAMIN B6), RIBOFLAVIN (VITAMIN B2), TAURINE, D-GLUCURONO LACTONE, L-CARNITINE, CYANOCOBALAMIN (VITAMIN B12).",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "16 fl oz/1 PT/473 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "8 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.708
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 8.33
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.833
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 545206,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "611269818994",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "Red Bull North America, Inc.",
+          "ingredients": "CARBONATED WATER, SUCROSE, GLUCOSE, CITRIC ACID, TAURINE, SODIUM BICARBONATE, MAGNESIUM CARBONATE, CAFFEINE, NIACINAMIDE, CALCIUM PANTOTHENATE, PYRIDOXINE HCL, VITAMIN B12, NATURAL AND ARTIFICIAL FLAVORS, COLORS.",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2018-04-10",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 360,
+          "householdServingFullText": "1 Can",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 7.78
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.94
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 44
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.28
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 667162,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "611269716467",
+          "publishedDate": "2019-12-06",
+          "brandOwner": "Red Bull North America, Inc.",
+          "ingredients": "CARBONATED WATER, CITRIC ACID, TAURINE, SODIUM BICARBONATE, MAGNESIUM CARBONATE, CAFFEINE, ACESULFAME K, ASPARTAME, NIACINAMIDE, CALCIUM PANTOTHENATE, PYRIDOXINE HCL, VITAMIN B12, XANTHAN GUM, NATURAL AND ARTIFICIAL FLAVORS, COLORS.",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2018-05-29",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 355,
+          "householdServingFullText": "12 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0.28
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.13
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 7.89
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.97
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 2.03
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.03
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "2",
+              "name": "Description",
+              "id": 140456
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "2",
+                  "name": "Description",
+                  "id": 140456
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 489961,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "012000160219",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "AMP ENERGY",
+          "ingredients": "CARBONATED WATER, HIGH FRUCTOSE CORN SYRUP, CITRIC ACID, NATURAL FLAVOR, MALTODEXTRIN, SODIUM BENZOATE (PRESERVES FRESHNESS), SODIUM HEXAMETAPHOSPHATE (TO PROTECT FLAVOR), CITRUS PECTIN, CAFFEINE, ACESULFAME POTASSIUM, SUCRALOSE, NIACINAMIDE (VITAMIN B3), CALCIUM PANTOTHENATE (VITAMIN B5), RED 40, CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR), PYRIDOXINE HYDROCHLORIDE (VITAMIN B6), TAURINE, GUARANA SEED EXTRACT, PANAX GINSENG ROOT EXTRACT, CYANOCOBALAMIN (VITAMIN B12).",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2018-01-19",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 473,
+          "householdServingFullText": "16 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: AMP <em>ENERGY</em>",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 4.23
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 2.11
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.423
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.5
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 32
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1743869,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "818094005777",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "PepsiCo, Inc. (Rockstar)",
+          "brandName": "ROCKSTAR",
+          "ingredients": "CARBONATED WATER, SUGAR, GLUCOSE, CITRIC ACID, TAURINE, SODIUM CITRATE, CAFFEINE, CARAMEL COLOR, NATURAL AND ARTIFICIAL FLAVORS, GLUCURONOLACTONE, SORBIC ACID (PRESERVATIVE), BENZOIC ACID (PRESERVATIVE), INOSITOL, L-CARNITINE, GUARANA SEED EXTRACT, MILK THISTLE EXTRACT, NIACINAMIDE, PANTOTHENIC ACID PANAX GINSENG ROOT EXTRACT, YELLOW #5, PYRIDOXINE HYDROCHLORIDE, RIBOFLAVIN, CYANOCOBALAMIN.",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2020-12-02",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 473,
+          "householdServingFullText": "1 Can",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.275
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 3.38
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.06
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.359
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.51
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 13.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1823542
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1823542
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2487845,
+          "description": "ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "863749000317",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Concept ID Group ",
+          "brandName": "FUSION",
+          "ingredients": "CARBONATED WATER, SUGAR, CARBON DIOXIDE, TAURINE, GLUCURONOLACTONE, CAFFEINE, INOSITOL, VITAMINS B3, B5, B6, B2 AND B12, CITRIC ACID, SODIUM CITRATE, ARTIFICIAL FLAVOR, POTASSIUM SORBATE (PRESERVATIVE) AND SODIUM BENZOATE (PRESERVATIVE), COLORS.",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2018-12-07",
+          "dataSource": "LI",
+          "packageWeight": "12 fl oz/355 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 355,
+          "householdServingFullText": "12 OZA",
+          "shortDescription": "",
+          "caffeineStatement": "['CAFFEINE CONTENT: 105MG / 12 FL. OZ. NOT RECOMMENDED FOR CHILDREN, PREGNANT OR NURSING WOMEN AND PEOPLE SENSITIVE TO CAFFEINE.', 'CAFFEINE CONTENT: 105MG / 12 FL. OZ. NOT RECOMMENDED FOR CHILDREN, PREGNANT OR NURSING WOMEN AND PEOPLE SENSITIVE TO CAFFEINE.']",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1104.1683,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 46
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.4
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 9
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.661
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 2.68
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.496
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.74
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ],
+      "red bull": [
+        {
+          "fdcId": 173210,
+          "description": "Beverages, Energy drink, RED BULL",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14154,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 748.05237,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "317",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.103
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.97
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.06
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 19
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 39
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.46
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 1.63
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 179
+            },
+            {
+              "nutrientNumber": "287",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 9.83
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.54
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 2.17
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 10.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 43
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 5.19
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 3.4
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 89.2
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 29
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 1.96
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 171828,
+          "description": "Sauce, barbecue, BULL'S-EYE, original",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 27056,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 526.6723,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0.67
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 40
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 170
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 24.7
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 5.19
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 55.3
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 43
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 263
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.17
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0.91
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "341",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "342",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "344",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "345",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.637
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.195
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.066
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.023
+            },
+            {
+              "nutrientNumber": "615",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.146
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.29
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.057
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.022
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0.044
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.216
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.349
+            },
+            {
+              "nutrientNumber": "652",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "663",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "664",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "665",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "670",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "672",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "673",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "685",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "689",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "695",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "853",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.91
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 3.19
+            },
+            {
+              "nutrientNumber": "209",
+              "value": 0.07
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 5.39
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 709
+            },
+            {
+              "nutrientNumber": "287",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.69
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 22
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 1010
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.089
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.136
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 320
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 190
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 4570
+            },
+            {
+              "nutrientNumber": "343",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "346",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "347",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.03
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.063
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.101
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "624",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "625",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "653",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "654",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "662",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "671",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "674",
+              "value": 0.146
+            },
+            {
+              "nutrientNumber": "675",
+              "value": 0.289
+            },
+            {
+              "nutrientNumber": "676",
+              "value": 0.044
+            },
+            {
+              "nutrientNumber": "687",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "693",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "697",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "851",
+              "value": 0.057
+            },
+            {
+              "nutrientNumber": "852",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "858",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 171870,
+          "description": "Beverages, Energy drink, RED BULL, sugar free, with added caffeine, niacin, pantothenic acid, vitamins B6 and B12",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14156,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 430.56662,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "404",
+              "value": 0.025
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.575
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 19
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.25
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.08
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 98.4
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 30
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 8.5
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 83
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 1.99
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.99
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.9
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 541366,
+          "description": "RED BULL, ENERGY DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "611269206432",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "Red Bull North America, Inc.",
+          "ingredients": "CARBONATED WATER, SUCROSE, GLUCOSE, CITRIC ACID, TAURINE, NATURAL AND ARTIFICIAL FLAVORS, SODIUM CITRATE, CAFFEINE, COLORS, NIACINAMIDE, PYRIDOXINE HCL, CALCIUM PANTOTHENATE, ASCORBIC ACID, VITAMIN B12.",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 355,
+          "householdServingFullText": "12 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: <em>Red</em> <em>Bull</em> North America, Inc.",
+          "score": 370.8987,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 7.89
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 1.97
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 2.03
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 2.03
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 28
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.28
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 169977,
+          "description": "Cabbage, red, raw",
+          "scientificName": "Brassica oleracea (Capitata Group)",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 11112,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Vegetables and Vegetable Products",
+          "allHighlightFields": "",
+          "score": 260.77994,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 1.74
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 17.1
+            },
+            {
+              "nutrientNumber": "454",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 1.48
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 57
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 329
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 7.37
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.034
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.046
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.049
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.012
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.048
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.083
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.024
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.136
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.059
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.019
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.012
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.034
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.045
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.012
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.08
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 18
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.83
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.1
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 130
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1120
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 18
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.012
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.039
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.014
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.036
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.022
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.048
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 0.329
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.034
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.054
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.021
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.147
+            },
+            {
+              "nutrientNumber": "429",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 38.2
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 670
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "209",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.243
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 90.4
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 243
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.22
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0.11
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.16
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.209
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.418
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 1.43
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.64
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 30
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 27
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.017
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.069
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 18
+            },
+            {
+              "nutrientNumber": "287",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2346408,
+          "description": "Cabbage, red, raw",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 11112,
+          "publishedDate": "2022-10-28",
+          "foodCategory": "Vegetables and Vegetable Products",
+          "mostRecentAcquisitionDate": "2022-05-02",
+          "allHighlightFields": "",
+          "score": 260.77994,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 35.8
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 269
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 11.7
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.245
+            },
+            {
+              "nutrientNumber": "202",
+              "value": 0.199
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 53.9
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.0035
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.214
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.309
+            },
+            {
+              "nutrientNumber": "316",
+              "value": 6.01
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.614
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.179
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 91.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "957",
+              "value": 34.1
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 1.24
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 6.79
+            },
+            {
+              "nutrientNumber": "958",
+              "value": 29.9
+            },
+            {
+              "nutrientNumber": "428",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "429",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 32.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 790577,
+          "description": "Onions, red, raw",
+          "scientificName": "Allium cepa",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 100252,
+          "publishedDate": "2020-04-01",
+          "foodCategory": "Vegetables and Vegetable Products",
+          "mostRecentAcquisitionDate": "2020-01-13",
+          "allHighlightFields": "",
+          "score": 260.77994,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "416",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 1.79
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 2.29
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 1.68
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "314",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "293",
+              "value": 3.97
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 41
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 197
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.17
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.058
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.24
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 11.4
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.119
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 88.6
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.94
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.43
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 8.1
+            },
+            {
+              "nutrientNumber": "269.3",
+              "value": 5.76
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 9.93
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 44
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 186
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2747665,
+          "description": "Radishes, red, raw",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 100400,
+          "publishedDate": "2025-12-18",
+          "foodCategory": "Vegetables and Vegetable Products",
+          "mostRecentAcquisitionDate": "2025-02-04",
+          "allHighlightFields": "",
+          "score": 260.77994,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 8.94
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 17.9
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 198
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 51.2
+            },
+            {
+              "nutrientNumber": "269.3",
+              "value": 2.64
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.104
+            },
+            {
+              "nutrientNumber": "202",
+              "value": 0.105
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.00166
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 17.8
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.0831
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.0702
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.524
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 1.56
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 1.08
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.31
+            },
+            {
+              "nutrientNumber": "416",
+              "value": 0.862
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 63.2
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 94.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 21.5
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.06
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.656
+            },
+            {
+              "nutrientNumber": "957",
+              "value": 19.6
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 172240,
+          "description": "Vinegar, red wine",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 2068,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Spices and Herbs",
+          "allHighlightFields": "",
+          "score": 260.77994,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0.27
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 19
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 94.5
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 39
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.03
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.17
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 79
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.45
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.046
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 173954,
+          "description": "Cherries, sour, red, raw",
+          "scientificName": "Prunus cerasus",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 9063,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Fruits and Fruit Juices",
+          "allHighlightFields": "",
+          "score": 240.04773,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0.07
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "287",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.6
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8.49
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 6.1
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 64
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 209
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.4
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.03
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.32
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 9
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.104
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.112
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1280
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.068
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 86.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 173
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.4
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.143
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.044
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.082
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.048
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.016
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.081
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.046
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.044
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 2.1
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 770
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 3.51
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 4.18
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 85
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "en|red bull": [
+        {
+          "code": "0611269818994",
+          "brands": [
+            "Red Bull"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 11.1,
+            "sugars_100g": 10.3,
+            "energy-kcal_100g": 44.4,
+            "proteins_100g": 0,
+            "sodium_100g": 0.0417,
+            "fat_100g": 0,
+            "salt_100g": 0.10400000000000001
+          },
+          "product_name": "Red bull"
+        },
+        {
+          "code": "22220768",
+          "brands": [
+            "Red Bull"
+          ],
+          "nutriments": {
+            "proteins_100g": 0,
+            "carbohydrates_100g": 11,
+            "sugars_100g": 11,
+            "saturated-fat_100g": 0,
+            "salt_100g": 0.1,
+            "fat_100g": 0,
+            "fiber_100g": 0,
+            "sodium_100g": 0.04,
+            "energy-kj_100g": 194
+          },
+          "product_name": "Red Bull energy drink"
+        },
+        {
+          "code": "90162909",
+          "brands": [
+            "Red Bull",
+            "Orginal"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 11,
+            "energy-kcal_100g": 46,
+            "energy-kj_100g": 192,
+            "fat_100g": 0,
+            "proteins_100g": 0,
+            "salt_100g": 0.0975,
+            "sodium_100g": 0.039,
+            "sugars_100g": 11
+          },
+          "product_name": "Red Bull 250ml"
+        },
+        {
+          "code": "2000000151417",
+          "brands": [
+            "Red Bull"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 0,
+            "energy-kj_100g": 195,
+            "fat_100g": 0,
+            "fiber_100g": 0,
+            "proteins_100g": 0,
+            "salt_100g": 0,
+            "saturated-fat_100g": 0,
+            "sodium_100g": 0,
+            "sugars_100g": 0.1
+          },
+          "product_name": "ENERGY DRINKS (RED BULL)"
+        },
+        {
+          "code": "9002490205973",
+          "brands": [
+            "Red Bull",
+            "حلال"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 11,
+            "energy-kcal_100g": 46,
+            "energy-kj_100g": 195,
+            "fat_100g": 0,
+            "proteins_100g": 0,
+            "salt_100g": 0.1,
+            "saturated-fat_100g": 0,
+            "sodium_100g": 0.04,
+            "sugars_100g": 11
+          },
+          "product_name": "Red Bull - Energy Drink"
+        },
+        {
+          "code": "0601260001723",
+          "brands": [
+            "Red Bull"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 28,
+            "sugars_100g": 26,
+            "energy-kcal_100g": 110
+          },
+          "product_name": "Red Bull"
+        },
+        {
+          "code": "51092580",
+          "brands": [
+            "Red Bull"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 29,
+            "energy-kcal_100g": 110,
+            "sugars_100g": 26
+          },
+          "product_name": "Red Bull"
+        },
+        {
+          "code": "90162718",
+          "brands": [
+            "Red Bull"
+          ],
+          "product_name": "Red bull"
+        },
+        {
+          "code": "86456739",
+          "brands": [
+            "Red bull"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 11,
+            "sugars_100g": 11,
+            "energy-kcal_100g": 46
+          },
+          "product_name": "Red Bull"
+        },
+        {
+          "code": "9002490273187",
+          "brands": [
+            "Red Bull"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 11,
+            "energy-kcal_100g": 46,
+            "fat_100g": 0,
+            "proteins_100g": 0,
+            "salt_100g": 0.00025,
+            "saturated-fat_100g": 0,
+            "sodium_100g": 0.0001,
+            "sugars_100g": 11
+          },
+          "product_name": "Red Bull"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1146 @@
+{
+  "caseId": "en-zero-calorie-drink",
+  "input": "a can of diet coke",
+  "recordedAt": "2026-08-21T00:47:23.943Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"a can of diet coke\",\"reasoning\":\"One item: a standard 12‑oz (355 ml) can of diet coke, a branded cola beverage. No size modifiers, so quantity 1 can.\",\"confidence\":0.95,\"language\":\"en\",\"items\":[{\"name\":\"diet coke\",\"local_name\":\"diet coke\",\"quantity\":1,\"unit\":\"can\",\"estimated_grams\":355,\"estimated_per_100g\":{\"kcal\":0,\"protein\":0,\"carbs\":0,\"fat\":0},\"kind\":\"food\",\"confidence\":0.94}]}",
+    "promptTokens": 2969,
+    "completionTokens": 804
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "diet coke": [
+        {
+          "fdcId": 2742339,
+          "description": "Diet Coke Bottle, 1.25 Liters",
+          "dataType": "Branded",
+          "gtinUpc": "00049000055399",
+          "publishedDate": "2025-09-18",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2025-08-28",
+          "dataSource": "GDSN",
+          "packageWeight": "42.2 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 355,
+          "householdServingFullText": "12 fl oz (360 mL)",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 1.25LTR PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 361.5762,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2742329,
+          "description": "Diet Coke Bottle, 2 Liters",
+          "dataType": "Branded",
+          "gtinUpc": "00049000050110",
+          "publishedDate": "2025-09-18",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2025-08-28",
+          "dataSource": "GDSN",
+          "packageWeight": "67.6 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 355,
+          "householdServingFullText": "12 fl oz (360 mL)",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 2LTR PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 361.5762,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2743986,
+          "description": "Diet Coke Bottle, 3 Liters",
+          "dataType": "Branded",
+          "gtinUpc": "00049000011340",
+          "publishedDate": "2025-09-18",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2025-08-28",
+          "dataSource": "GDSN",
+          "packageWeight": "101.4 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 355,
+          "householdServingFullText": "12 fl oz (360 mL)",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 3LTR PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 361.5762,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1627840,
+          "description": "DIET COKE WITH LIME FLAVOR, LIME",
+          "dataType": "Branded",
+          "gtinUpc": "049000039139",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "Coca-Cola USA Operations",
+          "brandName": "DIET COKE",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, NATURAL FLAVORS, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), ASPARTAME, CITRIC ACID, ACESULFAME POTASSIUM, CAFFEINE",
+          "marketCountry": "United States",
+          "foodCategory": "Soda",
+          "modifiedDate": "2019-10-03",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "8 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 361.5762,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 12
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1661545
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1661545
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 173231,
+          "description": "Beverages, tea, instant, lemon, diet",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 14376,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Beverages",
+          "allHighlightFields": "",
+          "score": 320.39413,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.14
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 7
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0.44
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 99.4
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.155
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.05
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.008
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 14
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2743985,
+          "description": "Diet Coke Bottle, 12 fl oz",
+          "dataType": "Branded",
+          "gtinUpc": "00049000008395",
+          "publishedDate": "2025-09-18",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2025-08-28",
+          "dataSource": "GDSN",
+          "packageWeight": "12.0 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 355,
+          "householdServingFullText": "1 Can",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 12OZA PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 306.70102,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2758143,
+          "description": "Diet Coke Bottle, 16 fl oz",
+          "dataType": "Branded",
+          "gtinUpc": "00049000049558",
+          "publishedDate": "2026-04-23",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2026-03-30",
+          "dataSource": "GDSN",
+          "packageWeight": "16.0 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 473,
+          "householdServingFullText": "1 Bottle",
+          "discontinuedDate": "2026-03-11",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 16OZA PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 306.70102,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2718303,
+          "description": "Diet Coke Bottle, 16 fl oz",
+          "dataType": "Branded",
+          "gtinUpc": "00049000051162",
+          "publishedDate": "2024-12-19",
+          "brandOwner": "The Coca-Cola Company",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "United States",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2023-06-30",
+          "dataSource": "GDSN",
+          "packageWeight": "16 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 480,
+          "householdServingFullText": "1 Bottle",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 16OZA PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 306.70102,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2744013,
+          "description": "Diet Coke Bottle, 16.9 fl oz",
+          "dataType": "Branded",
+          "gtinUpc": "00049000008562",
+          "publishedDate": "2025-09-18",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2025-08-28",
+          "dataSource": "GDSN",
+          "packageWeight": "16.9 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 500,
+          "householdServingFullText": "1 Bottle",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 16.9OZA PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 306.70102,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2743965,
+          "description": "Diet Coke Bottle, 20 fl oz",
+          "dataType": "Branded",
+          "gtinUpc": "00049000000450",
+          "publishedDate": "2025-09-18",
+          "brandOwner": "Coca-Cola",
+          "brandName": "Coca-Cola light/diet Coke",
+          "subbrandName": "diet Coke",
+          "ingredients": "CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (TO PROTECT TASTE), NATURAL FLAVORS, CITRIC ACID, CAFFEINE.",
+          "marketCountry": "US",
+          "foodCategory": "Non Alcoholic Beverages - Ready to Drink",
+          "modifiedDate": "2025-08-29",
+          "dataSource": "GDSN",
+          "packageWeight": "20.0 OZA",
+          "servingSizeUnit": "MLT",
+          "servingSize": 591,
+          "householdServingFullText": "1 Bottle",
+          "gpcClassCode": 50202300,
+          "shortDescription": "dt Coke 20OZA PL BT",
+          "preparationStateCode": "PREPARED",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 306.70102,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

@@ -1,0 +1,1070 @@
+{
+  "caseId": "tr-bir-bardak-sut",
+  "input": "bir bardak süt",
+  "recordedAt": "2026-08-21T00:42:36.278Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\n  \"normalized_text\": \"bir bardak süt\",\n  \"reasoning\": \"One glass of milk; \\\"bardak\\\" maps to unit glass, quantity 1.\",\n  \"confidence\": 0.95,\n  \"language\": \"tr\",\n  \"items\": [\n    {\n      \"name\": \"milk\",\n      \"local_name\": \"süt\",\n      \"unit\": \"glass\",\n      \"quantity\": 1,\n      \"estimated_grams\": 250,\n      \"estimated_per_100g\": {\n        \"kcal\": 61,\n        \"protein\": 3.2,\n        \"carbs\": 4.8,\n        \"fat\": 3.3\n      },\n      \"kind\": \"food\",\n      \"confidence\": 0.95\n    }\n  ]\n}",
+    "promptTokens": 2940,
+    "completionTokens": 321
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "milk": [
+        {
+          "fdcId": 1909132,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "072050301314",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Elmhurst Milk & Cream Co.Inc.",
+          "brandName": "JUNIPER VALLEY",
+          "ingredients": "REDUCED FAT MILK, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-08-06",
+          "dataSource": "LI",
+          "packageWeight": "1 Quart/946 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 236,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Elmhurst <em>Milk</em> & Cream Co.Inc.<br /><b>Ingredients</b>: REDUCED FAT <em>MILK</em>, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.39
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.12
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 127
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 212
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.27
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2078244,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "02114029705",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Winn-Dixie Stores, Inc.",
+          "brandName": "WINN-DIXIE",
+          "ingredients": "MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2019-05-01",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.75
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 46
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2501185,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "044100146992",
+          "publishedDate": "2023-03-16",
+          "brandOwner": "HP Hood LLC",
+          "brandName": "HOOD",
+          "ingredients": "MILK AND VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2023-02-11",
+          "dataSource": "LI",
+          "packageWeight": "HALF GALLON/1.89 L",
+          "servingSizeUnit": "MLT",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em> AND VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 167
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1500
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2475001,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "041497099993",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Weis Markets, Inc.",
+          "brandName": "WEIS QUALITY",
+          "ingredients": "REDUCED FAT MILK, VITAMIN A PALMITATE, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-11-03",
+          "dataSource": "LI",
+          "packageWeight": "12 fl oz/355 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 355,
+          "householdServingFullText": "12 ONZ",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: REDUCED FAT <em>MILK</em>, VITAMIN A PALMITATE, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.38
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.97
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.07
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 51
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.07
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 124
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 145
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 48
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 2290
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.56
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2083027,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "811964010437",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Bogopa Enterprises, Inc.",
+          "brandName": "BOGOPA",
+          "ingredients": "MILK, VITAMIN D3",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-04-29",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em>, VITAMIN D3",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2062196,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "011110502506",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "The Kroger Co.",
+          "brandName": "COLORADO PROUD",
+          "ingredients": "MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "8 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 162
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2476573,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "021130409235",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Safeway, Inc.",
+          "brandName": "LUCERNE DAIRY FARMS",
+          "ingredients": "GRADE A MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-06-14",
+          "dataSource": "LI",
+          "packageWeight": "64 fl oz/1/2 GAL/1.89 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: GRADE A <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.75
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 131
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 175
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1000
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2503416,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "071700100215",
+          "publishedDate": "2023-03-16",
+          "brandOwner": "HP Hood LLC",
+          "brandName": "CROWLEY",
+          "ingredients": "MILK AND VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2023-02-11",
+          "dataSource": "LI",
+          "packageWeight": "1/2 Gallon/1.89 L",
+          "servingSizeUnit": "MLT",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em> AND VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 167
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1500
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2454032,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "021130409433",
+          "publishedDate": "2023-01-26",
+          "brandOwner": "Safeway, Inc.",
+          "brandName": "VALUE CORNER",
+          "ingredients": "GRADE A MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-05-03",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: GRADE A <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.75
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 104
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 117
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1909141,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "072050401519",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Elmhurst Milk & Cream Co.Inc.",
+          "brandName": "JUNIPER VALLEY",
+          "ingredients": "REDUCED FAT MILK, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-06-13",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 236,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Elmhurst <em>Milk</em> & Cream Co.Inc.<br /><b>Ingredients</b>: REDUCED FAT <em>MILK</em>, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.39
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.12
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 127
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 212
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.27
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|süt": [
+        {
+          "code": "8695077000538",
+          "brands": [
+            "Dost"
+          ],
+          "nutriments": {
+            "energy-kcal_100g": 114,
+            "fat_100g": 4.3,
+            "proteins_100g": 7,
+            "salt_100g": 0,
+            "saturated-fat_100g": 2.8,
+            "sodium_100g": 0,
+            "sugars_100g": 11.8
+          },
+          "product_name": "Dost süt"
+        },
+        {
+          "code": "8690931005896",
+          "brands": [
+            "Yörükoğlu"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 4.7,
+            "saturated-fat_100g": 1,
+            "energy-kcal_100g": 44,
+            "fat_100g": 1.5,
+            "proteins_100g": 2.9,
+            "sugars_100g": 4.7
+          },
+          "product_name": "Süt"
+        },
+        {
+          "code": "8680181123013",
+          "brands": [
+            "Torku"
+          ],
+          "nutriments": {
+            "fat_100g": 1.5,
+            "proteins_100g": 2.7,
+            "sugars_100g": 7.5,
+            "saturated-fat_100g": 1,
+            "carbohydrates_100g": 13,
+            "salt_100g": 0.12,
+            "energy-kcal_100g": 76,
+            "sodium_100g": 0.048
+          },
+          "product_name": "Torku Keçiboynuzlu süt"
+        },
+        {
+          "code": "8682214709393",
+          "product_name": "mis süt"
+        },
+        {
+          "code": "8682214709355",
+          "nutriments": {
+            "carbohydrates_100g": 9.1,
+            "energy-kcal_100g": 62,
+            "fat_100g": 1.5,
+            "proteins_100g": 2.9,
+            "saturated-fat_100g": 1,
+            "sugars_100g": 9.1
+          },
+          "product_name": "Çikolatalı süt"
+        },
+        {
+          "code": "8692095343869",
+          "nutriments": {
+            "carbohydrates_100g": 8.7,
+            "energy-kcal_100g": 55,
+            "fat_100g": 1,
+            "proteins_100g": 2.8,
+            "saturated-fat_100g": 0.7,
+            "sugars_100g": 7.5
+          },
+          "product_name": "Çikolatalı süt"
+        },
+        {
+          "code": "8690767160264",
+          "nutriments": {
+            "carbohydrates_100g": 9.5,
+            "energy-kcal_100g": 160,
+            "fat_100g": 1.2,
+            "proteins_100g": 2.8,
+            "salt_100g": 0.25,
+            "saturated-fat_100g": 0.7,
+            "sodium_100g": 0.1,
+            "sugars_100g": 9.4
+          },
+          "product_name": "Çikolatalı süt"
+        },
+        {
+          "code": "8681737400008",
+          "nutriments": {
+            "carbohydrates_100g": 0.47,
+            "energy-kcal_100g": 635,
+            "fat_100g": 70,
+            "proteins_100g": 1.3900000000000001,
+            "fiber_100g": 0.167
+          },
+          "product_name": "Süt kaymağı"
+        },
+        {
+          "code": "8699118063452",
+          "brands": [
+            "Birşah"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 4.7,
+            "energy-kcal_100g": 31,
+            "fat_100g": 0.1,
+            "proteins_100g": 3,
+            "salt_100g": 0,
+            "saturated-fat_100g": 0.1,
+            "sodium_100g": 0,
+            "sugars_100g": 4.7
+          },
+          "product_name": "YAĞSIZ SÜT"
+        },
+        {
+          "code": "8690612303013",
+          "brands": [
+            "Superfresh"
+          ],
+          "nutriments": {
+            "fat_100g": 2.5,
+            "proteins_100g": 1,
+            "sugars_100g": 6,
+            "energy-kcal_100g": 61,
+            "saturated-fat_100g": 0.699999988079071,
+            "carbohydrates_100g": 9
+          },
+          "product_name": "Süt Mısır"
+        }
+      ]
+    }
+  }
+}

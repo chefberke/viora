@@ -1,0 +1,17 @@
+{
+  "caseId": "en-half-litre-water-bottle",
+  "input": "500 ml sparkling water",
+  "recordedAt": "2026-08-21T00:43:48.658Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"500 ml sparkling water\",\"reasoning\":\"A single item: sparkling water, measured at 500 ml. Volume converts directly to grams for water. No ambiguity.\",\"confidence\":0.98,\"language\":\"en\",\"items\":[{\"name\":\"water\",\"local_name\":\"sparkling water\",\"quantity\":500,\"unit\":\"ml\",\"estimated_grams\":500,\"estimated_per_100g\":{\"kcal\":0,\"protein\":0,\"carbs\":0,\"fat\":0},\"kind\":\"water\",\"confidence\":0.98}]}",
+    "promptTokens": 2940,
+    "completionTokens": 320
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {},
+    "off": {}
+  }
+}

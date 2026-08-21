@@ -1,0 +1,918 @@
+{
+  "caseId": "en-nutella-spoon",
+  "input": "a spoon of nutella",
+  "recordedAt": "2026-08-21T00:42:02.370Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\n  \"normalized_text\": \"a spoon of nutella\",\n  \"reasoning\": \"One tablespoon of Nutella is indicated by \\\"spoon\\\". A standard tablespoon is about 15 g.\",\n  \"confidence\": 0.9,\n  \"language\": \"en\",\n  \"items\": [\n    {\n      \"name\": \"nutella\",\n      \"local_name\": \"nutella\",\n      \"unit\": \"tbsp\",\n      \"quantity\": 1,\n      \"estimated_grams\": 15,\n      \"estimated_per_100g\": {\n        \"kcal\": 539,\n        \"protein\": 6.3,\n        \"carbs\": 57.5,\n        \"fat\": 30.9\n      },\n      \"kind\": \"food\",\n      \"confidence\": 0.9\n    }\n  ]\n}",
+    "promptTokens": 2941,
+    "completionTokens": 521
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "nutella": [
+        {
+          "fdcId": 2026852,
+          "description": "NUTELLA FERRERO WITH BREADSTICKS",
+          "dataType": "Branded",
+          "gtinUpc": "009800800124",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA FERRERO",
+          "ingredients": "NUTELLA: SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY (MILK), LECITHIN AS EMULSIFIER (SOY), VANILLIN: AN ARTIFICIAL FLAVOR. BREADSTICKS: WHEAT FLOUR, PALM OIL, SALT, MALT EXTRACT, BAKER'S YEAST.",
+          "marketCountry": "United States",
+          "foodCategory": "Crackers & Biscotti",
+          "modifiedDate": "2020-04-17",
+          "dataSource": "LI",
+          "packageWeight": "22 oz/624 g",
+          "servingSizeUnit": "g",
+          "servingSize": 52,
+          "householdServingFullText": "1 CONTAINER",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>NUTELLA</em>: SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY (MILK), LECITHIN AS EMULSIFIER (SOY",
+          "score": 219.96983,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.69
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 26.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 65.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 519
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 44.2
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 77
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.08
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 250
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.62
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2560072,
+          "description": "FILLED WITH NUTELLA CRISPY WAFER",
+          "dataType": "Branded",
+          "gtinUpc": "0009800820023",
+          "publishedDate": "2023-06-29",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA",
+          "subbrandName": "B-READY",
+          "ingredients": "HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR), WHEAT FLOUR, BAKER'S YEAST, BARLEY MALT EXTRACT, SALT, SKIM MILK, LECITHIN AS EMULSIFIER, WHEAT PROTEINS, WHEY PROTEINS",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2023-05-23",
+          "dataSource": "LI",
+          "servingSizeUnit": "GRM",
+          "servingSize": 22,
+          "householdServingFullText": "1 bar (22g)",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 167.63705,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.09
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 27.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 63.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 45.4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.73
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 350
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 227
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 40.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.09
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2193268,
+          "description": "COOKIES FILLED WITH NUTELLA HAZELNUT SPREAD BISCUITS, COOKIES FILLED WITH NUTELLA HAZELNUT SPREAD",
+          "dataType": "Branded",
+          "gtinUpc": "009800830022",
+          "publishedDate": "2021-12-01",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA",
+          "ingredients": "HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN AS EMULSIFIER, VANILLIN AN ARTIFICIAL FLAVOR), WHEAT FLOUR, VEGETABLE FATS (PALM, PALM KERNEL), CANE SUGAR, LACTOSE, WHEAT BRAN, MILK POWDER, BARLEYCORN MALT EXTRACT, HONEY, DISODIUM DIPHOSPHATE, SODIUM BICARBONATE AND AMMONIUM BICARBONATE AS LEAVENING AGENTS, COCOA, SALT, WHEAT STARCH, MALTED BARLEY FLOUR, LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2021-10-11",
+          "dataSource": "LI",
+          "packageWeight": "5.8 OZ/166 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "2 cookies",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 144.08885,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 64.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 35.7
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 64
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.43
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 243
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 214
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 32.1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 10.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 418678,
+          "description": "BON APPE, NUTELLA, SWIRL COOKIES",
+          "dataType": "Branded",
+          "gtinUpc": "773479072709",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "BON APPE",
+          "ingredients": "NUTELLA (SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY, SOY LECITHIN, VANILLIN), ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, ASCORBIC ACID ADDED AS A DOUGH CONDITIONER, THIAMINE MONONITRATE, RIBOFLAVIN, ENZYME, FOLIC ACID), MARGARINE (PALM OIL, WATER, CANOLA OIL, SUGAR, MONOGLYCERIDES, SOY LECITHIN, POTASSIUM SORBATE, CITRIC ACID, ARTIFICIAL FLAVOR, BETA CAROTENE, VITAMIN A VITAMIN D3), EGGS, DEXTROSE, SUGAR, FRUCTOSE, INVERT SUGAR, BROWN SUGAR, PALM OIL, SOYBEAN OIL, NATURAL FLAVOR, COCOA (PROCESSED WITH ALKALI), WATER, LEAVENING (CORN STARCH, SODIUM BICARBONATE, SODIUM ALUMINUM SULFATE, MONOCALCIUM PHOSPHATE), SALT, CITRUS FIBER, GUAR GUM, MODIFIED CORN STARCH, XANTHAN GUM",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "2 COOKIES",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>NUTELLA</em> (SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY, SOY LECITHIN, VANILLIN), ENRICHED",
+          "score": 123.04008,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 71
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.57
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 64.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 464
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 42.9
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 250
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 36
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.93
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 446248,
+          "description": "BON APPE, NUTELLA, GOURMET FUDGE BROWNIE",
+          "dataType": "Branded",
+          "gtinUpc": "773479772609",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "BON APPE",
+          "ingredients": "SUGAR, NUTELLA (SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY, SOY LECITHIN, VANILLIN), ENRICHED BLEACHED FLOUR (WHEAT FLOUR, CHLORINE, NIACIN, BENZOYL PEROXIDE, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), SOYBEAN AND/OR CANOLA OIL, EGGS, WATER, COCOA POWDER (ALKALIZED), INVERT SUGAR, SALT, ARTIFICIAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Cakes, Cupcakes, Snack Cakes",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 39,
+          "householdServingFullText": "0.05 SLICE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR, <em>NUTELLA</em> (SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY, SOY LECITHIN, VANILLIN",
+          "score": 84.58139,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 51
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.92
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 5.13
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 20.5
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 410
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 43.6
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.6
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 192
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 51
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.85
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2044919,
+          "description": "FERERRO, NUTELLA, B-READY FILLED WAFER BARS",
+          "dataType": "Branded",
+          "gtinUpc": "009800600106",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "FERERRO",
+          "subbrandName": "NUTELLA",
+          "ingredients": "HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, COCOA, SKIM MILK, WHEY (MILK), LECITHIN AS EMULSIFIER (SOY), VANILLIN: AN ARTIFICIAL FLAVOR), WHEAT FLOUR, PALM OIL, BAKER'S YEAST, MALT EXTRACT POWDER, LECITHIN AS EMULSIFIER (SOY), SALT, SKIM MILK, WHEAT PROTEINS, WHEY PROTEINS (MILK), ENZYMES.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2018-01-01",
+          "dataSource": "LI",
+          "packageWeight": "4.2 oz/132 g",
+          "servingSizeUnit": "g",
+          "servingSize": 22,
+          "householdServingFullText": "1 BAR",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 53.613567,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.09
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 27.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 63.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 45.4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 91
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.64
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 182
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.09
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2654458,
+          "description": "CRISPY WAFER FILLED WITH NUTELLA HAZELNUT SPREAD WITH COCOA, HAZELNUT SPREAD WITH COCOA",
+          "dataType": "Branded",
+          "gtinUpc": "009800820184",
+          "publishedDate": "2023-10-26",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA",
+          "subbrandName": "B-READY",
+          "ingredients": "HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR), WHEAT FLOUR, BAKER'S YEAST, BARLEY MALT EXTRACT, SALT, SKIM MILK LECITHIN AS EMULSIFIER, WHEAT PROTEINS. WHEY PROTEINS.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2023-09-28",
+          "dataSource": "LI",
+          "packageWeight": "27.9 oz/792 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 22,
+          "householdServingFullText": "1 bar",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": -24.074791,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.09
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 27.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 68.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 45.4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.73
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 350
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 227
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 40.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.09
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2654459,
+          "description": "CRISPY WAFER FILLED WITH NUTELLA HAZELNUT SPREAD WITH COCOA, HAZELNUT SPREAD WITH COCOA",
+          "dataType": "Branded",
+          "gtinUpc": "009800820146",
+          "publishedDate": "2023-10-26",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA",
+          "subbrandName": "B-READY",
+          "ingredients": "HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR), WHEAT FLOUR, BAKER'S YEAST, BARLEY MALT EXTRACT, SALT, SKIM MILK, LECITHIN AS EMULSIFIER, WHEAT PROTEINS, WHEY PROTEINS.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2023-09-28",
+          "dataSource": "LI",
+          "packageWeight": "1.55 oz/44 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 22,
+          "householdServingFullText": "1 bar",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": -24.074791,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.09
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 27.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 63.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 45.4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.73
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 350
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 227
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 40.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.09
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2560068,
+          "description": "FERRERO NUTELLA & GO! HAZELNUT SPREAD + BREADSTICKS, 1.8 OZ, 4 COUNT",
+          "dataType": "Branded",
+          "gtinUpc": "0009800800049",
+          "publishedDate": "2023-06-29",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA",
+          "ingredients": "NUTELLA: SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, SOY LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR, BREADSTICKS: ENRICHED FLOUR (WHEAT FLOUR, NIACIN, IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), PALM OIL, SALT, MALT EXTRACT, BAKER'S YEAST",
+          "marketCountry": "United States",
+          "foodCategory": "Prepared Subs & Sandwiches",
+          "modifiedDate": "2023-05-23",
+          "dataSource": "LI",
+          "packageWeight": "1.8 oz",
+          "servingSizeUnit": "GRM",
+          "servingSize": 52,
+          "householdServingFullText": "1 Unit (52g)",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>NUTELLA</em>: SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, SOY LECITHIN AS EMULSIFIER, VANILLIN",
+          "score": -24.074791,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.69
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 65.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 44.2
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 96
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.92
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 365
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 250
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 38.5
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.65
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2674689,
+          "description": "HAZELNUT SPREAD WITH COCOA CRISPY WAFER FILLED WITH NUTELLA, HAZELNUT SPREAD WITH COCOA",
+          "dataType": "Branded",
+          "gtinUpc": "009800820061",
+          "publishedDate": "2023-11-16",
+          "brandOwner": "Ferrero U.S.A., Incorporated",
+          "brandName": "NUTELLA",
+          "ingredients": "HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR), WHEAT FLOUR, BAKER'S YEAST, BARLEY MALT EXTRACT, SALT, SKIM MILK, LECITHIN AS EMULSIFIER, WHEAT PROTEINS, WHEY PROTEINS.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2022-11-02",
+          "dataSource": "LI",
+          "packageWeight": "4.6 OZ/132 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 22,
+          "householdServingFullText": "1 bar",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": -24.074791,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.09
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 27.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 68.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 45.4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.73
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 350
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 227
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 40.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.09
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

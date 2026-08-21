@@ -1,0 +1,916 @@
+{
+  "caseId": "en-pizza-slices",
+  "input": "3 slices of pepperoni pizza",
+  "recordedAt": "2026-08-21T00:46:24.386Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"3 slices of pepperoni pizza\",\"reasoning\":\"Three slices of pepperoni pizza, each slice assumed about 100 g, giving a total of 300 g. The line directly states the quantity and unit.\",\"confidence\":0.88,\"language\":\"en\",\"items\":[{\"name\":\"pepperoni pizza\",\"local_name\":\"pepperoni pizza\",\"quantity\":3,\"unit\":\"slice\",\"estimated_grams\":300,\"estimated_per_100g\":{\"kcal\":260,\"protein\":11,\"carbs\":30,\"fat\":10},\"kind\":\"food\",\"confidence\":0.85}]}",
+    "promptTokens": 2970,
+    "completionTokens": 738
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "pepperoni pizza": [
+        {
+          "fdcId": 2073325,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "041130387883",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Supervalu, Inc.",
+          "brandName": "CULINARY CIRCLE",
+          "ingredients": "TOPPINGS: SAUCE (WATER, TOMATO PASTE, SOYBEAN OIL, MODIFIED FOOD STARCH, SALT, SPICES, GARLIC POWDER, XANTHAN GUM, PAPRIKA, ONION POWDER, PARMESAN CHEESE [PASTEURIZED CULTURED PART-SKIM MILK, SALT, ENZYMES]), LOW MOISTURE MOZZARELLA CHEESE (PASTEURIZED MILK CHEESE CULTURES, SALT, ENZYMES), PEPPERONI [PORK, BEEF, SALT, SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, FLAVORING, SODIUM NITRATE, BHA, BHT, CITRIC ACID. MAY CONTAIN WATER) PARMESAN CHEESE (PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES), DEHYDRATED GARLIC, DEHYDRATED RED BELL PEPPERS, CRUST: SOFT WHEAT FLOUR, WATER, EXTRA VIRGIN OLIVE OIL, SUNFLOWER OIL, SALT, YEAST.",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "14.3 oz/405 g",
+          "servingSizeUnit": "g",
+          "servingSize": 135,
+          "householdServingFullText": "0.33 PIZZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ), <em>PEPPERONI</em> [PORK, BEEF, SALT, SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, FLAVORING",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 11.1
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 14.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 274
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.96
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 185
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 793
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 222
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 30
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5.93
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2032010,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "042197002016",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Bernatello's Pizza, Inc.",
+          "brandName": "BREW PUB",
+          "subbrandName": "LOTZZA MOTZZA",
+          "ingredients": "MOZZARELLA CHEESE (PART-SKIM MILK CHEESE CULTURES, SALT, ENZYMES), CRUST (WHEAT FLOUR [BLEACHED WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, ENZYME, FOLIC ACID], WATER, LARD [BHA, PROPYL GALLATE WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR], SOY BEAN OIL, DOUGH CONDITIONER [WHEY, L-CYSTEINE, MONO-HYDROCHLORIDE], SALT, SUGAR, YEAST), SAUCE (WATER, TOMATO PASTE, SPICES, SALT, SUGAR, GARLIC POWDER), PEPPERONI (PORK, BEEF, SALT, DEXTROSE, SODIUM NITRITE, BHA, BHT, CITRIC ACID, MAY CONTAIN WATER, SPICES, FLAVORING, SMOKE FLAVORING, PAPRIKA, OLEORESIN OF PAPRIKA, LACTIC ACID STARTER CULTURE, SODIUM ASCORBATE, GARLIC POWDER, DEHYDRATED GARLIC).",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2020-04-15",
+          "dataSource": "LI",
+          "packageWeight": "23.25 oz/659 g",
+          "servingSizeUnit": "g",
+          "servingSize": 132,
+          "householdServingFullText": "0.2 PIZZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Bernatello's <em>Pizza</em>, Inc.<br /><b>Ingredients</b>: , SUGAR, GARLIC POWDER), <em>PEPPERONI</em> (PORK, BEEF, SALT, DEXTROSE, SODIUM NITRITE, BHA, BHT, CITRIC",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 12.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 21.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 265
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.27
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 265
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.05
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 614
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 152
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 9.1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 34
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0.38
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.82
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2187857,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "038708950594",
+          "publishedDate": "2021-12-01",
+          "brandOwner": "Hansen's Dairy, Inc.",
+          "brandName": "FESTIVAL FOODS",
+          "ingredients": "CRUST: ENRICHED WHEAT FLOUR (FLOUR, NIACIN, IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID, ENZYME, ASCORBIC ACID), WATER, SOYBEAN OIL, YEAST, BREAD CRUMBS (WHEAT FLOUR, YEAST, SUGAR, SALT), OLIVE OIL, SUGAR, SALT, CULTURED WHEAT STARCH, HONEY, SODIUM BICARBONATE, SODIUM ALUMINUM PHOSPHATE, L-CYSTEINE, CITRIC ACID. SAUCE: TOMATO SAUCE (WATER, TOMATO PASTE), SALT, SUGAR, SPICES, DEXTROSE, HYDROLYZED SOY PROTEIN, GARLIC EXTRACT, SOYBEAN OIL, REFINED OLIVE PUMACE OIL, EXTRA VIRGIN OLIVE OIL. LOW MOISTURE, MOZZARELLA CHEESE: PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES, POWDERED CELLULOSE (TO PREVENT CAKING). PEPPERONI: PORK, BEEF, SALT, SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, FLAVORING, SODIUM NITRITE, BHA, BHT, CITRIC ACID. PROVOLONE CHEESE: PASTEURIZED MILK, CHEESE CULTURE, SALT, ENZYMES, POWDERED CELLULOSE (TO PREVENT CAKING). PARMESAN CHEESE: PASTEURIZED PART SKIM MILK, CHEESE CULTURE, SALT, ENZYMES, POWDERED CELLULOSE (TO PREVENT CAKING). SEASONING: DEHYDRATED GARLIC, SPICE.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Deli",
+          "modifiedDate": "2021-10-23",
+          "dataSource": "LI",
+          "packageWeight": "23 oz/652 g",
+          "servingSizeUnit": "g",
+          "servingSize": 130,
+          "householdServingFullText": "0.2 PIZZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>:  (TO PREVENT CAKING). <em>PEPPERONI</em>: PORK, BEEF, SALT, SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 13.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 262
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.08
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 115
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.08
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 715
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 231
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.6
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 27
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5.38
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2187164,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "782796023813",
+          "publishedDate": "2021-12-01",
+          "brandOwner": "Papa John's Salads & Produce",
+          "brandName": "PAPA JOHN'S SALAD & PRODUCE",
+          "ingredients": "DOUGH (ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, IRON, AMYLASE, ASCORBIC ACID, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, YEAST, EXTRA VIRGIN OLIVE OIL, SUGAR, SALT, CANOLA OIL AS A MANUFACTURING AID), PIZZA SAUCE (TOMATOES, BLEND OF EXTRA VIRGIN OLIVE OIL AND SUNFLOWER OIL, SALT, OREGANO, GRANULATED GARLIC, BLACK PEPPER AND NATURALLY DERIVED CITRIC ACID), CHEESE BLEND (LOW MOISTURE PART SKIM MOZZARELLA CHEESE (PASTEURIZED PART-SKIM MILK, CHEESE CULTURE, SALT, ENZYMES), PROVOLONE CHEESE (PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES), ASIAGO MEDIUM CHEESE (PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES), IMPORTED ROMANO CHEESE (PASTEURIZED SHEEP'S MILK, CHEESE CULTURES, SALT, ENZYMES), PRODUCT OF FRANCE, RICE FLOUR AND CELLULOSE POWDER ADDED TO PREVENT CAKING, NATAMYCIN (A NATURAL MOLD INHIBITOR)), PEPPERONI (PORK, BEEF, SALT, CONTAINS 2% OR LESS OF FLAVORINGS, LACTIC ACID STARTER CULTURE, DEXTROSE, PAPRIKA, SODIUM NITRITE, BHA, BHT, CITRIC ACID), PARMESAN CHEESE (PASTEURIZED PART-SKIM MILK, CHEESE CULTURES, SALT, ENZYMES, AND POWDERED CELLULOSE (ANTI-CAKING AGENT)).",
+          "marketCountry": "United States",
+          "foodCategory": "Other Deli",
+          "modifiedDate": "2021-10-23",
+          "dataSource": "LI",
+          "packageWeight": "19 oz",
+          "servingSizeUnit": "g",
+          "servingSize": 89,
+          "householdServingFullText": "1 PIECE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>:  AS A MANUFACTURING AID), <em>PIZZA</em> SAUCE (TOMATOES, BLEND OF EXTRA VIRGIN OLIVE OIL AND SUNFLOWER OIL, SALT",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 12.4
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 11.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 258
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 169
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 719
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 337
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 2.7
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 22
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5.06
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2272762,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "077387400709",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Schwan's Mama Rosa's, LLC",
+          "brandName": "CLOVER VALLEY",
+          "ingredients": "CRUST (ENRICHED FLOUR (WHEAT FLOUR, BARLEY MALT, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, CONTAINS LESS THAN 2% OF CALCIUM PROPIONATE, DEXTROSE, FUMARIC ACID, POTASSIUM SORBATE, SALT, SOY LECITHIN, VEGETABLE OIL (CANOLA AND/OR SOYBEAN OIL), YEAST), SAUCE (WATER, TOMATO PASTE, SEASONING (SALT, SUGAR, ONION POWDER, SPICES, GARLIC POWDER, XANTHAN AND GUAR GUM, POTASSIUM SORBATE, CITRIC ACID, TRICALCIUM PHOSPHATE, SOYBEAN OIL), MODIFIED FOOD STARCH), IMITATION MOZZARELLA CHEESE (WATER, PALM OIL, CASEIN, MOZZARELLA CHEESE [MILK, CHEESE CULTURES, SALT, ENZYMES], MODIFIED FOOD STARCH, CONTAINS 2% OR LESS: SALT, NATURAL FLAVOR, SODIUM ALUMINUM PHOSPHATE, SODIUM PHOSPHATE, LACTIC ACID, SORBIC ACID (AS A PRESERVATIVE), BETA CAROTENE), PEPPERONI MADE WITH PORK, CHICKEN AND BEEF (PORK, MECHANICALLY SEPARATED CHICKEN, BEEF, SALT, CONTAINS 2% OR LESS OF SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, SODIUM ASCORBATE, SMOKE FLAVORING, FLAVORING, SODIUM NITRITE, BHA, BHT, CITRIC ACID, CONTAINS ONE OR MORE OF: WATER, GARLIC POWDER, PAPRIKA, OLEORESIN OF PAPRIKA).",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2018-10-04",
+          "dataSource": "LI",
+          "packageWeight": "6.5 oz/184 g",
+          "servingSizeUnit": "g",
+          "servingSize": 184,
+          "householdServingFullText": "1 PIZZA",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>:  PHOSPHATE, LACTIC ACID, SORBIC ACID (AS A PRESERVATIVE), BETA CAROTENE), <em>PEPPERONI</em> MADE WITH PORK",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.7
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 9.24
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 29.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 234
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.35
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.12
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 217
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 533
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 1.1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.8
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2094678,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "681131139007",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Wal-Mart Stores, Inc.",
+          "brandName": "MARKETSIDE",
+          "ingredients": "CRUST (ENRICHED FLOUR [WHEAT FLOUR, NIACIN, IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID], WATER, PALM OIL, SOYBEAN OIL, YEAST, CONTAINS 2% OR LESS OF: BREAD CRUMBS [WHEAT FLOUR, SUGAR, YEAST, SALT], SUGAR, SALT, ACACIA GUM, ENZYMES, FERMENTED WHEAT FLOUR), LOW MOISTURE MOZZARELLA CHEESE (PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES), SAUCE (TOMATO PUREE [WATER, TOMATO PASTE], CONTAINS 2% OR LESS OF: SUGAR, SPICES, SALT, SOYBEAN OIL, XANTHAN GUM, CITRIC ACID, DEHYDRATED ONION, DEHYDRATED GARLIC), PEPPERONI, BHA, BHT WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR (PORK, SALT, CONTAINS 2% OR LESS OF: BEEF, DEXTROSE, FLAVORINGS, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, SODIUM NITRITE, SPICES, ASCORBIC ACID, BHA, BHT, CITRIC ACID), CONTAINS 2% OR LESS OF: ASIAGO CHEESE ([PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES], POWDERED CELLULOSE [ANTI-CAKING AGENT]), GRUYERE CHEESE (PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES), FONTINA CHEESE ([PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES], POWDERED CELLULOSE [ANTI-CAKING AGENT]), DRIED OREGANO, DRIED BASIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Deli",
+          "modifiedDate": "2018-10-05",
+          "dataSource": "LI",
+          "packageWeight": "19.1 oz/541 g",
+          "servingSizeUnit": "g",
+          "servingSize": 135,
+          "householdServingFullText": "0.25 PIZZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: , DEHYDRATED GARLIC), <em>PEPPERONI</em>, BHA, BHT WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR (PORK, SALT, CONTAINS",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 11.1
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 267
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.22
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 148
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.33
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 607
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 222
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 26
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.67
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1900838,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "077387403298",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Schwan's Mama Rosa's, LLC",
+          "brandName": "MAMA ROSA'S",
+          "ingredients": "CRUST (ENRICHED WHEAT FLOUR (WHEAT FLOUR, BARLEY MALT, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, SHORTENING (PALM OIL, SOY LECITHIN, NATURAL BUTTER FLAVOR AND BETA CAROTENE), CONTAINS LESS THAN 2% OF ASCORBIC ACID, CALCIUM PROPIONATE, DEXTROSE, FUMARIC ACID, OLIVE OIL, POTASSIUM SORBATE, SALT, SOY LECITHIN, YEAST.), SAUCE (WATER, TOMATO PASTE, SEASONING (SUGAR, SALT, GARLIC POWDER, SPICE, ONION POWDER, XANTHAN GUM, TRICALCIUM PHOSPHATE), MODIFIED FOOD STARCH), MOZZARELLA CHEESE (PASTEURIZED PART SKIM MILK, CHEESE CULTURES, SALT, ENZYMES), PEPPERONI (PORK, BEEF, SALT, CONTAINS 2% OR LESS OF FLAVORINGS, DEXTROSE, OLEORESIN OF PAPRIKA, SMOKE FLAVORING, ASCORBIC ACID, LACTIC ACID STARTER CULTURE, SODIUM NITRITE, BHA, BHT CITRIC ACID).",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2018-01-20",
+          "dataSource": "LI",
+          "packageWeight": "30 oz/850 g",
+          "servingSizeUnit": "g",
+          "servingSize": 141,
+          "householdServingFullText": "0.16 PIZZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ), MOZZARELLA CHEESE (PASTEURIZED PART SKIM MILK, CHEESE CULTURES, SALT, ENZYMES), <em>PEPPERONI</em> (PORK",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 12.1
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 12.8
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 26.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 248
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.13
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.4
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 142
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.91
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 688
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 355
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.3
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5.67
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1791746,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "050706900029",
+          "publishedDate": "2021-06-17",
+          "brandOwner": "T J's Pizza Company",
+          "brandName": "TJ'S",
+          "ingredients": "CRUST BLEACHED ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID, ENZYME), WATER, PARTIALLY HYDROGENATED SOYBEAN/COTTONSEED OIL, YEAST, EMULSIFIER (WATER, ETHOXYLATED MONO-DIGLYCERIDES, POLYSORBATE 60, SOYA LECITHIN, SODIUM LECITHIN, SODIUM PROPIONATE), CALCIUM PROPIONATE, SALT, BAKING POWDER, SUGAR, DOUGH IMPROVER (SODIUM METABISULFITE, CORN STARCH, MICROCRYSTALLINE CELLULOSE, DICALCIUM PHOSPHATE), WHEY CHEESE AMERICAN CHEESE (CULTURED MILK, SALT, ENZYMES), SWISS CHEESE (CULTURED MILK, SALT, ENZYMES), PROVOLONE CHEESE (CULTURED MILK, SALT, ENZYMES, SMOKE FLAVOR), CREAM, WATER, SODIUM PHOSPHATE, NATURAL FLAVOR, SALT, SMOKE FLAVOR, SODIUM CELLULOSE (ANTI-CAKING AGENT), SAUCE: TOMATO PASTE, WATER, PARMESAN CHEESE (CULTURED PART SKIM COW'S MILK, SALT, ENZYMES, POWDERED CELLULOSE), SALT, GARLIC, SPICES, PEPPERONI: PORK, BEEF, SALT, SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, NATURAL SMOKE FLAVOR, FLAVORING, SODIUM ERYTHORBATE, SODIUM NITRITE, BHA, BHT, CITRIC ACID.",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2018-10-05",
+          "dataSource": "LI",
+          "packageWeight": "9 oz",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "1 SLICE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: T J's <em>Pizza</em> Company<br /><b>Ingredients</b>: , SALT, ENZYMES, POWDERED CELLULOSE), SALT, GARLIC, SPICES, <em>PEPPERONI</em>: PORK, BEEF, SALT, SPICES, DEXTROSE",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.12
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 12.5
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 18.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 250
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 312
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.12
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 938
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 312
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 3.8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.25
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1881319
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1881319
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2073395,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "041318410211",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Schnuck Markets, Inc.",
+          "brandName": "SCHNUCKS",
+          "ingredients": "TOPPINGS: CHEESES: LOW MOISTURE PART SKIM MOZZARELLA CHEESE (PART SKIM MILK, CHEESE CULTURE, SALT, ENZYMES), PROVOLONE CHEESE (WHOLE MILK, NONFAT DRY MILK, STARTER CULTURE, SALT, ENZYMES, CALCIUM CHLORIDE AND RENNET), WHITE CHEDDAR CHEESE (MILK, CHEESE CULTURE, SALT, ENZYMES), PARMESAN AND ROMANO CHEESE BLEND (BOTH MADE FROM PART SKIM COW'S MILK, CHEESE CULTURE, SALT, RENNET, CALCIUM PROPIONATE). SAUCE: WATER, TOMATO PASTE, SUGAR, SALT, ONION POWDER, SPICES, GARLIC POWDER. PEPPERONI: PORK AND BEEF, SALT, SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, FLAVORING, SODIUM NITRITE, BHA, BHT, CITRIC ACID. CRUST: WHEAT FLOUR, WATER, CONTAINS LESS THAN 2% OF YEAST, BUTTER FLAVORED CHIPS (PARTIALLY HYDROGENATED SOYBEAN OIL, COTTONSEED OIL WITH LECITHIN, ARTIFICIAL FLAVOR, ARTIFICIAL COLOR, CITRIC ACID [ADDED AS A PRESERVATIVE]), SOYBEAN OIL, DEXTROSE, SALT, CALCIUM PROPIONATE, DOUGH CONDITIONERS (CALCIUM SULFATE, SALT, L-CYSTEINE HCL, TRICALCIUM PHOSPHATE, AND FUNGAL ENZYMES), AND POTASSIUM SORBATE (TO RETARD SPOILAGE).",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2018-10-05",
+          "dataSource": "LI",
+          "packageWeight": "21.5 oz/610 g",
+          "servingSizeUnit": "g",
+          "servingSize": 152,
+          "householdServingFullText": "0.25 PIZZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ). SAUCE: WATER, TOMATO PASTE, SUGAR, SALT, ONION POWDER, SPICES, GARLIC POWDER. <em>PEPPERONI</em>: PORK",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 9.21
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 11.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 21.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 237
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.63
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 230
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.71
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 592
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 329
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 3.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 26
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0.33
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5.26
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2289578,
+          "description": "PEPPERONI PIZZA",
+          "dataType": "Branded",
+          "gtinUpc": "664114909026",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Bylada Foods LLC",
+          "brandName": "POPLIES",
+          "ingredients": "POPOVER (WHEAT FLOUR, EGG WHITE, VEGETABLE OIL, WATER, WHOLE EGG, SKIMMED MILK POWDER, SALT), TOMATO SAUCE (WATER, TOMATO PASTE, SEASONING [SUGAR, SALT, GARLIC, BLACK PEPPER, BASIL]), MOZZARELLA CHEESE (PASTEURIZED MILK, NONFAT MILK, CULTURES, SALT, ENZYMES), PEPPERONI (PORK, BEEF, SALT, CONTAINS 2% OR LESS OF SPICES, DEXTROSE, LACTIC ACID STARTER CULTURE, OLEORESIN OF PAPRIKA, FLAVORING, SODIUM NITRITE, BHA, BHT, CITRIC ACID. MAY CONTAIN LESS THAN 2% OF SODIUM ASCORBATE), OREGANO.",
+          "marketCountry": "United States",
+          "foodCategory": "Pizza",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "6 oz/170 g",
+          "servingSizeUnit": "g",
+          "servingSize": 85,
+          "householdServingFullText": "3 PIECES",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>:  CHEESE (PASTEURIZED MILK, NONFAT MILK, CULTURES, SALT, ENZYMES), <em>PEPPERONI</em> (PORK, BEEF, SALT, CONTAINS 2",
+          "score": 1183.2363,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 10.6
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 14.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 21.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 247
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.35
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 176
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.85
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 529
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 118
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.2
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 41
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 4.12
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

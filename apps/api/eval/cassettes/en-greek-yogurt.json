@@ -1,0 +1,904 @@
+{
+  "caseId": "en-greek-yogurt",
+  "input": "170g greek yogurt",
+  "recordedAt": "2026-08-21T00:37:39.481Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\n  \"normalized_text\": \"170 g greek yogurt\",\n  \"reasoning\": \"The line gives a weight for Greek yogurt, so we use that directly.\",\n  \"confidence\": 0.97,\n  \"language\": \"en\",\n  \"items\": [\n    {\n      \"name\": \"greek yogurt\",\n      \"local_name\": \"greek yogurt\",\n      \"unit\": \"g\",\n      \"quantity\": 170,\n      \"estimated_grams\": 170,\n      \"estimated_per_100g\": {\n        \"kcal\": 59,\n        \"protein\": 10,\n        \"carbs\": 3.6,\n        \"fat\": 0.4\n      },\n      \"kind\": \"food\",\n      \"confidence\": 0.97\n    }\n  ]\n}",
+    "promptTokens": 2940,
+    "completionTokens": 164
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "greek yogurt": [
+        {
+          "fdcId": 2035482,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "031200037206",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Ocean Spray Cranberries, Inc.",
+          "brandName": "OCEAN SPRAY",
+          "subbrandName": "CRAISINS DRIED CRANBERRIES",
+          "ingredients": "GREEK YOGURT COATING [SUGAR, PALM KERNEL OIL, NONFAT MILK POWDER, GREEK YOGURT POWDER (NONFAT MILK SOLIDS, CULTURE, LACTIC ACID, NATURAL FLAVOR), LACTIC ACID, SOY LECITHIN (AN EMULSIFIER), NATURAL FLAVOR], SWEETENED DRIED CRANBERRIES (CRANBERRIES, SUGAR), COATING (GUM ACACIA, MALTODEXTRIN, AND SUGAR), CONFECTIONER'S GLAZE.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2018-01-19",
+          "dataSource": "LI",
+          "packageWeight": "3 oz/85 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>GREEK</em> <em>YOGURT</em> COATING [SUGAR, PALM KERNEL OIL, NONFAT MILK POWDER, <em>GREEK</em> <em>YOGURT</em> POWDER (NONFAT MILK",
+          "score": 1250.6069,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 70
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 467
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 70
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 133
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 16.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 373595,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "00772914",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "TRADER JOE'S",
+          "ingredients": "GRADE A PASTEURIZED MILK, CREAM, NONFAT MILK, FRUIT JUICE CONCENTRATES (PINEAPPLE, PEACH, APPLE, PEAR), WATER, APRICOTS, MANGOES, TAPIOCA STARCH, PECTIN, NATURAL FLAVOR, CITRIC ACID, LIVE AND ACTIVE CULTURES: S. THERMOPHILUS, L. BULGARICUS, L. ACIDOPHILUS, CULTURED AFTER PASTEURIZATION.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2018-07-23",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 227,
+          "householdServingFullText": "1 CONTAINER",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 110
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.16
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 220
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 4.85
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 7.05
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 132
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.1
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 119
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 59
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.52
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2038865,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "894700010038",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Chobani, Inc.",
+          "brandName": "CHOBANI",
+          "ingredients": "NONFAT YOGURT (CULTURED PASTEURIZED NON FAT MILK, LIVE AND ACTIVE CULTURES: S. THERMOPHILUS, L. BULGARICUS, L. ACIDOPHILUS, BIFIDUS AND L. CASEI), CLOVER HONEY.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2021-05-19",
+          "dataSource": "LI",
+          "packageWeight": "5.3 oz/150 g",
+          "servingSizeUnit": "g",
+          "servingSize": 150,
+          "householdServingFullText": "1 CONTAINER",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: NONFAT <em>YOGURT</em> (CULTURED PASTEURIZED NON FAT MILK, LIVE AND ACTIVE CULTURES: S. THERMOPHILUS, L",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.67
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 80
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8.67
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 43
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2475934,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "680569649836",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Cafe Hon, Inc.",
+          "brandName": "OLYMPIANA",
+          "ingredients": "CULTURED NONFAT MILK, LIVE AND ACTIVE YOGURT CULTURES",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2021-08-31",
+          "dataSource": "LI",
+          "packageWeight": "6 oz/170 g",
+          "servingSizeUnit": "g",
+          "servingSize": 170,
+          "householdServingFullText": "1 CONTAINER",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: CULTURED NONFAT MILK, LIVE AND ACTIVE <em>YOGURT</em> CULTURES",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 11.8
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.12
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 65
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.12
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 160
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 544
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 44
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 150
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2038866,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "894700010441",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Chobani, Inc.",
+          "brandName": "CHOBANI",
+          "ingredients": "LOWFAT YOGURT (CULTURED PASTEURIZED NONFAT MILK, CREAM, LIVE AND ACTIVE CULTURES: S. THEMOPHILUS, L. BULGARICUS, L. ACIDOPHILUS, BIFIDUS AND L. CASEI), BANANAS, EVAPORATED CANE JUICE, PECTIN, NATURAL FLAVOUR, LOCUST BEAN GUM, TURMERIC (FOR COLOR).",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2021-05-19",
+          "dataSource": "LI",
+          "packageWeight": "5.3 oz/150 g",
+          "servingSizeUnit": "g",
+          "servingSize": 150,
+          "householdServingFullText": "1 CONTAINER",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: LOWFAT <em>YOGURT</em> (CULTURED PASTEURIZED NONFAT MILK, CREAM, LIVE AND ACTIVE CULTURES: S. THEMOPHILUS, L",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 93
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.48
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 37
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 7
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.33
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 468388,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "5051379079512",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "FRESH & EASY",
+          "ingredients": "CULTURED PASTEURIZED NONFAT GRADE A MILK, WATER, VANILLA, SUGAR, CORN STARCH, NATURAL FLAVOR, PECTIN, CITRIC ACID, CALCIUM LACTATE, SODIUM CITRATE, CONTAINS THE FOLLOWING LIVE CULTURES: LACTOBACILLUS BULGARICUS, STREPTOCOCCUS THERMOPHILUS, LACTOBACILLUS ACIDOPHILUS, BIFIDUS, LACTOBACILLUS CASEI.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2017-10-13",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 150,
+          "householdServingFullText": "5.3 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 73
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 464109,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "851587003515",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "GREEN MOUNTAIN CREAMERY",
+          "ingredients": "STRAINED YOGURT: CULTURED PASTEURIZED NONFAT GRADE A MILK, LIVE & ACTIVE CULTURES (LACTOBACILLUS BULGARICUS, STREPTOCOCCUS THERMOPHILUS, LACTOBACILLUS ACIDOPHILUS, BIFIDUS, LACTOBACILLUS CASEI). FRUIT PREPARATION: SUGAR, RASPBERRY PUREE, WATER, NATIVE CORN STARCH, PECTIN, NATURAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 150,
+          "householdServingFullText": "5.3 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: STRAINED <em>YOGURT</em>: CULTURED PASTEURIZED NONFAT GRADE A MILK, LIVE & ACTIVE CULTURES (LACTOBACILLUS",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.24
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 80
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 107
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2098882,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "078355570035",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Hain Refrigerated Foods Inc.",
+          "brandName": "THE GREEK GODS",
+          "ingredients": "CULTURED PASTEURIZED GRADE A MILK, CREAM, CANE SUGAR, BROWN CANE SUGAR, HONEY, PECTIN.",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2018-02-16",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 227,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.52
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 6.17
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 128
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 14.5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 132
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 110
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 172
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 57
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 220
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.352
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 22
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.96
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2067023,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "796252880247",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Karoun Dairies Inc.",
+          "brandName": "BLUE ISLE",
+          "ingredients": "CULTURED PASTEURIZED GRADE A MILK & CREAM, CONDENSED SKIM MILK, HONEY, WHEY PROTEIN CONCENTRATE, PECTIN, AND NATURAL FLAVORS. CONTAINS: LIVE & ACTIVE YOGURT & PROBIOTIC CULTURES (S. THERMOPHILUS, L. BULGARICUS, L. LACTIS, L. CASEI, L. ACIDOPHILUS AND BIFIDOBACTERIUM.)",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2021-05-19",
+          "dataSource": "LI",
+          "packageWeight": "5.3 oz/150 g",
+          "servingSizeUnit": "g",
+          "servingSize": 150,
+          "householdServingFullText": "1 CONTAINER",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: , PECTIN, AND NATURAL FLAVORS. CONTAINS: LIVE & ACTIVE <em>YOGURT</em> & PROBIOTIC CULTURES (S. THERMOPHILUS, L",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 153
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8.67
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.48
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 40
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.67
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2067281,
+          "description": "GREEK YOGURT",
+          "dataType": "Branded",
+          "gtinUpc": "818290014467",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Chobani, Inc.",
+          "brandName": "CHOBANI",
+          "ingredients": "NONFAT YOGURT (CULTURED PASTEURIZED NONFAT MILK, LIVE AND ACTIVE CULTURES: S. THERMOPHILUS, L. BULGARICUS, L. ACIDOPHILUS, BIFIDUS AND L. CASEI), BLUEBERRIES, EVAPORATED CANE JUICE, PECTIN, LOCUST BEAN GUM, NATURAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2017-08-23",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 150,
+          "householdServingFullText": "5.3 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: NONFAT <em>YOGURT</em> (CULTURED PASTEURIZED NONFAT MILK, LIVE AND ACTIVE CULTURES: S. THERMOPHILUS, L",
+          "score": 1248.631,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 12.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 87
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 100
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 40
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 2.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

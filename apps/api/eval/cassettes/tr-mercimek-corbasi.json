@@ -1,0 +1,1176 @@
+{
+  "caseId": "tr-mercimek-corbasi",
+  "input": "mercimek çorbası içtim",
+  "recordedAt": "2026-08-21T00:49:14.808Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"mercimek çorbası içtim\",\"reasoning\":\"One item: mercimek çorbası, which is lentil soup. No portion size given, so assume one standard serving (≈300 g).\",\"confidence\":0.92,\"language\":\"tr\",\"items\":[{\"name\":\"lentil soup\",\"local_name\":\"mercimek çorbası\",\"quantity\":1,\"unit\":\"serving\",\"estimated_grams\":300,\"estimated_per_100g\":{\"kcal\":60,\"protein\":3,\"carbs\":8,\"fat\":2},\"kind\":\"food\",\"confidence\":0.9}]}",
+    "promptTokens": 2932,
+    "completionTokens": 364
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "lentil soup": [
+        {
+          "fdcId": 2098690,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "070784252568",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Tops Markets, LLC",
+          "brandName": "TOPS",
+          "ingredients": "WATER, LENTILS, CELERY, TOMATO PASTE, SPINACH, CONTAINS LESS THAN 1% OF CORNSTARCH, SALT, SOYBEAN OIL, SUGAR, POTASSIUM CHLORIDE, YEAST EXTRACT, ONION POWDER, GARLIC POWDER, NATURAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Canned Soup",
+          "modifiedDate": "2019-09-10",
+          "dataSource": "LI",
+          "packageWeight": "19 oz/538 g",
+          "servingSizeUnit": "g",
+          "servingSize": 245,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: WATER, <em>LENTILS</em>, CELERY, TOMATO PASTE, SPINACH, CONTAINS LESS THAN 1% OF CORNSTARCH, SALT, SOYBEAN",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.27
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.61
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 8.16
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 49
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.22
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.9
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.1
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 282
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2064920,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "033157011179",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Saor S.Rl.",
+          "brandName": "ORTI DI CALABRIA",
+          "ingredients": "LENTILS, WATER, PULP OF TOMATOES (TOMATOES, CITRIC ACID), EXTRA VIRGIN OLIVE OIL, SPINACH, ONION, CELERY, GARLIC, RICE SYRUP FROM ORGANIC FARMING, CHILLI PEPPER, SEA SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2019-09-08",
+          "dataSource": "LI",
+          "packageWeight": "19.4 oz/550 g",
+          "servingSizeUnit": "g",
+          "servingSize": 245,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>LENTILS</em>, WATER, PULP OF TOMATOES (TOMATOES, CITRIC ACID), EXTRA VIRGIN OLIVE OIL, SPINACH, ONION",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.31
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 6.94
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 15.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 143
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.86
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.9
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.57
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 188
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 714
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.02
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1903696,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "794504813029",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Paradise Eximport, Inc.",
+          "brandName": "RUSTICO",
+          "ingredients": "VEGETABLE STOCK (WATER, ONION, CARROT, CELERY, PARSLEY, GARLIC, SALT, OLIVE OIL, PEPPERCORNS*, BAYLEAF*), LENTILS*, ONION, CARROT*, CELERY, OLIVE OIL, PARSLEY, PEPPER*, SEA SALT, BAY LEAF*.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2019-09-09",
+          "dataSource": "LI",
+          "packageWeight": "22 oz/624 g",
+          "servingSizeUnit": "g",
+          "servingSize": 227,
+          "householdServingFullText": "8 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: *, BAYLEAF*), <em>LENTILS</em>*, ONION, CARROT*, CELERY, OLIVE OIL, PARSLEY, PEPPER*, SEA SALT, BAY LEAF*.",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 1.76
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.88
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 7.49
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 39
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 75
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.03
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 165
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 4710
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 39.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.09
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2597725,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "0070796801013",
+          "publishedDate": "2023-07-13",
+          "brandOwner": "Alanric Food Distributors, Inc.",
+          "brandName": "CENTO",
+          "ingredients": "WATER, LENTILS, ONIONS, CELERY, SPINACH, TOMATO CONCENTRATE, SOYBEAN OIL, SALT, ROMANO CHEESE (PASTEURIZED MILK, CULTURE, ENZYMES, SALT), EXTRA VIRGIN OLIVE OIL, SOLUBLE GARLIC, NATURAL FLAVOR",
+          "marketCountry": "United States",
+          "foodCategory": "Canned Soup",
+          "modifiedDate": "2023-06-23",
+          "dataSource": "LI",
+          "packageWeight": "15 oz",
+          "servingSizeUnit": "GRM",
+          "servingSize": 425,
+          "householdServingFullText": "1 can (425g)",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: WATER, <em>LENTILS</em>, ONIONS, CELERY, SPINACH, TOMATO CONCENTRATE, SOYBEAN OIL, SALT, ROMANO CHEESE",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.41
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 10.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 68
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.47
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.9
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.06
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 146
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 304
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.24
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2090519,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "737094217747",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "The Fresh Market, Inc.",
+          "brandName": "THE FRESH MARKET",
+          "ingredients": "WATER ORGANIC LENTILS, ORGANIC ONIONS, ORGANIC CARROTS, ORGANIC CELERY, ORGANIC TURNIPS, ORGANIC TOMATO PASTE (ORGANIC TOMATO PASTE, NATURALLY DERIVED CITRIC ACID), ORGANIC CANOLA OIL, ORGANIC EXTRA VIRGIN OLIVE OIL, ORGANIC RICE FLOUR, ORGANIC SUNFLOWER OIL, ORGANIC BALSAMIC VINEGAR (ORGANIC WHITE WINE VINEGAR, ORGANIC WHITE GRAPE MUST, SULFITES, NATURALLY COMING FROM RAW MATERIALS), ORGANIC GARLIC, SEA SALT, ORGANIC CULTURED DEXTROSE (CONTAINS ORGANIC MALTODEXTRIN), ORGANIC SPICES, ORGANIC PAPRIKA, ORGANIC PARSLEY, ORGANIC BASIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2019-09-08",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/1 lbs/453 g",
+          "servingSizeUnit": "g",
+          "servingSize": 245,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: WATER ORGANIC <em>LENTILS</em>, ORGANIC ONIONS, ORGANIC CARROTS, ORGANIC CELERY, ORGANIC TURNIPS, ORGANIC",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 2.04
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 4.49
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 6.94
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 73
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.22
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.73
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 249
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 510
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.61
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2376760,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "688267576874",
+          "publishedDate": "2022-12-07",
+          "brandOwner": "Ahold USA, Inc. ",
+          "brandName": "NATURE'S PROMISE",
+          "subbrandName": "ORGANIC",
+          "ingredients": "ORGANIC LENTILS, WATER, ORGANIC TOMATO PUREE (WATER, ORGANIC TOMATO PASTE), ORGANIC CELERY, ORGANIC CORN STARCH, CONTAINS LESS THAN 2% OF: ORGANIC SPINACH, ORGANIC SOYBEAN OIL, SEA SALT, ORGANIC LOCUST BEAN GUM, ORGANIC CANE SUGAR, ORGANIC GARC POWDER, ORGANIC ONION POWDER.",
+          "marketCountry": "United States",
+          "foodCategory": "Canned Soup",
+          "modifiedDate": "2022-10-21",
+          "dataSource": "LI",
+          "packageWeight": "18.6 OZ/527 g",
+          "servingSizeUnit": "g",
+          "servingSize": 245,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ORGANIC <em>LENTILS</em>, WATER, ORGANIC TOMATO PUREE (WATER, ORGANIC TOMATO PASTE), ORGANIC CELERY, ORGANIC",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 2.86
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.06
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 9.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 57
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.82
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.78
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 90
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 298
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.41
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2096107,
+          "description": "LENTIL SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "880632001022",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Plenus Group Inc",
+          "brandName": "WHOLE FOODS MARKET",
+          "ingredients": "VEGETABLE STOCK (WATER, SALT, ONION, MALTODEXTRIN, DEXTROSE, YEAST EXTRACT, CARROT, CELERY SEED, SPICE, TURMERIC), LENTILS, ONION, CARROT, CELERY, BELL PEPPER, TOMATO PASTE (TOMATO, SALT, CITRIC ACID), SALT, GARLIC, CORNSTARCH, CURRY POWDER (SPICES, GARLIC, TURMERIC, SALT, CHICKPEA), SPICES, CHILI POWDER, SUGAR, NISIN.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2019-09-10",
+          "dataSource": "LI",
+          "packageWeight": "23.5 oz/666 g",
+          "servingSizeUnit": "g",
+          "servingSize": 227,
+          "householdServingFullText": "8 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: , SPICE, TURMERIC), <em>LENTILS</em>, ONION, CARROT, CELERY, BELL PEPPER, TOMATO PASTE (TOMATO, SALT, CITRIC ACID",
+          "score": 1412.2375,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.96
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.22
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.88
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 18
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.19
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 273
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1100
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 171577,
+          "description": "SMART SOUP, French Lentil",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 6620,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 629.9996,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 1.06
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 9.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 85.5
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 23
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 2.9
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 1.1
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 222
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.9
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 131
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 251
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0.177
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 171549,
+          "description": "Soup, lentil with ham, canned, ready-to-serve",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 6037,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 543.4217,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "268",
+              "value": 234
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.545
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.14
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.27
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.16
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.47
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.12
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.52
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.13
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.12
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 8.16
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 85.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 144
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.07
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 9
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 74
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 532
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.07
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.12
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 145
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 3.74
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 1.24
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1.7
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.07
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.045
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.12
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.45
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.03
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 7
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2644283,
+          "description": "Lentils, dry",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 100312,
+          "publishedDate": "2023-10-26",
+          "foodCategory": "Legumes and Legume Products",
+          "mostRecentAcquisitionDate": "2023-05-12",
+          "allHighlightFields": "",
+          "score": 439.83252,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "303",
+              "value": 7.16
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 107
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 374
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 949
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 3.86
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.838
+            },
+            {
+              "nutrientNumber": "202",
+              "value": 3.77
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.92
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 1.57
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 2.88
+            },
+            {
+              "nutrientNumber": "209",
+              "value": 37.1
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 9.45
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 61.8
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 23.6
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 62.2
+            },
+            {
+              "nutrientNumber": "957",
+              "value": 360
+            },
+            {
+              "nutrientNumber": "958",
+              "value": 351
+            },
+            {
+              "nutrientNumber": "283",
+              "value": 16
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|mercimek çorbası": [
+        {
+          "code": "8694409000642",
+          "brands": [
+            "Hayma ana"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 4.99,
+            "energy-kcal_100g": 60,
+            "fat_100g": 3.29,
+            "fiber_100g": 0.56,
+            "proteins_100g": 2.3,
+            "sugars_100g": 4.5
+          },
+          "product_name": "Tarhana çorbası"
+        },
+        {
+          "code": "8682588741357",
+          "nutriments": {
+            "carbohydrates_100g": 68.47,
+            "energy-kcal_100g": 378,
+            "fat_100g": 2.37,
+            "fiber_100g": 3.96,
+            "proteins_100g": 15.7,
+            "salt_100g": 4.65,
+            "saturated-fat_100g": 1.73,
+            "sodium_100g": 1.86,
+            "sugars_100g": 0.7
+          },
+          "product_name": "Mercimek cipsi"
+        },
+        {
+          "code": "8693374262222",
+          "brands": [
+            "Yayla"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 7.5,
+            "energy-kcal_100g": 78,
+            "fat_100g": 4.1,
+            "fiber_100g": 3.2,
+            "proteins_100g": 3.2,
+            "salt_100g": 0.6875,
+            "saturated-fat_100g": 0.5,
+            "sodium_100g": 0.275,
+            "sugars_100g": 1.7
+          },
+          "product_name": "Zeytinyağlı Yeşil Mercimek"
+        },
+        {
+          "code": "8682214521988",
+          "nutriments": {
+            "carbohydrates_100g": 57.6,
+            "energy-kcal_100g": 354,
+            "fat_100g": 0.6,
+            "fiber_100g": 2.8,
+            "proteins_100g": 29.4,
+            "salt_100g": 0.5,
+            "saturated-fat_100g": 0.2,
+            "sodium_100g": 0.2,
+            "sugars_100g": 1.7
+          },
+          "product_name": "Organik kirmizi mercimek makarnasi"
+        },
+        {
+          "code": "8692173200015",
+          "brands": [
+            "tat/Memişoğlu"
+          ],
+          "nutriments": {
+            "fat_100g": 3.2,
+            "sugars_100g": 4.6,
+            "proteins_100g": 26.1,
+            "fiber_100g": 8,
+            "salt_100g": 0.1,
+            "saturated-fat_100g": 0,
+            "carbohydrates_100g": 56.5,
+            "energy-kcal_100g": 375,
+            "sodium_100g": 0.04
+          },
+          "product_name": "Rote Linsen (Kırmızı Mercimek)"
+        },
+        {
+          "code": "168540968",
+          "brands": [
+            "Yayla"
+          ],
+          "nutriments": {
+            "fat_100g": 2.9000000953674316,
+            "sugars_100g": 1.2000000476837158,
+            "fiber_100g": 14.100000381469727,
+            "proteins_100g": 9.399999618530273,
+            "saturated-fat_100g": 0.6000000238418579,
+            "carbohydrates_100g": 18.799999237060547,
+            "energy-kcal_100g": 167
+          },
+          "product_name": "Suyu süzülmüş kullanıma hazır yeşil mercimek"
+        },
+        {
+          "code": "6695300035520",
+          "brands": [
+            "Yayla"
+          ],
+          "nutriments": {
+            "fat_100g": 2.9000000953674316,
+            "proteins_100g": 9.5,
+            "fiber_100g": 14,
+            "sugars_100g": 1.2000000476837158,
+            "energy-kcal_100g": 167,
+            "carbohydrates_100g": 19,
+            "saturated-fat_100g": 0.6000000238418579
+          },
+          "product_name": "Suyu süzülmüş kullanıma hazır yeşil mercimek"
+        },
+        {
+          "code": "0000168540968",
+          "brands": [
+            "Yayla"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 18.7999992370605,
+            "energy-kcal_100g": 167,
+            "fat_100g": 2.90000009536743,
+            "fiber_100g": 14.1000003814697,
+            "proteins_100g": 9.39999961853027,
+            "saturated-fat_100g": 0.600000023841858,
+            "sugars_100g": 1.20000004768372
+          },
+          "product_name": "Suyu süzülmüş kullanıma hazır yeşil mercimek"
+        },
+        {
+          "code": "4260065871410",
+          "brands": [
+            "Dere"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 55,
+            "energy-kcal_100g": 346.797323135755,
+            "fat_100g": 1.4,
+            "proteins_100g": 26.6
+          },
+          "product_name": "Mercimek"
+        },
+        {
+          "code": "8695077095718",
+          "brands": [
+            "saban"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 42,
+            "energy-kcal_100g": 322,
+            "fat_100g": 1.57,
+            "fiber_100g": 18.67,
+            "proteins_100g": 26
+          },
+          "product_name": "kırmızı mercimek"
+        }
+      ]
+    }
+  }
+}

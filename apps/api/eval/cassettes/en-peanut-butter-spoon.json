@@ -1,0 +1,900 @@
+{
+  "caseId": "en-peanut-butter-spoon",
+  "input": "a tablespoon of peanut butter",
+  "recordedAt": "2026-08-21T00:38:03.231Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"a tablespoon of peanut butter\",\"reasoning\":\"One item: a tablespoon of peanut butter. The quantity is 1 tbsp, which we convert to about 16 g weight.\",\"confidence\":0.96,\"language\":\"en\",\"items\":[{\"name\":\"peanut butter\",\"local_name\":\"peanut butter\",\"quantity\":1,\"unit\":\"tbsp\",\"estimated_grams\":16,\"estimated_per_100g\":{\"kcal\":588,\"protein\":25,\"carbs\":20,\"fat\":50},\"kind\":\"food\",\"confidence\":0.95}]}",
+    "promptTokens": 2941,
+    "completionTokens": 301
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "peanut butter": [
+        {
+          "fdcId": 2031766,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "869759000149",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Reginald's Homemade Llc",
+          "brandName": "REGINALD'S HOMEMADE",
+          "ingredients": "DRY ROASTED UNSALTED PEANUTS, PECANS, PEANUT OIL, BOURBON ALCOHOL, MOLASSES, BROWN SUGAR, NATURAL VANILLA EXTRACT.",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2021-06-27",
+          "dataSource": "LI",
+          "packageWeight": "8.5 oz/242 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: DRY ROASTED UNSALTED <em>PEANUTS</em>, PECANS, <em>PEANUT</em> OIL, BOURBON ALCOHOL, MOLASSES, BROWN SUGAR, NATURAL VANILLA EXTRACT.",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 600
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.4
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.67
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1945605,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "022224500418",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Kenny's Candy Company Inc.",
+          "brandName": "SWEET CHAOS",
+          "ingredients": "CONFECTIONERY COATING (SUGAR, PALM KERNEL OIL, COCOA POWDER, WHOLE MILK POWDER, NONFAT DRY MILK, SOY LECITHIN, SALT), KETTLE CORN (SUGAR, POPCORN, CORN SYRUP, SUNFLOWER OIL, SOY LECITHIN, SALT, BAKING SODA), PEANUT BUTTER CUPS (MILK CHOCOLATE (SUGAR, COCOA BUTTER, CHOCOLATE, MILK, SOY LECITHIN, VANILLA), PEANUTS, SUGAR, PALM KERNEL OIL, LACTOSE, CORNSTARCH (PROCESSING AID), SALT, SOY LECITHIN), COATED PRETZEL (CONFECTIONERY COATING (SUGAR, PALM KERNEL OIL, PARTIALLY DEFATTED PEANUT FLOUR, NONFAT DRY MILK, PEANUT OIL, SALT, SOY LECITHIN), PRETZEL (ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), CORN SYRUP, SALT, YEAST)), PRETZEL (ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), CORN SYRUP, SALT, YEAST).",
+          "marketCountry": "United States",
+          "foodCategory": "Other Snacks",
+          "modifiedDate": "2018-07-07",
+          "dataSource": "LI",
+          "packageWeight": "5 oz/141 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "0.667 CUP | ABOUT",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: , BAKING SODA), <em>PEANUT</em> <em>BUTTER</em> CUPS (MILK CHOCOLATE (SUGAR, COCOA <em>BUTTER</em>, CHOCOLATE, MILK, SOY LECITHIN",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 70
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 500
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 43.3
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 187
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 467
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 43.3
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 467670,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "9421901881160",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "PIC'S REALLY GOOD",
+          "ingredients": "PEANUTS & SALT (LESS THAN 1%).",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2017-11-05",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 15,
+          "householdServingFullText": "15 GRM",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>PEANUTS</em> & SALT (LESS THAN 1%).",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 23.3
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 46.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 567
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.7
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 200
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.33
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2063467,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "681170300154",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "First International Health Foods Ltd.",
+          "brandName": "BRAD'S ORGANIC",
+          "ingredients": "ORGANIC PEANUTS",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "32 oz/2 lbs/907 g",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ORGANIC <em>PEANUTS</em>",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 28.1
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 46.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 18.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 594
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 6.25
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.25
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2025704,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "041318210231",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Schnuck Markets, Inc.",
+          "brandName": "SCHNUCKS",
+          "ingredients": "PEANUT, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED, SOYBEAN), DEXTROSE, SALT, MOLASSES, AND MONOGLYCERIDES.",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2017-06-24",
+          "dataSource": "LI",
+          "packageWeight": "1.81 kg/4 lbs",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>PEANUT</em>, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED, SOYBEAN), DEXTROSE, SALT, MOLASSES, AND MONOGLYCERIDES.",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 46.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 562
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 9.38
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 594
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 406
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 12.5
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.25
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 14.1
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 480762,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "048737002276",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "WILD OATS MARKETPLACE",
+          "ingredients": "PEANUTS, SUGAR (DRIED CANE SYRUP), PALM OIL, SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2018-01-20",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>PEANUTS</em>, SUGAR (DRIED CANE SYRUP), PALM OIL, SALT.",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 46.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 594
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 9.38
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 391
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.38
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2096697,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "051907142843",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Springboard Software Inc",
+          "brandName": "EARTH O'SWEET",
+          "ingredients": "DRY ROASTED PEANUTS.",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/1 lbs/454 g",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: DRY ROASTED <em>PEANUTS</em>.",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 594
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.12
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 9.4
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.25
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 15.6
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2009549,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "837991211289",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "American Blanching Company",
+          "brandName": "ABC",
+          "ingredients": "FRESHLY ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED, SOYBEAN), SALT AND MOLASSES. ",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2020-11-19",
+          "dataSource": "LI",
+          "packageWeight": "28 oz/794 g",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: FRESHLY ROASTED <em>PEANUTS</em>, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED, SOYBEAN), SALT AND MOLASSES. ",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 46.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 562
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 9.38
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 438
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.81
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2099081,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "04656700414",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Raley's",
+          "brandName": "RALEY'S",
+          "ingredients": "PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED AND SOYBEAN), SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2018-05-28",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>PEANUTS</em>, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED AND SOYBEAN), SALT.",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 594
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 9.38
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 438
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.81
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2100566,
+          "description": "PEANUT BUTTER",
+          "dataType": "Branded",
+          "gtinUpc": "04656700418",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Raley's",
+          "brandName": "RALEY'S",
+          "ingredients": "PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED AND SOYBEAN), SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Nut & Seed Butters",
+          "modifiedDate": "2018-05-28",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 32,
+          "householdServingFullText": "2 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>PEANUTS</em>, SUGAR, HYDROGENATED VEGETABLE OIL (RAPESEED, COTTONSEED AND SOYBEAN), SALT.",
+          "score": 1030.1584,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 21.9
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 594
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 9.38
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 6.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.25
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 438
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.81
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

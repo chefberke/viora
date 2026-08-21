@@ -1,0 +1,1365 @@
+{
+  "caseId": "tr-uc-kase-corba",
+  "input": "3 kase çorba",
+  "recordedAt": "2026-08-21T00:43:06.419Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\n  \"normalized_text\": \"3 kase çorba\",\n  \"reasoning\": \"Three bowls of generic soup; \\\"kase\\\" is interpreted as a serving. No specific soup type given, so use generic soup values.\",\n  \"confidence\": 0.85,\n  \"language\": \"tr\",\n  \"items\": [\n    {\n      \"name\": \"soup\",\n      \"local_name\": \"çorba\",\n      \"unit\": \"serving\",\n      \"quantity\": 3,\n      \"estimated_grams\": 900,\n      \"estimated_per_100g\": {\n        \"kcal\": 60,\n        \"protein\": 3,\n        \"carbs\": 8,\n        \"fat\": 2\n      },\n      \"kind\": \"food\",\n      \"confidence\": 0.8\n    }\n  ]\n}",
+    "promptTokens": 2941,
+    "completionTokens": 448
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "soup": [
+        {
+          "fdcId": 479971,
+          "description": "SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "20042967",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "FRESH & EASY",
+          "ingredients": "TOMATO AND BASIL SOUP [DICED TOMATOES (TOMATO, TOMATO JUICE, SALT, CALCIUM CHLORIDE, CITRIC ACID), GROUND PEELED TOMATOES (TOMATO, TOMATO PUREE, SALT, CITRIC ACID), ONION, CREAM, CANOLA OIL, SALT, BASIL, GARLIC, OREGANO].",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2018-01-20",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 312,
+          "householdServingFullText": "1 CONTAINER",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: TOMATO AND BASIL <em>SOUP</em> [DICED TOMATOES (TOMATO, TOMATO JUICE, SALT, CALCIUM CHLORIDE, CITRIC ACID",
+          "score": 1041.5072,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 32
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.87
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 481
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 9.6
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 1.28
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 5.77
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.13
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 80
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.88
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.3
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 317
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 14
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.56
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 390498,
+          "description": "SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "011213105857",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "SPARTAN",
+          "ingredients": "CHICKEN BROTH, WHITE CHICKEN MEAT (COOKED WHITE CHICKEN MEAT, WATER, MODIFIED CORN STARCH, SALT, SODIUM PHOSPHATE), CARROTS, ENRICHED PASTA (DURUM WHEAT FLOUR, WATER, EGG WHITE, WHOLE EGG, NIACIN, FERROUS SULFATE [IRON] THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), CELERY, CONTAINS LESS THAN 2% OF: SALT, MODIFIED CORN STARCH, CHICKEN FAT, SUGAR, ONION POWDER, DISODIUM INOSINATE, DISODIUM GUANYLATE, NATURAL FLAVORING, YEAST EXTRACT, GARLIC POWDER, ASCORBIC ACID, SPICE, BETA CAROTENE (FOR COLOR).",
+          "marketCountry": "United States",
+          "foodCategory": "Canned Soup",
+          "modifiedDate": "2017-06-25",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 245,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1041.5072,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.44
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 816
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.9
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 2.86
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.82
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 37
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 273
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.41
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.41
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 484227,
+          "description": "SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "5051379080402",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "ITALIAN KITCHEN TO GO",
+          "ingredients": "TOMATO AND BASIL SOUP [DICED TOMATOES (TOMATO, TOMATO JUICE, SALT, CALCIUM CHLORIDE, CITRIC ACID), GROUND PEELED TOMATOES (TOMATO, TOMATO JUICE, CITRIC ACID, CALCIUM CHLORIDE), ONION, CREAM, CANOLA OIL, SALT, BASIL, GARLIC, OREGANO].",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2017-12-21",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 245,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: TOMATO AND BASIL <em>SOUP</em> [DICED TOMATOES (TOMATO, TOMATO JUICE, SALT, CALCIUM CHLORIDE, CITRIC ACID",
+          "score": 1041.5072,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.73
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 510
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 9.8
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 1.22
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 5.71
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.31
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 82
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.86
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 318
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 14
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.45
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 569010,
+          "description": "SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "00558617",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "TRADER JOE'S",
+          "ingredients": "BUTTERNUT PUREE, WATER, ORGANIC SOYMILK (WATER, ORGANIC SOYBEANS), CANE SUGAR, SEA SALT, EXPELLER PRESSED CANOLA OIL, RICE FLOUR, NATURAL FLAVOR, ONION POWDER, GARLIC POWDER, GINGER POWDER.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Soups",
+          "modifiedDate": "2018-03-03",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1041.5072,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 938
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.83
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.83
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 38
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.67
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 229
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 507595,
+          "description": "SOUP",
+          "dataType": "Branded",
+          "gtinUpc": "056409402273",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "CUISINE ADVENTURES",
+          "ingredients": "VEGETABLE BROTH (WATER, COOKED VEGETABLES [CARROT, ONION, CELERY], SUGAR, CORN OIL, POTATO FLOUR, SALT, FLAVORS, CARROT POWDER), BROCCOLI, CHEDDAR CHEESE (MILK, CULTURED MILK, CREAM, BACTERIAL CULTURE, SALT, COLOR (ANNATTO), MICROBIAL ENZYME), HALF-&-HALF (CREAM, MILK, CELLULOSE GUM, DEXTROSE, GUAR GUM, CAROB BEAN GUM, CARRAGEENAN, MONO AND DIGLYCERIDES), ONION, MODIFIED CORN STARCH, DRY WHOLE MILK, CANOLA OIL, FLAVOR (WATER, CHEDDAR CHEESE [MILK, CULTURES, SALT, ENZYMES], SALT, DISODIUM PHOSPHATE, ANHYDROUS MILKFAT, NATURAL FLAVOR, SODIUM CITRATE, XANTHAN GUM), GELATIN, GARLIC, SALT, YEAST EXTRACT, CELLULOSE, PAPRIKA EXTRACT, NATURAL FLAVOR, SOY LECITHIN.",
+          "marketCountry": "United States",
+          "foodCategory": "Frozen Dinners & Entrees",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 285,
+          "householdServingFullText": "1 SOUP",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1041.5072,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "301",
+              "value": 88
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.13
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 351
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 8.4
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 4.21
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 5.96
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.26
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 84
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.75
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.1
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 253
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.81
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 172899,
+          "description": "Soup, HEALTHY CHOICE Chicken and Rice Soup, canned",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 6315,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 296.1754,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 2.53
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.9
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 156
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 181
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 334
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 7
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.17
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.55
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.71
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 37
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 90.3
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.37
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.23
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.13
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 174545,
+          "description": "Soup, HEALTHY CHOICE Chicken Noodle Soup, canned",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 6314,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 296.1754,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0.63
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 41
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 89.7
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0.57
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.18
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 3.69
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.75
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 173
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 195
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 568
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.4
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 172900,
+          "description": "Soup, HEALTHY CHOICE Garden Vegetable Soup, canned",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 6316,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 296.1754,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "204",
+              "value": 0.21
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 51
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 86.8
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.13
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.07
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.08
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 2.13
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 212
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.9
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 195
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 618
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.05
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 174547,
+          "description": "CAMPBELL'S, Tomato Soup, condensed",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 6377,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Soups, Sauces, and Gravies",
+          "allHighlightFields": "",
+          "score": 261.21066,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "404",
+              "value": 0.042
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.015
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.59
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 14
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 377
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.05
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.138
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 1.46
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 2.09
+            },
+            {
+              "nutrientNumber": "209",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 4.67
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 296
+            },
+            {
+              "nutrientNumber": "287",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.1
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 562
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.18
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.858
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.44
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 71
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 3.55
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 80.8
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8.23
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 323
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 4.8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 168069,
+          "description": "Restaurant, Latino, tripe soup",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 36414,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Restaurant Foods",
+          "allHighlightFields": "",
+          "score": 261.21066,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.61
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 1.33
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 309
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.68
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 411
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.022
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "343",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "346",
+              "value": 0.05
+            },
+            {
+              "nutrientNumber": "347",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.015
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.45
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 2.3
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.291
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.164
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.268
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.22
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.59
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 1.22
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.978
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.614
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 59
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0.111
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.04
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "624",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "625",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.081
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "653",
+              "value": 0.035
+            },
+            {
+              "nutrientNumber": "654",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "662",
+              "value": 0.009
+            },
+            {
+              "nutrientNumber": "671",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "674",
+              "value": 0.913
+            },
+            {
+              "nutrientNumber": "675",
+              "value": 0.206
+            },
+            {
+              "nutrientNumber": "676",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "687",
+              "value": 0.024
+            },
+            {
+              "nutrientNumber": "693",
+              "value": 0.094
+            },
+            {
+              "nutrientNumber": "697",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "851",
+              "value": 0.023
+            },
+            {
+              "nutrientNumber": "852",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "858",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.58
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.07
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 74
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 83.4
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 22
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 1.06
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 5.6
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0.38
+            },
+            {
+              "nutrientNumber": "341",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "342",
+              "value": 0.16
+            },
+            {
+              "nutrientNumber": "344",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "345",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.523
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.133
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.038
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 12.7
+            },
+            {
+              "nutrientNumber": "428",
+              "value": 2.4
+            },
+            {
+              "nutrientNumber": "454",
+              "value": 0.4
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.271
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.539
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.452
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.346
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.588
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.147
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.649
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.341
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.552
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.362
+            },
+            {
+              "nutrientNumber": "615",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.998
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.236
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.024
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0.022
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.009
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 1.12
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.31
+            },
+            {
+              "nutrientNumber": "652",
+              "value": 0.014
+            },
+            {
+              "nutrientNumber": "663",
+              "value": 0.085
+            },
+            {
+              "nutrientNumber": "664",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "665",
+              "value": 0.017
+            },
+            {
+              "nutrientNumber": "670",
+              "value": 0.014
+            },
+            {
+              "nutrientNumber": "672",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "673",
+              "value": 0.072
+            },
+            {
+              "nutrientNumber": "685",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "689",
+              "value": 0.006
+            },
+            {
+              "nutrientNumber": "695",
+              "value": 0.017
+            },
+            {
+              "nutrientNumber": "853",
+              "value": 0.005
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|çorba": [
+        {
+          "code": "8683130067499",
+          "nutriments": {
+            "carbohydrates_100g": 65,
+            "energy-kcal_100g": 2000,
+            "fat_100g": 7.4,
+            "fiber_100g": 4.4,
+            "proteins_100g": 10200,
+            "saturated-fat_100g": 3.8,
+            "sugars_100g": 17
+          },
+          "product_name": "Çabuk çorba"
+        }
+      ]
+    }
+  }
+}

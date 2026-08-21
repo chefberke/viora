@@ -1,0 +1,985 @@
+{
+  "caseId": "tr-biraz-cikolata",
+  "input": "biraz çikolata",
+  "recordedAt": "2026-08-21T00:44:12.669Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"biraz çikolata\",\"reasoning\":\"Turkish line with \\\"biraz\\\" meaning a small amount, so a reduced serving of chocolate. One item split as chocolate with a 0.75 serving size.\",\"confidence\":0.88,\"language\":\"tr\",\"items\":[{\"name\":\"chocolate\",\"local_name\":\"çikolata\",\"quantity\":0.75,\"unit\":\"serving\",\"estimated_grams\":22.5,\"estimated_per_100g\":{\"kcal\":546,\"protein\":4.9,\"carbs\":61,\"fat\":31},\"kind\":\"food\",\"confidence\":0.88}]}",
+    "promptTokens": 2969,
+    "completionTokens": 395
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "chocolate": [
+        {
+          "fdcId": 1949647,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "041761102893",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Elmer Candy Corporation",
+          "brandName": "",
+          "ingredients": "SUGAR, MILK CHOCOLATE (SUGAR; COCOA BUTTER; MILK; CHOCOLATE; SOY LECITHIN, AN EMULSIFIER; NATURAL VANILLA EXTRACT), CORN SYRUP, DARK SWEET CHOCOLATE (SUGAR; COCOA BUTTER; SOY LECITHIN, AN EMULSIFIER; NATURAL VANILLA EXTRACT), HIGH FRUCTOSE CORN SYRUP, PALM OIL. CONTAINS 2% OR LESS OF: MILK, ALKALIZED COCOA, EGG WHITES, CITRIC ACID, SOY LECITHIN (AN EMULSIFIER), NATURAL ORANGE FLAVOR, STRAWBERRY FLAVOR WITH OTHER NATURAL FLAVORS, SALT, VEGETABLE JUICE AND PAPRIKA OLEORESIN ADDED FOR COLOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2021-03-23",
+          "dataSource": "LI",
+          "packageWeight": "3.2 oz/91 g",
+          "servingSizeUnit": "g",
+          "servingSize": 34,
+          "householdServingFullText": "3 Pieces",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR, MILK <em>CHOCOLATE</em> (SUGAR; COCOA BUTTER; MILK; <em>CHOCOLATE</em>; SOY LECITHIN, AN EMULSIFIER; NATURAL",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 2.94
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 20.6
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 67.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 441
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 55.9
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 41
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.94
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 179
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 29
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 10.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2626435,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "4902555105161",
+          "publishedDate": "2023-08-31",
+          "brandOwner": "",
+          "brandName": "JFC",
+          "ingredients": "SUGAR, UNSWEETENED CHOCOLATE, WHOLE MILK POWDER, VEGETABLE OIL (PALM OIL, SALT FAT, ILLIPE FAT), COCOA BUTTER, SOY LECITHIN, ARTIFICIAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2023-07-11",
+          "dataSource": "LI",
+          "packageWeight": "0.91 oz/26 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 15,
+          "householdServingFullText": "0.5 oz",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR, UNSWEETENED <em>CHOCOLATE</em>, WHOLE MILK POWDER, VEGETABLE OIL (PALM OIL, SALT FAT, ILLIPE FAT), COCOA BUTTER, SOY LECITHIN, ARTIFICIAL FLAVOR.",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 40
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 600
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 53.3
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1914170,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "043319062307",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Supreme Chocolatier LLC",
+          "brandName": "SUPERIOR",
+          "ingredients": "MILK CHOCOLATE (SUGAR, COCOA BUTTER, MILK, CHOCOLATE, LECITHIN-AN EMULSIFIER, VANILIN-AN ARTIFICIAL FLAVOR).",
+          "marketCountry": "United States",
+          "foodCategory": "Candy",
+          "modifiedDate": "2019-12-17",
+          "dataSource": "LI",
+          "packageWeight": "1 oz/28.3 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28.299999237060547,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: MILK <em>CHOCOLATE</em> (SUGAR, COCOA BUTTER, MILK, <em>CHOCOLATE</em>, LECITHIN-AN EMULSIFIER, VANILIN-AN ARTIFICIAL FLAVOR).",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.07
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 565
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 49.5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 141
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 71
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 18
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 21.2
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2041965,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "071879002679",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Spike's Baking Co. Inc.",
+          "brandName": "VILLAGE MACAROONS",
+          "ingredients": "UNSWEETENED SULFITE FREE COCONUT, TAPIOCA SYRUP, PALM OIL, EGG WHITE, NATURAL CHOCOLATE FLAVOR",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2018-02-11",
+          "dataSource": "LI",
+          "packageWeight": "4 oz/113 g",
+          "servingSizeUnit": "g",
+          "servingSize": 14,
+          "householdServingFullText": "1 PIECE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: UNSWEETENED SULFITE FREE COCONUT, TAPIOCA SYRUP, PALM OIL, EGG WHITE, NATURAL <em>CHOCOLATE</em> FLAVOR",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 14.3
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 57.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 429
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 7.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.57
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 179
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 21.4
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2070610,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "037466065274",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Lindt & Sprungli (Schweiz) AG",
+          "brandName": "LINDT",
+          "ingredients": "SUGAR, COCOA BUTTER, MILK, CHOCOLATE, LACTOSE, SKIM MILK, SOYA LECITHIN (EMULSIFIER), BARLEY MALT POWDER, MILKFAT, ARTIFICIAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "17.6 oz/500 g",
+          "servingSizeUnit": "g",
+          "servingSize": 40,
+          "householdServingFullText": "40 GRM",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR, COCOA BUTTER, MILK, <em>CHOCOLATE</em>, LACTOSE, SKIM MILK, SOYA LECITHIN (EMULSIFIER), BARLEY MALT POWDER, MILKFAT, ARTIFICIAL FLAVOR.",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.5
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 32.5
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 57.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 550
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 200
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.9
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 88
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 250
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 20
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2070752,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "041761307571",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Elmer Candy Corporation",
+          "brandName": "ELMER CHOCOLATE",
+          "ingredients": "SUGAR; MILK CHOCOLATE (SUGAR; COCOA BUTTER; MILK; CHOCOLATE; SOY LECITHIN; AN EMULSIFIER; SALT; ARTIFICIAL FLAVOR), DARK SWEET CHOCOLATE (SUGAR; CHOCOLATE; COCOA BUTTER; NATURAL & ARTIFICIAL FLAVORS; SOY LECITHIN, AN EMULSIFIER), CORN SYRUP, PALM OIL, HIGH FRUCTOSE CORN SYRUP, CONTAINS 2% OR LESS OF: MILK, SKIM MILK, WHEY, COCOA, NATURAL & ARTIFICIAL FLAVORS, FOOD STARCH-MODIFIED, INVERTASE, CITRIC ACID, SALT, EGG WHITES, GELATIN, PARTIALLY HYDROGENATED PALM KERNEL & COTTONSEED OILS, SOY LECITHIN (AN EMULSIFIER), COLOR INCLUDING RED 40, YELLOW 6, POTASSIUM SORBATE (A PRESERVATIVE), HYDROLYZED SOY PROTEIN, SODIUM HEXAMETAPHOSPHATE.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2017-10-28",
+          "dataSource": "LI",
+          "packageWeight": "28.8 oz/816 g",
+          "servingSizeUnit": "g",
+          "servingSize": 34,
+          "householdServingFullText": "3 PIECES",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR; MILK <em>CHOCOLATE</em> (SUGAR; COCOA BUTTER; MILK; <em>CHOCOLATE</em>; SOY LECITHIN; AN EMULSIFIER; SALT",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 2.94
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 14.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 73.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 412
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 64.7
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.9
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 59
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.82
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1971684,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "853508005332",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "AgriMissouri",
+          "brandName": "KAKAO CHOCOLATE",
+          "ingredients": "DARK CHOCOLATE (CACAO BEANS, SUGAR, COCOA BUTTER, SOYA LECITHIN, VANILLA BEANS), GROUND COFFEE BEANS",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2019-08-22",
+          "dataSource": "LI",
+          "packageWeight": "2.45 oz/71 g",
+          "servingSizeUnit": "g",
+          "servingSize": 35,
+          "householdServingFullText": "1.25 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: DARK <em>CHOCOLATE</em> (CACAO BEANS, SUGAR, COCOA BUTTER, SOYA LECITHIN, VANILLA BEANS), GROUND COFFEE BEANS",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.71
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 37.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 54.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 514
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 40
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 8.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 57
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 10.3
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 43
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 22.9
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2071860,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "768395470937",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Ross Acquisition Inc.",
+          "brandName": "GALERIE",
+          "ingredients": "SUGAR, COCOA BUTTER, DRY WHOLE MILK, CHOCOLATE LIQUOR, EMULSIFIER (SOY LECITHIN, PGPR), VANILLA EXTRACT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 18,
+          "householdServingFullText": "1 PACKAGE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: SUGAR, COCOA BUTTER, DRY WHOLE MILK, <em>CHOCOLATE</em> LIQUOR, EMULSIFIER (SOY LECITHIN, PGPR), VANILLA EXTRACT.",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.56
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 27.8
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 61.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 556
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 61.1
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 222
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 83
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 28
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 19.4
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2009198,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "747599318368",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Ghirardelli Chocolate Company",
+          "brandName": "GHIRARDELLI",
+          "ingredients": "SUGAR, COCOA BUTTER, WHOLE MILK POWDER, UNSWEETENED CHOCOLATE, SOY LECITHIN-AN EMULSIFIER, VANILLA. ",
+          "marketCountry": "United States",
+          "foodCategory": "Candy",
+          "modifiedDate": "2018-04-27",
+          "dataSource": "LI",
+          "packageWeight": "0.91 oz/26 g",
+          "servingSizeUnit": "g",
+          "servingSize": 26,
+          "householdServingFullText": "None",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Ghirardelli <em>Chocolate</em> Company<br /><b>Ingredients</b>: SUGAR, COCOA BUTTER, WHOLE MILK POWDER, UNSWEETENED <em>CHOCOLATE</em>, SOY LECITHIN-AN EMULSIFIER, VANILLA. ",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.69
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 34.6
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 57.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 538
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 53.8
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 154
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.77
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 58
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 19
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 19.2
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2292090,
+          "description": "CHOCOLATE",
+          "dataType": "Branded",
+          "gtinUpc": "071629305012",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Deli Star Corp.",
+          "brandName": "FUDGE",
+          "ingredients": "SUGAR, BUTTER (MILK, SALT), PALM OIL, SOYBEAN OIL, CORN SYRUP, COCOA (PROCESSED WITH ALKALI), SWEETENED CONDENSED MILK (MILK, SUGAR), CONTAINS LESS THAN 2% NONFAT DRY MILK, MODIFIED WHEY, CITRIC ACID, INVERT SUGAR, NATURAL AND ARTIFICIAL FLAVOR, MODIFIED FOOD STARCH, SALT, SOY LECITHIN, RAPESEED LECITHIN, WATER, MONO AND DIGLYCERIDES, POLYSORBATE 60.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2022-04-01",
+          "dataSource": "LI",
+          "packageWeight": "8 oz/226 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 706.0185,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|çikolata": [
+        {
+          "code": "4824024017358",
+          "product_name": "Çikolata"
+        },
+        {
+          "code": "8690632019994",
+          "nutriments": {
+            "carbohydrates_100g": 60,
+            "energy-kcal_100g": 542,
+            "fat_100g": 30,
+            "fiber_100g": 1.6,
+            "proteins_100g": 6.2,
+            "salt_100g": 0.4,
+            "saturated-fat_100g": 20,
+            "sodium_100g": 0.16,
+            "sugars_100g": 59
+          },
+          "product_name": "Çikolata"
+        },
+        {
+          "code": "8690632245799",
+          "brands": [
+            "Nestle"
+          ],
+          "nutriments": {
+            "sugars_100g": 57,
+            "proteins_100g": 9.1,
+            "fat_100g": 32,
+            "sodium_100g": 0.12,
+            "energy-kj_100g": 2289,
+            "energy-kcal_100g": 547,
+            "salt_100g": 0.3,
+            "carbohydrates_100g": 57,
+            "saturated-fat_100g": 20
+          },
+          "product_name": "Beyaz Çikolata"
+        },
+        {
+          "code": "8683242262881",
+          "brands": [
+            "Kechy"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 26.5,
+            "energy-kcal_100g": 146,
+            "fat_100g": 2.79999995231628,
+            "fiber_100g": 2.20000004768372,
+            "proteins_100g": 2.59999990463257,
+            "saturated-fat_100g": 2,
+            "sugars_100g": 2.5
+          },
+          "product_name": "Dondurma çikolata"
+        },
+        {
+          "code": "8683508131760",
+          "nutriments": {
+            "carbohydrates_100g": 20,
+            "energy-kcal_100g": 199,
+            "fat_100g": 12,
+            "fiber_100g": 1,
+            "proteins_100g": 2,
+            "saturated-fat_100g": 6,
+            "sugars_100g": 18
+          },
+          "product_name": "Çilekli çikolata"
+        },
+        {
+          "code": "4001743761186",
+          "nutriments": {
+            "carbohydrates_100g": 58,
+            "energy-kcal_100g": 537,
+            "fat_100g": 30,
+            "proteins_100g": 6.6,
+            "saturated-fat_100g": 19,
+            "sugars_100g": 57
+          },
+          "product_name": "Sütlü çikolata"
+        },
+        {
+          "code": "8695077000996",
+          "brands": [
+            "buono"
+          ],
+          "nutriments": {
+            "proteins_100g": 9.5,
+            "fiber_100g": 3.5,
+            "sugars_100g": 42.3,
+            "fat_100g": 38.2,
+            "carbohydrates_100g": 45.7,
+            "saturated-fat_100g": 17.7,
+            "salt_100g": 0.4,
+            "sodium_100g": 0.16,
+            "energy-kcal_100g": 572
+          },
+          "product_name": "Findikli sütlű çikolata"
+        },
+        {
+          "code": "8690526048703",
+          "nutriments": {
+            "carbohydrates_100g": 56,
+            "energy-kcal_100g": 522,
+            "fat_100g": 28,
+            "fiber_100g": 3.1,
+            "proteins_100g": 9.4,
+            "salt_100g": 0.725,
+            "saturated-fat_100g": 19,
+            "sodium_100g": 0.29,
+            "sugars_100g": 47
+          },
+          "product_name": "Karamel patlaklı çikolata"
+        },
+        {
+          "code": "8690637820021",
+          "nutriments": {
+            "carbohydrates_100g": 33,
+            "energy-kcal_100g": 268,
+            "fat_100g": 13,
+            "fiber_100g": 1.8,
+            "proteins_100g": 4.2,
+            "sugars_100g": 26
+          },
+          "product_name": "Cornetto classico çikolata"
+        },
+        {
+          "code": "86924979",
+          "brands": [
+            "Eti"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 64.2857125,
+            "energy-kcal_100g": 510,
+            "fat_100g": 18.5714277777778,
+            "fiber_100g": 37.142855,
+            "proteins_100g": 1.4285715,
+            "saturated-fat_100g": 10,
+            "sugars_100g": 27.142855
+          },
+          "product_name": "Karam bitter çikolata"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1041 @@
+{
+  "caseId": "tr-bir-paket-cips",
+  "input": "bir paket cips",
+  "recordedAt": "2026-08-21T00:43:01.336Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"bir paket cips\",\"reasoning\":\"The line mentions one package of chips; \\\"paket\\\" is interpreted as a single serving. No weight given, so a typical snack bag (~45 g) is assumed.\",\"confidence\":0.85,\"language\":\"tr\",\"items\":[{\"name\":\"potato chips\",\"local_name\":\"cips\",\"unit\":\"serving\",\"quantity\":1,\"estimated_grams\":45,\"estimated_per_100g\":{\"kcal\":520,\"protein\":6,\"carbs\":55,\"fat\":30},\"kind\":\"food\",\"confidence\":0.85}]}",
+    "promptTokens": 2940,
+    "completionTokens": 458
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "potato chips": [
+        {
+          "fdcId": 2430813,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "075109894034",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Happy's Potato Chip Company",
+          "brandName": "SUPER 1 POUNDER",
+          "ingredients": "POTATOES, CANOLA AND/OR SUNFLOWER OIL, SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2019-04-17",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/1 lbs/454 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "16 CHIPS | ABOUT",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Happy's <em>Potato</em> <em>Chip</em> Company<br /><b>Ingredients</b>: <em>POTATOES</em>, CANOLA AND/OR SUNFLOWER OIL, SALT.",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 571
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 1190
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 482
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.57
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1876498,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "032792120048",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Conn's Potato Chip Co.",
+          "brandName": "MOTOWN",
+          "ingredients": "SELECT POTATOES, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: CORN, COTTONSEED, SUNFLOWER, OR PARTIALLY HYDROGENATED SOY OIL), SALT, AND SALT AND VINEGAR SEASONING COMPOSED OF: LACTOSE, SODIUM DIACETATE, SALT, PARTIALLY HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN), MALIC ACID, SODIUM CITRATE, WITH BHA, BHT, AND CITRIC ACID (0.01% EACH ADDED TO PRESERVE FRESHNESS), AND LESS THAN 2% SILICON DIOXIDE AND POLYSORBATE 80 ADDED TO PREVENT CAKING.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "2 oz/56.7 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28.299999237060547,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Conn's <em>Potato</em> <em>Chip</em> Co.<br /><b>Ingredients</b>: SELECT <em>POTATOES</em>, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: CORN, COTTONSEED",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 45.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 530
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 777
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 31.8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 7.07
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.07
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2038222,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "032792008827",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Conn's Potato Chip Co.",
+          "brandName": "CONN'S",
+          "ingredients": "SELECT POTATOES, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PARTIALLY HYDROGENATED SOY, CORN, COTTONSEED, OR SUNFLOWER OIL), AND SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2020-04-26",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/453.6 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Conn's <em>Potato</em> <em>Chip</em> Co.<br /><b>Ingredients</b>: SELECT <em>POTATOES</em>, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PARTIALLY",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 46.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 536
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.29
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 786
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 32.1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.14
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2038031,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "041368140601",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Jones Potato Chip Company",
+          "brandName": "NICK'S",
+          "ingredients": "POTATOES, VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWING: COTTONSEED, CORN, OR SOYBEAN), SLAT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2020-05-08",
+          "dataSource": "LI",
+          "packageWeight": "8.5 oz/241 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Jones <em>Potato</em> <em>Chip</em> Company<br /><b>Ingredients</b>: <em>POTATOES</em>, VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWING: COTTONSEED, CORN, OR SOYBEAN), SLAT.",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 32.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 57.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 536
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.29
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 429
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.93
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2410521,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "074982111207",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Backers Potato Chip Co",
+          "brandName": "BACKER'S",
+          "ingredients": "POTATOES, VEGETABLE OIL (CORN, SOYBEAN AND/OR SUNFLOWER), SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2019-01-18",
+          "dataSource": "LI",
+          "packageWeight": "10 oz/284 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28.350000381469727,
+          "householdServingFullText": "1 ONZ",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Backers <em>Potato</em> <em>Chip</em> Co<br /><b>Ingredients</b>: <em>POTATOES</em>, VEGETABLE OIL (CORN, SOYBEAN AND/OR SUNFLOWER), SALT.",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.05
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 52.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 564
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.41
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 1270
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 529
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 8.82
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 21.2
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2038218,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "032792009619",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Conn's Potato Chip Co.",
+          "brandName": "CONN'S",
+          "ingredients": "SELECT POTATOES, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PARTIALLY HYDROGENATED SOY, CORN, COTTONSEED, OR SUNFLOWER OIL), AND SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2020-04-26",
+          "dataSource": "LI",
+          "packageWeight": "10 oz/283 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28.299999237060547,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Conn's <em>Potato</em> <em>Chip</em> Co.<br /><b>Ingredients</b>: SELECT <em>POTATOES</em>, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PARTIALLY",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 45.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 530
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 777
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 31.8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 7.07
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.07
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2038220,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "032792009701",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Conn's Potato Chip Co.",
+          "brandName": "CONN'S",
+          "ingredients": "SELECT POTATOES, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PARTIALLY HYDROGENATED SOY, CORN, COTTONSEED, OR SUNFLOWER OIL).",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2020-04-26",
+          "dataSource": "LI",
+          "packageWeight": "10 oz/283 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28.299999237060547,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Conn's <em>Potato</em> <em>Chip</em> Co.<br /><b>Ingredients</b>: SELECT <em>POTATOES</em>, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PARTIALLY HYDROGENATED SOY, CORN, COTTONSEED, OR SUNFLOWER OIL).",
+          "score": 906.7582,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 45.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 530
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.53
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.54
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 31.8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 7.07
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.07
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2630426,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "076847144306",
+          "publishedDate": "2023-08-31",
+          "brandOwner": "Grippo Potato Chip Co Inc",
+          "brandName": "GRIPPOS",
+          "ingredients": "POTATOES, VEGETABLE OIL (HIGH OLEIC SOYBEAN, SUNFLOWER, COTTONSEED, CORN, AND/OR PALM), AND SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2023-07-10",
+          "dataSource": "LI",
+          "packageWeight": "2.75 oz/77.96 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 28,
+          "householdServingFullText": "1 oz",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Grippo <em>Potato</em> <em>Chip</em> Co Inc<br /><b>Ingredients</b>: <em>POTATOES</em>, VEGETABLE OIL (HIGH OLEIC SOYBEAN, SUNFLOWER, COTTONSEED, CORN, AND/OR PALM), AND SALT.",
+          "score": 905.51385,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 39.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 571
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 839
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 589
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.14
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2096564,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "020685002311",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Cape Cod Potato Chips Inc.",
+          "brandName": "CAPE COD",
+          "ingredients": "POTATOES, VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWING: CANOLA OIL, SAFFLOWER OIL AND/OR SUNFLOWER OIL), SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2019-03-12",
+          "dataSource": "LI",
+          "packageWeight": "2 oz/56.7 g",
+          "servingSizeUnit": "g",
+          "servingSize": 56.70000076293945,
+          "householdServingFullText": "1 PACKAGE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Cape Cod <em>Potato</em> <em>Chips</em> Inc.<br /><b>Ingredients</b>: <em>POTATOES</em>, VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWING: CANOLA OIL, SAFFLOWER OIL AND/OR SUNFLOWER OIL), SALT.",
+          "score": 905.51385,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.29
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 35.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 52.9
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 547
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 688
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 52.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.65
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1871002,
+          "description": "POTATO CHIPS",
+          "dataType": "Branded",
+          "gtinUpc": "011931000069",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Downey's Potato Chips-Jackson, Inc.",
+          "brandName": "DOWNEY'S",
+          "ingredients": "POTATOES, PARTIALLY HYDROGENATED VEGETABLE OIL, (SOYBEAN, COTTONSEED), PEANUT OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Chips, Pretzels & Snacks",
+          "modifiedDate": "2021-06-27",
+          "dataSource": "LI",
+          "packageWeight": "11 oz/312 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Downey's <em>Potato</em> <em>Chips</em>-Jackson, Inc.<br /><b>Ingredients</b>: <em>POTATOES</em>, PARTIALLY HYDROGENATED VEGETABLE OIL, (SOYBEAN, COTTONSEED), PEANUT OIL.",
+          "score": 905.51385,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.14
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 39.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 571
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.57
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 12.5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|cips": [
+        {
+          "code": "5941000032354",
+          "brands": [
+            "Lay's"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 52,
+            "energy-kcal_100g": 518,
+            "fat_100g": 31,
+            "fiber_100g": 4.3,
+            "proteins_100g": 6.8,
+            "salt_100g": 0.00375,
+            "saturated-fat_100g": 2.5,
+            "sodium_100g": 0.0015,
+            "sugars_100g": 3.1
+          },
+          "product_name": "Cips"
+        },
+        {
+          "code": "8699118067542",
+          "nutriments": {
+            "carbohydrates_100g": 9.85185185185185,
+            "energy-kcal_100g": 411.111111111111,
+            "fat_100g": 6.22222222222222,
+            "fiber_100g": 0.888888888888889,
+            "proteins_100g": 0.962962962962963,
+            "salt_100g": 0.740740740740741,
+            "saturated-fat_100g": 2.59259259259259,
+            "sodium_100g": 0.296296296296296,
+            "sugars_100g": 0.518518518518518
+          },
+          "product_name": "Cips"
+        },
+        {
+          "code": "8680782524219",
+          "nutriments": {
+            "energy-kcal_100g": 485,
+            "fat_100g": 6,
+            "salt_100g": 1,
+            "saturated-fat_100g": 2.5,
+            "sodium_100g": 0.4,
+            "sugars_100g": 0.3
+          },
+          "product_name": "Cips"
+        },
+        {
+          "code": "6422005004670",
+          "brands": [
+            "cd"
+          ],
+          "product_name": "mini cip"
+        },
+        {
+          "code": "0869630000404",
+          "nutriments": {
+            "saturated-fat_100g": 3.5398230088496,
+            "carbohydrates_100g": 53.097345132743,
+            "salt_100g": 1.504424778761,
+            "energy-kcal_100g": 530.97345132743,
+            "sodium_100g": 0.6017699115044,
+            "fat_100g": 35.398230088496,
+            "proteins_100g": 5.3097345132743,
+            "sugars_100g": 3.5398230088496
+          },
+          "product_name": "Original Cips"
+        },
+        {
+          "code": "3856021302947",
+          "brands": [
+            "Intersnack Adria",
+            "Čipi ćips"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 53,
+            "energy-kcal_100g": 579,
+            "energy-kj_100g": 2413,
+            "fat_100g": 38,
+            "proteins_100g": 5.4,
+            "salt_100g": 1.9,
+            "saturated-fat_100g": 3.6,
+            "sodium_100g": 0.76,
+            "sugars_100g": 0.8
+          }
+        },
+        {
+          "code": "3856021304064",
+          "brands": [
+            "Intersnack Adria",
+            "Čipi ćips"
+          ],
+          "nutriments": {
+            "sugars_100g": 0.8,
+            "proteins_100g": 5.4,
+            "fat_100g": 37,
+            "salt_100g": 1.9,
+            "carbohydrates_100g": 55,
+            "saturated-fat_100g": 3.5,
+            "sodium_100g": 0.76,
+            "energy-kj_100g": 2389,
+            "energy-kcal_100g": 571
+          }
+        },
+        {
+          "code": "0041220176144",
+          "nutriments": {
+            "fat_100g": 39.285714285714,
+            "proteins_100g": 7.1428571428571,
+            "fiber_100g": 3.5714285714286,
+            "sugars_100g": 0,
+            "energy-kcal_100g": 3.5714285714286,
+            "sodium_100g": 0.75,
+            "saturated-fat_100g": 5.3571428571429,
+            "carbohydrates_100g": 53.571428571429,
+            "salt_100g": 1.875
+          },
+          "product_name": "Corn in a Cip"
+        },
+        {
+          "code": "8681608061123",
+          "brands": [
+            "cips Bey"
+          ],
+          "product_name": "pizza aromalı"
+        },
+        {
+          "code": "8695077127112",
+          "nutriments": {
+            "carbohydrates_100g": 65.5,
+            "energy-kcal_100g": 502,
+            "fat_100g": 26,
+            "fiber_100g": 7.1,
+            "proteins_100g": 5,
+            "saturated-fat_100g": 11.9,
+            "sugars_100g": 4.4
+          },
+          "product_name": "Ballı hardallı cips"
+        }
+      ]
+    }
+  }
+}

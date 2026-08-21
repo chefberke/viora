@@ -1,0 +1,1189 @@
+{
+  "caseId": "tr-bir-kasik-bal",
+  "input": "bir kaşık bal",
+  "recordedAt": "2026-08-21T00:42:41.042Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"bir kaşık bal\",\"reasoning\":\"Turkish line indicating one spoon of honey; \\\"kaşık\\\" maps to a tablespoon unit.\",\"confidence\":0.93,\"language\":\"tr\",\"items\":[{\"name\":\"honey\",\"local_name\":\"bal\",\"unit\":\"tbsp\",\"quantity\":1,\"estimated_grams\":21,\"estimated_per_100g\":{\"kcal\":304,\"protein\":0.3,\"carbs\":82.4,\"fat\":0},\"kind\":\"food\",\"confidence\":0.9}]}",
+    "promptTokens": 2941,
+    "completionTokens": 384
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "honey": [
+        {
+          "fdcId": 169640,
+          "description": "Honey",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 19296,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Sweets",
+          "allHighlightFields": "",
+          "score": 1181.5682,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.42
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.036
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.08
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.038
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.008
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.006
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 0.018
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.007
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 82.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 304
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 17.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.22
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0.121
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.068
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.024
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.008
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.008
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.009
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.027
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.006
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 82.1
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0.89
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 35.8
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 1.44
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "287",
+              "value": 3.1
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 40.9
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 1270
+            },
+            {
+              "nutrientNumber": "313",
+              "value": 7
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "454",
+              "value": 1.7
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 2.2
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1126112,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "8901207025266",
+          "publishedDate": "2020-11-13",
+          "brandOwner": "DABUR INDIA LTD",
+          "ingredients": "HONEY (100%)",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2020-04-08",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 15,
+          "householdServingFullText": "1 TABLESPOON",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>HONEY</em> (100%)",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 80
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 333
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 80
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.33
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "5",
+              "name": "Nutrient Added",
+              "id": 1041710
+            },
+            {
+              "value": "4",
+              "name": "Nutrient Updated",
+              "id": 1041711
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "5",
+                  "name": "Nutrient Added",
+                  "id": 1041710
+                },
+                {
+                  "value": "4",
+                  "name": "Nutrient Updated",
+                  "id": 1041711
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 403966,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "058500000181",
+          "publishedDate": "2019-04-01",
+          "brandOwner": "BILLYBEE",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2017-08-16",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 81
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2315023,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "073299120322",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Barkman Honey, LLC",
+          "brandName": "BEE HARMONY",
+          "ingredients": "RAW HONEY.",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2019-06-01",
+          "dataSource": "LI",
+          "packageWeight": "12 oz/340 g",
+          "servingSizeUnit": "g",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Barkman <em>Honey</em>, LLC<br /><b>Ingredients</b>: RAW <em>HONEY</em>.",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 76.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1548359,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "090177302120",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "Weeks Honey Farm, Inc.",
+          "brandName": "WEEKS HONEY FARM",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2017-10-13",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Weeks <em>Honey</em> Farm, Inc.",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 76.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1561641
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1561641
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2500312,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "041512161513",
+          "publishedDate": "2023-03-16",
+          "brandOwner": "Smart & Final Iris Corporation",
+          "brandName": "FIRST STREET",
+          "ingredients": "HONEY.",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2023-02-25",
+          "dataSource": "LI",
+          "packageWeight": "12 OZ/340 g",
+          "servingSizeUnit": "IU",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>HONEY</em>.",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2609845,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "888670125649",
+          "publishedDate": "2023-07-13",
+          "brandOwner": "BJ's Wholesale Club / Corporate Brands",
+          "brandName": "WELLSLEY FARMS",
+          "ingredients": "HONEY",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2023-06-21",
+          "dataSource": "LI",
+          "packageWeight": "40 oz/1.13 kg",
+          "servingSizeUnit": "GRM",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>HONEY</em>",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1606175,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "716286000350",
+          "publishedDate": "2021-03-19",
+          "brandOwner": "Champlain Valley Apiaries",
+          "brandName": "CHAMPLAIN VALLEY APIARIES",
+          "ingredients": "",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2017-10-13",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 76.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "10",
+              "name": "Added Brand/Sub Brand Information",
+              "id": 1633851
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "10",
+                  "name": "Added Brand/Sub Brand Information",
+                  "id": 1633851
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2544169,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "021130286812",
+          "publishedDate": "2023-05-25",
+          "brandOwner": "Safeway, Inc.",
+          "brandName": "VALUE CORNER",
+          "ingredients": "HONEY.",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2023-03-06",
+          "dataSource": "LI",
+          "packageWeight": "24 OZ/680 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>HONEY</em>.",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2275519,
+          "description": "HONEY",
+          "dataType": "Branded",
+          "gtinUpc": "085239056424",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Target Stores",
+          "brandName": "GOOD & GATHER",
+          "subbrandName": "ORGANIC",
+          "ingredients": "ORGANIC HONEY.",
+          "marketCountry": "United States",
+          "foodCategory": "Honey",
+          "modifiedDate": "2021-10-11",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/1 lbs/454 g",
+          "servingSizeUnit": "g",
+          "servingSize": 21,
+          "householdServingFullText": "1 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ORGANIC <em>HONEY</em>.",
+          "score": 744.79486,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 81
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|bal": [
+        {
+          "code": "8690998112131",
+          "brands": [
+            "Balparmak"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 82.4,
+            "energy-kcal_100g": 304,
+            "energy-kj_100g": 1272,
+            "proteins_100g": 0.38,
+            "fiber_100g": 0.2,
+            "sugars_100g": 82.4
+          },
+          "product_name": "Bal"
+        },
+        {
+          "code": "3770020277023",
+          "brands": [
+            "BAL"
+          ],
+          "product_name": "la triple"
+        },
+        {
+          "code": "3760220490049",
+          "brands": [
+            "BAL"
+          ],
+          "product_name": "Blanche"
+        },
+        {
+          "code": "6009708532893",
+          "product_name": "Rugby bal"
+        },
+        {
+          "code": "0834970008304",
+          "brands": [
+            "Bangkok Meat Balls Food Co.LTD"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 6.25,
+            "energy-kcal_100g": 125,
+            "fat_100g": 3.12,
+            "fiber_100g": 0,
+            "proteins_100g": 12.5,
+            "salt_100g": 2.34,
+            "saturated-fat_100g": 1.25,
+            "sodium_100g": 0.938,
+            "sugars_100g": 0
+          },
+          "product_name": "Beef Bals"
+        },
+        {
+          "code": "6281100850649",
+          "product_name": "PUFAK bal sharaf"
+        },
+        {
+          "code": "0603608879407",
+          "nutriments": {
+            "fat_100g": 0,
+            "fiber_100g": 0,
+            "proteins_100g": 0,
+            "sugars_100g": 76.190476190476,
+            "saturated-fat_100g": 0,
+            "carbohydrates_100g": 80.952380952381,
+            "salt_100g": 0,
+            "energy-kcal_100g": 285.71428571429,
+            "sodium_100g": 0
+          },
+          "product_name": "Doğal Petek Bal"
+        },
+        {
+          "code": "0405538575035",
+          "product_name": "Butter,earh bal"
+        },
+        {
+          "code": "7612811338826",
+          "brands": [
+            "Madal Bal"
+          ],
+          "nutriments": {
+            "sugars_100g": 58.5,
+            "carbohydrates_100g": 67,
+            "proteins_100g": 0.5,
+            "energy-kcal_100g": 280,
+            "sodium_100g": 0.148,
+            "salt_100g": 0.37,
+            "saturated-fat_100g": 0.4,
+            "fat_100g": 0.4
+          },
+          "product_name": "Natural Tree Syrup"
+        },
+        {
+          "code": "4740053007613",
+          "brands": [
+            "Bal Snack"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 65,
+            "energy-kcal_100g": 418,
+            "fat_100g": 15,
+            "proteins_100g": 5,
+            "salt_100g": 0.1975,
+            "saturated-fat_100g": 1.1,
+            "sodium_100g": 0.079,
+            "sugars_100g": 21
+          },
+          "product_name": "Maisikepikesed Kaneeliga"
+        }
+      ]
+    }
+  }
+}

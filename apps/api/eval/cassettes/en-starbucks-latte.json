@@ -1,0 +1,905 @@
+{
+  "caseId": "en-starbucks-latte",
+  "input": "a grande latte",
+  "recordedAt": "2026-08-21T00:42:20.134Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\n  \"normalized_text\": \"a grande latte\",\n  \"reasoning\": \"The word \\\"grande\\\" indicates a 16‑oz (473 ml) serving size for a latte. No other size info is given, so we use that volume and treat it as a drink.\",\n  \"confidence\": 0.92,\n  \"language\": \"en\",\n  \"items\": [\n    {\n      \"name\": \"latte\",\n      \"local_name\": \"latte\",\n      \"unit\": \"ml\",\n      \"quantity\": 473,\n      \"estimated_grams\": 473,\n      \"estimated_per_100g\": {\n        \"kcal\": 62,\n        \"protein\": 2.5,\n        \"carbs\": 7,\n        \"fat\": 3.5\n      },\n      \"kind\": \"food\",\n      \"confidence\": 0.9\n    }\n  ]\n}",
+    "promptTokens": 2939,
+    "completionTokens": 410
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "latte": [
+        {
+          "fdcId": 2312265,
+          "description": "CAFFE LATTE ALMONDS, CAFFE LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "790429245891",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "International Foodsource",
+          "brandName": "VALUED NATURALS",
+          "ingredients": "MILK CHOCOLATE (SUGAR, COCOA BUTTER, UNSWEETENED CHOCOLATE, SKIM MILK POWDER, BUTTER OIL {MILK}, SOY LECITHIN {AN EMULSIFIER}, NATURAL VANILLA EXTRACT), WHITE CHOCOLATE (SUGAR, COCOA BUTTER, WHOLE MILK POWDER, SOY LECITHIN {AN EMULSIFIER}, NATURAL VANILLA EXTRACT), WHOLE ROASTED ALMONDS, GROUND COFFEE, NATURAL FLAVORS, WATER, CORN SYRUP, SUGAR, GUM ARABIC, POTASSIUM SORBATE {PRESERVATIVE}, CITRIC ACID, CONFECTIONER'S GLAZE, VEGETABLE OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2020-11-19",
+          "dataSource": "LI",
+          "packageWeight": "26 OZ/737 g",
+          "servingSizeUnit": "g",
+          "servingSize": 48,
+          "householdServingFullText": "1/4 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.25
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 33.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 56.2
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 542
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 146
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 14.6
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2533458,
+          "description": "CARAMEL LATTE FROSTING, CARAMEL LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "013300606865",
+          "publishedDate": "2023-04-27",
+          "brandOwner": "Hometown Food Company",
+          "brandName": "PILLSBURY",
+          "subbrandName": "CREAMY SUPREME",
+          "ingredients": "SUGAR, PALM OIL, WATER, CORN SYRUP, CORN STARCH, CANOLA OIL, CONTAINS 2% OR LESS OF: SALT, MONO- AND DIGLYCERIDES, CARAMEL COLOR, POLYSORBATE 60, MODIFIED CORN STARCH, POTASSIUM SORBATE (PRESERVATIVE), SOY LECITHIN, CARAMELIZED SUGAR SYRUP, XANTHAN GUM, CITRIC ACID, COFFEE EXTRACT (WATER, COFFEE), NATURAL FLAVORS, ANTIOXIDANTS (ASCORBYL PALMITATE, MIXED TOCOPHEROLS, CHAMOMILE AND ROSEMARY EXTRACTS).",
+          "marketCountry": "United States",
+          "foodCategory": "Baking Decorations & Dessert Toppings",
+          "modifiedDate": "2023-03-13",
+          "dataSource": "LI",
+          "packageWeight": "16 OZ/1 LB/453 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 33,
+          "householdServingFullText": "2 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 424
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 60.6
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 197
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 60.6
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.58
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2628634,
+          "description": "CARAMEL LATTE SANDWICH, CARAMEL LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "854723007712",
+          "publishedDate": "2023-08-31",
+          "brandOwner": "Thelma's LLC",
+          "brandName": "THELMA'S",
+          "ingredients": "COFFEE ICE CREAM (CREAM, SUGAR, MILK, CORN SYRUP, NONFAT MILK WHEY, WATER COFFEE MONO AND DIGLYCERIDES, TARA GUM, CELLULOSE GUM, CARRAGEENAN, LOCUST BEAN GUM, NATURAL FLAVOR ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN FOLC ACID, MALTED BARLEY FLOUR BROWN SUGAR, SUGAR, SALTED CARAMEL DROPS (SUGAR SUM MILK HYDROGENATED VEGETABLE OIL PALM KERNEL OIL, SOYBEAN OIL, PALM OIL PALM KERNEL OIL NATURAL FLAVOR SEACHTSTARCH, SALT, SOY LECITHIN), BUTTER (CREAM, SALT, PALM OIL, CORN SYRUP WATER PASTEURIZED EGGS, HIGH FRUCTOSE CORN SYRUP, SKIM MILK, HEAVY CREAM, NATURAL FLAVOR SODIUM BICARBONATE SAKING SODA), SALT, PECTIN.",
+          "marketCountry": "United States",
+          "foodCategory": "Ice Cream & Frozen Yogurt",
+          "modifiedDate": "2023-07-31",
+          "dataSource": "LI",
+          "packageWeight": "6 floz/177.4 ml",
+          "servingSizeUnit": "GRM",
+          "servingSize": 142,
+          "householdServingFullText": "1 sandwich",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 4.23
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 14.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 46.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 324
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.01
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 99
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 190
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 28.2
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 46
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 7.75
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2302733,
+          "description": "CARAMEL LATTE SHOOTER, CARAMEL LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "019951840634",
+          "publishedDate": "2022-05-23",
+          "brandOwner": "Dianne's Fine Desserts, Inc.",
+          "brandName": "DIANNE'S FINE DESSERTS",
+          "ingredients": "CARAMEL TOPPING (CORN SYRUP, SWEETENED CONDENSED SKIM MILK [SKIM MILK, SUGAR, CORN SYRUP], SUGAR, BUTTER, WATER, HIGH FRUCTOSE CORN SYRUP, DISODIUM PHOSPHATE, PECTIN, SALT, MONO AND DIGLYCERIDES [PALM], SODIUM CITRATE, ARTIFICIAL FLAVORS), HEAVY CREAM (CREAM, CARRAGEENAN, MONO-& DIGLYCERIDES), CREAM CHEESE (PASTEURIZED MILK AND CREAM, CHEESE CULTURE, SALT, STABILIZERS [CAROB BEAN GUM, XANTHAN GUM, GUAR GUM]), SUGAR, CULTURED SOUR CREAM (NONFAT MILK, CREAM, GRADE A WHEY, MODIFIED CORN STARCH, SODIUM PHOSPHATE, GUAR GUM, CARRAGEENAN, SODIUM CITRATE, LOCUST BEAN GUM, POTASSIUM SORBATE [AS PRESERVATIVE], ENZYMES), WATER, WHOLE EGGS WITH CITRIC ACID (AS PRESERVATIVE), NATURAL AND ARTIFICIAL FLAVORS (CARAMEL COLOR [CONTAINS SULFITES], COFFEE), MODIFIED FOOD STARCH, WHEY PROTEIN CONCENTRATE, CREAM, MILK, NATURAL FLAVORS, SALT, LACTIC ACID, MODIFIED FOOD STARCH, XANTHAN GUM, POTASSIUM SORBATE [PRESERVATIVE], ENZYMES, CHEESE CULTURE.",
+          "marketCountry": "United States",
+          "foodCategory": "Puddings & Custards",
+          "modifiedDate": "2018-09-08",
+          "dataSource": "LI",
+          "packageWeight": "2.24 oz/64 g",
+          "servingSizeUnit": "g",
+          "servingSize": 64,
+          "householdServingFullText": "1 PIECE",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.12
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 17.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 32.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 297
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 23.4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 180
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 625
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 86
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 10.9
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1909545,
+          "description": "CHAI LATTE MIX, CHAI LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "070893030514",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Bay Valley Foods, LLC",
+          "brandName": "GROVE SQUARE",
+          "ingredients": "SUGAR, HYDROGENATED COCONUT OIL, MALTODEXTRIN, NONFAT DRY MILK, SWEET WHEY, INSTANT BLACK TEA, NATURAL FLAVORS, CORN SYRUP SOLIDS, SODIUM CASEINATE, SALT, REFINERY SYRUP, HONEY, DIPOTASSIUM PHOSPHATE, SILICON DIOXIDE, MONO-AND DIGLYCERIDES, SOY LECITHIN, SPICE, SUCRALOSE.",
+          "marketCountry": "United States",
+          "foodCategory": "Tea Bags",
+          "modifiedDate": "2018-03-11",
+          "dataSource": "LI",
+          "packageWeight": "6.35 oz/180 g",
+          "servingSizeUnit": "g",
+          "servingSize": 15,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 16.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 467
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 46.7
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 733
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 16.7
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1995826,
+          "description": "COLDBREW LATTE POPS, COLDBREW LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "856920005362",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Austin's Natural Frozen Pops, Inc",
+          "brandName": "GOODPOP",
+          "ingredients": "INGREDIENTS: ORGANIC COCONUT CREAM, FILTERED WATER, ORGANIC COCONUT SUGAR, FAIR TRADE ORGANIC COLDBREW COFFEE EXTRACT, FAIR TRADE ORGANIC VANILLA EXTRACT, ORGANIC GUAR GUM",
+          "marketCountry": "United States",
+          "foodCategory": "Ice Cream & Frozen Yogurt",
+          "modifiedDate": "2021-05-21",
+          "dataSource": "LI",
+          "packageWeight": "10 fl oz/296 mL",
+          "servingSizeUnit": "g",
+          "servingSize": 260,
+          "householdServingFullText": "4 Pops",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0.38
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.92
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 2.31
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.31
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.77
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 1.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.54
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2428299,
+          "description": "INTENSELY CAFFINATED LATTE COFFEE, LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "866660000329",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Wildcat Coffee LLC",
+          "brandName": "STREET BEAN COFFEE",
+          "ingredients": "COLD BREW COFFEE (WATER, COFFEE), WHOLE MILK, POTASSIUM PHOSPHATES (TO PREVENT SEPARATION)",
+          "marketCountry": "United States",
+          "foodCategory": "Other Drinks",
+          "modifiedDate": "2020-11-19",
+          "dataSource": "LI",
+          "packageWeight": "11 fl oz/325 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 325,
+          "householdServingFullText": "11 OZA",
+          "shortDescription": "",
+          "caffeineStatement": "['OUR COFFEE - SINGLE ORIGIN DIRECT TRADE SHELF STABLE HIGH CAFFEINE', 'OUR COFFEE - SINGLE ORIGIN DIRECT TRADE SHELF STABLE HIGH CAFFEINE', '280 MG CAFFEINE', '280 MG CAFFEINE', '280 MG CAFFEINE', 'INTENSELY CAFFINATED LATTE COFFEE']",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0.92
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.92
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.54
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.54
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 31
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 11
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.58
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2543197,
+          "description": "LATTE FROTHY COFFEE BEVERAGE, LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "00028000990442",
+          "publishedDate": "2023-05-25",
+          "brandOwner": "Nestle USA Inc.",
+          "brandName": "NESCAFE",
+          "ingredients": "INGREDIENTS: SUGAR, MALTODEXTRIN, CORN SYRUP, HYDROGENATED VEGETABLE OIL (COCONUT AND/OR PALM KERNEL AND/OR SOYBEAN), NONFAT MILK, INSTANT COFFEE, 2% OR LESS OF CELLULOSE GUM, SODIUM CASEINATE, SALT, COCOA PROCESSED WITH ALKALI, SODIUM ALUMINOSILICATE, DIPOTASSIUM PHOSPHATE, ARTIFICIAL AND NATURAL FLAVORS, MONOGLYCERIDES, SODIUM HYDROXIDE, DATEM. INGREDIENTES: AZCAR, MALTODEXTRINA, JARABE DE MAZ, ACEITE VEGETAL HIDROGENADO (ACEITE DE COCO, NUEZ DE PALMA O SOJA), LECHE DESCREMADA, CAFE INSTANTANEO, 2 % O MENOS DE GOMA DE CELULOSA, CASEINATO DE SODIO, SAL, CACAO PROCESADO CON LCALI, ALUMINOSILICATO DE SODIO, FOSFATO DIPOTSICO, SABORIZANTES NATURALES Y ARTIFICIALES, MONOGLICRIDOS, HIDRXIDO DE SODIO, DATEM.",
+          "marketCountry": "United States",
+          "foodCategory": "Other Drinks",
+          "modifiedDate": "2022-04-12",
+          "dataSource": "LI",
+          "packageWeight": "12 lbs/5.44 kg",
+          "servingSizeUnit": "GRM",
+          "servingSize": 52,
+          "householdServingFullText": "1/4 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 1.92
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 6.73
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 80.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 385
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 46.2
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.9
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 58
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.19
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 365
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 385
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 3.8
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 6.73
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2413375,
+          "description": "LATTE MATCHA GREEN TEA, LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "810053640616",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Sang Labs, Inc.",
+          "brandName": "BLENDJET",
+          "ingredients": "WHOLE OAT FLOUR, SUGAR, MATCHA GREEN TEA POWDER, MALTODEXTRIN, GUM ACACIA, RICE FIBER (TO PREVENT CAKING), CONTAINS 2% OR LESS OF THE FOLLOWING: GUAR GUM, NATURAL FLAVORS.",
+          "marketCountry": "United States",
+          "foodCategory": "Powdered Drinks",
+          "modifiedDate": "2022-07-28",
+          "dataSource": "LI",
+          "packageWeight": "1.1 OZ/30 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "1 pack",
+          "shortDescription": "",
+          "caffeineStatement": "['90MG CAFFEINE', '90MG CAFFEINE', 'CONTAINS 90 MG OF CAFFEINE', 'CONTAINS 90 MG OF CAFFEINE']",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 83.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 400
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 46.7
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 133
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.33
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 467
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 30
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2365529,
+          "description": "MATCHA LATTE OATMEAL, MATCHA LATTE",
+          "dataType": "Branded",
+          "gtinUpc": "860005804412",
+          "publishedDate": "2022-12-07",
+          "brandOwner": "Crave Natural, Inc.",
+          "brandName": "YISHI",
+          "ingredients": "GLUTEN-FREE OATS*, COCONUT MILK POWDER* ERYTHRITOL*, HEMP SEEDS*, FLAXSEED, MATCHA GREEN TEA POWDER*, STEVIA LEAF EXTRACT*.",
+          "marketCountry": "United States",
+          "foodCategory": "Cereal",
+          "modifiedDate": "2022-09-29",
+          "dataSource": "LI",
+          "packageWeight": "1.76 0z/50 g",
+          "servingSizeUnit": "g",
+          "servingSize": 50,
+          "householdServingFullText": "1 Cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 30.205944,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 26
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 54
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "299",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.56
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 576
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 13.6
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

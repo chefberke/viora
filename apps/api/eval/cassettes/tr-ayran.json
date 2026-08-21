@@ -1,0 +1,353 @@
+{
+  "caseId": "tr-ayran",
+  "input": "1 ayran",
+  "recordedAt": "2026-08-21T00:38:47.211Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"1 ayran\",\"reasoning\":\"One serving of ayran, a Turkish yogurt drink, typically served in a glass.\",\"confidence\":0.96,\"language\":\"tr\",\"items\":[{\"name\":\"ayran\",\"local_name\":\"ayran\",\"quantity\":1,\"unit\":\"glass\",\"estimated_grams\":250,\"estimated_per_100g\":{\"kcal\":37,\"protein\":1.7,\"carbs\":2.9,\"fat\":1.9},\"kind\":\"food\",\"confidence\":0.96}]}",
+    "promptTokens": 2926,
+    "completionTokens": 246
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "ayran": [
+        {
+          "fdcId": 2066050,
+          "description": "ALL NATURAL AYRAN YOGURT DRINK",
+          "dataType": "Branded",
+          "gtinUpc": "094379111160",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Kradjian Importing Co., Inc.",
+          "brandName": "BYBLOS",
+          "ingredients": "PASTEURIZED PART SKIM MILK, WHEY, SALT & CULTURES.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2017-09-06",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "8 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 250.11568,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 2.08
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 312
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 12
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.67
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 665058,
+          "description": "NATURALLY CARBONATED YOGURT DRINK, MINT",
+          "dataType": "Branded",
+          "gtinUpc": "4742749000137",
+          "publishedDate": "2019-12-06",
+          "brandOwner": "AYRAN",
+          "ingredients": "WATER, WHOLE CREAM MILK POWDER, SALT, LEAVEN, THE NATURAL MINT FLAVORING.",
+          "marketCountry": "United States",
+          "foodCategory": "Yogurt",
+          "modifiedDate": "2019-09-13",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 500,
+          "householdServingFullText": "1 BOTTLE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: <em>AYRAN</em>",
+          "score": -419.30334,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 300
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.8
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [
+            {
+              "value": "2",
+              "name": "Description",
+              "id": 137196
+            }
+          ],
+          "foodAttributeTypes": [
+            {
+              "name": "Update Log",
+              "description": "Changes that were made to this food",
+              "id": 998,
+              "foodAttributes": [
+                {
+                  "value": "2",
+                  "name": "Description",
+                  "id": 137196
+                }
+              ]
+            }
+          ],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|ayran": [
+        {
+          "code": "4027394036732",
+          "brands": [
+            "Ayran"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 10,
+            "energy-kcal_100g": 62,
+            "energy-kj_100g": 260,
+            "fat_100g": 1.7,
+            "proteins_100g": 1.6,
+            "salt_100g": 1.6,
+            "saturated-fat_100g": 1.3,
+            "sodium_100g": 0.64,
+            "sugars_100g": 8
+          },
+          "product_name": "Ayran Strawberry"
+        },
+        {
+          "code": "8681324002837",
+          "brands": [
+            "Sütaş"
+          ],
+          "nutriments": {
+            "sugars_100g": 2,
+            "carbohydrates_100g": 2,
+            "energy-kcal_100g": 32,
+            "proteins_100g": 2,
+            "energy-kj_100g": 135,
+            "sodium_100g": 0.24,
+            "fat_100g": 1.8,
+            "saturated-fat_100g": 1.2,
+            "salt_100g": 0.6
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "4820205580017",
+          "nutriments": {
+            "carbohydrates_100g": 2,
+            "proteins_100g": 2,
+            "energy-kcal_100g": 30.3999996185303,
+            "fat_100g": 1.7999999523162888
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "4260643940002",
+          "brands": [
+            "Kapikule"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 2.40000009536743,
+            "energy-kcal_100g": 37,
+            "fat_100g": 2.20000004768372,
+            "proteins_100g": 1.89999997615814,
+            "saturated-fat_100g": 1.39999997615814,
+            "sugars_100g": 2.40000009536743
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "4056489018353",
+          "brands": [
+            "Milbona"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 2.4,
+            "energy-kcal_100g": 38.4,
+            "energy-kj_100g": 161,
+            "fat_100g": 1.92,
+            "fiber_100g": 0,
+            "proteins_100g": 2.4,
+            "salt_100g": 0.688,
+            "saturated-fat_100g": 1.2,
+            "sodium_100g": 0.275,
+            "sugars_100g": 2.4
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "4025500259464",
+          "brands": [
+            "Müller"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 1.9,
+            "energy-kcal_100g": 38,
+            "energy-kj_100g": 159,
+            "fat_100g": 2.1,
+            "proteins_100g": 2.1,
+            "salt_100g": 0.68,
+            "saturated-fat_100g": 1.4,
+            "sodium_100g": 0.272,
+            "sugars_100g": 1.9
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "8714222601007",
+          "nutriments": {
+            "sugars_100g": 4.5,
+            "proteins_100g": 3.2,
+            "fat_100g": 0,
+            "salt_100g": 0.6,
+            "carbohydrates_100g": 4.5,
+            "saturated-fat_100g": 0,
+            "sodium_100g": 0.24,
+            "energy-kcal_100g": 31
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "8695077041067",
+          "nutriments": {
+            "carbohydrates_100g": 2,
+            "energy-kcal_100g": 34,
+            "energy-kj_100g": 142,
+            "fat_100g": 2,
+            "proteins_100g": 2,
+            "salt_100g": 0.7,
+            "saturated-fat_100g": 1.2,
+            "sodium_100g": 0.28,
+            "sugars_100g": 2
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "9066001204701",
+          "nutriments": {
+            "carbohydrates_100g": 2.5,
+            "energy-kcal_100g": 38,
+            "fat_100g": 2.2,
+            "proteins_100g": 2,
+            "salt_100g": 0.86,
+            "saturated-fat_100g": 1.4,
+            "sodium_100g": 0.344,
+            "sugars_100g": 2.5
+          },
+          "product_name": "Ayran"
+        },
+        {
+          "code": "8718164543043",
+          "brands": [
+            "Piknik"
+          ],
+          "nutriments": {
+            "sugars_100g": 2.799999952316284,
+            "proteins_100g": 2,
+            "fat_100g": 2.0999999046325684,
+            "carbohydrates_100g": 2.799999952316284,
+            "saturated-fat_100g": 1.399999976158142,
+            "energy-kcal_100g": 36
+          },
+          "product_name": "Ayran"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "caseId": "non-food-greeting",
+  "input": "merhaba",
+  "recordedAt": "2026-08-21T00:45:07.959Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"\",\"reasoning\":\"The line contains only a greeting and no food or drink items.\",\"confidence\":0,\"language\":\"tr\",\"items\":[]}",
+    "promptTokens": 2966,
+    "completionTokens": 173
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {},
+    "off": {}
+  }
+}

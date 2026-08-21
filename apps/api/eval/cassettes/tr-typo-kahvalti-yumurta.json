@@ -1,0 +1,3632 @@
+{
+  "caseId": "tr-typo-kahvalti-yumurta",
+  "input": "iki yumurtta ve bi dilim ekmk",
+  "recordedAt": "2026-08-21T00:40:07.969Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"iki yumurta ve bir dilim ekmek\",\"reasoning\":\"The line mentions two eggs and a slice of bread. \\\"iki\\\" is two, \\\"yumurta\\\" eggs, \\\"bi\\\" expands to \\\"bir\\\" (one), and \\\"ekmk\\\" is a typo for \\\"ekmek\\\" (bread).\",\"confidence\":0.88,\"language\":\"tr\",\"items\":[{\"name\":\"egg\",\"local_name\":\"yumurta\",\"quantity\":2,\"unit\":\"piece\",\"estimated_grams\":100,\"estimated_per_100g\":{\"kcal\":155,\"protein\":13,\"carbs\":1.1,\"fat\":11},\"kind\":\"food\",\"confidence\":0.9},{\"name\":\"bread\",\"local_name\":\"dilim ekmek\",\"quantity\":1,\"unit\":\"slice\",\"estimated_grams\":30,\"estimated_per_100g\":{\"kcal\":265,\"protein\":9,\"carbs\":49,\"fat\":3.2},\"kind\":\"food\",\"confidence\":0.9}]}",
+    "promptTokens": 2946,
+    "completionTokens": 607
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "bread": [
+        {
+          "fdcId": 2058078,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "753182823638",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Multicom Publishing Incorporated",
+          "brandName": "JOHANN'S BAKERY",
+          "ingredients": "WHITE RICE, POTATO & TAPIOCA FLOUR, POTATO STARCH, YEAST, EGG WHITES, SALT, XANTHAN GUM.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2017-12-31",
+          "dataSource": "LI",
+          "packageWeight": "1.5 lbs/24 oz",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 32.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 146
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 354
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1916888,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "657484200138",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Artim Enterprises, Inc.",
+          "brandName": "GRATEFUL",
+          "ingredients": "UNBLEACHED WHEAT FLOUR, FILTERED WATER, SOURDOUGH STARTER (UNBLEACHED WHEAT FLOUR, WATER, RYE FLOUR), SEA SALT, MALTED BARLEY FLOUR.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "24 oz/680 g",
+          "servingSizeUnit": "g",
+          "servingSize": 38,
+          "householdServingFullText": "38 GRM",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.89
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 55.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 263
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.95
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 553
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2339103,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "076057001451",
+          "publishedDate": "2022-09-15",
+          "brandOwner": "Pan-O-Gold Baking Co.",
+          "brandName": "VILLAGE HEARTH",
+          "ingredients": "ENRICHED UNBLEACHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, OAT FIBER, WHEAT GLUTEN, YEAST, SUGAR, CONTAINS LESS THAN 2% OF THE FOLLOWING: SALT, HONEY, SOYBEAN OIL, DOUGH CONDITIONERS (MONOGLYCERIDES, SODIUM STEAROYL LACTYLATE, ASCORBIC ACID, CALCIUM SULFATE, ENZYMES), VINEGAR, SESAME SEED, MONOCALCIUM PHOSPHATE, CALCIUM PROPIONATE (PRESERVATIVE).",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2018-06-27",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/1 lbs/454 g",
+          "servingSizeUnit": "g",
+          "servingSize": 46,
+          "householdServingFullText": "2 SLICES",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.7
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.17
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 43.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 196
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 6.52
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 8.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 87
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.35
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 435
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.222
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 1.74
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2071481,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "649241893998",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Upstairs Software Inc.",
+          "brandName": "PANADERIA PAN DEL CIELO",
+          "ingredients": "WATER, SALT, LARD, YEAST, SUGAR, FLOUR",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2017-12-30",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 56,
+          "householdServingFullText": "2 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 5.36
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 66.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 357
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 4.82
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 625
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.79
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1850717,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "826846132022",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Bang Brothers Entertainment, Inc",
+          "brandName": "BOULART",
+          "ingredients": "UNBLEACHED ENRICHED WHEAT FLOUR (FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, SEA SALT, YEAST, MALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2018-03-11",
+          "dataSource": "LI",
+          "packageWeight": "17.7 oz/500 g",
+          "servingSizeUnit": "g",
+          "servingSize": 50,
+          "householdServingFullText": "0.1 BREAD",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 240
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 560
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2011754,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "072220009910",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "United States Bakery",
+          "brandName": "FRANZ",
+          "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA STARCH, TAPIOCA SYRUP, WHOLE GRAIN SORGHUM FLOUR, XANTHAN GUM, WHOLE GRAIN MILLET SEEDS, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: WHOLE EGGS, WHOLE GRAIN MILLET FLOUR, WHOLE GRAIN AMARANTH SEED, WHOLE GRAIN TEFF SEEDS, RED QUINOA SEEDS, EXTRA VIRGIN OLIVE OIL, MOLASSES, SALT, CULTURED RICE FLOUR, YEAST, ENZYMES.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2017-11-01",
+          "dataSource": "LI",
+          "packageWeight": "18 oz/510 g",
+          "servingSizeUnit": "g",
+          "servingSize": 36,
+          "householdServingFullText": "1 SLICE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.56
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 4.17
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 44.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 222
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.56
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 375
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 28
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2071305,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "606991071083",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Atticus Bakery LLC.",
+          "brandName": "CHABASO BAKERY",
+          "ingredients": "ENRICHED FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, CONTAINS LESS THAN 2% OF EACH OF THE FOLLOWING: SALT, CULTURED WHEAT STARCH, WHEAT FLOUR, YEAST, CALCIUM SULFATE, CITRIC ACID, ENZYMES, ASCORBIC ACID.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2017-12-31",
+          "dataSource": "LI",
+          "packageWeight": "8 oz/227 g",
+          "servingSizeUnit": "g",
+          "servingSize": 57,
+          "householdServingFullText": "0.25 LOAF",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.77
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0.88
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 56.1
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 263
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.16
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 544
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2431121,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "896911002031",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "The Bread Factory Inc.",
+          "brandName": "CONCHAS",
+          "ingredients": "ENRICHED WHEAT FLOUR(MALTED BARLEY FLOUR, NIACIN, IRON, THIAMINE MONOITRATE, RIBOFLAVIN, FOLIC ACID.), PALM OIL RBD, GRANULATED SUGAR, POWDERED SUGAR(CORN STARCH), EGGS(FROZEN), SALT, BUTTER (ARTIFICIAL FLAVOR WATER, COTTONSEED OIL, TRAGACANTH GUM, CITRIC ACID, SODIUM BENZOATE, VITAMIN E.), DRY YEAST(SOBITIAN MONOSTEARATE, ASCORBIC ACID), CRUSHED CINNAMON, COLOR(EGG SHADE), CALCIUM PROPIONATE.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2018-06-14",
+          "dataSource": "LI",
+          "packageWeight": "1 lbs/16 oz/454 g",
+          "servingSizeUnit": "g",
+          "servingSize": 85,
+          "householdServingFullText": "3 ONZ",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: The <em>Bread</em> Factory Inc.",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.88
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 7.06
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 51.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 306
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 15.3
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.12
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 247
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.53
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2071165,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "085239200018",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Target Stores",
+          "brandName": "ARCHER FARMS",
+          "ingredients": "ENRICHED WHEAT FLOUR (WHEAT FLOUR, MALTED BARLEY FLOUR, REDUCED IRON, NIACIN, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, MOZZARELLA CHEESE (MOZZARELLA CHEESE [PASTEURIZED MILK, CHEESE CULTURES, SALT, ENZYMES], POWDERED CELLULOSE [ANTI-CAKING]), SUGAR, VEGETABLE OIL (PALM, PALM KERNEL), CONTAINS 2% OR LESS OF THE FOLLOWING: DRIED TOMATO, SOYBEAN OIL, SALT, YEAST, MODIFIED CORN STARCH, NATURAL FLAVOR, VINEGAR, CITRIC ACID, PARSLEY FLAKES, WHEAT GLUTEN, CALCIUM PROPIONATE (MOLD INHIBITOR), DRIED GREEN BELL PEPPER, OAT FLOUR, POTATO FLAKES, SOY LECITHIN, SPICES, YEAST EXTRACT, LOCUST BEAN GUM, MONOGLYCERIDES, CALCIUM SULFATE, RED 40 LAKE, YELLOW 6 LAKE, BLUE 1 LAKE.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2017-12-30",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 49,
+          "householdServingFullText": "1 SLICE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 10.2
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 8.16
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 49
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 306
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.08
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 204
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.94
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 510
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 204
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 4.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2072082,
+          "description": "BREAD",
+          "dataType": "Branded",
+          "gtinUpc": "850532000487",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Cusano's Italian Bakery ",
+          "brandName": "HOLSUM",
+          "ingredients": "ENRICHED WHEAT FLOUR (WHEAT FLOUR, BARLEY MALT, NIACIN, IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID), WATER, CORN SYRUP, YEAST, CONTAINS 2% OR LESS OF THE FOLLOWING: SOYBEAN OIL (NON-HYDROGENATED), SALT, DOUGH CONDITIONERS (MONOGLYCERIDES, SODIUM STEAROYL LACTYLATE, ASCORBIC ACID, CALCIUM PEROXIDE, AZODICARBONAMIDE), WHEAT GLUTEN, CALCIUM PROPIONATE (TO RETAIN FRESHNESS), YEAST NUTRIENTS (CALCIUM SULFATE, MONOCALCIUM PHOSPHATE), WHEAT STARCH, SOY LECITHIN.",
+          "marketCountry": "United States",
+          "foodCategory": "Breads & Buns",
+          "modifiedDate": "2020-12-10",
+          "dataSource": "LI",
+          "packageWeight": "20 oz/1.25 lbs/567 g",
+          "servingSizeUnit": "g",
+          "servingSize": 26,
+          "householdServingFullText": "1 SLICE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 899.1719,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 7.69
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.85
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 269
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 7.69
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 77
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.77
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 538
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.392
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 4.62
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ],
+      "egg": [
+        {
+          "fdcId": 2575290,
+          "description": "EGG",
+          "dataType": "Branded",
+          "gtinUpc": "040000449270",
+          "publishedDate": "2023-06-29",
+          "brandOwner": "Mars Chocolate North America LLC",
+          "brandName": "SNICKERS",
+          "ingredients": "MILK CHOCOLATE (SUGAR, COCOA BUTTER, CHOCOLATE, SKIM MILK, LACTOSE, MILKFAT, SOY LECITHIN, ARTIFICIAL FLAVOR), PEANUTS, SUGAR, INVERT SUGAR, HYDROGENATED PALM KERNEL OIL AND/OR PALM OIL, CORN SYRUP, SKIM MILK, LESS THAN 2% - BUTTER, MILKFAT, PARTIALLY HYDROGENATED SOYBEAN OIL, SALT, SOY LECITHIN, POTASSIUM SORBATE TO MAINTAIN FRESHNESS, ARTIFICIAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Candy",
+          "modifiedDate": "2023-05-04",
+          "dataSource": "LI",
+          "packageWeight": "1.10 oz/31.2 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 31.200000762939453,
+          "householdServingFullText": "1 EGG",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1098.6989,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.41
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 28.8
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 57.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 513
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 54.5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 3.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 128
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 176
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 32
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2171141,
+          "description": "EGG",
+          "dataType": "Branded",
+          "gtinUpc": "768395547691",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Ross Acquisition Inc.",
+          "brandName": "GALERIE",
+          "subbrandName": "STAR WARS THE MANDALORIAN",
+          "ingredients": "SUGAR, CORN SYRUP, MODIFIED CORNSTARCH, LACTIC ACID, MALIC ACID, SODIUM LACTATE, CITRIC ACID, GUM ARABIC, CARNAUBA WAX, WHITE MINERAL OIL, BEESWAX, NATURAL AND ARTIFICIAL FLAVORS, SHELLAC, SODIUM CITRATE, YELLOW 5, RED 40, YELLOW 6, BLUE 1.",
+          "marketCountry": "United States",
+          "foodCategory": "Candy",
+          "modifiedDate": "2021-01-22",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "30 pieces",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1098.6989,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 90
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 367
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 63.3
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 150
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 63.3
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2677671,
+          "description": "EGG",
+          "dataType": "Branded",
+          "gtinUpc": "191011000605",
+          "publishedDate": "2023-11-16",
+          "brandOwner": "Just, Inc.",
+          "brandName": "JUST",
+          "ingredients": "WATER, MUNG BEAN PROTEIN ISOLATE, EXPELLER-PRESSED CANOLA OIL, CONTAINS LESS THAN 2% OF DEHYDRATED ONION, GELLAN GUM, NATURAL CARROT EXTRACTIVES (COLOR), NATURAL FLAVORS, NATURAL TURMERIC EXTRACTIVES (COLOR), POTASSIUM CITRATE, SALT, SOY LECITHIN, SUGAR, TAPIOCA SYRUP, TETRASODIUM PYROPHOSPHATE, TRANSGLUTAMINASE, NISIN (PRESERVATIVE).",
+          "marketCountry": "United States",
+          "foodCategory": "Eggs & Egg Substitutes",
+          "modifiedDate": "2022-02-14",
+          "dataSource": "LI",
+          "packageWeight": "12 fl oz/355 mL",
+          "servingSizeUnit": "MLT",
+          "servingSize": 44,
+          "householdServingFullText": "3 Tbsp",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 1098.6989,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 11.4
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 11.4
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 2.27
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 159
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 364
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 6.82
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 3.41
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 747997,
+          "description": "Eggs, Grade A, Large, egg white",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 1124,
+          "publishedDate": "2019-12-16",
+          "foodCategory": "Dairy and Egg Products",
+          "mostRecentAcquisitionDate": "2019-07-08",
+          "allHighlightFields": "",
+          "score": 336.7256,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "405",
+              "value": 0.391
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.65
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 17.9
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 86.3
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 231
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 2.36
+            },
+            {
+              "nutrientNumber": "202",
+              "value": 1.71
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.188
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.466
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.779
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.567
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.494
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.857
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.726
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.486
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 1.02
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.822
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.257
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.609
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 1.76
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.422
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 1.33
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.691
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.714
+            },
+            {
+              "nutrientNumber": "521",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "526",
+              "value": 0.407
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 748967,
+          "description": "Eggs, Grade A, Large, egg whole",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 1123,
+          "publishedDate": "2019-12-16",
+          "foodCategory": "Dairy and Egg Products",
+          "mostRecentAcquisitionDate": "2019-07-08",
+          "allHighlightFields": "",
+          "score": 336.7256,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "208",
+              "value": 148
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 617
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.077
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.419
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 1.02
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 411
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.2
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.032
+            },
+            {
+              "nutrientNumber": "674",
+              "value": 3.35
+            },
+            {
+              "nutrientNumber": "675",
+              "value": 1.46
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 12.4
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.85
+            },
+            {
+              "nutrientNumber": "212",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "213",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.67
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 11.4
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 184
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 129
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 179
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 180
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 31.1
+            },
+            {
+              "nutrientNumber": "210",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "211",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "214",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 75.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 48
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 132
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 1.24
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 9.96
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 3.63
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 1.82
+            },
+            {
+              "nutrientNumber": "673",
+              "value": 0.238
+            },
+            {
+              "nutrientNumber": "685",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "853",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.063
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 2.32
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.813
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 98.4
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 0.96
+            },
+            {
+              "nutrientNumber": "326",
+              "value": 2.46
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 2.46
+            },
+            {
+              "nutrientNumber": "202",
+              "value": 1.99
+            },
+            {
+              "nutrientNumber": "269.3",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "831",
+              "value": 1.46
+            },
+            {
+              "nutrientNumber": "833",
+              "value": 0.011
+            },
+            {
+              "nutrientNumber": "835",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "298",
+              "value": 8.65
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 71
+            },
+            {
+              "nutrientNumber": "314",
+              "value": 49.1
+            },
+            {
+              "nutrientNumber": "325",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "327",
+              "value": 0.56
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.166
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.594
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.616
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 1.05
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.832
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.418
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.66
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.512
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.734
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.787
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.283
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.667
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 1.63
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.408
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.56
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.919
+            },
+            {
+              "nutrientNumber": "521",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "526",
+              "value": 0.385
+            },
+            {
+              "nutrientNumber": "209",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321.1",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321.2",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "335",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "337.1",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337.2",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "338.1",
+              "value": 230
+            },
+            {
+              "nutrientNumber": "338.2",
+              "value": 229
+            },
+            {
+              "nutrientNumber": "338.3",
+              "value": 57
+            },
+            {
+              "nutrientNumber": "205.2",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "453",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "454",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "452",
+              "value": 0.2
+            },
+            {
+              "nutrientNumber": "450",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 335
+            },
+            {
+              "nutrientNumber": "451",
+              "value": 309
+            },
+            {
+              "nutrientNumber": "455",
+              "value": 25.1
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 748236,
+          "description": "Eggs, Grade A, Large, egg yolk",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "Foundation",
+          "ndbNumber": 1125,
+          "publishedDate": "2019-12-16",
+          "foodCategory": "Dairy and Egg Products",
+          "mostRecentAcquisitionDate": "2019-07-08",
+          "allHighlightFields": "",
+          "score": 336.7256,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "337",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 55.8
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 28.8
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 52.1
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 16.2
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 1.89
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.467
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 1.02
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 334
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 1400
+            },
+            {
+              "nutrientNumber": "202",
+              "value": 2.59
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.174
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.684
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.846
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.789
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.748
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 1.29
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.673
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.398
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 1.35
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 1.2
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.369
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.766
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 1.99
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.47
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 1.5
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 1.12
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.769
+            },
+            {
+              "nutrientNumber": "521",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "526",
+              "value": 0.425
+            },
+            {
+              "nutrientNumber": "321.1",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "321.2",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337.1",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337.2",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "338.1",
+              "value": 612
+            },
+            {
+              "nutrientNumber": "338.2",
+              "value": 546
+            },
+            {
+              "nutrientNumber": "338.3",
+              "value": 121
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 5.64
+            },
+            {
+              "nutrientNumber": "341",
+              "value": 1.02
+            },
+            {
+              "nutrientNumber": "342",
+              "value": 0.22
+            },
+            {
+              "nutrientNumber": "344",
+              "value": 0.14
+            },
+            {
+              "nutrientNumber": "346",
+              "value": 0.01
+            },
+            {
+              "nutrientNumber": "347",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "343",
+              "value": 0.3
+            },
+            {
+              "nutrientNumber": "345",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "416",
+              "value": 45.9
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 174901,
+          "description": "Bagels, egg",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 18003,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Baked Products",
+          "allHighlightFields": "",
+          "score": 321.28635,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "291",
+              "value": 2.3
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 88
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 66
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 134
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 1160
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 33
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 109
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 10.6
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 1.6
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.536
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.235
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 505
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.98
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.16
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 22
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.125
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.306
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.19
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.523
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.308
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.353
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 3.55
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.37
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 1.19
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.421
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.035
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 3.44
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.671
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.087
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.411
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.748
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.261
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.231
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.461
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.394
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.231
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.481
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.528
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.341
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.076
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.382
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.026
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0.012
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.002
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.42
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.642
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 53
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 278
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 32.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 30.6
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 84
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.09
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.41
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 68
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.77
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 172673,
+          "description": "Bread, egg",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 18027,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Baked Products",
+          "allHighlightFields": "",
+          "score": 321.28635,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "320",
+              "value": 63
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 211
+            },
+            {
+              "nutrientNumber": "624",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "625",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "653",
+              "value": 0.006
+            },
+            {
+              "nutrientNumber": "654",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.78
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "615",
+              "value": 0.003
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.3
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0.26
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 63
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 105
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 0.9
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 130
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 35
+            },
+            {
+              "nutrientNumber": "268",
+              "value": 1200
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 287
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 16
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 84.3
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.162
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 9.5
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 1.8
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.04
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 19
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 106
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 51
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 70
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.112
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.306
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.189
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.475
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.292
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.356
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 2.86
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.336
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 0.947
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.438
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.436
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "636",
+              "value": 7
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 47.8
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 34.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 93
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 115
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.79
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.394
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.692
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.311
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.208
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.443
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.385
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.21
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.522
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.501
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 4.85
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.282
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 380
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0.4
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.59
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0.012
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.108
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 1.08
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.463
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 2.18
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.998
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.048
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0.046
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.009
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 2.3
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 1.11
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 30.1
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 172674,
+          "description": "Bread, egg, toasted",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 18028,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Baked Products",
+          "allHighlightFields": "",
+          "score": 293.50848,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "268",
+              "value": 1320
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "221",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 231
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 69
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 69
+            },
+            {
+              "nutrientNumber": "321",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "322",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "334",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "337",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "430",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "338",
+              "value": 46
+            },
+            {
+              "nutrientNumber": "323",
+              "value": 0.29
+            },
+            {
+              "nutrientNumber": "262",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "263",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "421",
+              "value": 91.9
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 1.94
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 44
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 128
+            },
+            {
+              "nutrientNumber": "573",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "578",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 54
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 417
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 98
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 6.6
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 52.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 315
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 28.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 102
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 126
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.86
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.433
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.76
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.342
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.229
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 4.8
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.202
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.064
+            },
+            {
+              "nutrientNumber": "607",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "608",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.972
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.601
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 2.91
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 1.07
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.057
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0.019
+            },
+            {
+              "nutrientNumber": "627",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 2.99
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 1.15
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.487
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.423
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.23
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.574
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.551
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 10.5
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 2
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.178
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.549
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.34
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 117
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.385
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.432
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.123
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.336
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.208
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.11
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.62
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.025
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.072
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "631",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "636",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.522
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.321
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.391
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 3.14
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.37
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 1.04
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 32.9
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 172741,
+          "description": "Crackers, matzo, egg",
+          "commonNames": "",
+          "additionalDescriptions": "",
+          "dataType": "SR Legacy",
+          "ndbNumber": 18218,
+          "publishedDate": "2019-04-01",
+          "foodCategory": "Baked Products",
+          "allHighlightFields": "",
+          "score": 293.50848,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "268",
+              "value": 1640
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.8
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "432",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "431",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "435",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "319",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.1
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 78.6
+            },
+            {
+              "nutrientNumber": "503",
+              "value": 0.472
+            },
+            {
+              "nutrientNumber": "504",
+              "value": 0.886
+            },
+            {
+              "nutrientNumber": "505",
+              "value": 0.389
+            },
+            {
+              "nutrientNumber": "507",
+              "value": 0.268
+            },
+            {
+              "nutrientNumber": "510",
+              "value": 0.544
+            },
+            {
+              "nutrientNumber": "511",
+              "value": 0.544
+            },
+            {
+              "nutrientNumber": "512",
+              "value": 0.278
+            },
+            {
+              "nutrientNumber": "514",
+              "value": 0.656
+            },
+            {
+              "nutrientNumber": "518",
+              "value": 0.673
+            },
+            {
+              "nutrientNumber": "610",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "613",
+              "value": 0.423
+            },
+            {
+              "nutrientNumber": "614",
+              "value": 0.119
+            },
+            {
+              "nutrientNumber": "617",
+              "value": 0.564
+            },
+            {
+              "nutrientNumber": "618",
+              "value": 0.427
+            },
+            {
+              "nutrientNumber": "619",
+              "value": 0.02
+            },
+            {
+              "nutrientNumber": "620",
+              "value": 0.021
+            },
+            {
+              "nutrientNumber": "628",
+              "value": 0.004
+            },
+            {
+              "nutrientNumber": "630",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.612
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0.473
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 391
+            },
+            {
+              "nutrientNumber": "255",
+              "value": 6.4
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 40
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 150
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 0.73
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0.435
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0.054
+            },
+            {
+              "nutrientNumber": "203",
+              "value": 12.3
+            },
+            {
+              "nutrientNumber": "207",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.7
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 21
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0.6
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "501",
+              "value": 0.151
+            },
+            {
+              "nutrientNumber": "502",
+              "value": 0.384
+            },
+            {
+              "nutrientNumber": "506",
+              "value": 0.248
+            },
+            {
+              "nutrientNumber": "508",
+              "value": 0.624
+            },
+            {
+              "nutrientNumber": "509",
+              "value": 0.397
+            },
+            {
+              "nutrientNumber": "513",
+              "value": 0.45
+            },
+            {
+              "nutrientNumber": "515",
+              "value": 3.67
+            },
+            {
+              "nutrientNumber": "516",
+              "value": 0.438
+            },
+            {
+              "nutrientNumber": "517",
+              "value": 1.25
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0.548
+            },
+            {
+              "nutrientNumber": "609",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "611",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "612",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "621",
+              "value": 0.005
+            },
+            {
+              "nutrientNumber": "626",
+              "value": 0.043
+            },
+            {
+              "nutrientNumber": "629",
+              "value": 0.001
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.618
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 0.155
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 24
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 148
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 83
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.1
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0.788
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 0.19
+            },
+            {
+              "nutrientNumber": "317",
+              "value": 27.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {
+      "tr|dilim ekmek": [
+        {
+          "code": "8699118041474",
+          "product_name": "Ekmek"
+        },
+        {
+          "code": "7311043004515",
+          "brands": [
+            "Garant",
+            "Axfood"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 48,
+            "energy-kcal_100g": 295,
+            "energy-kj_100g": 1234,
+            "fat_100g": 5.8,
+            "fiber_100g": 5.6,
+            "proteins_100g": 10,
+            "salt_100g": 1,
+            "saturated-fat_100g": 0.6,
+            "sodium_100g": 0.4,
+            "sugars_100g": 4.4
+          },
+          "product_name": "Frörost"
+        },
+        {
+          "code": "6111246910023",
+          "brands": [
+            "Ekmek"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 42.4,
+            "energy-kcal_100g": 231,
+            "energy-kj_100g": 975,
+            "fat_100g": 2.1,
+            "fiber_100g": 5,
+            "proteins_100g": 8,
+            "salt_100g": 1.05,
+            "saturated-fat_100g": 0.12,
+            "sodium_100g": 0.42,
+            "sugars_100g": 3.8
+          },
+          "product_name": "Pain de mie complet"
+        },
+        {
+          "code": "8681980005005",
+          "brands": [
+            "1"
+          ],
+          "product_name": "Ekmek"
+        },
+        {
+          "code": "8699114901444",
+          "brands": [
+            "Tamköy"
+          ],
+          "nutriments": {
+            "sodium_100g": 0.4,
+            "energy-kcal_100g": 260,
+            "carbohydrates_100g": 45.6,
+            "saturated-fat_100g": 0.4,
+            "salt_100g": 1,
+            "proteins_100g": 10,
+            "sugars_100g": 2.2,
+            "fat_100g": 1.9
+          },
+          "product_name": "Ekmek"
+        },
+        {
+          "code": "4011259041252",
+          "brands": [
+            "Erciyes"
+          ],
+          "nutriments": {
+            "fat_100g": 18,
+            "proteins_100g": 10,
+            "sugars_100g": 0.5,
+            "carbohydrates_100g": 2.799999952316284,
+            "saturated-fat_100g": 6.099999904632568,
+            "energy-kcal_100g": 213
+          },
+          "product_name": "Sade Dilim"
+        },
+        {
+          "code": "6111250470896",
+          "brands": [
+            "eKmeK"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 58,
+            "energy-kcal_100g": 275,
+            "fat_100g": 1,
+            "fiber_100g": 3,
+            "proteins_100g": 8,
+            "salt_100g": 0,
+            "saturated-fat_100g": 0,
+            "sodium_100g": 0,
+            "sugars_100g": 58
+          },
+          "product_name": "Pâte à pizza"
+        },
+        {
+          "code": "6111250476133",
+          "brands": [
+            "ekmek"
+          ],
+          "product_name": "fonds sucrés"
+        },
+        {
+          "code": "6111246910047",
+          "brands": [
+            "Ekmek"
+          ],
+          "nutriments": {
+            "energy-kcal_100g": 215,
+            "sodium_100g": 0.41600000000000004,
+            "salt_100g": 1.04,
+            "saturated-fat_100g": 0.2,
+            "carbohydrates_100g": 42.9,
+            "fat_100g": 0.9,
+            "sugars_100g": 1.6,
+            "fiber_100g": 2.9,
+            "proteins_100g": 7.3
+          },
+          "product_name": "Pain panini"
+        },
+        {
+          "code": "6111246910191",
+          "brands": [
+            "Ekmek"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 21.8999996185303,
+            "energy-kcal_100g": 107.099998474121,
+            "fat_100g": 0.400000005960464,
+            "fiber_100g": 1.08000004291534,
+            "proteins_100g": 3.44000005722046,
+            "salt_100g": 0,
+            "sodium_100g": 0,
+            "sugars_100g": 0.689999997615814
+          },
+          "product_name": "Pain libanaiss"
+        }
+      ],
+      "tr|ekmek": [
+        {
+          "code": "8699118041474",
+          "product_name": "Ekmek"
+        },
+        {
+          "code": "7311043004515",
+          "brands": [
+            "Garant",
+            "Axfood"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 48,
+            "energy-kcal_100g": 295,
+            "energy-kj_100g": 1234,
+            "fat_100g": 5.8,
+            "fiber_100g": 5.6,
+            "proteins_100g": 10,
+            "salt_100g": 1,
+            "saturated-fat_100g": 0.6,
+            "sodium_100g": 0.4,
+            "sugars_100g": 4.4
+          },
+          "product_name": "Frörost"
+        },
+        {
+          "code": "6111246910023",
+          "brands": [
+            "Ekmek"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 42.4,
+            "energy-kcal_100g": 231,
+            "energy-kj_100g": 975,
+            "fat_100g": 2.1,
+            "fiber_100g": 5,
+            "proteins_100g": 8,
+            "salt_100g": 1.05,
+            "saturated-fat_100g": 0.12,
+            "sodium_100g": 0.42,
+            "sugars_100g": 3.8
+          },
+          "product_name": "Pain de mie complet"
+        },
+        {
+          "code": "8681980005005",
+          "brands": [
+            "1"
+          ],
+          "product_name": "Ekmek"
+        },
+        {
+          "code": "8699114901444",
+          "brands": [
+            "Tamköy"
+          ],
+          "nutriments": {
+            "sodium_100g": 0.4,
+            "energy-kcal_100g": 260,
+            "carbohydrates_100g": 45.6,
+            "saturated-fat_100g": 0.4,
+            "salt_100g": 1,
+            "proteins_100g": 10,
+            "sugars_100g": 2.2,
+            "fat_100g": 1.9
+          },
+          "product_name": "Ekmek"
+        },
+        {
+          "code": "6111250470896",
+          "brands": [
+            "eKmeK"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 58,
+            "energy-kcal_100g": 275,
+            "fat_100g": 1,
+            "fiber_100g": 3,
+            "proteins_100g": 8,
+            "salt_100g": 0,
+            "saturated-fat_100g": 0,
+            "sodium_100g": 0,
+            "sugars_100g": 58
+          },
+          "product_name": "Pâte à pizza"
+        },
+        {
+          "code": "6111250476133",
+          "brands": [
+            "ekmek"
+          ],
+          "product_name": "fonds sucrés"
+        },
+        {
+          "code": "6111246910047",
+          "brands": [
+            "Ekmek"
+          ],
+          "nutriments": {
+            "energy-kcal_100g": 215,
+            "sodium_100g": 0.41600000000000004,
+            "salt_100g": 1.04,
+            "saturated-fat_100g": 0.2,
+            "carbohydrates_100g": 42.9,
+            "fat_100g": 0.9,
+            "sugars_100g": 1.6,
+            "fiber_100g": 2.9,
+            "proteins_100g": 7.3
+          },
+          "product_name": "Pain panini"
+        },
+        {
+          "code": "6111246910191",
+          "brands": [
+            "Ekmek"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 21.8999996185303,
+            "energy-kcal_100g": 107.099998474121,
+            "fat_100g": 0.400000005960464,
+            "fiber_100g": 1.08000004291534,
+            "proteins_100g": 3.44000005722046,
+            "salt_100g": 0,
+            "sodium_100g": 0,
+            "sugars_100g": 0.689999997615814
+          },
+          "product_name": "Pain libanaiss"
+        },
+        {
+          "code": "6111246910016",
+          "brands": [
+            "eKmeK"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 45.3,
+            "energy-kcal_100g": 230,
+            "energy-kj_100g": 975,
+            "fat_100g": 1.6,
+            "fiber_100g": 2.9,
+            "proteins_100g": 7.2,
+            "salt_100g": 1,
+            "saturated-fat_100g": 0.5,
+            "sodium_100g": 0.4,
+            "sugars_100g": 4.2
+          },
+          "product_name": "Pain de mie"
+        }
+      ],
+      "tr|yumurta": [
+        {
+          "code": "8695077068422",
+          "brands": [
+            "Bili Bili"
+          ],
+          "nutriments": {
+            "energy-kcal_100g": 140,
+            "carbohydrates_100g": 0,
+            "proteins_100g": 13.1,
+            "sugars_100g": 0,
+            "fat_100g": 9.69
+          },
+          "product_name": "Orta boy Yumurta"
+        },
+        {
+          "code": "8699383750019",
+          "brands": [
+            "MNS"
+          ],
+          "product_name": "Büyük A Sınıfı Yumurta"
+        },
+        {
+          "code": "8699182522404",
+          "brands": [
+            "green apple organik"
+          ],
+          "product_name": "organik yumurta"
+        },
+        {
+          "code": "8682016200111",
+          "brands": [
+            "Abalı Çiftliği"
+          ],
+          "nutriments": {
+            "carbohydrates_100g": 0.5,
+            "energy-kcal_100g": 126,
+            "energy-kj_100g": 529,
+            "fat_100g": 8.55,
+            "fiber_100g": 0,
+            "proteins_100g": 11.5,
+            "salt_100g": 0.32,
+            "saturated-fat_100g": 3.5,
+            "sodium_100g": 0.128,
+            "sugars_100g": 0
+          },
+          "product_name": "Eggs Large"
+        },
+        {
+          "code": "8697903380012",
+          "product_name": "Zirve yumurta 30'lu beyaz L duble"
+        },
+        {
+          "code": "8681042078558",
+          "product_name": "Tire 10 Adet Organik Yumurta"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,957 @@
+{
+  "caseId": "en-almonds-handful",
+  "input": "a handful of almonds",
+  "recordedAt": "2026-08-21T00:38:09.514Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"a handful of almonds\",\"reasoning\":\"A single vague portion described as a handful, treated as one serving. Approximate weight of a handful of almonds is about 30 g.\",\"confidence\":0.92,\"language\":\"en\",\"items\":[{\"name\":\"almonds\",\"local_name\":\"almonds\",\"quantity\":1,\"unit\":\"serving\",\"estimated_grams\":30,\"estimated_per_100g\":{\"kcal\":579,\"protein\":21.2,\"carbs\":21.6,\"fat\":49.9},\"kind\":\"food\",\"confidence\":0.9}]}",
+    "promptTokens": 2940,
+    "completionTokens": 406
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "almonds": [
+        {
+          "fdcId": 2433310,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "797565001138",
+          "publishedDate": "2022-12-22",
+          "brandOwner": "Western Mixers Produce and Nuts Inc.",
+          "brandName": "TREASURED HARVEST",
+          "ingredients": "ALMONDS.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2018-01-19",
+          "dataSource": "LI",
+          "packageWeight": "8 oz/.5 lbs/227 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "30 GRM",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 603
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 367
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 4.2
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.33
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2074342,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "087132500004",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Western Nut Company",
+          "brandName": "HARVEST FRESH",
+          "ingredients": "ALMONDS, PEANUTS OIL, CORN SYRUP AND SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-11-05",
+          "dataSource": "LI",
+          "packageWeight": "10 oz/283 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "3 Tbsp",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>, PEANUTS OIL, CORN SYRUP AND SALT.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 23.3
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 56.7
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 633
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 10
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 333
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 367
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2642417,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "079893162140",
+          "publishedDate": "2023-09-14",
+          "brandOwner": "Glencourt Inc.",
+          "brandName": "O ORGANICS",
+          "ingredients": "ORGANIC ALMONDS.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2023-08-23",
+          "dataSource": "LI",
+          "packageWeight": "6 oz/170 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 30,
+          "householdServingFullText": "1/4 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: ORGANIC <em>ALMONDS</em>.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 567
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 200
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.6
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 467
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.33
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2652803,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "790429241954",
+          "publishedDate": "2023-10-26",
+          "brandOwner": "International Foodsource",
+          "brandName": "VALUED NATURALS",
+          "ingredients": "WHOLE RAW ALMONDS",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2023-07-10",
+          "dataSource": "LI",
+          "packageWeight": "2.75 oz/77 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 30,
+          "householdServingFullText": "1/4 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: WHOLE RAW <em>ALMONDS</em>",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 567
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 300
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 4
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 767
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.33
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2104640,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "034952587456",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Eillien's Candies Inc.",
+          "brandName": "EILLIEN'S",
+          "ingredients": "ALMONDS, COTTONSEED OIL, PEANUT OIL.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-10-04",
+          "dataSource": "LI",
+          "packageWeight": "11 oz/312 g",
+          "servingSizeUnit": "g",
+          "servingSize": 36,
+          "householdServingFullText": "0.25 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>, COTTONSEED OIL, PEANUT OIL.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 19.4
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 52.8
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 16.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 583
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.78
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 11.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 222
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.78
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2018378,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "719283148995",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Meijer, Inc.",
+          "brandName": "MEIJER",
+          "ingredients": "ALMONDS.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2021-02-04",
+          "dataSource": "LI",
+          "packageWeight": "16 oz/1 lbs/453 g",
+          "servingSizeUnit": "g",
+          "servingSize": 34,
+          "householdServingFullText": "0.25 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 20.6
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 20.6
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 588
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.94
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 11.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 235
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 4.24
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 4.41
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2093782,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "064777841846",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Jo-Lee Food Products, Inc.",
+          "brandName": "STOCK & BARREL",
+          "ingredients": "ALMONDS, SOYBEAN AND/OR PEANUT OIL, SEA SALT.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2020-04-26",
+          "dataSource": "LI",
+          "packageWeight": "14 oz/397 g",
+          "servingSizeUnit": "g",
+          "servingSize": 30,
+          "householdServingFullText": "0.125 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>, SOYBEAN AND/OR PEANUT OIL, SEA SALT.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 53.3
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 667
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 267
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 4.8
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 150
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2045940,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "079003015007",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Anton-Argires Brothers Co",
+          "brandName": "ARGIRES",
+          "ingredients": "ALMONDS.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2021-03-13",
+          "dataSource": "LI",
+          "packageWeight": "10 oz/289.5 g",
+          "servingSizeUnit": "g",
+          "servingSize": 73,
+          "householdServingFullText": "22 NUTS",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 8.22
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 20.6
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 8.22
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 247
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 2.74
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 4.1
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 110
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.48
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.05
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2073909,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "075450124705",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Hy-Vee, Inc.",
+          "brandName": "HY-VEE",
+          "ingredients": "ALMONDS.",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "9 oz/255 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>.",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 571
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 214
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.86
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "305",
+              "value": 536
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 714
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "309",
+              "value": 3.21
+            },
+            {
+              "nutrientNumber": "312",
+              "value": 1.07
+            },
+            {
+              "nutrientNumber": "315",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.911
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 4.29
+            },
+            {
+              "nutrientNumber": "410",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 29
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 32.1
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 12.5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2009293,
+          "description": "ALMONDS",
+          "dataType": "Branded",
+          "gtinUpc": "896700001139",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Madison's Grand Avenue Chocolates",
+          "brandName": "MADI K'S",
+          "ingredients": "ALMONDS. ",
+          "marketCountry": "United States",
+          "foodCategory": "Popcorn, Peanuts, Seeds & Related Snacks",
+          "modifiedDate": "2018-05-01",
+          "dataSource": "LI",
+          "packageWeight": "2 oz/57 g",
+          "servingSizeUnit": "g",
+          "servingSize": 28,
+          "householdServingFullText": "1 ONZ",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>ALMONDS</em>. ",
+          "score": 801.5003,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 21.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 571
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 3.57
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 10.7
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 214
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 3.86
+            },
+            {
+              "nutrientNumber": "304",
+              "value": 286
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 679
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 36
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 3.57
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

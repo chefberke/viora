@@ -1,0 +1,1857 @@
+{
+  "caseId": "en-cereal-and-milk",
+  "input": "a cup of cornflakes with half a cup of milk",
+  "recordedAt": "2026-08-21T00:40:50.283Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"a cup of cornflakes with half a cup of milk\",\"reasoning\":\"Two items: a cup of cornflakes and half a cup of milk. Volume units are converted to typical weights (1 cup cornflakes ≈30 g, 0.5 cup milk ≈123 g).\",\"confidence\":0.88,\"language\":\"en\",\"items\":[{\"name\":\"cornflakes\",\"local_name\":\"cornflakes\",\"quantity\":1,\"unit\":\"cup\",\"estimated_grams\":30,\"estimated_per_100g\":{\"kcal\":357,\"protein\":7.5,\"carbs\":84,\"fat\":0.4},\"kind\":\"food\",\"confidence\":0.85},{\"name\":\"milk\",\"local_name\":\"milk\",\"quantity\":0.5,\"unit\":\"cup\",\"estimated_grams\":123,\"estimated_per_100g\":{\"kcal\":61,\"protein\":3.2,\"carbs\":4.8,\"fat\":3.3},\"kind\":\"food\",\"confidence\":0.85}]}",
+    "promptTokens": 2947,
+    "completionTokens": 337
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {
+      "cornflakes": [
+        {
+          "fdcId": 2673260,
+          "description": "CORNFLAKE CRUMBS, CORNFLAKE",
+          "dataType": "Branded",
+          "gtinUpc": "041198004104",
+          "publishedDate": "2023-11-16",
+          "brandOwner": "Jason Dairy Products Co Inc",
+          "brandName": "JASON",
+          "ingredients": "MILLED CORN, SUGAR, SALT, BARLEY MALT, CORN SYRUP.",
+          "marketCountry": "United States",
+          "foodCategory": "Bread & Muffin Mixes",
+          "modifiedDate": "2022-03-01",
+          "dataSource": "LI",
+          "packageWeight": "12 OZ/340 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 32,
+          "householdServingFullText": "1/2 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 373.42267,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.25
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 87.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 375
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 9.38
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 6
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 172
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 1030
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 9.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2633840,
+          "description": "MILK CHOCOLATE WITH CORNFLAKES, CORNFLAKES",
+          "dataType": "Branded",
+          "gtinUpc": "050255011009",
+          "publishedDate": "2023-09-14",
+          "brandOwner": "Alfred Ritter Gmbh & Co. Kg",
+          "brandName": "RITTER SPORT",
+          "ingredients": "MILK CHOCOLATE WITH CORNFLAKES. SUGAR, COCOA BUTTER, CREAM, CORN, CHOCOLATE LIQUOR, LACTOSE (MILK), SOY LECITHIN, SALT, BARLEY MALT, NATURAL FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2023-06-22",
+          "dataSource": "LI",
+          "packageWeight": "3.5 oz/100 g",
+          "servingSizeUnit": "GRM",
+          "servingSize": 38,
+          "householdServingFullText": "6 pieces",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: MILK CHOCOLATE WITH <em>CORNFLAKES</em>. SUGAR, COCOA BUTTER, CREAM, CORN, CHOCOLATE LIQUOR, LACTOSE (MILK), SOY LECITHIN, SALT, BARLEY MALT, NATURAL FLAVOR.",
+          "score": 331.03864,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5.26
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 29
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 60.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 526
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.6
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 158
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.84
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 158
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 13
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 18.4
+            },
+            {
+              "nutrientNumber": "320",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 696338,
+          "description": "WHITE CHOCOLATE WITH COCONUT FLAKES AND CORNFLAKES, COCONUT FLAKES AND CORNFLAKES",
+          "dataType": "Branded",
+          "gtinUpc": "20481957",
+          "publishedDate": "2019-12-06",
+          "brandOwner": "LIDL",
+          "ingredients": "WHITE CHOCOLATE (SUGAR, COCOA BUTTER, MILK, CREAM, WHEY POWDER, SUNFLOWER LECITHIN, NATURAL VANILLA FLAVOR), COCONUT FLAKES, CORNFLAKES (CORN, SUGAR, SALT, BARLEY MALT), COCONUT FLAVOR.",
+          "marketCountry": "United States",
+          "foodCategory": "Chocolate",
+          "modifiedDate": "2019-01-23",
+          "dataSource": "LI",
+          "servingSizeUnit": "g",
+          "servingSize": 40,
+          "householdServingFullText": "1 PIECE",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>:  FLAVOR), COCONUT FLAKES, <em>CORNFLAKES</em> (CORN, SUGAR, SALT, BARLEY MALT), COCONUT FLAVOR.",
+          "score": 198.21141,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 37.5
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 47.5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 550
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 42.5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 200
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 200
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 27.5
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2464908,
+          "description": "CORNFLAKE CHOCOLATE CHIP MARSHMALLOW COOKIES, CORNFLAKE CHOCOLATE CHIP MARSHMALLOW",
+          "dataType": "Branded",
+          "gtinUpc": "194575040315",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "MomoMilk, LLC dba Milk Bar",
+          "brandName": "MILK BAR",
+          "ingredients": "ENRICHED FLOUR (UNBLEACHED WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), BUTTER (CREAM, NATURAL FLAVORS), BROWN SUGAR, SEMISWEET CHOCOLATE CHIPS (SEMISWEET CHOCOLATE, SUGAR, UNSWEETENED CHOCOLATE, COCOA BUTTER, DEXTROSE, SUNFLOWER LECITHIN), RICE SYRUP SOLIDS, CANE SUGAR, CEREAL (MILLED CORN, SUGAR, CORN SYRUP, SALT, BARLEY MALT EXTRACT, WHEAT STARCH, VITAMINS & MINERALS: FERRIC ORTHOPHOSPHATE [SOURCE OF IRON], NIACINAMIDE [VITAMIN B3], ZINC OXIDE [SOURCE OF ZINC], THIAMIN MONONITRATE [VITAMIN B1], CALCIUM PANTOTHEATE [VITAMIN B5], PYRIDOXINE HYDROCHLORIDE [VITAMIN B6], FOLIC ACID), GLYCERIN, MARSHMALLOWS (TAPIOCA SYRUP, CANE SUGAR, WATER, TAPIOCA STARCH, CARRAGEENAN, SOY PROTEIN, NATURAL VANILLA FLAVOR), EGG YOLK (EGG YOLK, SUGAR), EGGS, INSTANT NONFAT DRY MILK (VITAMINS A & D ADDED), MALTED MILK POWDER (EXTRACT OF MALTED BARLEY AND WHEAT, MILK, SALT, BAKING SODA), CITRUS FIBER, SALT, PURE VANILLA EXTRACT, BAKING POWDER (SODIUM ACID PYROPHOPHATE, SODIUM BICARBONATE, CORN STARCH, MONOCALCIUM PHOSPHATE), BAKING SODA (LEAVENING), XANTHAN GUM, VITAMIN E.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2022-03-01",
+          "dataSource": "LI",
+          "packageWeight": "6.5 oz/184 g",
+          "servingSizeUnit": "g",
+          "servingSize": 46,
+          "householdServingFullText": "2 cookies",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 171.89624,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 4.35
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 67.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 478
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 32.6
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.61
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 109
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 326
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 30.4
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 76
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2486261,
+          "description": "CORNFLAKE, CHOCOLATE CHIP, MARSHMALLOW COOKIES, CORNFLAKE, CHOCOLATE CHIP, MARSHMALLOW",
+          "dataType": "Branded",
+          "gtinUpc": "194575040308",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "MomoMilk, LLC dba Milk Bar",
+          "brandName": "MILK BAR",
+          "ingredients": "ENRICHED FLOUR (UNBLEACHED WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), BROWN SUGAR, BUTTER (CREAM, NATURAL FLAVORS), SEMISWEET CHOCOLATE CHIPS (SEMISWEET CHOCOLATE, SUGAR, UNSWEETENED CHOCOLATE, COCOA BUTTER, DEXTROSE, SUNFLOWER LECITHIN), BROWN RICE SYRUP SOLIDS, GLYCERIN, INVERT SUGAR, CEREAL (MILLED CORN, SUGAR, CORN SYRUP, SALT, BARLEY MALT EXTRACT, WHEAT STARCH, VITAMINS & MINERALS: FERRIC ORTHOPHOSPHATE [SOURCE OF IRON], NIACINAMIDE [VITAMIN B3], ZINC OXIDE [SOURCE OF ZINC], THIAMIN MONONITRATE [VITAMIN B1], CALCIUM PANTOTHENATE [VITAMIN B5], PYRIDOXINE HYDROCHLORIDE [VITAMIN B6], FOLIC ACID), EGG YOLK (EGG YOLK, SUGAR), MARSHMALLOWS (TAPIOCA SYRUP, CANE SUGAR, WATER, TAPIOCA STARCH, CARRAGEENAN, SOY PROTEIN, NATURAL VANILLA FLAVOR), EGGS, CANE SUGAR, METHYLCELLULOSE, INSTANT NONFAT DRY MILK, CITRUS FIBER, SALT, MALTED MILK POWDER (EXTRACT OF MALTED BARLEY AND WHEAT, MILK, SALT, BAKING SODA), PURE VANILLA EXTRACT, BAKING POWDER (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORN STARCH, MONOCALCIUM PHOSPHATE), BAKING SODA (LEAVENING), XANTHAN GUM, VITAMIN E.",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2022-04-23",
+          "dataSource": "LI",
+          "packageWeight": "1.6 OZ/46 g",
+          "servingSizeUnit": "g",
+          "servingSize": 46,
+          "householdServingFullText": "2 Cookies",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 171.89624,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 4.35
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 67.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 478
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 32.6
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 65
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.61
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 109
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 326
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 9
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 32.6
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 76
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2560451,
+          "description": "MILK CHOCOLATE COATED CORNFLAKES",
+          "dataType": "Branded",
+          "gtinUpc": "0013495113520",
+          "publishedDate": "2023-06-29",
+          "brandOwner": "Rose Of Galilee Chocolat/candy",
+          "brandName": "KLIK",
+          "ingredients": "MILK CHOCOLATE [SUGAR, DRY MILK (DRY WHOLE MILK, NONFAT DRY MILK), COCOA BUTTER, CHOCOLATE LIQUOR, EMULSIFIERS (LECITHIN, PGPR), ARTIFICIAL FLAVOR (VANILLIN)], CORNFLAKES (YELLOW CORN FLOUR, SUGAR, BARLEY MALT EXTRACT, MONO- AND DIGLYCERIDES, ARTIFICIAL FLAVORS), WATER, ACACIA, SUGAR",
+          "marketCountry": "United States",
+          "foodCategory": "Cereal",
+          "modifiedDate": "2023-05-30",
+          "dataSource": "LI",
+          "packageWeight": "2.64 oz",
+          "servingSizeUnit": "GRM",
+          "servingSize": 30,
+          "householdServingFullText": "1/4 Cup (30g) Per serving",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: , EMULSIFIERS (LECITHIN, PGPR), ARTIFICIAL FLAVOR (VANILLIN)], <em>CORNFLAKES</em> (YELLOW CORN FLOUR, SUGAR",
+          "score": 148.41139,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 66.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 467
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 46.7
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 250
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 46.7
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 11.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2477066,
+          "description": "TOASTED GRAIN CEREAL, CORNFLAKES",
+          "dataType": "Branded",
+          "gtinUpc": "041415000056",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Publix Super Markets, Inc.",
+          "brandName": "PUBLIX",
+          "ingredients": "MILLED CORN, SUGAR, SALT, MALTED BARLEY SYRUP. VITAMINS AND MINERALS: SODIUM ASCORBATE (VITAMIN C), REDUCED IRON, NIACINAMIDE, PYRIDOXINE HYDROCHLORIDE (VITAMIN B6), RIBOFLAVIN (VITAMIN B2), THIAMINE MONONITRATE (VITAMIN B1), VITAMIN A PALMITATE, FOLIC ACID, VITAMIN D, VITAMIN B12.",
+          "marketCountry": "United States",
+          "foodCategory": "Cereal",
+          "modifiedDate": "2018-08-07",
+          "dataSource": "LI",
+          "packageWeight": "18 oz/510 g",
+          "servingSizeUnit": "g",
+          "servingSize": 45,
+          "householdServingFullText": "1 1/2 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 148.41139,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 6.67
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 86.7
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 378
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 8.89
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 578
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1110
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 178
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 13.3
+            },
+            {
+              "nutrientNumber": "404",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "405",
+              "value": 0.944
+            },
+            {
+              "nutrientNumber": "406",
+              "value": 11.1
+            },
+            {
+              "nutrientNumber": "415",
+              "value": 1.11
+            },
+            {
+              "nutrientNumber": "417",
+              "value": 267
+            },
+            {
+              "nutrientNumber": "418",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 8.9
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2572321,
+          "description": "CORNFLAKE CHOCOLATE CHIP MARSHMALLOW ICE CREAM, CORNFLAKE; CHOCOLATE CHIP; MARSHMALLOW",
+          "dataType": "Branded",
+          "gtinUpc": "0194575060306",
+          "publishedDate": "2023-06-29",
+          "brandOwner": "MomoMilk, LLC dba Milk Bar",
+          "brandName": "MILK BAR",
+          "ingredients": "MILK, HEAVY CREAM, SUGAR, CORNFLAKE CRUNCH (POWDERED SUGAR [SUGAR, CORN STARCH], SOYBEAN OIL, CORN FLAKES [MILLED CORN, SUGAR, MALT FLAVOR, SALT], PALM OIL, SALT, SOY LECITHIN [EMULSIFIER], NATURAL FLAVOR), MARSHMALLOW (RICE SYRUP, WATER, SUGAR, CORN STARCH, TITANIUM DIOXIDE, NATURAL FLAVOR, CULTURED DEXTROSE [MALTODEXTRIN], SALT, GUAR GUM, XANTHAN GUM), COOKIE DOUGH FLAVOR BASE (RICE SYRUP, SUGAR, WATER, BUTTER [CREAM, SALT], NATURAL FLAVORS, FRUIT AND VEGETABLE JUICE [COLOR], SALT, CULTURED DEXTROSE [MALTODEXTRIN], SUNFLOWER LECITHIN), CHOCOLATE FLAVORED CHUNK (POWDERED SUGAR [SUGAR, CORN STARCH], COCONUT OIL, COCOA [PROCESSED WITH ALKALI], BUTTER OIL [MILK FAT], SOY LECITHIN, NATURAL FLAVOR), MARSHMALLOW FLAVOR BASE (RICE SYRUP, WATER, SUGAR, NATURAL FLAVOR, CULTURED DEXTROSE [MALTODEXTRIN], SALT), EGG YOLKS (EGG YOLKS, SUGAR), SKIM MILK, GUAR GUM",
+          "marketCountry": "United States",
+          "foodCategory": "Ice Cream & Frozen Yogurt",
+          "modifiedDate": "2023-05-23",
+          "dataSource": "LI",
+          "packageWeight": "14 fl oz",
+          "servingSizeUnit": "GRM",
+          "servingSize": 130,
+          "householdServingFullText": "2/3 cup (130g)",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: MILK, HEAVY CREAM, SUGAR, <em>CORNFLAKE</em> CRUNCH (POWDERED SUGAR [SUGAR, CORN STARCH], SOYBEAN OIL, CORN",
+          "score": 147.67857,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.08
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 16.9
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 30.8
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 285
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 23.8
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0.8
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 1.38
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 108
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 115
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 20
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 58
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0.38
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 9.23
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2464904,
+          "description": "CANDY CANE CORNFLAKE CHOCOLATE CHIP COOKIES, CANDY CANE CORNFLAKE CHOCOLATE CHIP",
+          "dataType": "Branded",
+          "gtinUpc": "194575040506",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "MomoMilk, LLC dba Milk Bar",
+          "brandName": "MILK BAR",
+          "ingredients": "ENRICHED FLOUR (UNBLEACHED WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), BUTTER (CREAM, NATURAL FLAVORS), BROWN SUGAR, SEMISWEET CHOCOLATE CHIPS (SEMISWEET CHOCOLATE, SUGAR, UNSWEETENED CHOCOLATE, COCOA BUTTER, DEXTROSE, SUNFLOWER LECITHIN), RICE SYRUP SOLIDS, SUGAR, PEPPERMINT PIECES (SUGAR, RICE SYRUP, COCONUT OIL, COLORED WITH BEET JUICE, PEPPERMINT OIL, SUNFLOWER LECITHIN), CEREAL (MILLED CORN, SUGAR, CORN SYRUP, SALT, BARLEY MALT EXTRACT, WHEAT STARCH, VITAMINS & MINERALS: FERRIC ORTHOPHOSPHATE [SOURCE OF IRON], NIACINAMIDE [VITAMIN B3], ZINC OXIDE [SOURCE OF ZINC], THIAMIN MONONITRATE [VITAMIN B1], CALCIUM PANTOTHENATE [VITAMIN B5], PYRIDOXINE HYDROCHLORIDE [VITAMIN B6], FOLIC ACID), GLYCERIN, CAGE FREE EGGS, EGG YOLK (EGG YOLK, SUGAR), INSTANT NONFAT DRY MILK, CITRUS FIBER, SALT, MALTED MILK POWDER (EXTRACT OF MALTED BARLEY AND WHEAT, MILK, SALT, BAKING SODA), NATURAL FLAVOR, BAKING POWDER (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORN STARCH, MONOCALCIUM PHOSPHATE), BAKING SODA (LEAVENING), XANTHAN GUM, VITAMIN E, NATURAL VANILLA EXTRACT, SOYBEAN OIL",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2020-09-25",
+          "dataSource": "LI",
+          "packageWeight": "1.6 oz/46 g",
+          "servingSizeUnit": "g",
+          "servingSize": 46,
+          "householdServingFullText": "2 Cookies",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 125.31721,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 4.35
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 67.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 478
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 34.8
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 87
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.61
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 109
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 272
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 17
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 32.6
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 76
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2572315,
+          "description": "CANDY CANE CORNFLAKE CHOCOLATE CHIP COOKIES, CANDY CANE; CORNFLAKE; CHOCOLATE CHIP",
+          "dataType": "Branded",
+          "gtinUpc": "0194575040513",
+          "publishedDate": "2023-06-29",
+          "brandOwner": "MomoMilk, LLC dba Milk Bar",
+          "brandName": "MILK BAR",
+          "subbrandName": "MILK",
+          "ingredients": "ENRICHED FLOUR (UNBLEACHED WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), BUTTER (CREAM, NATURAL FLAVORS), BROWN SUGAR, SEMISWEET CHOCOLATE CHIPS (SEMISWEET CHOCOLATE, SUGAR, UNSWEETENED CHOCOLATE, COCOA BUTTER, DEXTROSE, SUNFLOWER LECITHIN), RICE SYRUP SOLIDS, SUGAR, PEPPERMINT PIECES (SUGAR, RICE SYRUP, COCONUT OIL, COLORED WITH BEET JUICE, PEPPERMINT OIL, SUNFLOWER LECITHIN), CEREAL (MILLED CORN, SUGAR, CORN SYRUP, SALT, BARLEY MALT EXTRACT, WHEAT STARCH, VITAMINS & MINERALS: FERRIC ORTHOPHOSPHATE [SOURCE OF IRON], NIACINAMIDE [VITAMIN B3], ZINC OXIDE [SOURCE OF ZINC], THIAMIN MONONITRATE [VITAMIN B1], CALCIUM PANTOTHENATE [VITAMIN B5], PYRIDOXINE HYDROCHLORIDE [VITAMIN B6], FOLIC ACID), GLYCERIN, CAGE FREE EGGS, EGG YOLK (EGG YOLK, SUGAR), INSTANT NONFAT DRY MILK, CITRUS FIBER, SALT, MALTED MILK POWDER (EXTRACT OF MALTED BARLEY AND WHEAT, MILK, SALT, BAKING SODA), NATURAL FLAVOR, BAKING POWDER (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORN STARCH, MONOCALCIUM PHOSPHATE), BAKING SODA (LEAVENING), XANTHAN GUM, VITAMIN E, NATURAL VANILLA EXTRACT, SOYBEAN OIL",
+          "marketCountry": "United States",
+          "foodCategory": "Cookies & Biscuits",
+          "modifiedDate": "2023-05-23",
+          "dataSource": "LI",
+          "servingSizeUnit": "GRM",
+          "servingSize": 46,
+          "householdServingFullText": "2 cookies (46g)",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "",
+          "score": 125.31721,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 4.35
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 15.2
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 67.4
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 478
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 34.8
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 2.2
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 87
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 2.61
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 109
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 272
+            },
+            {
+              "nutrientNumber": "328",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "539",
+              "value": 32.6
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 76
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 8.7
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ],
+      "milk": [
+        {
+          "fdcId": 1909132,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "072050301314",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Elmhurst Milk & Cream Co.Inc.",
+          "brandName": "JUNIPER VALLEY",
+          "ingredients": "REDUCED FAT MILK, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-08-06",
+          "dataSource": "LI",
+          "packageWeight": "1 Quart/946 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 236,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Elmhurst <em>Milk</em> & Cream Co.Inc.<br /><b>Ingredients</b>: REDUCED FAT <em>MILK</em>, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.39
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.12
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 127
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 212
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.27
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2078244,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "02114029705",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Winn-Dixie Stores, Inc.",
+          "brandName": "WINN-DIXIE",
+          "ingredients": "MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2019-05-01",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.75
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 46
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2501185,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "044100146992",
+          "publishedDate": "2023-03-16",
+          "brandOwner": "HP Hood LLC",
+          "brandName": "HOOD",
+          "ingredients": "MILK AND VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2023-02-11",
+          "dataSource": "LI",
+          "packageWeight": "HALF GALLON/1.89 L",
+          "servingSizeUnit": "MLT",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em> AND VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 167
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1500
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2475001,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "041497099993",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Weis Markets, Inc.",
+          "brandName": "WEIS QUALITY",
+          "ingredients": "REDUCED FAT MILK, VITAMIN A PALMITATE, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-11-03",
+          "dataSource": "LI",
+          "packageWeight": "12 fl oz/355 mL",
+          "servingSizeUnit": "ml",
+          "servingSize": 355,
+          "householdServingFullText": "12 ONZ",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: REDUCED FAT <em>MILK</em>, VITAMIN A PALMITATE, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.38
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 1.97
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.07
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 51
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.07
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 124
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 145
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 48
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 2290
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 45
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.27
+            },
+            {
+              "nutrientNumber": "645",
+              "value": 0.56
+            },
+            {
+              "nutrientNumber": "646",
+              "value": 0
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2083027,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "811964010437",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "Bogopa Enterprises, Inc.",
+          "brandName": "BOGOPA",
+          "ingredients": "MILK, VITAMIN D3",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-04-29",
+          "dataSource": "LI",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em>, VITAMIN D3",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 0.5
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2062196,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "011110502506",
+          "publishedDate": "2021-10-28",
+          "brandOwner": "The Kroger Co.",
+          "brandName": "COLORADO PROUD",
+          "ingredients": "MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2017-07-14",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "8 OZA",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 4.58
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 162
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 50
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2476573,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "021130409235",
+          "publishedDate": "2023-02-16",
+          "brandOwner": "Safeway, Inc.",
+          "brandName": "LUCERNE DAIRY FARMS",
+          "ingredients": "GRADE A MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-06-14",
+          "dataSource": "LI",
+          "packageWeight": "64 fl oz/1/2 GAL/1.89 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: GRADE A <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.75
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 131
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 175
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1000
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2503416,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "071700100215",
+          "publishedDate": "2023-03-16",
+          "brandOwner": "HP Hood LLC",
+          "brandName": "CROWLEY",
+          "ingredients": "MILK AND VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2023-02-11",
+          "dataSource": "LI",
+          "packageWeight": "1/2 Gallon/1.89 L",
+          "servingSizeUnit": "MLT",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: <em>MILK</em> AND VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 62
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0.04
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 167
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 52
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 1500
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 2454032,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "021130409433",
+          "publishedDate": "2023-01-26",
+          "brandOwner": "Safeway, Inc.",
+          "brandName": "VALUE CORNER",
+          "ingredients": "GRADE A MILK, VITAMIN D3.",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-05-03",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 240,
+          "householdServingFullText": "1 cup",
+          "shortDescription": "",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Ingredients</b>: GRADE A <em>MILK</em>, VITAMIN D3.",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.75
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 3.33
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.42
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 67
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 104
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "306",
+              "value": 117
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 56
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 125
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 25
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 15
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 2.08
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        },
+        {
+          "fdcId": 1909141,
+          "description": "MILK",
+          "dataType": "Branded",
+          "gtinUpc": "072050401519",
+          "publishedDate": "2021-07-29",
+          "brandOwner": "Elmhurst Milk & Cream Co.Inc.",
+          "brandName": "JUNIPER VALLEY",
+          "ingredients": "REDUCED FAT MILK, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "marketCountry": "United States",
+          "foodCategory": "Milk",
+          "modifiedDate": "2018-06-13",
+          "dataSource": "LI",
+          "packageWeight": "1 GAL/3.78 L",
+          "servingSizeUnit": "ml",
+          "servingSize": 236,
+          "householdServingFullText": "1 cup",
+          "tradeChannels": [
+            "NO_TRADE_CHANNEL"
+          ],
+          "allHighlightFields": "<b>Brand Owner</b>: Elmhurst <em>Milk</em> & Cream Co.Inc.<br /><b>Ingredients</b>: REDUCED FAT <em>MILK</em>, VITAMIN A PALMITATE, VITAMIN D3. ",
+          "score": 771.5898,
+          "microbes": [],
+          "foodNutrients": [
+            {
+              "nutrientNumber": "203",
+              "value": 3.39
+            },
+            {
+              "nutrientNumber": "204",
+              "value": 2.12
+            },
+            {
+              "nutrientNumber": "205",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "208",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "269",
+              "value": 5.08
+            },
+            {
+              "nutrientNumber": "291",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "301",
+              "value": 127
+            },
+            {
+              "nutrientNumber": "303",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "307",
+              "value": 55
+            },
+            {
+              "nutrientNumber": "318",
+              "value": 212
+            },
+            {
+              "nutrientNumber": "324",
+              "value": 42
+            },
+            {
+              "nutrientNumber": "401",
+              "value": 1
+            },
+            {
+              "nutrientNumber": "601",
+              "value": 8
+            },
+            {
+              "nutrientNumber": "605",
+              "value": 0
+            },
+            {
+              "nutrientNumber": "606",
+              "value": 1.27
+            }
+          ],
+          "finalFoodInputFoods": [],
+          "foodMeasures": [],
+          "foodAttributes": [],
+          "foodAttributeTypes": [],
+          "foodVersionIds": []
+        }
+      ]
+    },
+    "off": {}
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "caseId": "tr-yarim-litre-su",
+  "input": "yarım litre su",
+  "recordedAt": "2026-08-21T00:44:44.315Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"yarım litre su\",\"reasoning\":\"Turkish line indicating half a litre of water. \\\"yarım\\\" means 0.5, so quantity 0.5 litre. Water weight equals its volume, so 500 g.\",\"confidence\":0.96,\"language\":\"tr\",\"items\":[{\"name\":\"water\",\"local_name\":\"su\",\"quantity\":0.5,\"unit\":\"l\",\"estimated_grams\":500,\"estimated_per_100g\":{\"kcal\":0,\"protein\":0,\"carbs\":0,\"fat\":0},\"kind\":\"water\",\"confidence\":0.96}]}",
+    "promptTokens": 2968,
+    "completionTokens": 283
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {},
+    "off": {}
+  }
+}

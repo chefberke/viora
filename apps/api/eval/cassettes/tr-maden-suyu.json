@@ -1,0 +1,17 @@
+{
+  "caseId": "tr-maden-suyu",
+  "input": "bir maden suyu",
+  "recordedAt": "2026-08-21T00:44:56.587Z",
+  "llm": {
+    "key": "v3.4b2e0a99:openai/gpt-oss-120b",
+    "raw": "{\"normalized_text\":\"bir maden suyu\",\"reasoning\":\"Turkish line indicating one mineral water, which is plain water. No size given, so default one serving (≈250 ml).\",\"confidence\":0.93,\"language\":\"tr\",\"items\":[{\"name\":\"water\",\"local_name\":\"maden suyu\",\"quantity\":1,\"unit\":\"glass\",\"estimated_grams\":250,\"estimated_per_100g\":{\"kcal\":0,\"protein\":0,\"carbs\":0,\"fat\":0},\"kind\":\"water\",\"confidence\":0.95}]}",
+    "promptTokens": 2969,
+    "completionTokens": 453
+  },
+  "complete": true,
+  "foods": {
+    "key": "raw-hits.v1",
+    "usda": {},
+    "off": {}
+  }
+}
