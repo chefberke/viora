@@ -3,7 +3,17 @@ import { Keyboard, View } from 'react-native';
 import { IconButton, Pill } from '@/shared/ui';
 import { CalorieStat } from './calorie-stat';
 
-/** Replaces the summary bar while an entry is being written. */
+/**
+ * Replaces the summary bar while an entry is being written.
+ *
+ * It used to carry a mic, a camera and an add button as well. None of the three had an
+ * `onPress`: they tinted when tapped, announced themselves to a screen reader as buttons,
+ * and did nothing — three promises the app cannot keep. A control that looks live and is
+ * not is worse than an absent one, because the person blames themselves for it.
+ *
+ * What is left is the two that work: the running calorie count, and a way out of the
+ * keyboard.
+ */
 export function ComposerToolbar({ calories }: { calories: number }) {
   return (
     <View className="flex-row items-center gap-3">
@@ -11,18 +21,6 @@ export function ComposerToolbar({ calories }: { calories: number }) {
         <CalorieStat value={calories} />
       </Pill>
 
-      <IconButton
-        icon={{ name: 'mic', className: 'text-action-voice' }}
-        accessibilityLabel="Log by voice"
-      />
-      <IconButton
-        icon={{ name: 'camera', className: 'text-action-camera' }}
-        accessibilityLabel="Log with a photo"
-      />
-      <IconButton
-        icon={{ name: 'add', size: 26, className: 'text-action-add' }}
-        accessibilityLabel="Add"
-      />
       <IconButton
         icon={{ family: 'material', name: 'keyboard-hide', className: 'text-foreground-muted' }}
         accessibilityLabel="Hide the keyboard"

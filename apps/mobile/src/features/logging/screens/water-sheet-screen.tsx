@@ -1,14 +1,13 @@
 import { useMemo, useState } from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { useQuery } from '@tanstack/react-query';
-import { useRouter } from 'expo-router';
 
-import { IconButton } from '@/shared/ui';
+import { SheetScreen } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { entriesRangeKey, fetchEntriesRange } from '../api';
 import type { LogEntryDto } from '@/shared/api-types';
 import { fromDayNumber, toDayNumber, WEEKDAY_LABELS } from '../calendar';
-import { WATER_GLYPH } from '@/shared/macros';
+import { sumTotals, WATER_GLYPH } from '@/shared/macros';
 import { useToday } from '../use-today';
 import { ProgressRing } from '../components/progress-ring';
 
@@ -20,10 +19,10 @@ function addDays(date: Date, delta: number): Date {
 }
 
 function waterOf(entries: readonly LogEntryDto[], day: number): number {
-  // Mixed rows count too: a meal logged with a glass of water still hydrates.
-  return entries
-    .filter((entry) => entry.day === day)
-    .reduce((sum, entry) => sum + (entry.result?.totals.waterMl ?? 0), 0);
+  // Mixed rows count too: a meal logged with a glass of water still hydrates — which is
+  // exactly why this goes through the same adder as the day's macros rather than picking
+  // `waterMl` out by hand.
+  return sumTotals(entries.filter((entry) => entry.day === day)).waterMl;
 }
 
 export interface WaterSheetScreenProps {
@@ -37,7 +36,6 @@ export interface WaterSheetScreenProps {
  * on a past day is shown among the days around it.
  */
 export function WaterSheetScreen({ day }: WaterSheetScreenProps) {
-  const router = useRouter();
   const { colors } = useTheme();
   const today = useToday();
   const todayDay = toDayNumber(today);
@@ -65,17 +63,7 @@ export function WaterSheetScreen({ day }: WaterSheetScreenProps) {
   );
 
   return (
-    <ScrollView className="flex-1 bg-background" contentContainerClassName="gap-5 px-5 pb-10 pt-4">
-      <View className="flex-row items-center justify-between">
-        <Text className="text-xl font-semibold text-foreground">
-          {selectedDay === todayDay ? 'Today' : 'Water'}
-        </Text>
-        <IconButton
-          icon={{ name: 'close', className: 'text-foreground-muted' }}
-          accessibilityLabel="Close"
-          onPress={() => router.back()}
-        />
-      </View>
+    <SheetScreen title={selectedDay === todayDay ? 'Today' : 'Water'}>
 
       <View className="flex-row justify-between rounded-3xl bg-surface px-4 py-3">
         {days.map((date) => {
@@ -142,6 +130,6 @@ export function WaterSheetScreen({ day }: WaterSheetScreenProps) {
           </View>
         )}
       </View>
-    </ScrollView>
+    </SheetScreen>
   );
 }

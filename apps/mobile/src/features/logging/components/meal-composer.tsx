@@ -18,6 +18,7 @@ import { createEntry, isBlank, splitEntry, withText, type DraftEntry } from '../
 import type { RowState } from '../use-entry-parser';
 import { EntryResultLabel } from './entry-result-label';
 import { EntrySuggestion } from './entry-suggestion';
+import { NeedsReviewHint } from './needs-review-hint';
 import { NoFoodHint } from './no-food-hint';
 
 /** Where the caret goes once a row opens, closes or joins. It waits for the row to mount. */
@@ -277,6 +278,23 @@ export function MealComposer({
   }
 
   /**
+   * How many of a row's foods the parse would like a person to look at.
+   *
+   * The mirror of the check above: that one is the parse failing, this one is the parse
+   * succeeding and saying how sure it is. A corrected item is never counted — someone has
+   * already looked at that one, and asking again would be the app not listening.
+   */
+  function unsureItems(entry: DraftEntry): number {
+    const state = rowStates.get(entry.id);
+
+    if (state?.phase !== 'done' || !state.result) {
+      return 0;
+    }
+
+    return state.result.items.filter((item) => item.needsReview && !item.corrected).length;
+  }
+
+  /**
    * A row is offered suggestions only while it is the focused one and still empty. The first
    * character types them away: a list sitting under a line being written competes with it
    * instead of helping, and by then the person already knows what they are logging.
@@ -308,6 +326,7 @@ export function MealComposer({
     >
       {entries.map((entry, index) => {
         const noFood = foundNoFood(entry);
+        const unsure = unsureItems(entry);
         const prompt = index === 0 ? 'Start logging your meals...' : 'Add another meal...';
 
         return (
@@ -344,7 +363,7 @@ export function MealComposer({
                   // The prompt below stands in for `placeholder`, which can only wear the
                   // input's own type.
                   accessibilityLabel={prompt}
-                  selectionColor={colors['action-voice']}
+                  selectionColor={colors.brand}
                   // Wraps instead of scrolling sideways; the outer ScrollView owns scrolling.
                   multiline
                   scrollEnabled={false}
@@ -408,6 +427,8 @@ export function MealComposer({
 
             {noFood ? (
               <NoFoodHint text={entry.text} onDelete={() => handleDeleteRow(entry.id)} />
+            ) : unsure > 0 ? (
+              <NeedsReviewHint count={unsure} onReview={() => onRowPress(entry.id)} />
             ) : null}
           </View>
         );

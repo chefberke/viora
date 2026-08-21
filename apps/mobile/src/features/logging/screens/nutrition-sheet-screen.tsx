@@ -1,30 +1,26 @@
 import { useCallback, useState } from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { useQuery } from '@tanstack/react-query';
-import { useRouter } from 'expo-router';
 
 import { BookmarkButton, useSavedMeals } from '@/features/saved-meals';
-import { IconButton } from '@/shared/ui';
+import { Icon, SheetScreen } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { entriesDayKey, fetchEntriesByDay } from '../api';
-import type { ConfidenceLevel, ParseSource } from '@/shared/api-types';
+import type { CorrectionOpRequest, ParseSource } from '@/shared/api-types';
 import { toDayNumber } from '../calendar';
 import { CALORIE_GLYPH, MACROS } from '@/shared/macros';
+import { CONFIDENCE } from '../constants';
 import { useToday } from '../use-today';
+import { useItemCorrections } from '../use-item-corrections';
+import { FoodSearchPanel } from '../components/food-search-panel';
 import { NutritionItemRow } from '../components/nutrition-item-row';
 import { ProgressRing } from '../components/progress-ring';
 
-const LEVEL_LABEL: Record<ConfidenceLevel, string> = {
-  high: 'High',
-  medium: 'Medium',
-  low: 'Low',
-};
-
-const LEVEL_CLASS: Record<ConfidenceLevel, string> = {
-  high: 'text-success',
-  medium: 'text-warning',
-  low: 'text-danger',
-};
+/**
+ * What the sheet is showing. A swap rather than a second screen: this is already a sheet,
+ * and the app presents nothing on top of one.
+ */
+type SheetView = { kind: 'items' } | { kind: 'search'; itemIndex: number };
 
 /**
  * A `Record` rather than a chain of checks: the compiler then refuses to build once a
@@ -53,12 +49,12 @@ export interface NutritionSheetScreenProps {
 
 /** The bottom sheet behind a food row's calorie label. */
 export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
-  const router = useRouter();
   const { colors } = useTheme();
   const today = useToday();
   const shownDay = day ?? toDayNumber(today);
   // Which item drawers are open, by index. Several may be, so two foods can be compared.
   const [openItems, setOpenItems] = useState<ReadonlySet<number>>(() => new Set());
+  const [view, setView] = useState<SheetView>({ kind: 'items' });
 
   const toggleItem = useCallback((index: number) => {
     setOpenItems((open) => {
@@ -70,6 +66,10 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
 
       return next;
     });
+  }, []);
+
+  const openItem = useCallback((index: number) => {
+    setOpenItems((open) => new Set(open).add(index));
   }, []);
 
   const { data } = useQuery({
@@ -86,31 +86,63 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
   const { find, toggle, isSaving } = useSavedMeals();
   const saved = entry ? find(entry.rawText) : undefined;
 
-  return (
-    <ScrollView className="flex-1 bg-background" contentContainerClassName="gap-5 px-5 pb-10 pt-4">
-      <View className="flex-row items-center justify-between">
-        <Text className="text-xl font-semibold text-foreground">Nutrition Details</Text>
+  const { correct, busyIndex, error, dismissError } = useItemCorrections(entry, shownDay);
 
-        {/* Grouped, not spread: `justify-between` would push the two buttons to either end. */}
-        <View className="flex-row items-center gap-2">
-          {/* Nothing to save from an entry with no parse — the sheet has no figures to show
-              for it either, so the button keeps the same company as the body below. */}
-          {entry && result ? (
-            <BookmarkButton
-              isSaved={saved !== undefined}
-              disabled={isSaving}
-              onPress={() => {
-                void toggle({ text: entry.rawText, result, sourceEntryId: entry.id });
-              }}
-            />
-          ) : null}
-          <IconButton
-            icon={{ name: 'close', className: 'text-foreground-muted' }}
-            accessibilityLabel="Close"
-            onPress={() => router.back()}
+  const applyOp = useCallback(
+    (op: CorrectionOpRequest) => {
+      // Removing a row renumbers everything under it, so the open set no longer describes the
+      // list it was written about. Closing them all is the only honest thing to do with it.
+      if (op.type === 'remove_item') {
+        setOpenItems(new Set());
+      }
+
+      void correct(op);
+    },
+    [correct],
+  );
+
+  // The first row the parse itself was unsure about — where "something off?" should land.
+  const firstUnsure = result?.items.findIndex((item) => item.needsReview && !item.corrected) ?? -1;
+
+  const searching = view.kind === 'search' ? result?.items[view.itemIndex] : undefined;
+
+  // The whole body swaps, so the search has the sheet's height to work in and the keyboard
+  // is not fighting a list of macros for room.
+  if (view.kind === 'search' && searching !== undefined) {
+    // Returned bare, with no wrapper: the panel is the whole screen here, and every extra
+    // flex level between it and the sheet is another chance for its list to be laid out
+    // against the wrong box.
+    return (
+      <FoodSearchPanel
+        initialQuery={searching.name}
+        grams={searching.grams ?? searching.ml ?? 0}
+        disabled={busyIndex !== null}
+        onBack={() => setView({ kind: 'items' })}
+        onPick={(food) => {
+          setView({ kind: 'items' });
+          applyOp({ type: 'set_food', itemIndex: view.itemIndex, food });
+        }}
+      />
+    );
+  }
+
+  return (
+    <SheetScreen
+      title="Nutrition Details"
+      headerAccessory={
+        /* Nothing to save from an entry with no parse — the sheet has no figures to show
+           for it either, so the button keeps the same company as the body below. */
+        entry && result ? (
+          <BookmarkButton
+            isSaved={saved !== undefined}
+            disabled={isSaving}
+            onPress={() => {
+              void toggle({ text: entry.rawText, result, sourceEntryId: entry.id });
+            }}
           />
-        </View>
-      </View>
+        ) : null
+      }
+    >
 
       {!entry || !result ? (
         <Text className="text-base text-foreground-muted">This entry is gone.</Text>
@@ -138,6 +170,20 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
             </View>
           </View>
 
+          {/* A correction that did not land has to say so. The row it was aimed at is still
+              on screen showing the old figures, and silence there reads as "it worked". */}
+          {error !== null ? (
+            <Pressable
+              onPress={dismissError}
+              accessibilityRole="button"
+              accessibilityLabel="Dismiss"
+              className="flex-row items-center gap-2 rounded-2xl bg-surface px-4 py-3"
+            >
+              <Icon name="alert-circle-outline" size={18} className="text-danger" />
+              <Text className="flex-1 text-[15px] text-foreground">{error.message}</Text>
+            </Pressable>
+          ) : null}
+
           <View className="gap-2">
             <Text className="text-base font-medium text-foreground-muted">Items</Text>
             <View className="gap-px overflow-hidden rounded-3xl">
@@ -145,8 +191,12 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
                 <NutritionItemRow
                   key={`${item.name}-${index}`}
                   item={item}
+                  index={index}
                   isOpen={openItems.has(index)}
                   onToggle={() => toggleItem(index)}
+                  onCorrect={applyOp}
+                  onSearchFood={() => setView({ kind: 'search', itemIndex: index })}
+                  isBusy={busyIndex === index}
                 />
               ))}
             </View>
@@ -160,7 +210,7 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
                   size={56}
                   strokeWidth={5}
                   progress={result.confidence}
-                  color={colors[result.confidenceLevel === 'high' ? 'success' : result.confidenceLevel === 'medium' ? 'warning' : 'danger']}
+                  color={colors[CONFIDENCE[result.confidenceLevel].token]}
                   trackColor={colors['surface-strong']}
                 >
                   <Text className="text-sm font-semibold text-foreground">
@@ -169,8 +219,10 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
                 </ProgressRing>
                 <View className="gap-0.5">
                   <Text className="text-sm text-foreground-muted">Confidence level</Text>
-                  <Text className={`text-lg font-semibold ${LEVEL_CLASS[result.confidenceLevel]}`}>
-                    {LEVEL_LABEL[result.confidenceLevel]}
+                  <Text
+                    className={`text-lg font-semibold ${CONFIDENCE[result.confidenceLevel].className}`}
+                  >
+                    {CONFIDENCE[result.confidenceLevel].label}
                   </Text>
                 </View>
               </View>
@@ -179,8 +231,16 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
                 <Text className="text-base leading-6 text-foreground">{result.reasoning}</Text>
               ) : null}
 
-              <Pressable onPress={() => router.back()} hitSlop={6}>
-                <Text className="text-base text-brand">✎ Something off? Edit the entry</Text>
+              {/* It used to dismiss the sheet, which handed the problem back to the person
+                  who already said they had one. Now it opens the row the parse was least
+                  sure of — and when it was sure of all of them, the first one. */}
+              <Pressable
+                onPress={() => openItem(firstUnsure === -1 ? 0 : firstUnsure)}
+                hitSlop={6}
+                accessibilityRole="button"
+                accessibilityLabel="Fix an item the parser got wrong"
+              >
+                <Text className="text-base text-brand">✎ Something off? Fix it above</Text>
               </Pressable>
             </View>
           </View>
@@ -207,6 +267,6 @@ export function NutritionSheetScreen({ id, day }: NutritionSheetScreenProps) {
           ) : null}
         </>
       )}
-    </ScrollView>
+    </SheetScreen>
   );
 }

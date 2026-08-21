@@ -65,9 +65,21 @@ export function TodayScreen() {
         daysBack={selected.daysBack}
       />
 
-      {/* The word answers the pull to refresh, and nothing else. A day that is opened or
-          stepped to has the skeleton below to say it is coming. */}
-      <RefreshStatus active={parser.isRefreshing} />
+      {/* One band, two things it can say. The word answers the pull to refresh and nothing
+          else — a day that is opened or stepped to has the skeleton below to say it is
+          coming — and the offline line outranks it, because a refresh with no connection is
+          not going to finish. */}
+      <RefreshStatus
+        state={
+          parser.isOffline
+            ? 'offline'
+            : parser.isRefreshing
+              ? 'refreshing'
+              : parser.isError
+                ? 'failed'
+                : 'idle'
+        }
+      />
 
       {/* Dragging sideways steps between days. It wraps the rows alone: the greeting says
           which day this is, and it should not slide off while saying it. */}

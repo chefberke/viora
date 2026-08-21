@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, Text, TextInput, View } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
+import { logError, messageForError } from '@/shared/lib';
 import { CALORIE_GLYPH, MACROS } from '@/shared/macros';
-import { IconButton, ShimmerText } from '@/shared/ui';
+import { SheetScreen, ShimmerText } from '@/shared/ui';
 import { useTheme } from '@/theme';
 import { BookmarkButton } from '../components/bookmark-button';
 import { useSavedMeals } from '../use-saved-meals';
@@ -92,9 +93,12 @@ export function SavedMealSheetScreen({ id }: SavedMealSheetScreenProps) {
           router.back();
         }
       })
-      .catch(() => {
+      .catch((error: unknown) => {
         // The line could not be read. The wording stays in the field, so it can be tried
-        // again by touching it; the figures below are still the ones that match the old line.
+        // again by touching it; the figures below are still the ones that match the old
+        // line. Nothing is shown, but it is no longer nothing at all: what a person is not
+        // told, a log still should be.
+        logError(messageForError(error).event, error, { savedMealId: id, action: 'edit' });
       });
   };
 
@@ -136,24 +140,16 @@ export function SavedMealSheetScreen({ id }: SavedMealSheetScreenProps) {
     // Closed first, so the sheet is not left reading a meal that has gone. A failure leaves
     // the meal where it was, and the list behind still shows it.
     router.back();
-    void remove(id).catch(() => {});
+    void remove(id).catch((error: unknown) =>
+      logError(messageForError(error).event, error, { savedMealId: id, action: 'remove' }),
+    );
   }
 
   return (
-    <ScrollView className="flex-1 bg-background" contentContainerClassName="gap-5 px-5 pb-10 pt-4">
-      <View className="flex-row items-center justify-between">
-        <Text className="text-xl font-semibold text-foreground">Saved Meal</Text>
-
-        {/* Grouped, not spread: `justify-between` would push the two buttons to either end. */}
-        <View className="flex-row items-center gap-2">
-          {meal ? <BookmarkButton isSaved onPress={removeMeal} /> : null}
-          <IconButton
-            icon={{ name: 'close', className: 'text-foreground-muted' }}
-            accessibilityLabel="Close"
-            onPress={() => router.back()}
-          />
-        </View>
-      </View>
+    <SheetScreen
+      title="Saved Meal"
+      headerAccessory={meal ? <BookmarkButton isSaved onPress={removeMeal} /> : null}
+    >
 
       {!meal ? (
         <Text className="text-base text-foreground-muted">
@@ -169,7 +165,7 @@ export function SavedMealSheetScreen({ id }: SavedMealSheetScreenProps) {
             onChangeText={handleChangeText}
             onBlur={handleBlur}
             accessibilityLabel="Meal wording"
-            selectionColor={colors['action-voice']}
+            selectionColor={colors.brand}
             // Wraps instead of scrolling sideways; the sheet's ScrollView owns scrolling.
             multiline
             scrollEnabled={false}
@@ -205,6 +201,6 @@ export function SavedMealSheetScreen({ id }: SavedMealSheetScreenProps) {
           </View>
         </>
       )}
-    </ScrollView>
+    </SheetScreen>
   );
 }

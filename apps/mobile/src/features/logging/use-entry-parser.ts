@@ -1,34 +1,40 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { toZonedDate, useTimeZone } from '@/shared/time';
-import { toDayNumber } from './calendar';
+import { useMinDurationRefresh } from './use-min-duration-refresh';
+import { useMinuteOfDay } from './use-minute-of-day';
 import {
+  applyEntryToCache,
   deleteEntry,
+  dropEntryFromCache,
   entriesDayKey,
   fetchEntriesByDay,
-  loggedDaysKey,
   upsertEntry,
 } from './api';
-import type { EntriesResponse, ParseResult } from '@/shared/api-types';
+import { ApiError, logError, messageForError, onlineManager } from '@/shared/lib';
+import type { ParseResult } from '@/shared/api-types';
 import type { DraftEntry } from './draft';
-import type { MacroTotals } from '@/shared/macros';
+import { sumTotals, type MacroTotals } from '@/shared/macros';
 
 /** How long a row rests before its text is sent to be parsed. */
 const DEBOUNCE_MS = 1000;
 
-/** Everything under this key is what to suggest; a write to the day makes all of it wrong. */
-const SUGGESTIONS_KEY_PREFIX = ['suggestions'] as const;
-
-/** The shortest time the pull-to-refresh bar stays up, so a fast fetch is still readable. */
-const MIN_REFRESH_MS = 550;
-
-export type RowPhase = 'idle' | 'reading' | 'calculating' | 'done' | 'error';
+export type RowPhase = 'idle' | 'reading' | 'calculating' | 'queued' | 'done' | 'error';
 
 export interface RowState {
   /** `reading` is a first parse, `calculating` a re-parse of an edited row. */
   phase: RowPhase;
   result: ParseResult | null;
+  /**
+   * What to tell the person about a failed row, from `messageForError`. Null on every
+   * other phase.
+   *
+   * It is held per row rather than derived at render because the error object itself is
+   * gone by then — `send` catches it, and the row only remembers that something went
+   * wrong. Before this, a rate limit, a dead network and a bad request all rendered the
+   * same red "Retry", and one of those three should not offer a retry at all.
+   */
+  error: { message: string; retry: boolean } | null;
 }
 
 export interface UseEntryParserResult {
@@ -46,6 +52,21 @@ export interface UseEntryParserResult {
   isRefreshing: boolean;
   /** Fetches the day again and re-seeds the rows from what came back. */
   refresh: () => void;
+  /**
+   * No usable connection. Rows still accept text and park until it comes back.
+   *
+   * Separate from `isError`: one is the phone's fault and self-healing, the other is the
+   * server's and is not.
+   */
+  isOffline: boolean;
+  /**
+   * The day itself could not be loaded.
+   *
+   * It used to be invisible. `seedEntries` returned `[]` as soon as the query had *fetched*,
+   * error or not, so a failed day rendered as an empty day with a working composer — which
+   * invites someone to retype a breakfast they already logged.
+   */
+  isError: boolean;
 }
 
 /**
@@ -55,7 +76,7 @@ export interface UseEntryParserResult {
  */
 export function useEntryParser(day: number): UseEntryParserResult {
   const queryClient = useQueryClient();
-  const timeZone = useTimeZone();
+  const minuteOfDayFor = useMinuteOfDay();
   const query = useQuery({
     queryKey: entriesDayKey(day),
     queryFn: () => fetchEntriesByDay(day),
@@ -64,7 +85,7 @@ export function useEntryParser(day: number): UseEntryParserResult {
   const { refetch } = query;
 
   const [rowStates, setRowStates] = useState<Map<string, RowState>>(new Map());
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isOffline, setIsOffline] = useState(!onlineManager.isOnline());
   // Bumped by a refresh so the render-phase seeding below runs again on the fresh data.
   const [seedVersion, setSeedVersion] = useState(0);
   const seedKey = `${day}:${seedVersion}`;
@@ -77,14 +98,13 @@ export function useEntryParser(day: number): UseEntryParserResult {
   const latestText = useRef(new Map<string, string>());
   const statesRef = useRef(rowStates);
   const seededKey = useRef<string | null>(null);
-  const refreshing = useRef(false);
 
   statesRef.current = rowStates;
 
   const setRow = useCallback((id: string, partial: Partial<RowState>) => {
     setRowStates((prev) => {
       const next = new Map(prev);
-      const current = prev.get(id) ?? { phase: 'idle' as const, result: null };
+      const current = prev.get(id) ?? { phase: 'idle' as const, result: null, error: null };
 
       next.set(id, { ...current, ...partial });
       return next;
@@ -137,10 +157,48 @@ export function useEntryParser(day: number): UseEntryParserResult {
       seeded.set(entry.id, {
         phase: entry.status === 'parsed' ? 'done' : 'error',
         result: entry.result,
+        // A row seeded as failed came back that way from a parse in some earlier session.
+        // Whatever went wrong then is not knowable now, so it gets the generic retry
+        // rather than a sentence invented after the fact.
+        error: entry.status === 'parsed' ? null : { message: 'Something went wrong.', retry: true },
       });
     }
 
     setRowStates(seeded);
+  }
+
+  // A correction is made in the nutrition sheet, which writes the entry back into the day
+  // query and never touches anything in here. Without this pass the sheet would show the
+  // corrected calories while the composer row beside it, and the day total summed from these
+  // states, both went on showing the old ones until a pull-to-refresh.
+  //
+  // Deliberately lighter than the seeding above: the revision and the figures move, the text
+  // refs do not — a correction never changes what was written — and `seedKey` is left alone,
+  // because bumping it remounts the composer and would take the caret with it. One pass
+  // settles, since the pass itself writes the new revision into the ref.
+  const corrected = (query.data?.entries ?? []).filter(
+    (entry) => (revisions.current.get(entry.id) ?? Infinity) < entry.revision,
+  );
+
+  if (corrected.length > 0) {
+    for (const entry of corrected) {
+      revisions.current.set(entry.id, entry.revision);
+    }
+
+    setRowStates((prev) => {
+      const next = new Map(prev);
+
+      for (const entry of corrected) {
+        next.set(entry.id, {
+          phase: entry.status === 'parsed' ? 'done' : 'error',
+          result: entry.result,
+          error:
+            entry.status === 'parsed' ? null : { message: 'Something went wrong.', retry: true },
+        });
+      }
+
+      return next;
+    });
   }
 
   const clearTimer = useCallback((id: string) => {
@@ -151,28 +209,6 @@ export function useEntryParser(day: number): UseEntryParserResult {
       timers.current.delete(id);
     }
   }, []);
-
-  /**
-   * When this row is being eaten, in minutes past local midnight — the signal suggestions
-   * learn a person's hours from.
-   *
-   * Read here rather than from `useToday`, which only re-renders on the hour and so would
-   * hand back a time up to an hour stale. Only today gets one: writing yesterday's dinner in
-   * at 23:00 says nothing about when that dinner was eaten, and the server keeps the first
-   * value anyway, so a wrong guess here would be permanent.
-   */
-  const minuteOfDayFor = useCallback(
-    (rowDay: number): number | null => {
-      const now = toZonedDate(new Date(), timeZone);
-
-      if (toDayNumber(now) !== rowDay) {
-        return null;
-      }
-
-      return now.getHours() * 60 + now.getMinutes();
-    },
-    [timeZone],
-  );
 
   const send = useCallback(
     async (id: string, text: string) => {
@@ -196,29 +232,23 @@ export function useEntryParser(day: number): UseEntryParserResult {
         }
 
         revisions.current.set(id, entry.revision);
-        setRow(id, { phase: 'done', result: entry.result });
+        setRow(id, { phase: 'done', result: entry.result, error: null });
 
-        queryClient.setQueryData<EntriesResponse>(entriesDayKey(day), (old) => ({
-          entries: [...(old?.entries ?? []).filter((item) => item.id !== entry.id), entry],
-        }));
-        // The water sheet reads a range query and the day walk reads the logged days;
-        // both are cheap to refresh and wrong to leave stale.
-        void queryClient.invalidateQueries({ queryKey: ['entries-range'] });
-        void queryClient.invalidateQueries({ queryKey: loggedDaysKey() });
-        // What is already on today's plate is what must not be suggested again, so the list
-        // is wrong the moment a row lands.
-        void queryClient.invalidateQueries({ queryKey: SUGGESTIONS_KEY_PREFIX });
+        applyEntryToCache(queryClient, day, entry);
       } catch (error) {
         if (revisions.current.get(id) !== revision) {
           return;
         }
 
         // A stale-revision refusal means a newer request won the race — nothing to show.
-        if (error instanceof Error && error.message === 'revision_conflict') {
+        if (error instanceof ApiError && error.status === 409) {
           return;
         }
 
-        setRow(id, { phase: 'error' });
+        const copy = messageForError(error);
+
+        logError(copy.event, error, { entryId: id, revision });
+        setRow(id, { phase: 'error', error: { message: copy.message, retry: copy.retry } });
       }
     },
     [day, minuteOfDayFor, queryClient, setRow],
@@ -246,11 +276,20 @@ export function useEntryParser(day: number): UseEntryParserResult {
             return;
           }
 
+          // Parked rather than sent. The text is already in `latestText`, so the reconnect
+          // effect below has everything it needs; sending anyway would spend the hundred-
+          // second timeout in `api.ts` to learn what `onlineManager` already knows.
+          if (!onlineManager.isOnline()) {
+            setRow(id, { phase: 'queued', error: null });
+
+            return;
+          }
+
           void send(id, text);
         }, DEBOUNCE_MS),
       );
     },
-    [clearTimer, send],
+    [clearTimer, send, setRow],
   );
 
   const removeRow = useCallback(
@@ -262,14 +301,10 @@ export function useEntryParser(day: number): UseEntryParserResult {
 
       if (lastSent.current.has(id)) {
         lastSent.current.delete(id);
-        // Fire-and-forget: the delete is idempotent and a miss costs nothing.
-        deleteEntry(id).catch(() => {});
-        queryClient.setQueryData<EntriesResponse>(entriesDayKey(day), (old) => ({
-          entries: (old?.entries ?? []).filter((item) => item.id !== id),
-        }));
-        void queryClient.invalidateQueries({ queryKey: ['entries-range'] });
-        void queryClient.invalidateQueries({ queryKey: loggedDaysKey() });
-        void queryClient.invalidateQueries({ queryKey: SUGGESTIONS_KEY_PREFIX });
+        // Fire-and-forget: the delete is idempotent and a miss costs nothing to the person.
+        // It is still written down — "costs nothing" was a claim nobody could check.
+        deleteEntry(id).catch((error: unknown) => logError('entry_delete_failed', error, { entryId: id }));
+        dropEntryFromCache(queryClient, day, id);
       }
 
       revisions.current.delete(id);
@@ -306,13 +341,10 @@ export function useEntryParser(day: number): UseEntryParserResult {
 
             lastSent.current.delete(id);
             revisions.current.set(id, (revisions.current.get(id) ?? 0) + 1);
-            deleteEntry(id).catch(() => {});
-            queryClient.setQueryData<EntriesResponse>(entriesDayKey(day), (old) => ({
-              entries: (old?.entries ?? []).filter((item) => item.id !== id),
-            }));
-            void queryClient.invalidateQueries({ queryKey: ['entries-range'] });
-            void queryClient.invalidateQueries({ queryKey: loggedDaysKey() });
-            void queryClient.invalidateQueries({ queryKey: SUGGESTIONS_KEY_PREFIX });
+            deleteEntry(id).catch((error: unknown) =>
+              logError('entry_delete_failed', error, { entryId: id }),
+            );
+            dropEntryFromCache(queryClient, day, id);
             dropRow(id);
           }
 
@@ -341,35 +373,60 @@ export function useEntryParser(day: number): UseEntryParserResult {
    * seeding above and remounts the composer on the rows that came back — so a change made
    * on another device shows up here. Text still waiting on the debounce is not sent first,
    * so a refresh in the middle of typing gives that row back as the server last saw it.
+   *
+   * The reentrancy guard and the readable-minimum floor live in `useMinDurationRefresh`;
+   * what belongs here is only what to do with the result.
    */
-  const refresh = useCallback(async () => {
-    if (refreshing.current) {
-      return;
-    }
-
-    refreshing.current = true;
-    setIsRefreshing(true);
-
-    const startedAt = Date.now();
-
-    try {
+  const { isRefreshing, refresh } = useMinDurationRefresh(
+    useCallback(async () => {
       const result = await refetch();
 
       // A failed fetch leaves the cache as it was, so there is nothing new to seed from.
-      if (!result.isError) {
-        setSeedVersion((version) => version + 1);
-      }
-    } finally {
-      const elapsed = Date.now() - startedAt;
+      // The failure itself reaches the screen through `query.isError`, and the log line is
+      // what says which failure it was.
+      if (result.isError) {
+        logError(messageForError(result.error).event, result.error, { day });
 
-      if (elapsed < MIN_REFRESH_MS) {
-        await new Promise((resolve) => setTimeout(resolve, MIN_REFRESH_MS - elapsed));
+        return false;
       }
 
-      refreshing.current = false;
-      setIsRefreshing(false);
-    }
-  }, [refetch]);
+      setSeedVersion((version) => version + 1);
+
+      return true;
+    }, [refetch, day]),
+  );
+
+  /**
+   * Connection state, and the rows that were waiting for it.
+   *
+   * `onlineManager` pauses TanStack Query's own work by itself; parked composer rows are
+   * not queries, so they need this. Everything a parked row needs is already in
+   * `latestText` — the text is what was typed, not what was sent — so coming back is just
+   * sending it now.
+   */
+  useEffect(() => {
+    const unsubscribe = onlineManager.subscribe((online) => {
+      setIsOffline(!online);
+
+      if (!online) {
+        return;
+      }
+
+      for (const [id, state] of statesRef.current) {
+        if (state.phase !== 'queued') {
+          continue;
+        }
+
+        const text = (latestText.current.get(id) ?? '').trim();
+
+        if (text !== '') {
+          void send(id, text);
+        }
+      }
+    });
+
+    return unsubscribe;
+  }, [send]);
 
   // Timers do not outlive the screen.
   useEffect(() => {
@@ -384,37 +441,7 @@ export function useEntryParser(day: number): UseEntryParserResult {
     };
   }, []);
 
-  const { totals, waterMl } = useMemo(() => {
-    let calories = 0;
-    let carbs = 0;
-    let protein = 0;
-    let fat = 0;
-    let water = 0;
-
-    for (const state of rowStates.values()) {
-      const rowTotals = state.result?.totals;
-
-      if (!rowTotals) {
-        continue;
-      }
-
-      calories += rowTotals.calories;
-      carbs += rowTotals.carbs;
-      protein += rowTotals.protein;
-      fat += rowTotals.fat;
-      water += rowTotals.waterMl;
-    }
-
-    return {
-      totals: {
-        calories,
-        carbs: Math.round(carbs),
-        protein: Math.round(protein),
-        fat: Math.round(fat),
-      },
-      waterMl: water,
-    };
-  }, [rowStates]);
+  const { totals, waterMl } = useMemo(() => sumTotals(rowStates.values()), [rowStates]);
 
   return {
     seedEntries,
@@ -426,5 +453,7 @@ export function useEntryParser(day: number): UseEntryParserResult {
     retryRow,
     isRefreshing,
     refresh,
+    isOffline,
+    isError: query.isError,
   };
 }

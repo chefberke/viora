@@ -1,8 +1,7 @@
 import { Text, View } from 'react-native';
-import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { IconButton } from '@/shared/ui';
+import { SheetHeader } from '@/shared/ui';
 import { fromDayNumber, toDayNumber } from '../calendar';
 import { CALORIE_GLYPH, MACROS, WATER_GLYPH } from '@/shared/macros';
 import { formatDateLabel } from '../greeting';
@@ -27,7 +26,6 @@ export interface DaySummarySheetScreenProps {
  * A plain `View`, never `flex-1` — the sheet is sized to its contents.
  */
 export function DaySummarySheetScreen({ day }: DaySummarySheetScreenProps) {
-  const router = useRouter();
   const insets = useSafeAreaInsets();
   const today = useToday();
   const todayDay = toDayNumber(today);
@@ -40,17 +38,7 @@ export function DaySummarySheetScreen({ day }: DaySummarySheetScreenProps) {
 
   return (
     <View className="gap-5 px-5 pt-4" style={{ paddingBottom: insets.bottom + 16 }}>
-      <View className="flex-row items-center justify-between">
-        <Text className="text-xl font-semibold text-foreground">
-          {shown === todayDay ? 'Today' : formatDateLabel(fromDayNumber(shown))}
-        </Text>
-
-        <IconButton
-          icon={{ name: 'close', className: 'text-foreground-muted' }}
-          accessibilityLabel="Close"
-          onPress={() => router.back()}
-        />
-      </View>
+      <SheetHeader title={shown === todayDay ? 'Today' : formatDateLabel(fromDayNumber(shown))} />
 
       <View className="flex-row items-end justify-between">
         <View className="gap-0.5">

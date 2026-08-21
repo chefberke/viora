@@ -80,11 +80,6 @@ function SuggestionLine({
 /**
  * What to write on an empty row, offered as a short stack of lines.
  *
- * This is the affordance the old "Summarize Food Text" setting used to draw, kept because it
- * was the best thing on the screen and given something better to say. What changed is the
- * spellcheck wave that used to sit above it: a wave means "this is wrong", and nothing here
- * is wrong — the row is empty. So the lines stand on their own.
- *
  * They arrive one at a time, top to bottom, each rising into place and shimmering once before
  * the next appears. The stack is the app thinking out loud, and three lines that materialised
  * together would say the answers had been sitting there all along.
