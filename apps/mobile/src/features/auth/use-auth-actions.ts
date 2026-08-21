@@ -1,16 +1,23 @@
 import { useCallback, useState } from 'react';
 
-import { apiFetch, authClient } from '@/shared/lib';
+import { apiFetch, authClient, NetworkError } from '@/shared/lib';
 
 /**
  * One readable line out of either failure shape: the `{ error }` Better Auth returns in
  * the response, or a real exception when the request never reached the server.
+ *
+ * The unreachable-server case used to be recognised by comparing the message against the
+ * literal string 'Network request failed' — the platform's own wording, which is not ours
+ * to depend on. `apiFetch` now throws a `NetworkError` for it, so the check is a type
+ * check. The advice stays developer-facing on purpose: this is the sign-in screen, the one
+ * place where the likeliest cause really is a misconfigured `EXPO_PUBLIC_API_URL`.
  */
 function toMessage(error: unknown): string {
+  if (error instanceof NetworkError) {
+    return 'Cannot reach the server. Check that the API is running and that EXPO_PUBLIC_API_URL points at it.';
+  }
+
   if (error instanceof Error) {
-    if (error.message === 'Network request failed') {
-      return 'Cannot reach the server. Check that the API is running and that EXPO_PUBLIC_API_URL points at it.';
-    }
     return error.message;
   }
 

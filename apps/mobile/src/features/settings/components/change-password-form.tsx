@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Text, View } from 'react-native';
 
 import { MIN_PASSWORD_LENGTH, type ChangePasswordInput } from '@/features/auth';
-import { Button, IconButton, TextField } from '@/shared/ui';
+import { Button, ErrorText, IconButton, TextField } from '@/shared/ui';
 
 export interface ChangePasswordFormProps {
   isPending: boolean;
@@ -95,7 +95,7 @@ export function ChangePasswordForm({
       />
 
       {error ? (
-        <Text className="mt-4 text-center text-[15px] text-danger">{error}</Text>
+        <ErrorText>{error}</ErrorText>
       ) : null}
 
       <View className="mt-6">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { authClient } from '@/shared/lib';
+import { authClient, logError } from '@/shared/lib';
 
 /** Better Auth's id for an email and password account. Social accounts carry the provider. */
 const CREDENTIAL_PROVIDER = 'credential';
@@ -50,7 +50,9 @@ export function useSignInMethods(): SignInMethods {
 
     // A failed read leaves the password rows hidden, which is the safe way to be wrong:
     // the server would refuse the change anyway.
-    read().catch(() => {
+    read().catch((error: unknown) => {
+      logError('sign_in_methods_failed', error);
+
       if (active) {
         setMethods({ isPending: false, hasPassword: false, providers: [] });
       }

@@ -1,8 +1,8 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { KeyboardAvoidingView, Platform, Text, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, View } from 'react-native';
 
-import { Button, TextField } from '@/shared/ui';
+import { Button, ErrorText, TextField } from '@/shared/ui';
 import { AuthFooterLink } from '../components/auth-footer-link';
 import { AuthLayout } from '../components/auth-layout';
 import { useAuthActions } from '../use-auth-actions';
@@ -28,7 +28,7 @@ export function EmailSignInScreen() {
           <>
             {error ? (
               <View className="mb-4">
-                <Text className="text-center text-[15px] text-macro-carbs">{error}</Text>
+                <ErrorText className="mt-0">{error}</ErrorText>
               </View>
             ) : null}
 

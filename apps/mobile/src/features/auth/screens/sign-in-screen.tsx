@@ -1,7 +1,7 @@
 import { useRouter } from 'expo-router';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
-import { Button } from '@/shared/ui';
+import { Button, ErrorText } from '@/shared/ui';
 import { AuthFooterLink } from '../components/auth-footer-link';
 import { AuthLayout } from '../components/auth-layout';
 import { useAuthActions } from '../use-auth-actions';
@@ -20,7 +20,7 @@ export function SignInScreen() {
         <>
           {error ? (
             <View className="mb-4">
-              <Text className="text-center text-[15px] text-macro-carbs">{error}</Text>
+              <ErrorText className="mt-0">{error}</ErrorText>
             </View>
           ) : null}
 

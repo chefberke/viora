@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuthActions, useSignInMethods, type DeleteAccountInput } from '@/features/auth';
 import { SavedMealsPanel } from '@/features/saved-meals';
 import { authClient } from '@/shared/lib';
+import { ErrorText } from '@/shared/ui';
 import { ChangePasswordForm } from '../components/change-password-form';
 import { DeleteAccountConfirm } from '../components/delete-account-confirm';
 import { DeleteAccountReason } from '../components/delete-account-reason';
@@ -179,7 +180,7 @@ export function SettingsScreen() {
         />
 
         {error ? (
-          <Text className="mt-4 text-center text-[15px] text-danger">{error}</Text>
+          <ErrorText>{error}</ErrorText>
         ) : null}
 
         {/* From app.json, so the two cannot drift. */}

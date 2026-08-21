@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 
-import { Button, Icon, IconButton, TextField } from '@/shared/ui';
+import { Button, ErrorText, Icon, IconButton, TextField } from '@/shared/ui';
 import { DELETE_CONFIRMATION_WORD } from '../constants';
 
 export interface DeleteAccountConfirmProps {
@@ -72,7 +72,7 @@ export function DeleteAccountConfirm({
       </View>
 
       {error ? (
-        <Text className="mt-4 text-center text-[15px] text-danger">{error}</Text>
+        <ErrorText>{error}</ErrorText>
       ) : null}
 
       <View className="mt-6">
