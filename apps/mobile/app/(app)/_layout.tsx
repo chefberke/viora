@@ -1,11 +1,44 @@
 import { Stack } from 'expo-router';
+import { Pressable, Text, View } from 'react-native';
 
 import { SelectedDayProvider } from '@/features/logging';
+import { logError } from '@/shared/lib';
 import { useTheme } from '@/theme';
 
 // Names the screen under the modal. Without it, a deep link straight to `/settings`
 // opens it as the first screen in the stack, with nothing behind it.
 export const unstable_settings = { anchor: 'index' };
+
+/**
+ * Catches a crash in any screen of the signed-in app.
+ *
+ * The one in `app/_layout.tsx` renders outside every provider and replaces the whole tree;
+ * this one is inside them, so it keeps the theme, and — the point of having two — a
+ * sheet that throws while rendering a bad parse no longer blanks the app someone was
+ * halfway through using.
+ */
+export function ErrorBoundary({ error, retry }: { error: Error; retry: () => Promise<void> }) {
+  logError('render_crashed', error, { boundary: 'app' });
+
+  return (
+    <View className="flex-1 items-center justify-center gap-4 bg-background px-8">
+      <Text className="text-center text-[17px] font-semibold text-foreground">
+        This screen could not be shown.
+      </Text>
+      <Text className="text-center text-[15px] text-foreground-muted">
+        Nothing you logged was lost.
+      </Text>
+      <Pressable
+        onPress={() => void retry()}
+        accessibilityRole="button"
+        accessibilityLabel="Try again"
+        className="rounded-full bg-surface px-6 py-3 active:bg-surface-strong"
+      >
+        <Text className="text-[15px] text-foreground">Try again</Text>
+      </Pressable>
+    </View>
+  );
+}
 
 export default function AppLayout() {
   // The modal background follows the chosen theme, not the device one.

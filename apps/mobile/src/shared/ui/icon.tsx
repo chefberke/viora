@@ -21,7 +21,7 @@ export type MaterialIconName = keyof typeof MaterialIcons.glyphMap;
 
 interface IconBaseProps {
   size?: number;
-  /** Tailwind text color class for the glyph, e.g. `text-action-voice`. */
+  /** Tailwind text color class for the glyph, e.g. `text-macro-carbs`. */
   className?: string;
 }
 

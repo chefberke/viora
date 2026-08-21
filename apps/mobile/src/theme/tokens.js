@@ -27,8 +27,7 @@ const colors = {
     'foreground-subtle': '168 168 176', // #A8A8B0 — dot separators
 
     /* Status. `danger` removes or refuses, `warning` clears or exports, `accent` is a
-       link, `success` a switch that is on. `accent` repeats the `action-voice` value on
-       purpose: that token means "the mic button", so a link must not borrow the name. */
+       link, `success` a switch that is on. */
     danger: '225 29 72', // #E11D48
     warning: '245 158 11', // #F59E0B
     accent: '0 122 255', // #007AFF
@@ -41,9 +40,10 @@ const colors = {
     'macro-protein': '180 83 9', // #B45309
     'macro-fat': '162 28 175', // #A21CAF
 
-    /* Composer action icons */
-    'action-voice': '0 122 255', // #007AFF
-    'action-camera': '176 36 176', // #B024B0
+    /* The one composer action colour still in use: the sun on the morning greeting. It
+       kept its name through the toolbar's removal because the name is the honest one —
+       it is the warm end of the same set, and `warning` (which the afternoon uses) would
+       have meant something this does not. Its two siblings went with the buttons. */
     'action-add': '234 88 12', // #EA580C
 
     /* The brand purple. Primary actions only, so it keeps meaning "the way forward". */
@@ -78,9 +78,7 @@ const colors = {
     'macro-protein': '255 214 10', // #FFD60A
     'macro-fat': '199 79 232', // #C74FE8
 
-    /* Composer action icons */
-    'action-voice': '10 132 255', // #0A84FF
-    'action-camera': '214 51 214', // #D633D6
+    /* See the light scheme for why only one of the three is left. */
     'action-add': '255 159 10', // #FF9F0A
 
     /* Brand, lifted: a purple tuned for white is too close to the near-black page. */

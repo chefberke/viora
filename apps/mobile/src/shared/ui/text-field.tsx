@@ -1,6 +1,7 @@
 import { Text, TextInput, View, type TextInputProps } from 'react-native';
 
 import { useTheme } from '@/theme';
+import { ErrorText } from './error-text';
 
 export type TextFieldProps = Omit<TextInputProps, 'className' | 'style'> & {
   label: string;
@@ -26,7 +27,7 @@ export function TextField({ label, error, ...inputProps }: TextFieldProps) {
         {...inputProps}
       />
 
-      {error ? <Text className="mt-2 text-[13px] text-macro-carbs">{error}</Text> : null}
+      <ErrorText variant="field">{error}</ErrorText>
     </View>
   );
 }
