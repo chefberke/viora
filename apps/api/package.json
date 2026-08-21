@@ -17,11 +17,12 @@
   },
   "dependencies": {
     "@better-auth/expo": "^1.7.0",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.2",
     "better-auth": "^1.7.0",
     "cors": "^2.8.6",
     "drizzle-orm": "^0.45.2",
     "express": "^5.2.1",
-    "ioredis": "^6.0.0",
     "pg": "^8.23.0"
   },
   "devDependencies": {

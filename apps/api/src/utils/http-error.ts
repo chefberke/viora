@@ -36,8 +36,16 @@ export function conflict(message = 'conflict'): HttpError {
   return httpError(409, message);
 }
 
+export function payloadTooLarge(message = 'payload_too_large'): HttpError {
+  return httpError(413, message);
+}
+
 export function tooManyRequests(message = 'rate_limited'): HttpError {
   return httpError(429, message);
+}
+
+export function serviceUnavailable(message = 'service_unavailable'): HttpError {
+  return httpError(503, message);
 }
 
 export function badGateway(message = 'bad_gateway'): HttpError {
