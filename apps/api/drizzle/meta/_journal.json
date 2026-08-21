@@ -50,6 +50,20 @@
       "when": 1787246850151,
       "tag": "0006_tense_thor",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1787272697768,
+      "tag": "0007_nebulous_pet_avengers",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1787280017573,
+      "tag": "0008_parallel_ezekiel",
+      "breakpoints": true
     }
   ]
 }

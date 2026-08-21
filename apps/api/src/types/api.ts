@@ -1,5 +1,5 @@
 import type { SessionUser } from '../lib/auth.ts';
-import type { EntryStatus, ParseResult } from './parse.ts';
+import type { EntryKind, EntryStatus, ItemCandidate, ParseResult } from './parse.ts';
 
 export interface ErrorResponse {
   error: string;
@@ -54,6 +54,52 @@ export interface UpsertEntryResponse {
 }
 
 /** `GET /api/entries?day=` or `?from=&to=` */
+/**
+ * One edit to one parsed item, as the client sends it.
+ *
+ * `itemIndex` is an index into the items of the revision named in the request — not into
+ * whatever the list becomes as the batch is applied. A request that removes item 0 and
+ * re-portions item 1 means the two rows the person was looking at.
+ */
+export type CorrectionOpRequest =
+  | { type: 'pick_candidate'; itemIndex: number; candidateIndex: number }
+  | { type: 'set_food'; itemIndex: number; food: ItemCandidate }
+  | {
+      type: 'set_portion';
+      itemIndex: number;
+      quantity: number;
+      unit: string;
+      /** An explicit weight, when the client knows one. Otherwise the unit decides. */
+      grams?: number | null;
+    }
+  | { type: 'remove_item'; itemIndex: number }
+  | {
+      type: 'add_item';
+      name: string;
+      quantity: number;
+      unit: string;
+      kind: EntryKind;
+      grams?: number | null;
+      /** The database row this food was chosen from. Null for water, or for a bare guess. */
+      food?: ItemCandidate | null;
+    };
+
+export interface CorrectEntryRequest {
+  /** The revision the client is correcting. A mismatch is a 409, never a silent overwrite. */
+  revision: number;
+  ops: CorrectionOpRequest[];
+}
+
+/** The entry as it stands after the corrections, one revision on. */
+export interface CorrectEntryResponse {
+  entry: LogEntryDto;
+}
+
+/** Rows a person can pick from when none of an item's candidates were the food. */
+export interface FoodSearchResponse {
+  foods: ItemCandidate[];
+}
+
 export interface EntriesResponse {
   entries: LogEntryDto[];
 }
