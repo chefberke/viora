@@ -6,7 +6,8 @@ import { logError } from '@/shared/lib';
 import { useTheme } from '@/theme';
 
 // Names the screen under the modal. Without it, a deep link straight to `/settings`
-// opens it as the first screen in the stack, with nothing behind it.
+// opens it as the first screen in the stack, with nothing behind it. It does NOT decide
+// which screen the stack opens on — see the note on the `index` screen below.
 export const unstable_settings = { anchor: 'index' };
 
 /**
@@ -49,6 +50,15 @@ export default function AppLayout() {
     // to sit above both of them.
     <SelectedDayProvider>
       <Stack screenOptions={{ headerShown: false }}>
+        {/* The log, and it has to be declared first.
+
+            Declaring any screen here fixes the order of the whole stack: the ones named
+            in JSX come in this order, and the ones that are not are appended after them.
+            The navigator opens on whichever is first, and `anchor` above does not change
+            that — it only tells a deep link what to put underneath itself. With `settings`
+            declared first and `index` left to the end, signing in landed on settings. */}
+        <Stack.Screen name="index" />
+
         {/* A full-screen modal, not a sheet: iOS keeps a top inset on the largest detent
             and `sheetShouldOverflowTopInset` is Android-only. The cost is no drag-to-dismiss,
             so the close button in `settings-header.tsx` is required. */}
