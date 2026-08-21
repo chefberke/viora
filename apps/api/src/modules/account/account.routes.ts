@@ -14,9 +14,15 @@ accountRouter.post(
   '/api/account/deletion-feedback',
   requireSession,
   async (req: Request, res: Response<DeletionFeedbackResponse>) => {
-    const { reason } = req.body as { reason?: unknown };
+    // Express 5 leaves `req.body` undefined when no parser matched the content type, so
+    // a request sent without one destructured off undefined and answered 500. Every other
+    // route in the API reaches its body through a guard that tolerates a non-object; this
+    // one read it raw.
+    const body = (typeof req.body === 'object' && req.body !== null ? req.body : {}) as {
+      reason?: unknown;
+    };
 
-    if (!isDeletionReason(reason)) {
+    if (!isDeletionReason(body.reason)) {
       throw badRequest('invalid_reason');
     }
 
@@ -25,8 +31,7 @@ accountRouter.post(
     await db.insert(accountDeletionFeedback).values({
       id: crypto.randomUUID(),
       userId: user.id,
-      email: user.email,
-      reason,
+      reason: body.reason,
     });
 
     res.status(201).json({ recorded: true });
