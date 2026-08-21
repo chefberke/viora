@@ -5,6 +5,7 @@ import type {
   SavedMealsResponse,
   SaveMealResponse,
 } from '../../types/index.ts';
+import { PARSE_BUDGET, rateLimit } from '../../lib/ratelimit.ts';
 import { requireSession } from '../auth/auth.middleware.ts';
 import { requireId, requireUuid } from '../entries/entries.validation.ts';
 import { deleteSavedMeal, listSavedMeals, saveMeal } from './saved-meals.service.ts';
@@ -25,10 +26,12 @@ savedMealsRouter.get(
 savedMealsRouter.put(
   '/api/saved-meals/:id',
   requireSession,
+  rateLimit(PARSE_BUDGET),
   async (req: Request, res: Response<SaveMealResponse>) => {
     const savedMeal = await saveMeal(
       req.session!.user.id,
       requireUuid(req.params.id),
+      req.requestId,
       parseSaveMealBody(req.body),
     );
 

@@ -3,14 +3,23 @@ import express from 'express';
 
 import { env, isProduction } from './config/index.ts';
 import { closeDatabase } from './db/index.ts';
+import { flushBraintrust, initBraintrust, mirrorEvent } from './lib/braintrust.ts';
 import { accountRouter } from './modules/account/account.routes.ts';
 import { authRouter } from './modules/auth/auth.routes.ts';
 import { entriesRouter } from './modules/entries/entries.routes.ts';
+import { foodsRouter } from './modules/foods/foods.routes.ts';
 import { healthRouter } from './modules/health/health.routes.ts';
 import { savedMealsRouter } from './modules/saved-meals/saved-meals.routes.ts';
 import { suggestionsRouter } from './modules/suggestions/suggestions.routes.ts';
 import { userRouter } from './modules/user/user.routes.ts';
-import { errorHandler, log, requestId, requestTimeout } from './utils/index.ts';
+import { errorHandler, log, requestId, requestTimeout, setLogSink } from './utils/index.ts';
+
+// Tracing starts before anything can be traced, and only here. Every other module reaches
+// it through `lib/braintrust.ts`, whose helpers do nothing until this line has run — which
+// is what keeps `npm run eval` and `npm run check` off the network even on a machine whose
+// `.env` holds a key.
+initBraintrust();
+setLogSink(mirrorEvent);
 
 const app = express();
 
@@ -79,6 +88,7 @@ app.use(healthRouter);
 app.use(userRouter);
 app.use(accountRouter);
 app.use(entriesRouter);
+app.use(foodsRouter);
 app.use(savedMealsRouter);
 app.use(suggestionsRouter);
 
@@ -100,7 +110,10 @@ function shutdown(signal: string): void {
   log('shutdown', { signal });
 
   server.close(() => {
-    void closeDatabase().finally(() => {
+    // Both, and neither blocking the other. The spans are batched in memory: the SDK ships
+    // them on `beforeExit`, which a SIGTERM does not reach, so without this line the traces
+    // missing from Braintrust would be exactly the ones from the minutes before a deploy.
+    void Promise.allSettled([closeDatabase(), flushBraintrust()]).finally(() => {
       process.exit(0);
     });
   });

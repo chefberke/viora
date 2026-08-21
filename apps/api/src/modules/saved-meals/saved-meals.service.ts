@@ -9,12 +9,15 @@ import { and, asc, eq } from 'drizzle-orm';
 
 import { db } from '../../db/index.ts';
 import { savedMeals } from '../../db/app-schema.ts';
+import { tracedParse } from '../../lib/braintrust.ts';
 import type { SavedMealDto, SaveMealRequest } from '../../types/index.ts';
 import { notFound } from '../../utils/index.ts';
 import { normalizeStoredResult } from '../entries/entries.compat.ts';
-import { isPipelineError, toHttpError } from '../entries/entries.errors.ts';
+import { isPipelineError, toHttpError, type PipelineError } from '../entries/entries.errors.ts';
 import { parseRow } from '../entries/entries.pipeline.ts';
 import { canonicalKey } from '../entries/entries.text.ts';
+import type { ParseOutcome } from '../entries/entries.types.ts';
+import { newTraceId, savedMealTraceId, writeParseTrace } from '../entries/entries.trace.ts';
 
 function toDto(row: typeof savedMeals.$inferSelect): SavedMealDto {
   return {
@@ -39,6 +42,7 @@ export async function listSavedMeals(userId: string): Promise<SavedMealDto[]> {
 export async function saveMeal(
   userId: string,
   id: string,
+  requestId: string,
   body: SaveMealRequest,
 ): Promise<SavedMealDto> {
   const existing = await db.query.savedMeals.findFirst({ where: eq(savedMeals.id, id) });
@@ -56,18 +60,55 @@ export async function saveMeal(
   // No snapshot means the text is new or edited, so it has to be read again. A failure is
   // stored rather than thrown: the meal is still saved, it just has no figures yet.
   if (!result) {
-    try {
-      const outcome = await parseRow(body.text);
+    const startedAt = performance.now();
+    const traceId = newTraceId();
+    let outcome: ParseOutcome | null = null;
+    let pipelineError: PipelineError | null = null;
 
-      result = outcome.result;
-      status = 'parsed';
+    try {
+      // Traced exactly as an entry's parse is. A saved meal reaching the model by a
+      // different door is not a reason for it to be invisible once it gets there.
+      outcome = await tracedParse(
+        {
+          traceId,
+          entryId: savedMealTraceId(id),
+          userId,
+          requestId,
+          revision: 0,
+          inputText: body.text,
+        },
+        () => parseRow(body.text),
+      );
     } catch (error) {
       if (!isPipelineError(error)) {
         throw error;
       }
 
-      throw toHttpError(error);
+      pipelineError = error;
     }
+
+    // The same trace an entry writes. This parse used to leave none, so the traces table
+    // described log entries only while reading as though it described every parse — and a
+    // measurement that silently covers a subset is worse than no measurement.
+    await writeParseTrace({
+      traceId,
+      entryId: savedMealTraceId(id),
+      userId,
+      requestId,
+      // A saved meal has no edit counter of its own: it is written whole or not at all.
+      revision: 0,
+      inputText: body.text,
+      outcome,
+      errorCode: pipelineError?.code ?? null,
+      startedAt,
+    });
+
+    if (pipelineError) {
+      throw toHttpError(pipelineError);
+    }
+
+    result = outcome!.result;
+    status = 'parsed';
   }
 
   const normalizedKey = canonicalKey(body.text);

@@ -4,14 +4,25 @@
  * this one is the order they run in.
  */
 import { env } from '../../config/index.ts';
-import type { EntryKind, ParsedItem, ParseResult, ParseSource } from '../../types/index.ts';
-import { mapWithLimit, round1 } from '../../utils/index.ts';
-import { getCachedFood, getCachedParse, setCachedFood, setCachedParse } from './entries.cache.ts';
+import { tracedLookups } from '../../lib/braintrust.ts';
+import type { EntryKind, ParsedItem, ParseResult } from '../../types/index.ts';
+import { mapWithLimit } from '../../utils/index.ts';
+import {
+  buildSources,
+  describeMatch,
+  rowKind,
+  sumTotals,
+  toCandidate,
+} from './entries.assemble.ts';
+import { getCachedParse, setCachedParse } from './entries.cache.ts';
 import { confidenceLevel, itemConfidence, overallConfidence } from './entries.confidence.ts';
+import type { MatchEvidence } from './entries.confidence.ts';
 import { callParseLlm } from './entries.llm.ts';
+import { resolveFrom, type FoodLookup } from './entries.lookup.ts';
 import { validateLlmOutput } from './entries.llm-output.ts';
 import { searchOffFood, takeOffSlot } from './entries.off.ts';
-import { scaleNutrition, toGrams, toMl } from './entries.portion.ts';
+import { isGuessedPortion, scaleNutrition, toGrams, toMl } from './entries.portion.ts';
+import { energyDisagreement } from './entries.rank.ts';
 import { foldTokens } from './entries.text.ts';
 import { searchUsdaFood } from './entries.usda.ts';
 import { PROMPT_VERSION } from './entries.versions.ts';
@@ -31,6 +42,9 @@ import type {
  * resolves in one wave, low enough that a busy server cannot flood either API. Open Food
  * Facts gets the smaller number because it allows only 10 searches a minute per IP.
  */
+/** For the two sources that never involve a database row: water, and a model estimate. */
+const NO_MATCH_EVIDENCE: MatchEvidence = { margin: 0, disagreement: 0 };
+
 const USDA_CONCURRENCY = 6;
 const OFF_CONCURRENCY = 2;
 
@@ -57,52 +71,15 @@ const OFF_WIN_MARGIN = 0.15;
  */
 const OVERLAP_LEAD = 0.15;
 
-interface FoodLookup {
-  match: FoodMatch | null;
-  cacheHit: boolean;
-  /**
-   * True when the rate budget stopped the call before it was made. It is not an answer,
-   * so it is never written to the cache: doing so would blacklist the food for a day.
-   */
-  skipped: boolean;
-}
-
 /**
- * One name resolved against one provider: from the cache when possible. `language` is
- * part of the cache key only for a provider whose answer depends on it.
+ * How close two rows have to finish before the item is marked for review.
+ *
+ * It sits below `OFF_WIN_MARGIN`: a gap of less than a tenth of a rank point is smaller
+ * than the one the ranking itself refuses to decide a provider on, so it is not a gap the
+ * parse should quietly settle either. The flag changes no number — it only says which row
+ * is worth a person's glance, and `candidates` is what they glance at.
  */
-async function resolveFrom(
-  provider: FoodProvider,
-  query: string,
-  language: string,
-  search: SearchFood,
-  useCache: boolean,
-  takeSlot?: () => boolean,
-): Promise<FoodLookup> {
-  const scope = provider === 'off' ? language : '';
-  const cached = useCache ? await getCachedFood(provider, query, scope) : null;
-
-  if (cached === 'miss') {
-    return { match: null, cacheHit: true, skipped: false };
-  }
-
-  if (cached !== null) {
-    return { match: cached, cacheHit: true, skipped: false };
-  }
-
-  // Checked after the cache, so a name we already know costs no budget.
-  if (takeSlot !== undefined && !takeSlot()) {
-    return { match: null, cacheHit: false, skipped: true };
-  }
-
-  const match = await search(query, language);
-
-  if (useCache) {
-    await setCachedFood(provider, query, match, scope);
-  }
-
-  return { match, cacheHit: false, skipped: false };
-}
+const REVIEW_MARGIN = 0.1;
 
 /**
  * One provider's whole wave, timed on its own. The waves run side by side, so a single
@@ -134,16 +111,21 @@ function providerTrace(
     lookups,
     cacheHits,
     skipped: neverAsked + skippedByBudget,
+    // Counted out of the lookups that ran, not subtracted from them: a name that was
+    // asked and not answered was still asked, and the latency it cost was real.
+    unreachable: wave.resolved.filter((lookup) => lookup.unreachable).length,
     latencyMs: lookups > 0 ? wave.ms : null,
   };
 }
 
 /** A row's own slice of the Open Food Facts budget, on top of the per-minute window. */
-function rowOffBudget(takeSlot: () => boolean): () => boolean {
+function rowOffBudget(takeSlot: () => boolean | Promise<boolean>): () => Promise<boolean> {
   let used = 0;
 
-  return () => {
-    if (used >= OFF_MAX_PER_ROW || !takeSlot()) {
+  return async () => {
+    // The row's own cap is checked first and costs nothing, so a row that has already had
+    // its four names never asks the shared counter about a fifth.
+    if (used >= OFF_MAX_PER_ROW || !(await takeSlot())) {
       return false;
     }
 
@@ -173,70 +155,149 @@ function worthOffLookup(item: LlmItem, language: string): boolean {
 }
 
 /**
- * The better of two matches, or whichever one exists.
+ * What a row disagreeing with the model's estimate costs it, per natural log unit past
+ * the tolerance `energyDisagreement` allows.
+ *
+ * This is the pipeline paying attention to a number it already had and used to throw
+ * away. The model estimates per-100 g figures for every item so that an unmatched food
+ * still gets numbers; on the gold set those estimates land inside the expected band for
+ * 25 of the 26 items the ranking got wrong. They are not accurate enough to publish —
+ * that is why they are capped at `LLM_ESTIMATE_CONFIDENCE_CAP` when they are all there
+ * is — but they are easily accurate enough to say that a 467 kcal row is not yogurt.
+ *
+ * It has to be worth more than a provider weight, because the rows it separates are
+ * frequently identical in every other respect: USDA answers "greek yogurt" with ten
+ * Branded rows carrying that exact description and energies from 65 to 467. No amount of
+ * reading the words can order those, and the words are all the ranking had.
+ */
+const IMPLAUSIBILITY_WEIGHT = 1;
+
+/** The row's rank once the model's estimate has had its say. */
+function plausibleRank(match: FoodMatch, estimateKcal: number): number {
+  return match.rank - IMPLAUSIBILITY_WEIGHT * energyDisagreement(match.per100g.kcal, estimateKcal);
+}
+
+/**
+ * How many losing rows are kept on the item. Three is what a picker can show without
+ * becoming a database browser, and every one of them is stored in the entry's jsonb on
+ * every row forever — the fourth-best match is not worth that.
+ */
+const CANDIDATES_KEPT = 3;
+
+/** The row this item is priced from, and how clear-cut that choice was. */
+interface Choice {
+  match: FoodMatch | null;
+  /**
+   * How far ahead of the runner-up the winner finished, in rank units. `Infinity` when
+   * there was no runner-up, which is the clearest possible answer: exactly one row in
+   * either database could be this food.
+   */
+  margin: number;
+  /** How far the winning row's energy sat from the model's estimate. See the confidence. */
+  disagreement: number;
+  /**
+   * The rows that lost, best first: no duplicate of the winner, no two of each other. They
+   * are what the correction loop offers when the winner is the wrong food, which is why
+   * they are carried out of here instead of being dropped with the rest of the list.
+   */
+  alternates: FoodMatch[];
+}
+
+/**
+ * The row this item is priced from, out of everything both providers offered.
  *
  * Fit first, provenance second: a row that clearly answers its own query better is the
  * one that names the right food, whichever table it came from. Only when neither row
  * fits better does the provider weight decide, and there lab data wins a tie — see
  * `OFF_WIN_MARGIN` for why a tie there is not really a tie.
+ *
+ * The margin comes back with the winner because it is the one thing here that says how
+ * much the choice was worth. A row that finished half a point clear of everything else
+ * was identified; a row that finished a hundredth clear of a rival was guessed between,
+ * and the score the user sees should not read the same in both cases.
  */
-function bestMatch(usda: FoodMatch | null, off: FoodMatch | null): FoodMatch | null {
-  if (off === null) {
-    return usda;
-  }
+function chooseMatch(
+  usda: readonly FoodMatch[],
+  off: readonly FoodMatch[],
+  estimateKcal: number,
+): Choice {
+  const scored = [...usda, ...off]
+    .map((match) => ({ match, score: plausibleRank(match, estimateKcal) }))
+    .sort((a, b) => b.score - a.score);
 
-  if (usda === null) {
-    return off;
-  }
+  const bestOf = (candidates: readonly FoodMatch[]): FoodMatch | null =>
+    scored.find((entry) => candidates.includes(entry.match))?.match ?? null;
 
-  if (off.matchScore > usda.matchScore + OVERLAP_LEAD) {
-    return off;
-  }
+  const bestUsda = bestOf(usda);
+  const bestOff = bestOf(off);
 
-  if (usda.matchScore > off.matchScore + OVERLAP_LEAD) {
-    return usda;
-  }
-
-  return off.rank > usda.rank + OFF_WIN_MARGIN ? off : usda;
-}
-
-function rowKind(items: ParsedItem[]): EntryKind {
-  // A row is water only when every item is: a meal with a glass of water is food.
-  return items.length > 0 && items.every((item) => item.kind === 'water') ? 'water' : 'food';
-}
-
-function buildSources(items: ParsedItem[]): ParseSource[] {
-  const sources: ParseSource[] = [];
-  const seen = new Set<string>();
-  let hasEstimate = false;
-
-  for (const item of items) {
-    // Keyed by provider as well as id: a barcode and an fdcId share no id space.
-    if ((item.source === 'usda' || item.source === 'off') && item.sourceId !== null) {
-      const key = `${item.source}:${item.sourceId}`;
-
-      if (!seen.has(key)) {
-        seen.add(key);
-        sources.push({
-          kind: item.source,
-          title: item.matchedDescription ?? item.name,
-          sourceId: item.sourceId,
-        });
-      }
+  const winner = ((): FoodMatch | null => {
+    if (bestOff === null) {
+      return bestUsda;
     }
 
-    hasEstimate ||= item.source === 'llm_estimate';
+    if (bestUsda === null) {
+      return bestOff;
+    }
+
+    if (bestOff.matchScore > bestUsda.matchScore + OVERLAP_LEAD) {
+      return bestOff;
+    }
+
+    if (bestUsda.matchScore > bestOff.matchScore + OVERLAP_LEAD) {
+      return bestUsda;
+    }
+
+    return plausibleRank(bestOff, estimateKcal) >
+      plausibleRank(bestUsda, estimateKcal) + OFF_WIN_MARGIN
+      ? bestOff
+      : bestUsda;
+  })();
+
+  if (winner === null) {
+    return { match: null, margin: 0, disagreement: 0, alternates: [] };
   }
 
-  if (hasEstimate) {
-    sources.push({
-      kind: 'llm',
-      title: `Model estimate (${env.LLM_MODEL})`,
-      sourceId: null,
-    });
-  }
+  // The margin is measured against the best row that is not the winner and is not a
+  // duplicate of it: the same product listed twice is not a rival, and counting it as one
+  // would report every common food as ambiguous.
+  const runnerUp = scored.find(
+    (entry) => entry.match !== winner && entry.match.description !== winner.description,
+  );
 
-  return sources;
+  // The list a person picks from is deduped by a different rule, and the difference matters.
+  // USDA answers "greek yogurt" with ten Branded rows carrying that exact description and
+  // energies from 65 to 467 kcal per 100 g. To the margin those are one row seen ten times,
+  // which is right — nothing about the words separates them. To a person choosing, they are
+  // ten different foods, and the description-only rule would offer them nothing at all on
+  // precisely the item most likely to be wrong. So a row is a duplicate here only when its
+  // energy matches too.
+  const seen = new Set<string>([`${winner.description}|${Math.round(winner.per100g.kcal)}`]);
+  const alternates = scored.filter((entry) => {
+    const key = `${entry.match.description}|${Math.round(entry.match.per100g.kcal)}`;
+
+    if (entry.match === winner || seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+
+    return true;
+  });
+
+  return {
+    match: winner,
+    // Floored at zero. The cross-provider rules above can hand the row to a match that is
+    // not the top-scoring one — that is their whole job — and the arithmetic would then
+    // report a negative lead, which is not a thing a margin can be. A winner that did not
+    // outscore the field is simply one that was not decisive.
+    margin:
+      runnerUp === undefined
+        ? Infinity
+        : Math.max(0, plausibleRank(winner, estimateKcal) - runnerUp.score),
+    disagreement: energyDisagreement(winner.per100g.kcal, estimateKcal),
+    alternates: alternates.slice(0, CANDIDATES_KEPT).map((entry) => entry.match),
+  };
 }
 
 function traceSource(items: ParsedItem[], kind: EntryKind): string | null {
@@ -286,8 +347,10 @@ export async function parseRow(rawText: string, deps: ParseDeps = {}): Promise<P
     completionTokens = call.completionTokens;
     llmParse = validateLlmOutput(call.raw);
 
+    // Stored only once it has validated: a generation the pipeline could not read is not
+    // one worth serving back for a week.
     if (useCache) {
-      await setCachedParse(rawText, llmParse);
+      await setCachedParse(rawText, call.raw);
     }
   }
 
@@ -308,16 +371,33 @@ export async function parseRow(rawText: string, deps: ParseDeps = {}): Promise<P
       ]
     : [];
 
+  // Each wave is also its own span, so a trace shows the two lanes side by side with the
+  // counts that explain them. `neverAsked` is not known until below, so the span reports
+  // only what the wave itself did — every name it was actually handed.
   const [usdaWave, offWave] = await Promise.all([
-    timedWave(() =>
-      mapWithLimit(usdaNames, USDA_CONCURRENCY, (name) =>
-        resolveFrom('usda', name, language, searchUsda, useCache),
-      ),
+    tracedLookups(
+      'usda',
+      usdaNames,
+      () =>
+        timedWave(() =>
+          mapWithLimit(usdaNames, USDA_CONCURRENCY, (name) =>
+            resolveFrom('usda', name, language, searchUsda, useCache),
+          ),
+        ),
+      (wave) => providerTrace('usda', wave, 0),
     ),
-    timedWave(() =>
-      mapWithLimit(offNames, OFF_CONCURRENCY, (name) =>
-        resolveFrom('off', name, language, searchOff, useCache, takeSlot),
-      ),
+    tracedLookups(
+      'off',
+      offNames,
+      () =>
+        timedWave(() =>
+          mapWithLimit(offNames, OFF_CONCURRENCY, (name) =>
+            resolveFrom('off', name, language, searchOff, useCache, takeSlot),
+          ),
+        ),
+      // A wave that was never in play leaves no span content, the same way it leaves no
+      // `parse_trace_lookups` row.
+      (wave) => (offEnabled ? providerTrace('off', wave, localNames.length - offNames.length) : null),
     ),
   ]);
 
@@ -347,15 +427,24 @@ export async function parseRow(rawText: string, deps: ParseDeps = {}): Promise<P
         source: 'water',
         sourceId: null,
         matchedDescription: null,
-        confidence: itemConfidence(item.confidence, 'water', 0),
+        confidence: itemConfidence(item.confidence, 'water', 0, NO_MATCH_EVIDENCE),
+        // Water has one composition and no database is asked for it, so there is nothing
+        // to pick between. Only the volume can be wrong.
+        per100g: null,
+        candidates: [],
+        needsReview: isGuessedPortion(item.unit, item.estimatedGrams),
+        corrected: false,
       };
     }
 
     const grams = toGrams(item.quantity, item.unit, item.estimatedGrams);
-    const match = bestMatch(
-      usdaByName.get(item.name)?.match ?? null,
-      offByName.get(item.localName)?.match ?? null,
+    const guessedPortion = isGuessedPortion(item.unit, item.estimatedGrams);
+    const choice = chooseMatch(
+      usdaByName.get(item.name)?.candidates ?? [],
+      offByName.get(item.localName)?.candidates ?? [],
+      item.per100g.kcal,
     );
+    const match = choice.match;
 
     if (match !== null) {
       return {
@@ -368,12 +457,13 @@ export async function parseRow(rawText: string, deps: ParseDeps = {}): Promise<P
         ...scaleNutrition(match.per100g, grams),
         source: match.provider,
         sourceId: match.id,
-        // The brand is what makes a barcode row recognisable, so it travels with the name.
-        matchedDescription:
-          match.detail !== '' && match.provider === 'off'
-            ? `${match.description} — ${match.detail}`
-            : match.description,
-        confidence: itemConfidence(item.confidence, match.provider, match.matchScore),
+        matchedDescription: describeMatch(toCandidate(match)),
+        confidence: itemConfidence(item.confidence, match.provider, match.matchScore, choice),
+        per100g: match.per100g,
+        candidates: choice.alternates.map(toCandidate),
+        // Two questions, one flag: is this the right row, and is that the right weight.
+        needsReview: choice.margin < REVIEW_MARGIN || guessedPortion,
+        corrected: false,
       };
     }
 
@@ -388,7 +478,13 @@ export async function parseRow(rawText: string, deps: ParseDeps = {}): Promise<P
       source: 'llm_estimate',
       sourceId: null,
       matchedDescription: null,
-      confidence: itemConfidence(item.confidence, 'llm_estimate', 0),
+      confidence: itemConfidence(item.confidence, 'llm_estimate', 0, NO_MATCH_EVIDENCE),
+      per100g: item.per100g,
+      // Nothing outranked anything: no database held this food. The item rests entirely on
+      // a model guess, which is the strongest reason there is to ask a person.
+      candidates: [],
+      needsReview: true,
+      corrected: false,
     };
   });
 
@@ -403,13 +499,7 @@ export async function parseRow(rawText: string, deps: ParseDeps = {}): Promise<P
     confidence,
     confidenceLevel: confidenceLevel(confidence),
     items,
-    totals: {
-      calories: items.reduce((sum, item) => sum + item.calories, 0),
-      protein: round1(items.reduce((sum, item) => sum + item.protein, 0)),
-      carbs: round1(items.reduce((sum, item) => sum + item.carbs, 0)),
-      fat: round1(items.reduce((sum, item) => sum + item.fat, 0)),
-      waterMl: items.reduce((sum, item) => sum + (item.ml ?? 0), 0),
-    },
+    totals: sumTotals(items),
     sources: buildSources(items),
   };
 

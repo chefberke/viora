@@ -25,6 +25,10 @@ export const VOLUME_UNIT_ML: Record<string, number> = {
   tbsp: 15,
   tsp: 5,
   glass: 250,
+  // A Turkish çay bardağı: the tulip glass tea is served in, and nothing like a tumbler.
+  // Without it, "bir çay bardağı çay" arrived as `glass` and a cup of tea was logged at
+  // 250 ml, which is more than twice what the glass holds.
+  tea_glass: 110,
   bottle: 500,
   can: 330,
 };
@@ -45,6 +49,22 @@ const MAX_GRAMS = 5000;
 
 function bounded(value: number): number {
   return Math.round(clamp(value, MIN_GRAMS, MAX_GRAMS));
+}
+
+/**
+ * Whether the weight below is a stand-in rather than a reading of the line.
+ *
+ * A unit in neither table fixes no size of its own — "a plate", "a serving", "2 slices" —
+ * so when the model also declined to estimate, the grams are `FALLBACK_GRAMS` and nothing
+ * about the user's words produced them. That is the one portion a person should be asked
+ * about, and it is why this lives here, next to the two tables that define it.
+ */
+export function isGuessedPortion(unit: string, estimatedGrams: number | null): boolean {
+  return (
+    MASS_UNIT_GRAMS[unit] === undefined &&
+    VOLUME_UNIT_ML[unit] === undefined &&
+    (estimatedGrams === null || estimatedGrams <= 0)
+  );
 }
 
 /**

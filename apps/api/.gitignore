@@ -2,6 +2,9 @@ node_modules/
 dist/
 .turbo/
 
-# Local secrets. .env.example is the committed template.
+# Local secrets. .env.example is the committed template and the only one committed.
+# The glob is deliberately wide: a `.env.backup` or `.env.prod` written in a hurry is
+# exactly the file that gets committed by accident.
 .env
-.env*.local
+.env.*
+!.env.example

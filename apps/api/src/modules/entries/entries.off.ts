@@ -14,8 +14,9 @@
  *    busy minute would blacklist the most common local foods for a whole day.
  */
 import { env } from '../../config/index.ts';
+import { takeSharedSlot } from '../../lib/redis.ts';
 import { log, logError } from '../../utils/index.ts';
-import { foldTokens } from './entries.text.ts';
+import { contentTokens, scoreRow } from './entries.rank.ts';
 import type { FoodMatch, Nutrition100g, SearchFood } from './entries.types.ts';
 
 /** One attempt only: a retry spends a budget slot on a request that already failed. */
@@ -32,17 +33,19 @@ function searchLangs(language: string): string {
 
 const PAGE_SIZE = 10;
 
+/** How many ranked products a search hands back. See the USDA provider's own note. */
+const CANDIDATE_LIMIT = 10;
+
 /** Only the fields the match needs. The full product document is far larger. */
 const SEARCH_FIELDS = 'code,product_name,brands,nutriments';
 
-/** Beats the USDA `Branded` weight of 1, loses to `SR Legacy` at 2 and `Foundation` at 3. */
-const RANK_WEIGHT = 1.5;
-
 /**
- * Product names run long ("Ülker Çikolatalı Gofret 36 g"), so USDA's flat per-token
- * penalty would eat most of the weight above. This one is a share of the name's length.
+ * Provenance, on the same scale as `DATA_TYPE_WEIGHT` in the USDA provider: above its
+ * `Branded` at 1, below its `SR Legacy` at 1.5. A photographed label is better evidence
+ * than another photographed label filed in a US table, and worse evidence than a
+ * laboratory.
  */
-const EXTRA_TOKEN_PENALTY = 0.4;
+const RANK_WEIGHT = 1.4;
 
 /**
  * Stricter than the USDA gate of 0.5, because these rows are product titles rather than
@@ -77,16 +80,14 @@ const sentAt: number[] = [];
 let degraded = false;
 
 /**
- * Consumes one slot of the rate budget. `false` means the caller must not call Open Food
- * Facts at all — not that the food is unknown. The caller has to keep those two apart,
- * because only the second may be cached. Whether the provider is switched on at all is
- * the pipeline's decision (`OFF_ENABLED`), made before any slot is asked for.
+ * This process's own share of the window. Synchronous, pure, and asked first — a request
+ * that is already over the local share costs no round trip to find that out.
  *
- * The window is per process. A second API instance gets its own budget and doubles the
- * real traffic against the shared IP; scaling out means moving this to a Redis counter
- * that fails closed.
+ * Kept separate from `takeOffSlot` because it is also the only part that can be asserted
+ * deterministically: `npm run check` runs with the real environment loaded, so a budget
+ * test that went to the network would depend on whatever a live counter happened to hold.
  */
-export function takeOffSlot(): boolean {
+export function takeLocalOffSlot(): boolean {
   const now = Date.now();
 
   while (sentAt.length > 0 && now - sentAt[0]! >= WINDOW_MS) {
@@ -100,6 +101,21 @@ export function takeOffSlot(): boolean {
   sentAt.push(now);
 
   return true;
+}
+
+/**
+ * Consumes one slot of the rate budget. `false` means the caller must not call Open Food
+ * Facts at all — not that the food is unknown. The caller has to keep those two apart,
+ * because only the second may be cached. Whether the provider is switched on at all is
+ * the pipeline's decision (`OFF_ENABLED`), made before any slot is asked for.
+ *
+ * The window used to be per process, which meant a second API instance got its own eight
+ * a minute and doubled the real traffic against an address the provider counts as one.
+ * The shared counter is what makes the budget describe the traffic rather than one copy
+ * of it, and it fails closed — see `takeSharedSlot`.
+ */
+export async function takeOffSlot(): Promise<boolean> {
+  return takeLocalOffSlot() && (await takeSharedSlot('off', MAX_PER_MINUTE, WINDOW_MS / 1000));
 }
 
 /** A number, or null. Values arriving as strings are rejected rather than coerced. */
@@ -182,16 +198,24 @@ function readOffProduct(raw: unknown): OffProduct | null {
   return { code, name, brands, per100g };
 }
 
-/** Exported for the hand-run check in `scripts/entries.check.ts`; nothing else calls it. */
-export function pickBestMatch(query: string, hits: unknown[]): FoodMatch | null {
-  const queryTokens = foldTokens(query);
+/**
+ * Ranks the products a search returned, best first.
+ *
+ * Open Food Facts titles carry no `Primary, qualifier` convention — "Sütaş Tava Yoğurt"
+ * is one phrase — so the whole title is passed as the primary segment and every word in
+ * it that the query did not ask for is charged at the full rate. That is the right
+ * reading here: a product title is chosen by the manufacturer to be exactly specific, so
+ * an unasked-for word in it ("Tava", "Light", "Çikolatalı") is a different product rather
+ * than a narrower description of the same one.
+ */
+export function rankMatches(query: string, hits: unknown[], limit = 3): FoodMatch[] {
+  const queryTokens = contentTokens(query);
 
   if (queryTokens.length === 0) {
-    return null;
+    return [];
   }
 
-  let best: FoodMatch | null = null;
-  let bestRank = -Infinity;
+  const ranked: FoodMatch[] = [];
 
   for (const hit of hits) {
     // The top hit is often the one with a blank label while the second is the right
@@ -204,57 +228,65 @@ export function pickBestMatch(query: string, hits: unknown[]): FoodMatch | null 
 
     // The title carries the food, the brand line carries who made it. Both are evidence,
     // at the weights `BRAND_TOKEN_WEIGHT` explains.
-    const nameTokens = foldTokens(product.name);
-    const brandTokens = foldTokens(product.brands);
+    const nameTokens = contentTokens(product.name);
+    const brandTokens = new Set(contentTokens(product.brands));
+    const score = scoreRow(queryTokens, nameTokens, []);
 
-    let nameMatched = 0;
-    let weighted = 0;
-
-    for (const token of queryTokens) {
-      if (nameTokens.includes(token)) {
-        nameMatched += 1;
-        weighted += 1;
-      } else if (brandTokens.includes(token)) {
-        weighted += BRAND_TOKEN_WEIGHT;
-      }
-    }
-
-    const overlap = weighted / queryTokens.length;
+    // A query word the title lacks may still be the maker's name. Worth half a word, and
+    // only ever as a top-up on the title's own coverage.
+    const brandOnly = queryTokens.filter(
+      (token) => !nameTokens.includes(token) && brandTokens.has(token),
+    ).length;
+    const overlap = Math.min(
+      1,
+      score.coverage + (BRAND_TOKEN_WEIGHT * brandOnly) / queryTokens.length,
+    );
 
     if (overlap < MIN_OVERLAP) {
       continue;
     }
 
-    // Only the title is measured for length: a brand line lists every name a product is
-    // sold under, and none of those make the row less specific.
-    const extraTokens = Math.max(0, nameTokens.length - nameMatched);
-    const penalty =
-      nameTokens.length === 0 ? 0 : (EXTRA_TOKEN_PENALTY * extraTokens) / nameTokens.length;
-    const rank = RANK_WEIGHT * overlap - penalty;
-
-    if (rank > bestRank) {
-      bestRank = rank;
-      best = {
-        provider: 'off',
-        id: product.code,
-        description: product.name,
-        detail: product.brands,
-        per100g: product.per100g,
-        matchScore: overlap,
-        rank,
-      };
-    }
+    ranked.push({
+      provider: 'off',
+      id: product.code,
+      description: product.name,
+      detail: product.brands,
+      per100g: product.per100g,
+      matchScore: overlap,
+      rank: RANK_WEIGHT * overlap + score.penalty + score.stateBonus,
+    });
   }
 
-  return best;
+  ranked.sort((a, b) => b.rank - a.rank);
+
+  return ranked.slice(0, limit);
+}
+
+/** Exported for the hand-run check in `scripts/entries.check.ts`; nothing else calls it. */
+export function pickBestMatch(query: string, hits: unknown[]): FoodMatch | null {
+  return rankMatches(query, hits, 1)[0] ?? null;
 }
 
 /**
- * Finds the best product match for a name the user wrote themselves. Like the USDA
- * provider it never throws and returns null for both "nothing matched" and "the service
- * was unreachable" — but unlike it, the caller must have taken a budget slot first.
+ * The products that could be this food, best first. Like the USDA provider it never
+ * throws, and keeps `[]` apart from null for the same reason — but unlike it, the caller
+ * must have taken a budget slot first.
  */
 export const searchOffFood: SearchFood = async (query, language) => {
+  const hits = await fetchOffHits(query, language);
+
+  return hits === null ? null : rankMatches(query, hits, CANDIDATE_LIMIT);
+};
+
+/**
+ * The search request on its own: the products Open Food Facts returned, unranked. Split
+ * from the ranking for the same reason as the USDA one — so the rows can be recorded
+ * once and every later change to `pickBestMatch` replayed against them for free.
+ *
+ * Null is an outage; `[]` is Open Food Facts answering that it holds nothing. Only the
+ * second may ever be cached.
+ */
+export async function fetchOffHits(query: string, language: string): Promise<unknown[] | null> {
   const url =
     `${env.OFF_BASE_URL}/search?q=${encodeURIComponent(query)}` +
     `&langs=${encodeURIComponent(searchLangs(language))}` +
@@ -284,7 +316,7 @@ export const searchOffFood: SearchFood = async (query, language) => {
       log('off_recovered');
     }
 
-    return pickBestMatch(query, Array.isArray(body.hits) ? body.hits : []);
+    return Array.isArray(body.hits) ? body.hits : [];
   } catch (error) {
     if (!degraded) {
       degraded = true;
@@ -293,4 +325,4 @@ export const searchOffFood: SearchFood = async (query, language) => {
 
     return null;
   }
-};
+}

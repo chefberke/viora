@@ -3,15 +3,13 @@
  * `src/types` because the DB schema and the client mirror them; the shapes below never
  * leave this module, so they stay next to the code that produces them.
  */
-import type { EntryKind, ParseResult } from '../../types/index.ts';
+import type { EntryKind, Nutrition100g, ParseResult } from '../../types/index.ts';
 
-/** Nutrition per 100 g (per 100 ml for liquids) — the unit every source reports in. */
-export interface Nutrition100g {
-  kcal: number;
-  protein: number;
-  carbs: number;
-  fat: number;
-}
+/**
+ * Re-exported so the pipeline's own contracts read from one file. It lives in
+ * `src/types/parse.ts` because `ParsedItem` carries one — see the field's comment there.
+ */
+export type { Nutrition100g };
 
 /** One item as the model returned it: structure and portions, no final numbers yet. */
 export interface LlmItem {
@@ -68,11 +66,17 @@ export interface FoodMatch {
   /** The USDA data type, or the Open Food Facts brand line. Provenance detail only. */
   detail: string;
   per100g: Nutrition100g;
-  /** 0-1 share of the query's tokens found in the matched description. Feeds confidence. */
+  /** 0-1 share of the query's words the row carries. Feeds confidence. */
   matchScore: number;
   /**
-   * Provider-weighted quality. The only number compared across providers, and it never
-   * reaches confidence: lab data outranks crowd-entered label data at equal overlap.
+   * Provider-weighted quality: how good a row this is, all evidence considered. Lab data
+   * outranks crowd-entered label data at equal overlap, which is why this and not
+   * `matchScore` is what gets compared across providers.
+   *
+   * It reaches the item's confidence only through the MARGIN between this row and the
+   * best rival — never as a level. A rank is not comparable between two different
+   * queries; the gap between two rows answering the SAME query is, and that gap is the
+   * thing worth telling a user about.
    */
   rank: number;
 }
@@ -89,6 +93,16 @@ export interface ProviderTrace {
   cacheHits: number;
   /** Names never put to it at all: nothing to gain, or a spent rate budget. */
   skipped: number;
+  /**
+   * Names this database was asked about and could not answer — a timeout, a refused key,
+   * a 5xx. Distinct from a lookup that came back empty, which is an answer.
+   *
+   * It was already computed per lookup and thrown away here. Without it a provider that
+   * has quietly stopped answering is invisible: every item falls back to a flagged
+   * estimate, the parse succeeds, and the only trace is an accuracy number drifting down
+   * over weeks with nothing to point at.
+   */
+  unreachable: number;
   /** This provider's own wave, null when it made no call. The waves run side by side. */
   latencyMs: number | null;
 }
@@ -119,8 +133,18 @@ export type CallParseLlm = (rawText: string) => Promise<LlmCallResult>;
  * Every provider has this shape, and none of them may throw: `mapWithLimit` rejects.
  * `language` is the line's ISO 639-1 code; a provider that indexes by language uses it,
  * USDA ignores it.
+ *
+ * It answers with a RANKED LIST rather than a winner, because text ranking alone cannot
+ * finish the job. Ten USDA rows called exactly "GREEK YOGURT" run from 65 to 467 kcal per
+ * 100 g and share one description, so nothing about their words separates them. The
+ * pipeline holds a piece of evidence the provider does not — the model's own per-100 g
+ * estimate for the item — and that is what picks between rows the words tie.
+ *
+ * Null and `[]` are different answers, and the difference is what a cache turns on: `[]`
+ * means the provider looked and holds nothing, null means it could not be reached. Only
+ * the first may ever be written down.
  */
-export type SearchFood = (query: string, language: string) => Promise<FoodMatch | null>;
+export type SearchFood = (query: string, language: string) => Promise<FoodMatch[] | null>;
 
 /** Injection points so evals and tests can run the pipeline without the network. */
 export interface ParseDeps {
@@ -128,7 +152,12 @@ export interface ParseDeps {
   searchUsda?: SearchFood;
   searchOff?: SearchFood;
   /** The Open Food Facts rate budget. Stubbed, a row's own cap can be checked on its own. */
-  takeOffSlot?: () => boolean;
+  /**
+   * Sync or async. The real budget goes to a shared counter and returns a promise; every
+   * stub in `eval/` and `scripts/` is a plain `() => true`, and keeping both shapes here
+   * means the shared counter cost those files nothing.
+   */
+  takeOffSlot?: () => boolean | Promise<boolean>;
   /** Whether Open Food Facts is asked at all. Defaults to `OFF_ENABLED`. */
   offEnabled?: boolean;
   useCache?: boolean;

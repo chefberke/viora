@@ -3,7 +3,13 @@ import { cacheGet, cacheSet } from '../../lib/redis.ts';
 import { sha256 } from '../../utils/index.ts';
 import { normalizeInput } from './entries.text.ts';
 import type { FoodMatch, FoodProvider, LlmParse, Nutrition100g } from './entries.types.ts';
-import { FOOD_KEY_VERSION, PROMPT_FINGERPRINT, PROMPT_VERSION } from './entries.versions.ts';
+import { validateLlmOutput } from './entries.llm-output.ts';
+import {
+  FOOD_KEY_VERSION,
+  PARSE_CACHE_VERSION,
+  PROMPT_FINGERPRINT,
+  PROMPT_VERSION,
+} from './entries.versions.ts';
 
 const PARSE_TTL_SECONDS = 7 * 24 * 3600; // 7 days
 const FOOD_TTL_SECONDS = 30 * 24 * 3600; // 30 days
@@ -16,7 +22,7 @@ const FOOD_MISS = 'miss';
 function parseKey(rawText: string): string {
   const prompt = `${PROMPT_VERSION}.${PROMPT_FINGERPRINT}`;
 
-  return `viora:parse:${prompt}:${env.LLM_MODEL}:${sha256(normalizeInput(rawText))}`;
+  return `viora:parse:${PARSE_CACHE_VERSION}:${prompt}:${env.LLM_MODEL}:${sha256(normalizeInput(rawText))}`;
 }
 
 /**
@@ -91,6 +97,20 @@ function toFoodMatch(raw: unknown): FoodMatch | null {
   };
 }
 
+/**
+ * The model's stored answer, validated exactly as a fresh one is.
+ *
+ * The cache holds the raw generation rather than the parsed object, so this goes through
+ * `validateLlmOutput` and there is only ever one thing that produces an `LlmParse`. The
+ * food side has always validated what it read back; this side did a bare `JSON.parse` and
+ * asserted the type, which meant anything that reached the key — a truncated write, a
+ * value from a build whose output shape has since moved on — was trusted straight into
+ * the pipeline. It also means a fix to the validator now reaches warm keys instead of
+ * being shadowed by them for a week.
+ *
+ * A stored value that does not validate is reported as a miss, not as an error: the
+ * honest recovery is to pay for the parse again.
+ */
 export async function getCachedParse(rawText: string): Promise<LlmParse | null> {
   const hit = await cacheGet(parseKey(rawText));
 
@@ -99,22 +119,31 @@ export async function getCachedParse(rawText: string): Promise<LlmParse | null> 
   }
 
   try {
-    return JSON.parse(hit) as LlmParse;
+    return validateLlmOutput(hit);
   } catch {
     return null;
   }
 }
 
-export async function setCachedParse(rawText: string, parse: LlmParse): Promise<void> {
-  await cacheSet(parseKey(rawText), JSON.stringify(parse), PARSE_TTL_SECONDS);
+export async function setCachedParse(rawText: string, raw: string): Promise<void> {
+  await cacheSet(parseKey(rawText), raw, PARSE_TTL_SECONDS);
 }
 
-/** `null` = not cached; `'miss'` = cached "this provider has no match"; else the match. */
+/**
+ * `null` = not cached; `'miss'` = cached "this provider has no match"; else the ranked
+ * candidates the provider returned.
+ *
+ * The whole list is stored, not the winner. The winner is not a property of the query any
+ * more — the pipeline picks it using the model's estimate for the particular item — so
+ * caching one row would freeze the first line's choice onto every later line that names
+ * the same food. Any row in the stored list that fails to read back drops the entry: a
+ * partially readable candidate list would silently narrow the choice.
+ */
 export async function getCachedFood(
   provider: FoodProvider,
   query: string,
   scope = '',
-): Promise<FoodMatch | 'miss' | null> {
+): Promise<FoodMatch[] | 'miss' | null> {
   const hit = await cacheGet(foodKey(provider, query, scope));
 
   if (hit === null) {
@@ -126,28 +155,36 @@ export async function getCachedFood(
   }
 
   try {
-    return toFoodMatch(JSON.parse(hit));
+    const stored: unknown = JSON.parse(hit);
+
+    if (!Array.isArray(stored)) {
+      return null;
+    }
+
+    const candidates = stored.map(toFoodMatch);
+
+    return candidates.every((candidate) => candidate !== null) ? (candidates as FoodMatch[]) : null;
   } catch {
     return null;
   }
 }
 
 /**
- * Only ever called for a lookup that actually ran. A lookup the rate budget skipped must
- * never come through here: it would be stored as a day-long "no match" for a food nobody
- * ever asked the database about.
+ * Only ever called for a lookup that actually ran AND came back. A lookup the rate budget
+ * skipped, or one the provider could not answer, must never come through here: either
+ * would be stored as a day-long "no match" for a food nobody ever got an answer about.
  */
 export async function setCachedFood(
   provider: FoodProvider,
   query: string,
-  match: FoodMatch | null,
+  candidates: FoodMatch[],
   scope = '',
 ): Promise<void> {
-  if (match === null) {
-    // Short TTL: "no match" may just mean the provider was briefly down.
+  if (candidates.length === 0) {
+    // Short TTL: "no match" is the answer likeliest to change as a database grows.
     await cacheSet(foodKey(provider, query, scope), FOOD_MISS, FOOD_MISS_TTL_SECONDS);
     return;
   }
 
-  await cacheSet(foodKey(provider, query, scope), JSON.stringify(match), FOOD_TTL_SECONDS);
+  await cacheSet(foodKey(provider, query, scope), JSON.stringify(candidates), FOOD_TTL_SECONDS);
 }

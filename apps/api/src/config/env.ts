@@ -14,6 +14,8 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET ?? '';
 const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL ?? '';
 const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN ?? '';
 
+const BRAINTRUST_API_KEY = process.env.BRAINTRUST_API_KEY ?? '';
+
 /**
  * The cache is optional, but half of it is not. A URL with no token — the shape a copied
  * `.env` takes when only the first line was pasted — would otherwise boot into a client
@@ -79,6 +81,12 @@ export const env = {
   /** Proxy hops to trust for `req.ip`. See the note beside `app.set` in `index.ts`. */
   TRUST_PROXY: Number(process.env.TRUST_PROXY ?? 0),
 
+  /**
+   * How long a parse trace keeps the raw meal text. Past this `npm run retention` blanks
+   * `parse_traces.input_text` and leaves the measurements — see the column's own note.
+   */
+  TRACE_RETENTION_DAYS: Number(process.env.TRACE_RETENTION_DAYS ?? 30),
+
   BETTER_AUTH_SECRET: required('BETTER_AUTH_SECRET'),
   BETTER_AUTH_URL: required('BETTER_AUTH_URL'),
   // Optional: the API boots and email sign-in works without Google credentials.
@@ -89,6 +97,54 @@ export const env = {
   LLM_BASE_URL: required('LLM_BASE_URL').replace(/\/+$/, ''),
   LLM_API_KEY: required('LLM_API_KEY'),
   LLM_MODEL: required('LLM_MODEL'),
+
+  /**
+   * What a thousand tokens of this model cost, in dollars, so a trace can report money
+   * rather than counts.
+   *
+   * Zero — the default — means "nobody has priced this model here", which is not the same
+   * as free: the trace then reports its token counts and no cost of its own. That is the
+   * right default rather than a gap, because Braintrust already prices the models it
+   * recognises and does so for the current one; a second figure computed here would sit
+   * beside its `estimated_cost` and the two would drift apart the day a rate changes. Set
+   * these only for a model it does not know.
+   *
+   * Both halves matter separately. Every provider charges more for what it writes than for
+   * what it reads, and this pipeline's ratio is lopsided — roughly 2900 prompt tokens
+   * against 445 completion ones, because the few-shots are resent on every call.
+   */
+  LLM_PRICE_PROMPT_PER_1K: Number(process.env.LLM_PRICE_PROMPT_PER_1K ?? 0),
+  LLM_PRICE_COMPLETION_PER_1K: Number(process.env.LLM_PRICE_COMPLETION_PER_1K ?? 0),
+
+  /**
+   * Where a parse goes to be looked at afterwards. Optional, and unlike the cache there is
+   * no half-configured shape to refuse: the key alone decides. Without it every helper in
+   * `lib/braintrust.ts` is a no-op, `parse_traces` still records every run, and the only
+   * thing missing is the place a person reads them.
+   *
+   * `BRAINTRUST_API_URL` and `BRAINTRUST_APP_URL` are read by the SDK straight from the
+   * environment and appear nowhere in this file on purpose — the api url it needs is on the
+   * organisation the key belongs to, and it fetches that itself. Set them only to override.
+   */
+  BRAINTRUST_API_KEY,
+  /**
+   * Which project the traces land in. Blank falls back to a project named `viora`, created
+   * on first write — never the organisation's Global project, which is where an unnamed
+   * logger would quietly pile them up alongside everything else.
+   */
+  BRAINTRUST_PROJECT_ID: process.env.BRAINTRUST_PROJECT_ID ?? '',
+  hasBraintrust: Boolean(BRAINTRUST_API_KEY),
+
+  /**
+   * Whether the meal line itself is sent along with the trace.
+   *
+   * It is by default, because a trace of a parse with the sentence removed cannot answer
+   * the only question worth asking of it — what was this model actually given. But it is
+   * the same text `TRACE_RETENTION_DAYS` exists to age out of our own database, and once it
+   * is on someone else's it ages out on their schedule and not on `npm run retention`'s.
+   * `false` keeps every measurement and sends `[redacted]` in place of the sentence.
+   */
+  BRAINTRUST_LOG_INPUT: (process.env.BRAINTRUST_LOG_INPUT ?? 'true') !== 'false',
 
   USDA_API_KEY: required('USDA_API_KEY'),
 
